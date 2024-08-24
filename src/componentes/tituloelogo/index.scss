@@ -1,0 +1,31 @@
+.tituloelogo {
+    margin: 0;
+    display: flex;
+    background-color: #BDB1C2; 
+    width: 100%; 
+    align-items: center;
+    color: #000000;
+    justify-content: center;
+    padding: 15px 40px;
+    z-index: 1000; 
+    box-sizing: border-box; 
+
+.imh1 {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+
+h1 {
+    font-size: 50px;
+    font-family: 'Ultra', serif;
+    font-weight: 400; 
+    margin: 0;
+}
+
+.geg {
+    height: 60px;
+}
+
+}
