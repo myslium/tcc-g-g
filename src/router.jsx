@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Inicio from './pages/inicio';
-import SobreGeG from './pages/sobre';
+import SobreGeG from './pages/sobregeg';
 import Vagas from './pages/vagas';
 import Falecomconsultor from './pages/falecomconsultor';
 import Login from './pages/login';
