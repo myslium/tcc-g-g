@@ -6,7 +6,7 @@ export default function Cabecalho() {
     return (
         <header className="cabeçalho">
             <div className="imh1">
-                <img className="geg" src="/assets/images/cabeçalho/logo.png" alt="G&G" />
+                <img className="geg" src="/assets/images/cabecalho/logo.png" alt="G&G" />
                 <h1>G&G</h1>
             </div>
 
@@ -19,7 +19,7 @@ export default function Cabecalho() {
                 </ul>
             </nav>
             <div className="imh1">
-            <img className="geg" src="/assets/images/cabeçalho/perfil.png" alt="G&G" />
+            <img className="geg" src="/assets/images/cabecalho/perfil.png" alt="G&G" />
                 
             </div>
 

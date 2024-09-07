@@ -1,0 +1,26 @@
+.cards{
+
+    display: flex;
+    flex-direction: column;
+ 
+    
+
+
+    .card{
+    background-color: #E5DBEB;
+    width: 20vw;
+    height: 20vw;
+    img{
+        width: 20vw;
+    }
+    h1{
+        text-align: center;
+        font-family: 'Urbanist';
+        font-weight: 800;
+    }
+    ul{
+        margin-left: 5vw;
+
+    }
+}
+}
