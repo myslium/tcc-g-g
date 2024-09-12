@@ -13,12 +13,19 @@
 .imh1 {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    
     color: #240A39;
+
+    .login {
+        
+            width: 35px;
+            height: 35px;
+        
+    }
 }
 
 nav ul li {
-    margin: 0 30px; 
+    margin: 0 60px; 
 }
 
 h1 {
@@ -29,7 +36,7 @@ h1 {
 }
 
 .geg {
-    height: 60px;
+    height: 70px;
 }
 
 nav {
