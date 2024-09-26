@@ -1,3 +1,119 @@
 .pagina-vagas{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     
+
+    .topo{
+       
+ 
+            display: flex;
+            color: #000000;
+            padding: 3vw;
+            padding-left: 15vw;
+            z-index: 1000; 
+            box-sizing: border-box; 
+
+
+        .conttopo{
+        
+            display: flex;
+            background-color: #E5DBEB;
+            width: 70%;  
+            align-items: center;
+            text-align: center;
+            gap: 10px; 
+            justify-content: center;
+            padding: 15px 40px;
+            border-radius: 20px;
+
+ 
+        
+        h1 {
+            font-size: 2.6vw;
+            font-family: 'Montserrat';
+            font-weight: 800; 
+            margin: 0;
+        }
+        
+        .geg {
+            height: 60px;
+        }}
+        
+        
+    }
+    
+
+    
+
+    .botoes{
+        padding: 6vw;
+        
+        a{
+            text-decoration: none;
+            align-items: center;
+            text-align: center;
+            color: rgb(94, 94, 94);
+            border-radius: 10px;
+            background-color: #E5DBEB;
+            padding: 20px 30px;
+        
+
+
+        }
+    }
+
+
+    .vagas{
+        padding: 3vw;
+
+
+        .cartavaga{
+            display: flex;
+            flex-direction: row;
+            background-color: #E5DBEB;
+            width: 80vw;
+            height: 30vw;
+            border-radius: 20px;
+
+            .textovaga{
+                padding: 4vw;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5vw;
+                width: 50vw;
+                a{
+                    color: #B54FCF;
+                    text-decoration: none;
+                }
+                
+            }
+
+            .image{
+                padding-top: 2vw;
+
+
+
+                .vagaimg{
+
+                width: 30vw;
+                border-radius: 20px;
+                padding: 2vw;}
+
+                .botaovaga{
+                    background-color: #B54FCF;
+                    border-radius: 25px;
+                    padding: 1.5vw 10vw;
+                    color: #ffffff;
+                    text-decoration: none;
+                   
+                }
+                
+            
+            }
+          
+
+        }
+    }
+
 }
