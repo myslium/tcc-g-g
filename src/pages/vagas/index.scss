@@ -5,12 +5,12 @@
     
 
     .topo{
-       
  
             display: flex;
             color: #000000;
-            padding: 3vw;
-            padding-left: 15vw;
+            padding: 2vw 0vw 0vw 0vw;
+            margin: 0vw 1vw 0vw 5vw;
+            padding-left: 16vw;
             z-index: 1000; 
             box-sizing: border-box; 
 
@@ -22,10 +22,10 @@
             width: 70%;  
             align-items: center;
             text-align: center;
-            gap: 10px; 
+            gap: 5px; 
             justify-content: center;
-            padding: 15px 40px;
-            border-radius: 20px;
+            padding: 13px 16px;
+            border-radius: 28px;
 
  
         
@@ -45,9 +45,10 @@
     
 
     
-
     .botoes{
+        display: flex;
         padding: 6vw;
+        align-items: center;
         
         a{
             text-decoration: none;
@@ -58,14 +59,28 @@
             background-color: #E5DBEB;
             padding: 20px 30px;
         
+        }
 
+        .bb{
+            align-items: end;
+            margin: 0vw 0vw 0vw 7vw;
+            color: rgb(94, 94, 94);
+            border-radius: 10px;
+            background-color: #E5DBEB;
+            padding: 20px 30px;
+        
+        }
 
+        .botaoimg{
+            padding: 0vw 1vw 0vw 1vw;
+            height: 20px;
+            width: auto;
         }
     }
 
 
     .vagas{
-        padding: 3vw;
+        padding: 0vw 0vw 0vw 3vw;
 
 
         .cartavaga{
@@ -75,6 +90,7 @@
             width: 80vw;
             height: 30vw;
             border-radius: 20px;
+            margin: 0vw 0vw 3vw 6vw;
 
             .textovaga{
                 padding: 4vw;
@@ -97,7 +113,7 @@
                 .vagaimg{
 
                 width: 30vw;
-                border-radius: 20px;
+                border-radius: 40px;
                 padding: 2vw;}
 
                 .botaovaga{
@@ -106,6 +122,7 @@
                     padding: 1.5vw 10vw;
                     color: #ffffff;
                     text-decoration: none;
+                    margin: 0vw 0vw 0vw 4vw;
                    
                 }
                 
