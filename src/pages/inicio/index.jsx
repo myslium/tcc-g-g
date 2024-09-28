@@ -5,6 +5,7 @@ import Tituloelogo from '../../componentes/tituloelogo'
 import Cards from '../../componentes/cards'
 import { Link } from 'react-router-dom'
 import Cardspilar from '../../componentes/cardpilar'
+import Footer from '../../componentes/footer'
 
 export default function Inicio() {
     return (
@@ -93,25 +94,11 @@ export default function Inicio() {
            <div className="ultima">
             <h1 className='texto'><img src="/assets/images/cabecalho/logo.png" alt="" />Quer aumentar a produtividade da sua empresa e economizar?</h1>
             <button>Fale com o consultor</button>
-
            </div>
-           <footer className="footer">
-            <div className="footer-content">
-                <div className="logo">
-                    <img src="/assets/images/cabecalho/logo.png" alt="Gente&Gestão Logo" />
-                    <span>Gente&Gestão</span>
-                </div>
-                <div className="contact">
-                    <h3>Entre em contato</h3>
-                    <p>gente.gestao@gmail.com</p>
-                </div>
-            </div>
-            <div className="footer-bottom">
-                <p>Copyright © 2024 G&G - Todos os direitos reservados à Femme</p>
-            </div>
-        </footer>
 
-         
+
+           <Footer/>
+
         </div>
     )
 }
