@@ -12,7 +12,7 @@ export default function Inicio() {
            <Cabecalho/>
 
            <div className="faixa">
-            <img className='fundo' src="/assets/images/inicio/image.png" alt="" />
+           <img className='fundo' src="/assets/images/inicio/image.png" alt="" />
            </div>
 
            <div className="faixa2">
@@ -95,10 +95,21 @@ export default function Inicio() {
             <button>Fale com o consultor</button>
 
            </div>
-           <div className="rodape">
-            <img src="/assets/images/inicio/rodapeprovisorio.png" alt="" />
-
-           </div>
+           <footer className="footer">
+            <div className="footer-content">
+                <div className="logo">
+                    <img src="/assets/images/cabecalho/logo.png" alt="Gente&Gestão Logo" />
+                    <span>Gente&Gestão</span>
+                </div>
+                <div className="contact">
+                    <h3>Entre em contato</h3>
+                    <p>gente.gestao@gmail.com</p>
+                </div>
+            </div>
+            <div className="footer-bottom">
+                <p>Copyright © 2024 G&G - Todos os direitos reservados à Femme</p>
+            </div>
+        </footer>
 
          
         </div>
