@@ -1,0 +1,73 @@
+.pagina-falecomconsultor {
+
+    .primeira-parte {
+      
+    
+        img {
+            width: 100%;
+        }
+    }
+
+    .segunda-parte {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+
+        .primeira-div {
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+            padding-left: 5rem;
+
+            .geg-img {
+                width: 700px;
+                height: 400px;
+            }
+            
+            .texto {
+                width: 540px;
+                height: 300px;
+               
+                p {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 30px;
+                    font-weight: 100;
+                    line-height: 120%;
+                }
+            }
+        }
+
+        .segunda-div {
+            display: flex;
+            align-items: center;
+            gap: 10rem;
+            .filhos {
+                width: 350px;
+                height: 130px;
+                display: flex;
+                align-items: center;
+                .img-filho {
+                    height: 137px;
+                }
+
+                h3 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 800;
+                    font-size: 23px;
+                    color: #B314DB;
+                }
+
+
+                .outro {
+                    display: flex;
+                   text-align: center;
+                    flex-direction: column;
+                    
+                }
+            }
+        }
+    }
+}

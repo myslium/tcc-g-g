@@ -91,8 +91,24 @@ export default function Inicio() {
 
            </div>
            <div className="ultima">
-            <h1 className='texto'><img src="/assets/images/cabecalho/logo.png" alt="" />Quer aumentar a produtividade da sua empresa e economizar?</h1>
-            <button>Fale com o consultor</button>
+            
+            <div className='consultor'>
+
+                <div className='frase'>
+
+                    <img src="/assets/images/cabecalho/logo.png" alt="Logo" />
+                    <h1>Quer aumentar a produtividade da sua empresa e economizar?</h1>
+                </div>
+
+                <Link to = '/falecomconsultor'>
+                <button className='botao'>Fale com o consultor</button>
+                
+                </Link>
+              
+
+            </div>
+
+            <img className='ultima-imagem'  src="/assets/images/inicio/ultima.png" alt="imagem Gente&Gestão" />
 
            </div>
            <footer className="footer">
