@@ -19,7 +19,7 @@ export default function Cabecalho() {
                 </ul>
             </nav>
             <div className="imh1">
-            <img className="login" src="/assets/images/cabecalho/perfil.png" alt="G&G" />
+            <Link to='/login' ><img className="login" src="/assets/images/cabecalho/perfil.png" alt="G&G" /></Link>
                 
             </div>
 
