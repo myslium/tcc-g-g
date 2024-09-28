@@ -1,66 +1,168 @@
 .cabeçalho {
     margin: 0;
     display: flex;
-    background-color: #BDB1C2; 
-    width: 100%; 
+    background-color: rgba(189, 177, 194, 0.863); 
+    width: 100%;
     align-items: center;
     color: #f5f4f4;
     justify-content: space-between;
-    padding: 8px 40px;
-    z-index: 1000; 
+    padding: 10px 0;
+    z-index: 1000;
     box-sizing: border-box; 
+   
 
-.imh1 {
-    display: flex;
-    align-items: center;
-    
-    color: #240A39;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .imh1 {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;  
+
+        .h1 {
+            font-size: 2.25vw;
+            font-family: 'Urbanist', serif;
+            font-weight: 500;
+            margin: 0;
+            color: #240A39;
+        }
+
+        .geg {
+            height: 5.5vw;
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        margin-right: 40px;
+
+        .bar {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: #000;
+            margin: 5px auto;
+            transition: all 0.3s;
+        }
+
+        &.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg); 
+        }
+
+        &.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg); 
+        }
+    }
+
+    nav {
+        display: flex;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            li {
+                margin: 0 4.5vw;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    font-family: 'Urbanist', sans-serif;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 17px;
+
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        &.aberto {
+            display: block; 
+            position: absolute;
+            top: 60px; 
+            left: 0;
+            right: 0;
+            background-color: #BDB1C2;
+            z-index: 1000;
+            padding: 10px 0; 
+
+            ul {
+                flex-direction: column-reverse; 
+                align-items: center;
+
+                li {
+                    margin: 10px 0;
+                    a {
+                        font-size: 14px; 
+                    }
+                }
+            }
+
+            .imh1 {
+                margin: 0 auto;  
+                justify-content: center;
+            }
+        }
+    }
 
     .login {
         
-            width: 35px;
-            height: 35px;
-        
+        width: 32px;
+        height: 35px;
     }
-}
+    .login:hover{
+        filter: brightness(0) invert(1);
+    }
 
-nav ul li {
-    margin: 0 60px; 
-}
+    @media (max-width: 768px) {
+        .imh1 {
+            .h1 {
+                font-size: 3.50vw;
+                font-family: 'Urbanist', serif;
+                font-weight: 700;
+            }
 
-h1 {
-    font-size: 30px;
-    font-family: 'Urbanist', serif;
-    font-weight: 400; 
-    margin: 0;
-}
+            .geg {
+                height: 10.5vw;
+            }
+        }
 
-.geg {
-    height: 70px;
-}
+        .menu-toggle {
+            display: block; 
+        }
 
-nav {
-    display: flex;
-}
+        nav {
+            display: none; 
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
+       .login {
+            width: 20px;
+            height: 25px;
+        }
+       .login:hover{
+            filter: brightness(0) invert(1);
+        }
 
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 17px;
-}
+        nav.aberto .imh1 {
+            margin: 0 auto;  
+            justify-content: center;
+        }
+    }
 
-nav ul li a:hover {
-    color: #ffffff; 
-}
-}
 
+}
