@@ -1,7 +1,8 @@
 
 import './index.scss'
-import Tituloelogo from '../../componentes/tituloelogo'
+
 import Cabecalho from '../../componentes/cabeçalho'
+import Footer from '../../componentes/footer'
 
 export default function Vagas() {
     return (
@@ -109,7 +110,8 @@ export default function Vagas() {
 
             </div>
 
-           
+            <Footer/>
+
         </div>
     )
 }

@@ -3,6 +3,7 @@ import './index.scss'
 
 import Cabecalho from '../../componentes/cabeçalho'
 import Tituloelogo from '../../componentes/tituloelogo'
+import Footer from '../../componentes/footer'
 
 export default function SobreGeG() {
     return (
@@ -58,20 +59,8 @@ export default function SobreGeG() {
 
             </div>
             </div>
-            
 
-
-
-
-            <div className="rodape">
-            <img src="/assets/images/inicio/rodapeprovisorio.png" alt="" />
-
-           </div>
-
-
-
-
-            
+            <Footer/>
            
         </div>
     )
