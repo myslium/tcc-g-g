@@ -1,0 +1,27 @@
+.cardspilar{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+ 
+    .cardpilar{
+        background-color: #BE7BCF;
+        width: 20vw;
+        height: 18vw;
+        border-radius: 40px;
+   
+    h1{
+        text-align: center;
+        font-family: 'Urbanist';
+        font-weight: 800;
+        font-size: 1.7vw;
+        color: #fff;
+        width: 20vw;
+        padding-top: 2vw;
+    }
+    ul{
+        align-items: center;
+        font-size: 1.3vw;
+        color: #fff;
+    }
+}
+}
