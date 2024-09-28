@@ -28,7 +28,7 @@ export default function Inicio() {
                 <h1>RECRUTANDO PESSOAS E DESTACANDO TALENTOS!</h1>
                 <p>GENTE&GESTÃO tem foco onde pode causar impacto e como pode acelerar planos, pois acretida que apoiar empresas gera oportunidade e emprego </p>
 
-                <a href="">saiba mais <img src="/assets/images/inicio/arrow.png" alt="" /></a>
+              
             </div>
 
            </div>
