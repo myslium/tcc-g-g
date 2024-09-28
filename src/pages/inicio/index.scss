@@ -1,132 +1,150 @@
-.pagina-inicio{
+.pagina-inicio {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    .faixa{
+    .faixa {
         width: 100%;
         height: 40vw;
-       
 
-        .fundo
-        {
+        .fundo {
             position: relative;
             width: 100%;
             height: 40vw;
         }
     }
 
-    .recrutando{
-        background-color: #E5DBEB;
+
+
+    .recrutando {
+        background-color: #ffffff;
         margin: 0;
-        
-        .conteudo{
-        padding: 7vw;
-        display: flex;
-        flex-direction:row ;
-        gap: 3vw;
-        
-
-        img{
-            border-radius: 40px;
-            width: 45vw;
-            height: 30vw;
-            margin: 3vw 0vw 0vw 0vw;
-        }
-
-
-        .text{
+        padding-bottom: 50px; 
+    
+        .conteudo {
+            padding: 5vw 7vw 10vw 7vw; 
             display: flex;
-            flex-direction: column;
-            gap: 1vw;
-            height: 35vw;
-            h1{
-                font-size: 40px;
-                width: 50vw;
-                height: 10vw;
-
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1437 752" fill="none"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+       
+            gap: 3vw;
+    
+            img {
+                border-radius: 40px;
+                width: 57.96375vw; 
+                height: auto; 
             }
-
-            p{
-                font-size: 30px;
-                color: #524E4E;
-                width: 30vw;
-                height: 40vw;
-            }
-            a{
-                text-decoration: none;
-                color: #8822A1;
-                font-size: 25px;
-                align-items: center;
-                justify-content: center;
-                img{
-                    width: 2vw;
-                    align-items: center;
+    
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                gap: 2vw;
+                height: auto; 
+                max-width: 40vw; 
+    
+                h1 {
+                    font-size: 4.706vh; 
+                    width: 15vw;
+                    margin: 0;
+                }
+    
+                p {
+                    font-size: 3.4vh;
+                    color: #524E4E;
+                    margin: 0;
+                    line-height: 1.5; 
+                }
+    
+                a {
+                    text-decoration: none;
+                }
+    
+                .link {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: start;
+                    margin-right: 40px;
+                    text-decoration: none;
+                    gap: 0.5vw;
+                    font-size: 2.5vw;
+    
+                    p {
+                        color: #8822A1;
+                    }
+    
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                        margin-bottom: 1.5px;
+                    }
                 }
             }
         }
+    }
+    
+    
 
-        
-    }
-   
-    }
-    .cartaovaga{
-        .cartao{
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: row;
-        gap: 6vw;
-        margin-left: 10vw;
-        padding: 5vw;
+
+
+    .cartaovaga {
+        .cartao {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            gap: 6vw;
+            margin-left: 10vw;
+            padding: 5vw;
         }
 
-        .mostrar{
+        .mostrar {
             text-align: right;
             margin-right: 10vw;
-
             padding-bottom: 3vw;
-            a{
+
+            a {
                 text-decoration: none;
                 color: #000;
                 font-weight: 400;
                 font-size: 1.7vw;
             }
-            img{
-                width: 1.5vw;
-                align-items: center;
-            }
 
+            img {
+                width: 1.5vw;
+            }
         }
-     
-      
     }
 
-    .pilares{
+    .pilares {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .ultima{
+
+    .ultima {
         background-color: #E5DBEB;
         width: 100%;
         height: 45vw;
         position: relative;
 
         .consultor {
-           
             width: 650px;
             height: 150px;
             margin-left: 4rem;
             padding-top: 4rem;
-
-
 
             .frase {
                 display: flex;
                 align-items: center;
 
                 img {
-                  height: 100px;  
+                    height: 100px;
                 }
 
                 h1 {
@@ -143,7 +161,7 @@
                 padding: 25px 50px;
                 border-radius: 50px;
                 margin-left: 3rem;
-                
+
                 font: 600 20px 'Ubuntu';
                 color: #fff;
                 cursor: pointer;
@@ -151,15 +169,11 @@
             }
 
             .botao:hover {
-
                 background-color: #E5DBEB;
                 border: 5px solid #B54FCF;
                 color: #000;
             }
-
         }
-
-
 
         .ultima-imagem {
             width: 750px;
@@ -168,7 +182,5 @@
             right: 5rem;
             bottom: 0;
         }
-
     }
-
 }
