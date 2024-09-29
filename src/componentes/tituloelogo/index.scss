@@ -30,4 +30,20 @@ h1 {
     width: 100px;
 }
 
+@media (max-width: 746px) {
+
+   h1 {
+    font-size: 30px;
+   }
+    
+}
+
+@media (max-width: 476px) {
+
+    h1 {
+        font-size: 25px;
+    }
+    
+}
+
 }

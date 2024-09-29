@@ -4,44 +4,34 @@
     box-sizing: border-box;
 
 
-    .faixa {
-        width: 100%;
-        height: 80vh;
-        background-size: 100%;
-        background-position: center;
-        display: flex;
-        padding-top: 100px;
+   
+     .faixa {
+
+        height: 45.9vw;
         background-repeat: no-repeat;
-        justify-content: center;
-        gap: 40vw; 
-        text-align: start; }
+        background-size: cover;
+        width: 100%;
 
-        .faixa h2 {
-            color: #6E2275;
-            font-family: 'Urbanist', sans-serif;
+        .texto-faixa {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10rem;
+            padding-right: 10rem;
+            padding-top: 5.5rem;
+            h2 {
+                font-family: 'Urbanist', sans-serif;
+                font-weight: 700;
+                color: #6E2275;
+                font-size: 55px;
+            }
+            
         }
-    
-        .faixa h2:first-of-type {
-            font-size: 4em;
-            width: 10vw;
-            font-weight: bold;
-        }
-    
-        .faixa h2:last-of-type {
-            font-size: 4em;
-            width: 20vw;
-            font-weight: bold;
-    
-        }
-     
-      @media (max-width: 768px) {
-        h2 {
-            font-size: 16px;
-        }
-    }
+        
+     }
 
+    
 
-    .recrutando {
+     .recrutando {
         background-color: #ffffff;
         margin: 0;
         padding-bottom: 100px;
@@ -123,7 +113,8 @@
             flex-direction: row;
             gap: 6vw;
             align-items: center;
-            padding: 5vw;
+            padding-top: 5vw;
+            padding-left: 5vw;
             font-family: 'Montserrat', sans-serif;
           
 
@@ -134,68 +125,183 @@
                 gap: 2vw;    
                 flex-wrap: wrap;
             }
-        }}
+        }
+    
+       .mostrar {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        padding-right: 4rem;
+        padding-bottom: 2vw;
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.5vw;
+            text-decoration: none;
 
-    .pilares {
+            h3 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 23px;
+                color: #000;
+            }
+           
+
+        }
+     
+       }
+    
+    }
+
+        .pilares {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-    }
+        }  
 
-    .ultima {
-        background-color: #E5DBEB;
-        width: 100%;
-        height: 45vw;
-        position: relative;
-
-        .consultor {
-            width: 650px;
-            height: 150px;
-            margin-left: 4rem;
-            padding-top: 4rem;
-
-            .frase {
-                display: flex;
-                align-items: center;
-
-                img {
-                    height: 100px;
-                }
-
-                h1 {
-                    font-family: 'Ubuntu', sans-serif;
-                    font-weight: 400;
-                    font-size: 36px;
-                    color: #240A39;
-                }
-            }
-
-            .botao {
-                background-color: #B54FCF;
-                border: 5px solid #B54FCF;
-                padding: 25px 50px;
-                border-radius: 50px;
-                margin-left: 3rem;
-
-                font: 600 20px 'Ubuntu';
-                color: #fff;
-                cursor: pointer;
-                transition: 0.2s ease-in-out;
-            }
-
-            .botao:hover {
+        .ultima {
                 background-color: #E5DBEB;
-                border: 5px solid #B54FCF;
-                color: #000;
+                width: 100%;
+                height: 45vw;
+                position: relative;
+
+                .consultor {
+                    width: 650px;
+                    height: 150px;
+                    margin-left: 4rem;
+                    padding-top: 4rem;
+
+                    .frase {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            height: 100px;
+                        }
+
+                        h1 {
+                            font-family: 'Ubuntu', sans-serif;
+                            font-weight: 400;
+                            font-size: 36px;
+                            color: #240A39;
+                        }
+                    }
+
+                    .botao {
+                        background-color: #B54FCF;
+                        border: 5px solid #B54FCF;
+                        padding: 25px 50px;
+                        border-radius: 50px;
+                        margin-left: 3rem;
+
+                        font: 600 20px 'Ubuntu';
+                        color: #fff;
+                        cursor: pointer;
+                        transition: 0.2s ease-in-out;
+                    }
+
+                    .botao:hover {
+                        background-color: #E5DBEB;
+                        border: 5px solid #B54FCF;
+                        color: #000;
+                    }
+                }
+
+                    .ultima-imagem {
+                        width: 750px;
+                        height: 500px;
+                        position: absolute;
+                        right: 5rem;
+                        bottom: 0;
+                    }
+     }
+
+
+    @media (max-width: 1220px) {
+        .texto-faixa {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-top: 5.5rem;
+            h2 {
+                font-family: 'Urbanist', sans-serif;
+                font-weight: 700;
+                color: #6E2275;
+                font-size: 50px;
+            }
+            
+        }
+        .recrutando {
+           
+            .conteudo {
+                padding: 4vw 7vw 10vw 7vw;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-image: url('data:image/svg+xml;utf8,<svg width="1437" height="752" viewBox="0 0 1437 752" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 80%;
+                
+                gap: 3vw;
+    
+                img {
+                    border-radius: 40px;
+                    width: 70%;
+                    height: auto;
+                }
+    
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+                    gap: 2vw;
+                    height: auto;
+                    max-width: 40vw;
+    
+                    h1 {
+                       font-size:  3.000vh;
+                       width: 100%;
+                        
+    
+                        margin: 0;
+                    }
+    
+                    p {
+                        font-size: 3vh;
+                        color: #524E4E;
+                        margin: 0;
+                        line-height: 1.5;
+                    }
+    
+                    a {
+                        text-decoration: none;
+                    }
+    
+                    .link {
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: start;
+                        margin-right: 40px;
+                        text-decoration: none;
+                        gap: 0.5vw;
+                        font-size: 2.5vw;
+    
+                        p {
+                            color: #8822A1;
+                        }
+    
+                        img {
+                            width: 2vw;
+                            height: 2vw;
+                            margin-bottom: 1.5px;
+                        }
+                    }
+                }
             }
         }
 
-        .ultima-imagem {
-            width: 750px;
-            height: 500px;
-            position: absolute;
-            right: 5rem;
-            bottom: 0;
-        }
+        
     }
 }
