@@ -18,7 +18,7 @@
 
 
 h1 {
-    font-size: 36px;
+    font-size: 3vw;
     font-family: 'Ultra', sans-serif;
     font-weight: 400; 
     margin: 0;
@@ -26,29 +26,32 @@ h1 {
 }
 
 .geg {
-    height: 80px;
-    width: 100px;
+    height: 5vw;
+    width: 7vw;
 }
 
-@media (max-width: 746px) {
-
-   h1 {
-    font-size: 30px;
-   }
-    
-}
-
-@media (max-width: 476px) {
+@media (max-width: 768px) {
 
     h1 {
-        font-size: 25px;
-    }
-
-    .geg {
-        height: 60px;
-        width: 80px;
+        font-size: 3.5vw;
     }
     
+    .geg {
+        height: 5vw;
+        width: 7.5vw;
+    }
+}
+
+@media (max-width: 468px) {
+
+    h1 {
+        font-size: 4vw;
+    }
+    
+    .geg {
+        height: 7vw;
+        width: 10vw;
+    }
 }
 
 }
