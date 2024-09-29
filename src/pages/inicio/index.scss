@@ -166,23 +166,23 @@
                 position: relative;
 
                 .consultor {
-                    width: 650px;
-                    height: 150px;
-                    margin-left: 4rem;
-                    padding-top: 4rem;
+                    width: 45vw;
+                    height: 20vw;
+                    margin-left: 4vw;
+                    padding-top: 5vw;
 
                     .frase {
                         display: flex;
                         align-items: center;
 
                         img {
-                            height: 100px;
+                            height: 7vw;
                         }
 
                         h1 {
                             font-family: 'Ubuntu', sans-serif;
                             font-weight: 400;
-                            font-size: 36px;
+                            font-size: 2vw;
                             color: #240A39;
                         }
                     }
@@ -190,11 +190,11 @@
                     .botao {
                         background-color: #B54FCF;
                         border: 5px solid #B54FCF;
-                        padding: 25px 50px;
+                        padding: 1.7vw 3.7vw;
                         border-radius: 50px;
-                        margin-left: 3rem;
+                        margin-left: 3vw;
 
-                        font: 600 20px 'Ubuntu';
+                        font: 600 1.5vw 'Ubuntu';
                         color: #fff;
                         cursor: pointer;
                         transition: 0.2s ease-in-out;
@@ -208,10 +208,10 @@
                 }
 
                     .ultima-imagem {
-                        width: 750px;
-                        height: 500px;
+                        width: 50vw;
+                        height: 35vw;
                         position: absolute;
-                        right: 5rem;
+                        right: 5vw;
                         bottom: 0;
                     }
      }
@@ -223,9 +223,7 @@
             padding-right: 3rem;
             padding-top: 5.5rem;
             h2 {
-                font-family: 'Urbanist', sans-serif;
-                font-weight: 700;
-                color: #6E2275;
+                
                 font-size: 50px;
             }
             
@@ -236,12 +234,7 @@
                 padding: 4vw 7vw 10vw 7vw;
                 display: flex;
                 flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                background-image: url('data:image/svg+xml;utf8,<svg width="1437" height="752" viewBox="0 0 1437 752" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
-                background-size: cover;
-                background-repeat: no-repeat;
+            
                 height: 80%;
                 
                 gap: 3vw;
@@ -253,12 +246,7 @@
                 }
     
                 .text {
-                    display: flex;
-                    flex-direction: column;
-                    align-self: center;
-                    gap: 2vw;
-                    height: auto;
-                    max-width: 40vw;
+                   
     
                     h1 {
                        font-size:  3.000vh;
@@ -275,33 +263,25 @@
                         line-height: 1.5;
                     }
     
-                    a {
-                        text-decoration: none;
-                    }
-    
-                    .link {
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: start;
-                        margin-right: 40px;
-                        text-decoration: none;
-                        gap: 0.5vw;
-                        font-size: 2.5vw;
-    
-                        p {
-                            color: #8822A1;
-                        }
-    
-                        img {
-                            width: 2vw;
-                            height: 2vw;
-                            margin-bottom: 1.5px;
-                        }
-                    }
+                  
+                    
                 }
             }
         }
 
+        .ultima {
+
+            .ultima-imagem {
+
+            }
+        }
+
+        
+    }
+
+    @media (max-width: 746px) {
+
+      
         
     }
 }
