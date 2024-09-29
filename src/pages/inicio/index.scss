@@ -3,37 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 
+
     .faixa {
         width: 100%;
-        height: 100vh;
-        background-size: cover;
+        height: 80vh;
+        background-size: 100%;
         background-position: center;
         display: flex;
         padding-top: 100px;
+        background-repeat: no-repeat;
         justify-content: center;
-        gap: 58vw;
-        text-align: start;
+        gap: 40vw; 
+        text-align: start; }
 
+        .faixa h2 {
+            color: #6E2275;
+            font-family: 'Urbanist', sans-serif;
+        }
+    
+        .faixa h2:first-of-type {
+            font-size: 4em;
+            width: 10vw;
+            font-weight: bold;
+        }
+    
+        .faixa h2:last-of-type {
+            font-size: 4em;
+            width: 20vw;
+            font-weight: bold;
+    
+        }
+     
+      @media (max-width: 768px) {
+        h2 {
+            font-size: 16px;
+        }
     }
-
-    .faixa h2 {
-        color: #6E2275;
-        font-family: 'Urbanist', sans-serif;
-    }
-
-    .faixa h2:first-of-type {
-        font-size: 4em;
-        width: 10vw;
-        font-weight: bold;
-    }
-
-    .faixa h2:last-of-type {
-        font-size: 4em;
-        width: 20vw;
-        font-weight: bold;
-
-    }
-
 
 
     .recrutando {
@@ -112,36 +117,24 @@
 
 
     .cartaovaga {
-
         .cartao {
             background-color: #ffffff;
             display: flex;
             flex-direction: row;
             gap: 6vw;
             align-items: center;
-          
             padding: 5vw;
             font-family: 'Montserrat', sans-serif;
-        }
+          
 
-        .mostrar {
-            text-align: right;
-            margin-right: 8vw;
-            padding-bottom: 3vw;
-
-            a {
-                text-decoration: none;
-                color: #000;
-                font-weight: 400;
-                font-size: 1.2vw;
-                font-family: 'Montserrat', sans-serif;
+          
+            @media (max-width: 768px) {
+                flex-direction: column; 
+                align-items: center; 
+                gap: 2vw;    
+                flex-wrap: wrap;
             }
-
-            img {
-                width: 1.2vw;
-            }
-        }
-    }
+        }}
 
     .pilares {
         display: flex;
