@@ -1,4 +1,5 @@
 import Cabecalho from '../../componentes/cabeçalho'
+import Footer from '../../componentes/footer'
 import Tituloelogo from '../../componentes/tituloelogo'
 import './index.scss'
 
@@ -40,12 +41,101 @@ export default function Falecomconsultor() {
 
                         <img className='img-filho'   src="/assets/images/consultor/apertodemao.png" alt="Aperto de mão Gente&Gestão" />
 
+                        <div className='outro'>
                         <h3>+de 1.500 contratados</h3>
-                        
+
+                        </div>
                      
                     </div>
                 </div>
             </section>
+
+            <Tituloelogo titulo = 'ENTRE EM CONTATO CONOSCO!'/>
+
+            <section className='terceira-parte'>
+
+                <p>Preencha as informações abaixo com os requisitos da sua vaga</p>
+
+                <div className='vagas'>
+
+                    <label>Empresa:</label>
+                    <input className='grande' type="text" />
+
+                    <label>E-mail comercial:</label>
+                    <input className='grande' type="text" />
+
+
+                
+
+                    <div className='duo'>
+
+                        <div>
+                            <label>Vaga:</label>
+                            <input className = 'pequeno'type="text" />
+
+                        </div>
+                    
+                         <div>
+                            <label>CNPJ:</label>
+                            <input className = 'pequeno'type="text" />
+                        </div>
+                    
+                    </div>
+
+
+                    <div className='duo'>
+
+                        <div>
+                            <label>Localização:</label>
+                            <input className = 'pequeno'type="text" />
+
+                        </div>
+                    
+                    <div>
+                            <label>Tipo de contrato:</label>
+                            <input className = 'pequeno'type="text" />
+                    </div>
+                    
+                    </div>
+
+                    <div className='duo'>
+
+                        <div>
+                            <label>Salário:</label>
+                            <input className = 'pequeno'type="text" />
+
+                        </div>
+                    
+                    <div>
+                            <label>Modelo de atuação:</label>
+                            <input className = 'pequeno'type="text" />
+                    </div>
+                    
+                    </div>
+
+                    <label>Requisitos:</label>
+                    <input className='grande' type="text" />
+
+                    <label>Beneficios:</label>
+                    <input className='grande' type="text" />
+
+                    <label>Por que quer trabalhar com a G&G?</label>
+                    <textarea>
+
+                    </textarea>
+
+                    <div className='botao'>
+                        <button>Enviar</button>
+                    </div>
+
+                
+
+                </div>
+            </section>
+
+            <Footer/>
+
+
         </div>
     )
 }
