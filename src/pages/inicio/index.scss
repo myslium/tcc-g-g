@@ -5,13 +5,33 @@
 
     .faixa {
         width: 100%;
-        height: 40vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        padding-top: 100px;
+        justify-content: center;
+        gap: 58vw;
+        text-align: start;
 
-        .fundo {
-            position: relative;
-            width: 100%;
-            height: 40vw;
-        }
+    }
+
+    .faixa h2 {
+        color: #6E2275;
+        font-family: 'Urbanist', sans-serif;
+    }
+
+    .faixa h2:first-of-type {
+        font-size: 4em;
+        width: 10vw;
+        font-weight: bold;
+    }
+
+    .faixa h2:last-of-type {
+        font-size: 4em;
+        width: 20vw;
+        font-weight: bold;
+
     }
 
 
@@ -19,53 +39,53 @@
     .recrutando {
         background-color: #ffffff;
         margin: 0;
-        padding-bottom: 50px; 
-    
+        padding-bottom: 100px;
+        height: 100vh;
+        position: relative;
+
         .conteudo {
-            padding: 5vw 7vw 10vw 7vw; 
+            padding: 5vw 7vw 10vw 7vw;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             position: relative;
-            margin: 0%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1437 752" fill="none"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
-            background-size: 100% auto;
+            background-image: url('data:image/svg+xml;utf8,<svg width="1437" height="752" viewBox="0 0 1437 752" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
+            background-size: cover;
             background-repeat: no-repeat;
-       
             gap: 3vw;
-    
+
             img {
                 border-radius: 40px;
-                width: 57.96375vw; 
-                height: auto; 
+                width: 57.96375vw;
+                height: auto;
             }
-    
+
             .text {
                 display: flex;
                 flex-direction: column;
                 align-self: center;
                 gap: 2vw;
-                height: auto; 
-                max-width: 40vw; 
-    
+                height: auto;
+                max-width: 40vw;
+
                 h1 {
-                    font-size: 4.706vh; 
+                    font-size: 4.706vh;
                     width: 15vw;
                     margin: 0;
                 }
-    
+
                 p {
                     font-size: 3.4vh;
                     color: #524E4E;
                     margin: 0;
-                    line-height: 1.5; 
+                    line-height: 1.5;
                 }
-    
+
                 a {
                     text-decoration: none;
                 }
-    
+
                 .link {
                     display: flex;
                     align-items: flex-end;
@@ -74,11 +94,11 @@
                     text-decoration: none;
                     gap: 0.5vw;
                     font-size: 2.5vw;
-    
+
                     p {
                         color: #8822A1;
                     }
-    
+
                     img {
                         width: 2vw;
                         height: 2vw;
@@ -88,35 +108,37 @@
             }
         }
     }
-    
-    
 
 
 
     .cartaovaga {
+
         .cartao {
             background-color: #ffffff;
             display: flex;
             flex-direction: row;
             gap: 6vw;
-            margin-left: 10vw;
+            align-items: center;
+          
             padding: 5vw;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .mostrar {
             text-align: right;
-            margin-right: 10vw;
+            margin-right: 8vw;
             padding-bottom: 3vw;
 
             a {
                 text-decoration: none;
                 color: #000;
                 font-weight: 400;
-                font-size: 1.7vw;
+                font-size: 1.2vw;
+                font-family: 'Montserrat', sans-serif;
             }
 
             img {
-                width: 1.5vw;
+                width: 1.2vw;
             }
         }
     }

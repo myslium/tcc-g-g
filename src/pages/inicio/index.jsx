@@ -11,8 +11,10 @@ export default function Inicio() {
         <div className='pagina-inicio'>
             <Cabecalho />
 
-            <div className="faixa">
-                <img className='fundo' src="/assets/images/inicio/image.png" alt="" />
+            <div className="faixa"
+            style={{ backgroundImage: `url('/assets/images/inicio/preview.svg')` }} >
+             <h2>SEJA G&G</h2>   
+             <h2>VOCÊ TAMBÉM!</h2> 
             </div>
 
             <div className="faixa2">
@@ -41,27 +43,39 @@ export default function Inicio() {
             </div>
 
             <div className="cartaovaga">
-                <div className="cartao">
-                    <Cards
-                        url='/assets/images/inicio/tecnologia.png'
-                        titulo='TECNOLOGIA'
-                        topico='Ciência de dados'
-                    />
-                    <Cards
-                        url='/assets/images/inicio/industrias.png'
-                        titulo='INDÚSTRIAS'
-                        topico='Engenharia'
-                    />
-                    <Cards
-                        url='/assets/images/inicio/visuais.png'
-                        titulo='VISUAIS'
-                        topico='Design de interiores'
-                    />
-                </div>
-                <div className="mostrar">
-                    <Link>MOSTRAR MAIS <img src="/assets/images/inicio/arrow.png" alt="" /></Link>
-                </div>
-            </div>
+    <div className="cartao">
+        <Cards
+            url='/assets/images/inicio/tecnologia.png'
+            titulo='TECNOLOGIA'
+            topicos={['Ciência de dados', 'Engenharia', 'Arquitetura', 'Design de interiores']} 
+        />
+        <Cards
+            url='/assets/images/inicio/industrias.png'
+            titulo='INDÚSTRIAS'
+            topicos={[
+                "Mecânico de Manutenção em Automação Industrial",
+                "Assistente de Logística",
+                "Operador de Máquina",
+                "Gerente de Produção",
+                "Diretor Industrial"
+            ]} 
+        />
+        <Cards
+            url='/assets/images/inicio/visuais.png'
+            titulo='VISUAIS'
+            topicos={[
+                "Ilustrador",
+                "Desenhista",
+                "Crítico de Arte",
+                "Gestor Cultural"
+            ]} 
+        />
+    </div>
+    <div className="mostrar">
+        <Link>MAIS OPÇÕES <img src="/assets/images/inicio/arrow.png" alt="" /></Link>
+    </div>
+</div>
+
 
             <div className="faixa2">
                 <Tituloelogo titulo='4 PILARES DE G&G' />

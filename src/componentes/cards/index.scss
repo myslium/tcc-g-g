@@ -8,20 +8,26 @@
 
     .card{
     background-color: #E5DBEB;
-    width: 20vw;
-    height: 25vw;
+    width:  25vw;
+    height:32vw;
     img{
-        width: 20vw;
+        width: 25vw;
     }
-    h1{
-        text-align: center;
-        font-family: 'Urbanist';
+    .texto{
+        margin: 20px;
+         h1{
+        margin-left: 20px;
+        text-align: start;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 800;
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     ul{
-        align-items: center;
-        font-size: 1.3vw;
+        align-items: start;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        width: 15vw;
     }
-}
+}}
+   
 }
