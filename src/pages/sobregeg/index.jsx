@@ -19,9 +19,11 @@ export default function SobreGeG() {
             <div className="cartaotexto">
                 <div className="cardizinho">
                 <h1>Quem é G&G?</h1>
-                <p>Fundada em 07/09/2014, a <strong>G&G</strong> se destaca por oferecer um serviço personalizado, garantindo maior disponibilidade e flexibilidade para os clientes, com direção e solidez. O crescimento da G&G é resultado de um trabalho comprometido, focado em desenvolver soluções inovadoras e prestar serviços de alta qualidade que superam as expectativas. <strong>Há um investimento contínuo na contratação dos melhores profissionais, sempre em conformidade com as leis trabalhistas.</strong></p>
+                <p>Fundada em 07/09/2014, a <b>G&G</b> se destaca por oferecer um serviço personalizado, garantindo maior disponibilidade e flexibilidade para os clientes, com direção e solidez. O crescimento da G&G é resultado de um trabalho comprometido, focado em desenvolver soluções inovadoras e prestar serviços de alta qualidade que superam as expectativas. <b>Há um investimento contínuo na contratação dos melhores profissionais, sempre em conformidade com as leis trabalhistas.</b></p>
                 </div>
             </div>
+
+            <hr />
 
             <div className="text">
                 <p>Profissional com mais de 10 anos de experiência nas áreas de Recursos Humanos e Administrativa, com carreira desenvolvida em empresas de pequeno e grande porte.</p>
@@ -35,8 +37,8 @@ export default function SobreGeG() {
 
                 <div className="conteudo">
                 <div className="texto">
-                    <p>Os serviços da <strong>G&G </strong> tem como foco a <strong>otimização de tarefas das áreas de negócio.</strong> O objetivo  da G&G está em facilitar o processo de contratação 
-                    tanto para os recrutadores quanto para os candidatos das vagas. Tudo isso resulta em uma maior <strong>produtividade e economia.</strong> </p>
+                    <p>Os serviços da <b>G&G </b> tem como foco a <b>otimização de tarefas das áreas de negócio.</b> O objetivo  da G&G está em facilitar o processo de contratação 
+                    tanto para os recrutadores quanto para os candidatos das vagas. Tudo isso resulta em uma maior <b>produtividade e economia.</b> </p>
                 </div>
                 
                     <img className='imagem' src="/assets/images/sobre/servico.png" alt="" />
@@ -61,7 +63,7 @@ export default function SobreGeG() {
             </div>
 
             <Footer/>
-           
+            
         </div>
     )
 }
