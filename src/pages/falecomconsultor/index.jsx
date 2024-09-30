@@ -41,10 +41,10 @@ export default function Falecomconsultor() {
 
                         <img className='img-filho'   src="/assets/images/consultor/apertodemao.png" alt="Aperto de mão Gente&Gestão" />
 
-                        <div className='outro'>
+                     
                         <h3>+de 1.500 contratados</h3>
 
-                        </div>
+                       
                      
                     </div>
                 </div>
@@ -58,15 +58,18 @@ export default function Falecomconsultor() {
 
                 <div className='vagas'>
 
+                    <div className='div-grande'>
+                        
                     <label>Empresa:</label>
                     <input className='grande' type="text" />
+                    </div>
 
+
+                    <div className='div-grande'>
                     <label>E-mail comercial:</label>
                     <input className='grande' type="text" />
-
-
-                
-
+                    </div>
+                   
                     <div className='duo'>
 
                         <div>
@@ -113,16 +116,31 @@ export default function Falecomconsultor() {
                     
                     </div>
 
+                    <div className='div-grande'>
+
                     <label>Requisitos:</label>
                     <input className='grande' type="text" />
 
+
+                    </div>
+
+                    <div className='div-grande'>
+
+                        
                     <label>Beneficios:</label>
                     <input className='grande' type="text" />
+                    </div>
 
+                    <div className='div-grande'>
                     <label>Por que quer trabalhar com a G&G?</label>
                     <textarea>
 
                     </textarea>
+                        
+                    </div>
+
+
+                   
 
                     <div className='botao'>
                         <button>Enviar</button>

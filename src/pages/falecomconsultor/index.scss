@@ -14,27 +14,28 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 80px;
-        padding-bottom: 5rem;
+        gap: 6vw;
+        padding-bottom: 5vw;
 
         .primeira-div {
             display: flex;
             align-items: center;
-            padding-top: 5rem;
-            padding-left: 5rem;
+            padding-top: 3vw;
+            padding-left: 5vw;
+            gap: 10vw;
 
             .geg-img {
-                width: 700px;
-                height: 400px;
+                width: 30vw;
+               
             }
             
             .texto {
-                width: 540px;
-                height: 300px;
+                width: 30vw;
+                
                
                 p {
                     font-family: 'Montserrat', sans-serif;
-                    font-size: 30px;
+                    font-size: 2vw;
                     font-weight: 100;
                     line-height: 120%;
                 }
@@ -44,31 +45,108 @@
         .segunda-div {
             display: flex;
             align-items: center;
-            gap: 10rem;
+            gap: 10vw;
             .filhos {
-                width: 350px;
-                height: 130px;
+                width: 25vw;
+                 gap: 2vw;
                 display: flex;
                 align-items: center;
                 .img-filho {
-                    height: 137px;
+                    height: 12vw;
                 }
 
                 h3 {
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 800;
-                    font-size: 23px;
+                    font-size: 1.5vw;
                     color: #B314DB;
                 }
 
 
-                .outro {
-                    display: flex;
-                   text-align: center;
-                    flex-direction: column;
-                    
+              
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            gap: 3vw;
+            margin-top: 4vw;
+
+            .primeira-div {
+                .texto {
+
+                    width: 35vw;
+
+                    p {
+                        font-size: 2.5vw;
+                    }
+
+                   
+                }
+                .geg-img {
+                    width: 35vw;
                 }
             }
+
+            .segunda-div {
+
+                .filhos {
+                    width: 30vw;
+
+                    h3 {
+                        font-size: 2vw;
+                    }
+                }
+            }
+          
+            
+        }
+
+        @media (max-width: 468px) {
+
+            gap: 3vw;
+            
+
+            .primeira-div {
+
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 0vw;
+
+                .texto {
+
+                    width: 70vw;
+
+                    p {
+                        font-size: 4vw;
+                    }
+
+                   
+                }
+                .geg-img {
+                    width: 70vw;
+                }
+            }
+
+            .segunda-div {
+                display: flex;
+                flex-direction: column;
+
+                .filhos {
+                    width: 60vw;
+
+                    .img-filho {
+                        height: 20vw;
+                    }
+
+                    h3 {
+                        font-size: 4vw;
+                    }
+                }
+            }
+          
+            
         }
     }
 
@@ -84,43 +162,52 @@
 
         p {
             font-family: 'Roboto', sans-serif;
-            font-size: 24px;
+            font-size: 1.7vw;
             font-weight: 400;
         }
 
         .vagas {
             display: flex;
             flex-direction: column;
-            width: 700px;
+            justify-content: center;
+            align-items: center;
 
             label {
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 600;
                 color: #380f5a;
-                font-size: 20px;
-                margin-bottom: 1rem;
+                font-size: 1.5vw;
+                margin-bottom: 1vw;
             }
+            
 
-            .grande {
-                width: 680px;
-                height: 50px;
-                border-radius: 20px;
-                border: 2px solid #C7C4C4;
-                margin-bottom: 2rem;
-                outline: none;
-                padding: 2px 10px;
-                font-family: 'Montserrat', sans-serif;
-                font-size: 16px;
-                color: #313131;
-                font-weight: 500;
-                box-shadow: 0px 5px 3px #e6e6e6;
-
+            .div-grande {
+                display: flex;
+                flex-direction: column;
+              
+    
+                .grande {
+                    width: 48vw;
+                    height: 3.5vw;
+                    border-radius: 1.5vw;
+                    border: 2px solid #C7C4C4;
+                    margin-bottom: 2rem;
+                    outline: none;
+                    padding: 2px 10px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.3vw;
+                    color: #313131;
+                    font-weight: 500;
+                    box-shadow: 0px 5px 3px #e6e6e6;
+    
+                }
             }
+            
 
             .duo {
                 display: flex;
                 align-items: center;
-                gap: 20px;
+                gap: 1vw;
 
                 div {
                     display: flex;
@@ -129,14 +216,14 @@
                 
 
                     .pequeno {
-                        width: 320px;
-                        height: 50px;
-                        border-radius: 20px;
+                        width: 22vw;
+                        height: 3.5vw;
+                        border-radius: 1.5vw;
                         border: 2px solid #C7C4C4;
                         outline: none;
                         padding: 2px 10px;
                         font-family: 'Montserrat', sans-serif;
-                        font-size: 16px;
+                        font-size: 1.3vw;
                         color: #313131;
                         font-weight: 500;
                         box-shadow: 0px 5px 3px #e6e6e6;
@@ -145,14 +232,14 @@
             }
 
             textarea{
-                width: 680px;
-                height: 200px;
-                border-radius: 20px;
+                width: 48vw;
+                height: 16vw;
+                border-radius: 1.5vw;
                 border: 2px solid #C7C4C4;
                 outline: none;
                 padding: 10px 10px;
                 font-family: 'Montserrat', sans-serif;
-                font-size: 16px;
+                font-size: 1.3vw;
                 color: #313131;
                 font-weight: 500;
                 box-shadow: 0px 5px 3px #e6e6e6;
@@ -160,19 +247,19 @@
 
             .botao {
                 margin-top: 2rem;
-                width: 700px;
+                width: 50vw;
                 display: flex;
                 justify-content: end;
                 align-items: end;
 
                 button {
-                    padding: 15px 80px;
+                    padding: 1vw 5vw;
                     background-color: #B54FCF;
-                    border-radius: 20px;
+                    border-radius: 1.3vw;
                     border: 5px solid #B54FCF;
                     color: #fff;
                     font-family: 'Ubuntu', sans-serif;
-                    font-size: 20px;
+                    font-size: 1.5vw;
                     font-weight: 600;
                     transition: 0.3s ease-in-out;
                 }
@@ -183,6 +270,102 @@
                     background-color: #a642be;
                 }
             }
+        }
+
+
+        @media (max-width: 768px) {
+
+            p {
+                font-size: 2.5vw;
+            }
+
+            .vagas {
+                label {
+                    font-size: 2.3vw;
+                }
+
+                .div-grande {
+
+                    .grande {
+                        width: 70vw;
+                        height: 5vw;
+                    }
+
+
+                    textarea {
+                        width: 70vw;
+                        height: 20vw;
+                    }
+                }
+
+                .duo {
+
+                    div {
+                        .pequeno {
+                            width: 33vw;
+                            height: 5vw;
+                        }
+                    }
+                }
+
+                .botao {
+                    width: 75vw;
+                    
+                    button {
+                        padding: 2vw 8vw;
+                        font-size: 3vw;
+                    }
+                }
+            }
+
+            
+        }
+
+        @media (max-width: 468px) {
+            p {
+                font-size: 3vw;
+            }
+
+            .vagas {
+
+                label {
+                    font-size: 3.5vw;
+                }
+
+                .div-grande {
+
+                    .grande {
+                        width: 80vw;
+                        height: 8vw;
+                    }
+
+
+                    textarea {
+                        width: 80vw;
+                        height: 30vw;
+                    }
+                }
+
+                .duo {
+
+                    div {
+                        .pequeno {
+                            width: 37vw;
+                            height: 8vw;
+                        }
+                    }
+                }
+
+                .botao {
+                    width: 85vw;
+                    
+                    button {
+                        padding: 4vw 20vw;
+                        font-size: 4vw;
+                    }
+                }
+            }
+            
         }
     }
 }
