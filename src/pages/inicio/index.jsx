@@ -92,10 +92,22 @@ export default function Inicio() {
             </div>
 
             <div className="pilares">
-                <Cardspilar titulo='FOCO NO CLIENTE' topico='Foco no cliente' />
-                <Cardspilar titulo='RESPONSABILIDADE' topico='responsabilidade' />
-                <Cardspilar titulo='ESPÍRITO DE EQUIPE' topico='espírito de equipe' />
-                <Cardspilar titulo='EMPREENDEDORISMO' topico='empreendedorismo' />
+                <Cardspilar titulo='FOCO NO CLIENTE' topico={`Compromisso
+Agilidade
+Assertividade
+Parceria`} />
+                <Cardspilar titulo='RESPONSABILIDADE' topico={`Integridade
+Justiça
+Ética
+Honestidade`} />
+                <Cardspilar titulo='ESPÍRITO DE EQUIPE' topico={`Respeito
+Cooperação
+Reconhecimento
+Confiança`} />
+                <Cardspilar titulo='EMPREENDEDORISMO' topico={`Paixão
+iniciatividade
+Criatividade
+Resultados`} />
             </div>
 
             <div className="ultima">

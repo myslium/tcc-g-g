@@ -6,9 +6,7 @@ export default function Cardspilar(props) {
         <div className="cardspilar">
             <div className="cardpilar"> 
             <h1>{props.titulo}</h1>
-            <ul>
-               <li>{props.topico}</li> 
-            </ul>
+            <pre>{props.topico}</pre>
            </div>
 
             

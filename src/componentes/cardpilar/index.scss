@@ -15,13 +15,37 @@
         font-weight: 700;
         font-size: 1.7vw;
         color: #fff;
-        width: 20vw;
         padding-top: 2vw;
     }
-    ul{
+    pre{
+        text-align: start;
+        margin-left: 2vw;
         align-items: center;
         font-size: 1.3vw;
         color: #fff;
     }
+}
+
+
+@media (max-width: 768px) {
+
+   
+       
+    
+    
+    .cardpilar {
+        width: 40vw;
+        height: 30vw;
+        h1 {
+            font-size: 3.5vw;
+        }
+        pre {
+            font-size: 2.5vw;
+            margin-left: 4vw;
+        }
+    }
+       
+        
+
 }
 }
