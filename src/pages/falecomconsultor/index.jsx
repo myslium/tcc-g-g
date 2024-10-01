@@ -40,7 +40,6 @@ export default function Falecomconsultor() {
         const url = 'http://localhost:5010/vagas';
         let resp = await axios.post(url, paramCorpo);
 
-        alert('Vaga adicionada na lista vagas. Id: ' + resp.data.novoId);
 
 
 
