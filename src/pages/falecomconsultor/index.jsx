@@ -1,9 +1,53 @@
+import { useState } from 'react'
 import Cabecalho from '../../componentes/cabeçalho'
 import Footer from '../../componentes/footer'
 import Tituloelogo from '../../componentes/tituloelogo'
 import './index.scss'
 
+import axios from 'axios'
+
+
 export default function Falecomconsultor() {
+
+    const [empresa, setEmpresa] = useState('');
+    const [contato, setContato] = useState('');
+    const [cnpj, setCnpj] = useState(0);
+    const [cargo, setCargo] = useState('');
+    const [tipoContrato, setTipoContrato] = useState('');
+    const [local, setLocal] = useState('');
+    const [modelo, setModelo] = useState('');
+    const [salario, setSalario] = useState('');
+    const [beneficios, setBeneficios] = useState('');
+    const [requisitos, setRequisitos] = useState('');
+    const [descricao, setDescricao] = useState('');
+
+    async function novaVaga() {
+
+        const paramCorpo = {
+            "nome_empresa": empresa,
+            "contato_empresa": contato,
+            "cnpj": cnpj,
+            "cargo": cargo,
+            "tipo_contrato": tipoContrato,
+            "localizacao": local,
+            "modelo_trabalho": modelo,
+            "salario": Number(salario),
+            "beneficios": beneficios,
+            "requisicoes": requisitos,
+            "descricao": descricao
+        };
+
+        const url = 'http://localhost:5010/vagas';
+        let resp = await axios.post(url, paramCorpo);
+
+        alert('Vaga adicionada na lista vagas. Id: ' + resp.data.novoId);
+
+
+
+    }
+
+
+
     return (
         <div className='pagina-falecomconsultor'>
            <Cabecalho/>
@@ -61,26 +105,26 @@ export default function Falecomconsultor() {
                     <div className='div-grande'>
                         
                     <label>Empresa:</label>
-                    <input className='grande' type="text" />
+                    <input className='grande' type="text" value={empresa} onChange={e => setEmpresa(e.target.value)}/>
                     </div>
 
 
                     <div className='div-grande'>
                     <label>E-mail comercial:</label>
-                    <input className='grande' type="text" />
+                    <input className='grande' type="text" value={contato} onChange={e => setContato(e.target.value)}/>
                     </div>
                    
                     <div className='duo'>
 
                         <div>
                             <label>Vaga:</label>
-                            <input className = 'pequeno'type="text" />
+                            <input className = 'pequeno'type="text" value={cargo} onChange={e => setCargo(e.target.value)}/>
 
                         </div>
                     
                          <div>
                             <label>CNPJ:</label>
-                            <input className = 'pequeno'type="text" />
+                            <input className = 'pequeno'type="text" value={cnpj} onChange={e => setCnpj(e.target.value)}/>
                         </div>
                     
                     </div>
@@ -90,13 +134,13 @@ export default function Falecomconsultor() {
 
                         <div>
                             <label>Localização:</label>
-                            <input className = 'pequeno'type="text" />
+                            <input className = 'pequeno'type="text" value={local} onChange={e => setLocal(e.target.value)}/>
 
                         </div>
                     
                     <div>
                             <label>Tipo de contrato:</label>
-                            <input className = 'pequeno'type="text" />
+                            <input className = 'pequeno'type="text" value={tipoContrato} onChange={e => setTipoContrato(e.target.value)}/>
                     </div>
                     
                     </div>
@@ -105,13 +149,13 @@ export default function Falecomconsultor() {
 
                         <div>
                             <label>Salário:</label>
-                            <input className = 'pequeno'type="text" />
+                            <input className = 'pequeno'type="text" value={salario} onChange={e => setSalario(e.target.value)} />
 
                         </div>
                     
                     <div>
                             <label>Modelo de atuação:</label>
-                            <input className = 'pequeno'type="text" />
+                            <input className = 'pequeno'type="text" value={modelo} onChange={e => setModelo(e.target.value)}/>
                     </div>
                     
                     </div>
@@ -119,7 +163,7 @@ export default function Falecomconsultor() {
                     <div className='div-grande'>
 
                     <label>Requisitos:</label>
-                    <input className='grande' type="text" />
+                    <input className='grande' type="text" value={requisitos} onChange={e => setRequisitos(e.target.value)}/>
 
 
                     </div>
@@ -128,13 +172,13 @@ export default function Falecomconsultor() {
 
                         
                     <label>Beneficios:</label>
-                    <input className='grande' type="text" />
+                    <input className='grande' type="text" value={beneficios} onChange={e => setBeneficios(e.target.value)}/>
                     </div>
 
                     <div className='div-grande'>
                     <label>Por que quer trabalhar com a G&G?</label>
-                    <textarea>
-
+                    <textarea value={descricao} onChange={e => setDescricao(e.target.value)}>
+                        
                     </textarea>
                         
                     </div>
@@ -143,7 +187,7 @@ export default function Falecomconsultor() {
                    
 
                     <div className='botao'>
-                        <button>Enviar</button>
+                        <button onClick={novaVaga}>Enviar</button>
                     </div>
 
                 
