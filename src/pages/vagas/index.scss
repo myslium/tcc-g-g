@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
+  
 
     .topo{
  
@@ -47,35 +48,29 @@
     
     .botoes{
         display: flex;
-        padding: 6vw;
+        padding: 6vw 8vw;
         align-items: center;
         
         a{
             text-decoration: none;
-            align-items: center;
-            text-align: center;
             color: rgb(94, 94, 94);
             border-radius: 10px;
             background-color: #E5DBEB;
-            padding: 20px 30px;
+            padding: 20px 20px;
         
         }
 
         .bb{
-            align-items: end;
+           
             margin: 0vw 0vw 0vw 7vw;
             color: rgb(94, 94, 94);
             border-radius: 10px;
             background-color: #E5DBEB;
-            padding: 20px 30px;
+            padding: 20px 40px;
         
         }
 
-        .botaoimg{
-            padding: 0vw 1vw 0vw 1vw;
-            height: 20px;
-            width: auto;
-        }
+       
     }
 
 

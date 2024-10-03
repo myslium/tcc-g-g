@@ -1,5 +1,6 @@
-
+import React from 'react'
 import './index.scss'
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import Cabecalho from '../../componentes/cabeçalho'
 import Footer from '../../componentes/footer'
@@ -7,28 +8,28 @@ import Footer from '../../componentes/footer'
 export default function Vagas() {
     return (
         <div className='pagina-vagas'>
-           
-            <Cabecalho/>
+
+            <Cabecalho />
             <div className="topo">
                 <div className="conttopo">
-                <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />
-                <h1>VAGAS</h1>
+                    <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />
+                    <h1>VAGAS</h1>
                 </div>
             </div>
 
             <div className="botoes">
                 <div className='bb'>
-                    <img className='botaoimg' src="/assets/images/vagas/seta.png" alt="" />
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
                     <a className='botaob' href="">Filtros</a>
                 </div>
 
                 <div className='bb'>
-                    <img className='botaoimg' src="/assets/images/vagas/pasta.png" alt="" />
+                    <i className="fa-solid fa-briefcase"></i>
                     <a className='botaob' href="">Cargos</a>
                 </div>
 
                 <div className='bb'>
-                    <img className='botaoimg' src="/assets/images/vagas/localiza.png" alt="" />
+                    <i className="fa-solid fa-location-dot"></i>
                     <a className='botaob' href="">Cidade, Estado ou Região</a>
                 </div>
 
@@ -46,7 +47,7 @@ export default function Vagas() {
                         <img className='vagaimg' src="/assets/images/vagas/TI.png" alt="" />
                         <a className='botaovaga' href="">Candidatar-se</a>
                     </div>
-                    
+
                 </div>
 
 
@@ -60,7 +61,7 @@ export default function Vagas() {
                         <img className='vagaimg' src="/assets/images/vagas/enfermeira (1).png" alt="" />
                         <a className='botaovaga' href="">Candidatar-se</a>
                     </div>
-                    
+
                 </div>
 
 
@@ -74,7 +75,7 @@ export default function Vagas() {
                         <img className='vagaimg' src="/assets/images/vagas/auxiliar.png" alt="" />
                         <a className='botaovaga' href="">Candidatar-se</a>
                     </div>
-                    
+
                 </div>
 
 
@@ -88,7 +89,7 @@ export default function Vagas() {
                         <img className='vagaimg' src="/assets/images/vagas/laboratorio.png" alt="" />
                         <a className='botaovaga' href="">Candidatar-se</a>
                     </div>
-                    
+
                 </div>
 
 
@@ -100,7 +101,7 @@ export default function Vagas() {
                         <a href="">Mais sobre</a>
                     </div>
                     <div className='image'>
-                        <img className='vagaimg' src='assets/images/vagas/estoque (1).png'/>
+                        <img className='vagaimg' src='assets/images/vagas/estoque (1).png' />
                         <a className='botaovaga' href=""> Candidatar-se</a>
 
                     </div>
@@ -110,7 +111,7 @@ export default function Vagas() {
 
             </div>
 
-            <Footer/>
+            <Footer />
 
         </div>
     )
