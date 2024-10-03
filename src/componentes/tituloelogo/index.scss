@@ -40,17 +40,23 @@ h1 {
         height: 5vw;
         width: 7.5vw;
     }
+    .imh1{
+        height: 2vw;
+    }
 }
 
 @media (max-width: 468px) {
 
     h1 {
-        font-size: 4vw;
+        font-size: 3vw;
     }
     
     .geg {
         height: 7vw;
         width: 10vw;
+    }
+    .imh1{
+        height: 2vw;
     }
 }
 

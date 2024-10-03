@@ -54,7 +54,7 @@ export default function Cabecalho() {
                         <li><Link to='/'>Início</Link></li>
                         <li><Link to='/sobre'>Sobre G&G</Link></li>
                         <li><Link to='/vagas'>Vagas</Link></li>
-                        <li><Link to='/acompanheoprocesso'>Acompanhe o processo</Link></li>
+                        <li><Link to='/falecomconsultor'>Acompanhe o processo</Link></li>
                         <li>
                             <Link to='/login'>
                                 
