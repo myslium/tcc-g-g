@@ -265,9 +265,13 @@
                 }
 
                 button:hover{
-                    border: 5px solid #a642be;
-                    color: #ffffff;
-                    background-color: #a642be;
+                    
+                        background-color: #240A39;
+                        color: white;
+                        transform: translateY(-2px);
+                        transition: all 0.3s ease;
+                        border: 5px solid #240A39;
+                      
                 }
             }
         }
