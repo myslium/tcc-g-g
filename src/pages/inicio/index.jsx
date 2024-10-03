@@ -12,14 +12,14 @@ export default function Inicio() {
             <Cabecalho />
 
             <div className="faixa" style={{ backgroundImage: `url('/assets/images/inicio/preview.svg')` }} >
-            
 
-             <div className='texto-faixa'>
-             <h2>SEJA <br />G&G</h2>   
-             <h2>VOCÊ <br />TAMBÉM!</h2> 
 
-             </div>
-            
+                <div className='texto-faixa'>
+                    <h2>SEJA <br />G&G</h2>
+                    <h2>VOCÊ <br />TAMBÉM!</h2>
+
+                </div>
+
             </div>
 
             <div className="faixa2">
@@ -27,18 +27,18 @@ export default function Inicio() {
             </div>
 
             <div className="recrutando">
-                
+
                 <div className="conteudo">
                     <img src="/assets/images/inicio/segunda.png" alt="" />
                     <div className="text">
                         <h1>RECRUTANDO PESSOAS E DESTACANDO TALENTOS!</h1>
                         <p>GENTE&GESTÃO tem foco onde pode causar impacto e como pode acelerar planos, pois acredita que apoiar empresas gera oportunidade e emprego</p>
-                        <Link  to='/sobre'>
-                        <div className='link'>
-                           <p> saiba mais</p>
-                           <img src="/assets/images/inicio/arrow.png" alt="seta" />
-                        </div>
-                          </Link>  
+                        <Link to='/sobre'>
+                            <div className='link'>
+                                <p> saiba mais</p>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -47,12 +47,12 @@ export default function Inicio() {
                 <Tituloelogo titulo='VAGAS PARA VOCÊ' />
             </div>
 
-        <div className="cartaovaga">
+            <div className="cartaovaga">
                 <div className="cartao">
                     <Cards
                         url='/assets/images/inicio/tecnologia.png'
                         titulo='TECNOLOGIA'
-                        topicos={['Ciência de dados', 'Engenharia', 'Arquitetura', 'Design de interiores']} 
+                        topicos={['Ciência de dados', 'Engenharia', 'Arquitetura', 'Design de interiores']}
                     />
                     <Cards
                         url='/assets/images/inicio/industrias.png'
@@ -63,7 +63,7 @@ export default function Inicio() {
                             "Operador de Máquina",
                             "Gerente de Produção",
                             "Diretor Industrial"
-                        ]} 
+                        ]}
                     />
                     <Cards
                         url='/assets/images/inicio/visuais.png'
@@ -73,18 +73,18 @@ export default function Inicio() {
                             "Desenhista",
                             "Crítico de Arte",
                             "Gestor Cultural"
-                        ]} 
+                        ]}
                     />
                 </div>
-                        <div className="mostrar">
-                            <Link>
-                            
-                            <h3>MAIS OPÇÕES </h3>
-                            
-                            <img src="/assets/images/inicio/arrow.png" alt="" />
-                            </Link>
-                        </div>
-        </div>
+                <div className="mostrar">
+                    <Link>
+
+                        <h3>MAIS OPÇÕES </h3>
+
+                        <img src="/assets/images/inicio/arrow.png" alt="" />
+                    </Link>
+                </div>
+            </div>
 
 
             <div className="faixa2">

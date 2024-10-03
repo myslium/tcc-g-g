@@ -15,8 +15,8 @@ export default function Footer() {
 
                 <div className="contact">
                     <div className="text">
-                        <h3>Entre em contato</h3>
-                        <p>gente.gestao@gmail.com</p>
+                        <h3 className='h3'>Entre em contato</h3>
+                        <p className='p'>gente.gestao@gmail.com</p>
                     </div>
                     <div className="footer-bottom">
                         <p>Copyright © 2024 G&G - Todos os direitos reservados à Femme</p>

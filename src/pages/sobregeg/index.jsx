@@ -25,7 +25,7 @@ export default function SobreGeG() {
 
             <hr />
 
-            <div className="text">
+            <div className="texto3">
                 <p>Profissional com mais de 10 anos de experiência nas áreas de Recursos Humanos e Administrativa, com carreira desenvolvida em empresas de pequeno e grande porte.</p>
             </div>
             <div className="textlupa">
@@ -58,12 +58,13 @@ export default function SobreGeG() {
             </div>
 
                 <img className='gislaine' src="/assets/images/sobre/autonomo.png" alt="" />
-
+               
             </div>
+         
             </div>
 
-            <Footer/>
-            
+   <Footer/>
+      
         </div>
     )
 }
