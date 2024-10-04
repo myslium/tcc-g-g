@@ -18,19 +18,20 @@ export default function Vagas() {
             </div>
 
             <div className="botoes">
+
                 <div className='bb'>
-                <i class="fa-solid fa-arrow-down-wide-short"></i>
-                    <a className='botaob' href="">Filtros</a>
+                
+                    <a className='botaob' href=""><i  className="fa-solid fa-arrow-down-wide-short"></i>Filtros</a>
                 </div>
 
                 <div className='bb'>
-                    <i className="fa-solid fa-briefcase"></i>
-                    <a className='botaob' href="">Cargos</a>
+                   
+                    <a className='botaob' href=""> <i className="fa-solid fa-briefcase"></i>Cargos</a>
                 </div>
 
                 <div className='bb'>
-                    <i className="fa-solid fa-location-dot"></i>
-                    <a className='botaob' href="">Cidade, Estado ou Região</a>
+                   
+                    <a className='botaob' href=""> <i className="fa-solid fa-location-dot"></i>Cidade, Estado ou Região</a>
                 </div>
 
             </div>
@@ -39,7 +40,7 @@ export default function Vagas() {
 
                 <div className="cartavaga">
                     <div className="textovaga">
-                        <h1>Analista de Suporte em TI</h1>
+                        <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
                         <p>Sobre a vaga: - Estamos procurando por uma pessoa alinhada com nossos valores para atuar como Técnico de Informática, em um contexto dinâmico de uma empresa em ascensão no mercado…</p>
                         <a href="">Mais sobre</a>
                     </div>
@@ -53,7 +54,7 @@ export default function Vagas() {
 
                 <div className="cartavaga">
                     <div className="textovaga">
-                        <h1>Enfermeiro(a)</h1>
+                        <h1 className='profissaovaga'>Enfermeiro(a)</h1>
                         <p>O profissional de enfermagem atua na promoção, prevenção, recuperação e reabilitação da saúde, com autonomia e em consonância com os preceitos éticos e legais.</p>
                         <a href="">Mais sobre</a>
                     </div>
@@ -67,7 +68,7 @@ export default function Vagas() {
 
                 <div className="cartavaga">
                     <div className="textovaga">
-                        <h1>Auxiliar de escritório</h1>
+                        <h1 className='profissaovaga'>Auxiliar de escritório</h1>
                         <p>O Auxiliar de Escritório é o responsável por produzir e organizar documentos, preparar relatórios e planilhas, controlar o estoque, materiais e afins. Além disso, ele pode realizar rotinas bancárias, atendimento pessoal e telefônico.</p>
                         <a href="">Mais sobre</a>
                     </div>
@@ -81,7 +82,7 @@ export default function Vagas() {
 
                 <div className="cartavaga">
                     <div className="textovaga">
-                        <h1>Analista de Laboratório</h1>
+                        <h1 className='profissaovaga'>Analista de Laboratório</h1>
                         <p>O papel principal de um Analista de Laboratório envolve a realização de testes e análises em amostras biológicas, químicas ou físicas. Contudo, são responsáveis por garantir a precisão e a confiabilidade dos resultados, o que é crucial para a tomada de decisões baseada em dados em muitas indústrias.</p>
                         <a href="">Mais sobre</a>
                     </div>
@@ -96,7 +97,7 @@ export default function Vagas() {
 
                 <div className="cartavaga">
                     <div className="textovaga">
-                        <h1>Analista de Estoque</h1>
+                        <h1 className='profissaovaga'>Analista de Estoque</h1>
                         <p>Um Analista de Estoque controla o estoque de matérias-primas e materiais em uma empresa, verificando as quantidades necessárias, recebendo e registrando suas entradas e saídas, para atender ao abastecimento das áreas de produção.</p>
                         <a href="">Mais sobre</a>
                     </div>
