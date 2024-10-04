@@ -172,23 +172,20 @@
     
     }
 
-        .pilares {
-            display: flex;
-            margin: 3vw 0vw 3vw 0vw;
-
-            @media (max-width: 768px) {
-               
-                display: flex;
-                flex-direction: column;
-                gap: 2vw;
-                justify-content: center;
-                align-items: center;
-                
-            }
-
-           
-        }  
-
+    .pilares {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        margin: 3vw 0vw;
+    
+        @media (max-width: 768px) {
+            flex-wrap: wrap; 
+            flex-direction: row; 
+            gap: 2vw;
+            justify-content: center;
+            align-items: center;
+        }
+    }
         .ultima {
                 background-color: #E5DBEB;
                 width: 100%;
