@@ -17,21 +17,21 @@ export default function Vagas() {
                 </div>
             </div>
 
-            <div className="botoes">
+            <div className="botooes">
 
                 <div className='bb'>
                 
-                    <a className='botaob' href=""><i  className="fa-solid fa-arrow-down-wide-short"></i>Filtros</a>
+                    <a className='botaobb' href=""><i  className="fa-solid fa-arrow-down-wide-short"></i>Filtros</a>
                 </div>
 
                 <div className='bb'>
                    
-                    <a className='botaob' href=""> <i className="fa-solid fa-briefcase"></i>Cargos</a>
+                    <a className='botaobb' href=""> <i className="fa-solid fa-briefcase"></i>Cargos</a>
                 </div>
 
                 <div className='bb'>
                    
-                    <a className='botaob' href=""> <i className="fa-solid fa-location-dot"></i>Cidade, Estado ou Região</a>
+                    <a className='botaobb' href=""> <i className="fa-solid fa-location-dot"></i>Cidade, Estado ou Região</a>
                 </div>
 
             </div>
