@@ -143,12 +143,26 @@
                 .botaovaga{
                     background-color: #B54FCF;
                     border-radius: 25px;
-                    padding: 1.5vw 10vw;
+                    padding: 1.3vw 6vw;
                     color: #ffffff;
                     text-decoration: none;
-                    margin: 0vw 0vw 0vw 4vw;
-                    font-size: 1vw;
+                    margin: 0vw 0vw 0vw 6vw;
+                    font-size: 20px;
                    
+                }
+
+                @media(max-width:768px) {
+                    .botaovaga{
+                        background-color: #B54FCF;
+                        border-radius: 25px;
+                        padding: 1.3vw 6vw;
+                        color: #ffffff;
+                        text-decoration: none;
+                        margin: 0vw 0vw 0vw 6vw;
+                        font-size: 10px;
+                       
+                    }
+                    
                 }
                 
             
