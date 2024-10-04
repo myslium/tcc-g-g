@@ -110,8 +110,8 @@ Criatividade
 Resultados`} />
             </div>
 
-            <div className="ultima">
-                <div className='consultor'>
+            <div className="ultima"  style={{ backgroundImage: `url('/assets/images/inicio/grafico.png')` }}>
+                <div className='consultor '>
                     <div className='frase'>
                         <img src="/assets/images/cabecalho/logo.png" alt="Logo" />
                         <h1>Quer aumentar a produtividade da sua empresa e economizar?</h1>

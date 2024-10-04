@@ -34,12 +34,12 @@
      .recrutando {
         background-color: #ffffff;
         margin: 0;
-        padding-bottom: 100px;
+        padding-bottom: 5%;
         height: 100%;
         position: relative;
 
         .conteudo {
-            padding: 5vw 7vw 10vw 7vw;
+            padding: 5% 7% 19% 7%;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -194,6 +194,9 @@
                 width: 100%;
                 height: 45vw;
                 position: relative;
+                background-size: 90%;
+                background-repeat: no-repeat;
+                
 
                 .consultor {
                     width: 45vw;
