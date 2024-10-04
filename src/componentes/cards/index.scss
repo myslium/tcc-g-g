@@ -44,8 +44,7 @@
             width: 70vw;
             height: auto;
             display: flex;
-            flex-direction: row; /* Apenas ajustar sem o !important */
-
+            flex-direction: row; 
             .texto {
                 align-self: center;
 
@@ -59,7 +58,7 @@
             }
 
             img {
-                width: 50%; /* Ajuste da largura da imagem dentro da linha */
+                width: 50%; 
                 height: auto;
             }
         }

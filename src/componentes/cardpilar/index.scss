@@ -29,18 +29,20 @@
 
 @media (max-width: 768px) {
 
-   
-       
+flex-wrap: wrap;
+    display: flex;
+    
     
     
     .cardpilar {
-        width: 40vw;
-        height: 30vw;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 20px;
         h1 {
-            font-size: 3.5vw;
+            font-size: 3vw;
         }
         pre {
-            font-size: 2.5vw;
+            font-size: 2vw;
             margin-left: 4vw;
         }
     }
