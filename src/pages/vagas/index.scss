@@ -43,47 +43,36 @@
         
         
     }
-    
 
     
-    .botoes{
+    .botooes{
         display: flex;
-        padding: 6vw 8vw;
+        padding: 5vw 9vw;
         align-items: center;
-        margin-left: 15vw;
-        
-       
+        margin-left: 12vw;
+        gap: 100px;
+          
 
         .bb{
-           
-           
             color: rgb(94, 94, 94);
             border-radius: 10px;
             background-color: #E5DBEB;
-            padding: 1vw 5vw;
+            padding: 1vw 2vw 1vw 2vw;
             margin: 1vw;
             align-items: center;
-
-            
-          
            
 
-            .botaob{
+            .botaobb{
                 text-decoration: none;
                 color: rgb(94, 94, 94);
                 border-radius: 10px;
                 align-items: center;
-                
-         
-    
-             
+                padding: 1vw 0vw 2vw 0vw !important;
             
             }
             
-        
         }
 
-       
     }
 
 
@@ -109,6 +98,7 @@
                 .profissaovaga{
                     font-size: 2vw;
                 }
+
                 p{
                     font-size: 1vw;
                 }
@@ -117,8 +107,26 @@
                     text-decoration: none;
                     font-size: 1vw;
                 }
-                
+
+                @media(max-width: 667px) {
+
+                    .profissaovaga{
+                        font-size: 12px;
+                    }
+
+                    p{
+                        font-size: 8.5px;
+                    }
+                    a{
+                        color: #B54FCF;
+                        text-decoration: none;
+                        font-size: 9px;
+                    }
+                   
+                }
+
             }
+
 
             .image{
                 padding-top: 2vw;
@@ -148,47 +156,53 @@
           
 
         }
+
+        @media(max-width: 667px) {
+
+            .cartavaga{
+                display: flex;
+                flex-direction: row;
+                background-color: #E5DBEB;
+                width: 80vw;
+                height: 40vw;
+                border-radius: 20px;
+                margin: 0vw 0vw 3vw 8vw;
+            }
+
+        }
     }
-
     
-    @media (max-width: 768px) {
-       
+    @media (max-width: 667px) and (max-width: 768px) {
 
-        
-    }
+        .botooes{
+            display: flex;
+            padding: 5vw 6vw;
+            align-items: center;
+            margin: 0vw 6vw;
+            gap: 10px;
+              
     
-    
-       
-    @media (max-width: 468px) {
-
-        .botoes{
-
-
             .bb{
                 color: rgb(94, 94, 94);
-                border-radius: 20px;
+                border-radius: 10px;
                 background-color: #E5DBEB;
-                padding: 1.7vw 4vw;
+                padding: 1vw 2vw 1vw 2vw;
                 margin: 1vw;
-
+                align-items: center;
                
+    
+                .botaobb{
+                    text-decoration: none;
+                    color: rgb(94, 94, 94);
+                    border-radius: 10px;
+                    align-items: center;
+                    padding: 1vw 0vw 2vw 0vw !important;
                 
-            .botaob{
-                text-decoration: none;
-                color: rgb(94, 94, 94);
-                border-radius: 20px;
-            
-            }
-            
-        
-
+                }
+                
             }
         }
-    
-       
-    
-           
-        
+   
     }
 
 }
