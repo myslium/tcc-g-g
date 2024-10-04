@@ -13,7 +13,6 @@
         img {
             width: 100%;
             height: auto;
-
         }
 
         .texto {
@@ -34,48 +33,35 @@
                 width: 100%;
                 padding: 1vw;
                 margin: 0;
-
             }
         }
     }
 
     @media (max-width: 768px) {
+        align-items: center;
+
         .card {
-            width: 40vw;
-
+            width: 70vw;
             height: auto;
-        
+            display: flex;
+            flex-direction: row; /* Apenas ajustar sem o !important */
 
-        .texto{
-            align-self: center;
-          
-        }
+            .texto {
+                align-self: center;
 
-        img {
-            width: 100%;
-            height: auto;
-        }}
-    }
+                h1 {
+                    font-size: 2.8vw;
+                }
 
-    @media (max-width: 480px) {
-        .card {
-            width: 40vw;
-            height: auto;
-
-        }
-
-        .texto {
-               align-self: center;
-            h1 {
-                font-size: 4vw;
+                ul {
+                    font-size: 1.8vw;
+                }
             }
 
-            ul {
-                font-size: 1em;
+            img {
+                width: 50%; /* Ajuste da largura da imagem dentro da linha */
+                height: auto;
             }
-
-        
         }
-
     }
 }

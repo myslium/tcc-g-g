@@ -104,13 +104,14 @@ Honestidade`} />
 Cooperação
 Reconhecimento
 Confiança`} />
-                <Cardspilar titulo='EMPREENDEDORISMO' topico={`Paixão
-iniciatividade
-Criatividade
-Resultados`} />
+                <Cardspilar titulo='EMPREENDEDORISMO' topico=
+                    {`Paixão
+                iniciatividade
+                Criatividade
+                Resultados`} />
             </div>
 
-            <div className="ultima"  style={{ backgroundImage: `url('/assets/images/inicio/grafico.png')` }}>
+            <div className="ultima" style={{ backgroundImage: `url('/assets/images/inicio/grafico.png')` }}>
                 <div className='consultor '>
                     <div className='frase'>
                         <img src="/assets/images/cabecalho/logo.png" alt="Logo" />
