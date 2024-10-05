@@ -1,0 +1,146 @@
+.pagina-interessados{
+
+    
+    .topo{
+ 
+        display: flex;
+        color: #000000;
+        padding: 2vw 0vw 0vw 0vw;
+        margin: 0vw 1vw 0vw 5vw;
+        padding-left: 16vw;
+        z-index: 1000; 
+        box-sizing: border-box; 
+
+
+    .conttopo{
+    
+        display: flex;
+        background-color: #E5DBEB;
+        width: 70%;  
+        align-items: center;
+        text-align: center;
+        gap: 5px; 
+        justify-content: center;
+        padding: 15px 16px;
+
+
+    
+    h1 {
+        font-size: 2vw;
+        font-family: 'Montserrat';
+        font-weight: 800; 
+        margin: 0;
+    }
+    
+    .geg {
+        height: 60px;
+    }}
+    
+    
+}
+
+.cards-interessados{
+    display: flex;
+    flex-direction: row;
+
+
+    .contcard{
+  
+    background-color: #E5DBEB;
+    border-radius: 10px;
+    width: 18vw;
+    height: 15vw;
+    padding: 2vw;
+   
+    margin: 4vw;
+
+    .textinho
+    {
+
+  .titulointeressado{
+        font-size: 1.5vw;
+        text-align: justify;
+  
+
+     
+    }
+    .textointeressado{
+        font-size: 0.8vw;
+        text-align: justify;
+     
+    }
+
+
+    }
+
+  
+    .vejamais{
+       text-decoration: none;
+       color: #B54FCF;
+       font-weight: 600;
+       padding-left: 13vw;
+       font-size: 0.8vw;
+     
+    }
+    .marcalida{
+        background-color: #B54FCF;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 4vw;
+        margin-top: 4vw;
+        margin-left: 0;
+        padding: 0.5vw;
+        font-size: 0.8vw;
+       
+
+    }
+          
+}
+}
+
+.visaogeral{
+
+    margin-top: 3vw;
+    background-color:#E5DBEB;
+    display: flex;
+    flex-direction: row;
+    padding: 2vw;
+    gap: 3vw;
+    width: 70vw;
+    margin-left: 12.5vw;
+    border-radius: 10px;
+    
+
+
+
+    .card{
+        background-color: #FDF7FE;
+        text-align: center;
+        font-family: 'Montserrat';
+        width: 10vw;
+        height: 7vw;
+        padding: 3vw;
+        border-radius: 30px;
+        
+
+        h1{
+            color: #4B1972;
+            font-weight: 900; 
+            font-size: 1.5vw;
+
+        }
+        h2{
+            color:#240A39;
+            font-weight: 900;
+            font-size: 1vw; 
+        }
+        h3{
+            color: #841B86;
+            font-weight: 900; 
+            font-size: 1vw;
+        }
+    }
+}
+
+    
+}

@@ -9,7 +9,16 @@ import Footer from '../../componentes/footer'
 export default function Inicio() {
     return (
         <div className='pagina-inicio'>
-            <Cabecalho />
+            <Cabecalho
+            titulo1 =  'Início'
+            titulo2 = 'Sobre G&G'
+            link2 = '/sobre'
+            titulo3 = 'indo na adm rapidin'
+            link3 = '/admin/notificacoes'
+            titulo4 = 'Acompanhe o processo'
+            link4 = '/falecomconsultor'
+
+            />
 
             <div className="faixa" style={{ backgroundImage: `url('/assets/images/inicio/preview.svg')` }} >
 
@@ -77,7 +86,7 @@ export default function Inicio() {
                     />
                 </div>
                 <div className="mostrar">
-                    <Link>
+                    <Link to='/vagas'>
 
                         <h3>MAIS OPÇÕES </h3>
 

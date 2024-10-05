@@ -4,7 +4,9 @@ import SobreGeG from './pages/sobregeg';
 import Vagas from './pages/vagas';
 import Falecomconsultor from './pages/falecomconsultor';
 import Login from './pages/login';
-
+import Notificacoes from './admin/notificacoes';
+import Gerenciamento from './admin/gerenciamento';
+import Vagasadmin from './admin/gerenciandovagas';
 
 
 export default function Navegacao() {
@@ -16,6 +18,12 @@ export default function Navegacao() {
                 <Route path='/vagas' element={<Vagas/>} />
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
+                <Route path='/admin/gerenciamento' element={<Gerenciamento/>} />
+                <Route path='/admin/notificacoes' element={<Notificacoes/>} />
+                <Route path='/admin/gerenciandovagas' element={<Vagasadmin/>} />
+
+
+
             </Routes>
         </BrowserRouter>
     );

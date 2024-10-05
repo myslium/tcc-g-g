@@ -9,7 +9,16 @@ export default function Vagas() {
     return (
         <div className='pagina-vagas'>
 
-            <Cabecalho />
+            <Cabecalho
+            titulo1 = 'Início'
+            titulo2 = 'Sobre G&G'
+            link2 = '/sobre'
+            titulo3 = 'Vagas'
+            link3 = '/vagas'
+            titulo4 = 'Acompanhe o processo'
+            link4 = '/falecomconsultor'
+
+            />
             <div className="topo">
                 <div className="conttopo">
                     <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />

@@ -49,7 +49,16 @@ export default function Falecomconsultor() {
 
     return (
         <div className='pagina-falecomconsultor'>
-           <Cabecalho/>
+             <Cabecalho
+             titulo1 = 'Início'
+            titulo2 = 'Sobre G&G'
+            link2 = '/sobre'
+            titulo3 = 'Vagas'
+            link3 = '/vagas'
+            titulo4 = 'Acompanhe o processo'
+            link4 = '/falecomconsultor'
+
+            />
 
             <section className='primeira-parte'>
                 <img src="/assets/images/consultor/primeiraimg.png" alt="" />

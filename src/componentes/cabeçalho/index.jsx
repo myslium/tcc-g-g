@@ -2,7 +2,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-export default function Cabecalho() {
+export default function Cabecalho(props) {
     const [menuAberto, setMenuAberto] = useState(false);
     const [titulo, setTitulo] = useState('G&G'); 
     const [larguraTela, setLarguraTela] = useState(window.innerWidth); 
@@ -51,10 +51,10 @@ export default function Cabecalho() {
                 </div>
                 <nav className={menuAberto ? 'aberto' : ''}>
                     <ul>
-                        <li><Link to='/'>Início</Link></li>
-                        <li><Link to='/sobre'>Sobre G&G</Link></li>
-                        <li><Link to='/vagas'>Vagas</Link></li>
-                        <li><Link to='/falecomconsultor'>Acompanhe o processo</Link></li>
+                        <li><Link to='/'>{props.titulo1}</Link></li>
+                        <li><Link to={props.link2}>{props.titulo2}</Link></li>
+                        <li><Link to= {props.link3}>{props.titulo3}</Link></li>
+                        <li><Link to={props.link4}>{props.titulo4}</Link></li>
                         <li>
                             <Link to='/login'>
                                 
