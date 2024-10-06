@@ -1,20 +1,36 @@
 import { useState } from 'react'
 import Cabecalho from '../../componentes/cabeçalho'
 import Tituloelogo from '../../componentes/tituloelogo'
+import { useNavigate } from 'react-router-dom'; 
 import './index.scss'
 
+
+
+
 export default function Notificacoes(){
+    const navigate = useNavigate(); 
+
+function reset() {
+    localStorage.removeItem('token'); 
+    navigate('/')
+}
+
+
+
     return(
         <div className="pagina-interessados">
+           
             <Cabecalho
-            titulo1 =' Sair'
-            titulo2 = 'Vagas'
-            link2 = '/admin/vagasadmin'
-            titulo3 = 'Notificações'
-            link3 = '/admin/notificacoes'
-            titulo4 = 'Gerenciamento Vagas'
-            link4 = '/admin/gerenciamento'
+                titulo1='Sair' 
+                onLogout={reset} 
+                titulo2='Vagas'
+                link2='/admin/vagasadmin'
+                titulo3='Notificações'
+                link3='/admin/notificacoes'
+                titulo4='Gerenciamento Vagas'
+                link4='/admin/gerenciamento'
             />
+
 
         <div className="topo">
                 <div className="conttopo">

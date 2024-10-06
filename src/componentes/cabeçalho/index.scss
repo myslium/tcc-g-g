@@ -1,19 +1,14 @@
-
-
-
-
 .cabeçalho {
     margin: 0;
     display: flex;
-    background-color: rgba(189, 177, 194, 0.863); 
+    background-color: rgba(189, 177, 194, 0.863);
     width: 100%;
     align-items: center;
     color: #f5f4f4;
     justify-content: space-between;
     padding: 10px 0;
     z-index: 1000;
-    box-sizing: border-box; 
-   
+    box-sizing: border-box;
 
     .container {
         display: flex;
@@ -25,7 +20,7 @@
     .imh1 {
         display: flex;
         align-items: center;
-        margin: 0 auto;  
+        margin: 0 auto;
 
         .h1 {
             font-size: 2.25vw;
@@ -60,11 +55,11 @@
         }
 
         &.active .bar:nth-child(1) {
-            transform: translateY(9px) rotate(45deg); 
+            transform: translateY(9px) rotate(45deg);
         }
 
         &.active .bar:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg); 
+            transform: translateY(-9px) rotate(-45deg);
         }
     }
 
@@ -93,44 +88,60 @@
                         color: #ffffff;
                     }
                 }
+
+            }
+            
+            .oi { 
+                color: #000;
+                text-decoration: none;
+                font-family: 'Urbanist', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 17px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ffffff;
+                }
             }
         }
 
         &.aberto {
-            display: block; 
+            display: block;
             position: absolute;
-            top: 60px; 
+            top: 60px;
             left: 0;
             right: 0;
             background-color: #BDB1C2;
             z-index: 1000;
-            padding: 10px 0; 
+            padding: 10px 0;
 
             ul {
-                flex-direction: column-reverse; 
+                flex-direction: column-reverse;
                 align-items: center;
 
                 li {
                     margin: 10px 0;
+
                     a {
-                        font-size: 14px; 
+                        font-size: 14px;
                     }
                 }
             }
 
             .imh1 {
-                margin: 0 auto;  
+                margin: 0 auto;
                 justify-content: center;
             }
         }
     }
 
     .login {
-        
         width: 32px;
         height: 35px;
     }
-    .login:hover{
+
+    .login:hover {
         filter: brightness(0) invert(1);
     }
 
@@ -148,26 +159,25 @@
         }
 
         .menu-toggle {
-            display: block; 
+            display: block;
         }
 
         nav {
-            display: none; 
+            display: none;
         }
 
-       .login {
+        .login {
             width: 20px;
             height: 25px;
         }
-       .login:hover{
+
+        .login:hover {
             filter: brightness(0) invert(1);
         }
 
         nav.aberto .imh1 {
-            margin: 0 auto;  
+            margin: 0 auto;
             justify-content: center;
         }
     }
-
-
 }

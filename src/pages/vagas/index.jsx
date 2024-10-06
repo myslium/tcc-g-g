@@ -11,6 +11,7 @@ export default function Vagas() {
 
             <Cabecalho
             titulo1 = 'Início'
+            link1='/'
             titulo2 = 'Sobre G&G'
             link2 = '/sobre'
             titulo3 = 'Vagas'

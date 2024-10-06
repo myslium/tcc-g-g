@@ -9,12 +9,13 @@ import Footer from '../../componentes/footer'
 export default function Inicio() {
     return (
         <div className='pagina-inicio'>
-            <Cabecalho
-            titulo1 =  'Início'
+         <Cabecalho
+             titulo1 = 'Início'
+            link1='/'
             titulo2 = 'Sobre G&G'
             link2 = '/sobre'
-            titulo3 = 'indo na adm rapidin'
-            link3 = '/admin/notificacoes'
+            titulo3 = 'Vagas'
+            link3 = '/vagas'
             titulo4 = 'Acompanhe o processo'
             link4 = '/falecomconsultor'
 

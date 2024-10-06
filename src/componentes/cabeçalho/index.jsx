@@ -4,14 +4,11 @@ import { useState, useEffect } from 'react';
 
 export default function Cabecalho(props) {
     const [menuAberto, setMenuAberto] = useState(false);
-    const [titulo, setTitulo] = useState('G&G'); 
-    const [larguraTela, setLarguraTela] = useState(window.innerWidth); 
+    const [titulo, setTitulo] = useState('G&G');
+    const [larguraTela, setLarguraTela] = useState(window.innerWidth);
 
     useEffect(() => {
-        
         window.addEventListener('resize', atualizarLarguraTela);
-
-        
         return () => {
             window.removeEventListener('resize', atualizarLarguraTela);
         };
@@ -19,19 +16,19 @@ export default function Cabecalho(props) {
 
     useEffect(() => {
         atualizarTitulo();
-    }, [menuAberto, larguraTela]); 
+    }, [menuAberto, larguraTela]);
 
     const atualizarLarguraTela = () => {
         setLarguraTela(window.innerWidth);
     };
 
-    function atualizarTitulo() {
+    const atualizarTitulo = () => {
         if (larguraTela <= 768 || menuAberto) {
             setTitulo('GENTE & GESTÃO');
         } else {
             setTitulo('G&G');
         }
-    }
+    };
 
     const toggleMenu = () => {
         setMenuAberto(!menuAberto);
@@ -51,15 +48,19 @@ export default function Cabecalho(props) {
                 </div>
                 <nav className={menuAberto ? 'aberto' : ''}>
                     <ul>
-                        <li><Link to='/'>{props.titulo1}</Link></li>
+                        {props.onLogout ? (
+                            <li onClick={props.onLogout}>{props.titulo1}</li> 
+                        ) : (
+                            <li>
+                                <Link to={props.link1}>{props.titulo1}</Link> 
+                            </li>
+                        )}
                         <li><Link to={props.link2}>{props.titulo2}</Link></li>
-                        <li><Link to= {props.link3}>{props.titulo3}</Link></li>
+                        <li><Link to={props.link3}>{props.titulo3}</Link></li>
                         <li><Link to={props.link4}>{props.titulo4}</Link></li>
                         <li>
                             <Link to='/login'>
-                                
-                                    <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" /> 
-                             
+                                <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" />
                             </Link>
                         </li>
                     </ul>
