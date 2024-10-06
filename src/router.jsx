@@ -7,23 +7,36 @@ import Login from './pages/login';
 import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
 import Vagasadmin from './admin/gerenciandovagas';
+import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 
 
 export default function Navegacao() {
     return (
         <BrowserRouter>
             <Routes>
+                
                 <Route path='/' element={<Inicio />} />
                 <Route path='/sobre' element={<SobreGeG/>} />
                 <Route path='/vagas' element={<Vagas/>} />
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
-                <Route path='/admin/gerenciamento' element={<Gerenciamento/>} />
-                <Route path='/admin/notificacoes' element={<Notificacoes/>} />
-                <Route path='/admin/gerenciandovagas' element={<Vagasadmin/>} />
 
-
-
+              
+                <Route path='/admin/gerenciamento' element={
+                    <ProtectedRoute>
+                        <Gerenciamento />
+                    </ProtectedRoute>
+                } />
+                <Route path='/admin/notificacoes' element={
+                    <ProtectedRoute>
+                        <Notificacoes />
+                    </ProtectedRoute>
+                } />
+                <Route path='/admin/gerenciandovagas' element={
+                    <ProtectedRoute>
+                        <Vagasadmin />
+                    </ProtectedRoute>
+                } />
             </Routes>
         </BrowserRouter>
     );
