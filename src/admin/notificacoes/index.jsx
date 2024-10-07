@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import './index.scss'
 
 
-
-
 export default function Notificacoes(){
     const navigate = useNavigate(); 
+
+    
 
 function reset() {
     localStorage.removeItem('token'); 

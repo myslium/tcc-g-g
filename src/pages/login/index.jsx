@@ -8,24 +8,27 @@ export default function Login() {
     const [senha, setSenha] = useState('');
     const navigate = useNavigate(); 
 
+    
     async function entrar(e) {
         e.preventDefault(); 
-       
-            let url = `http://localhost:5010/login/adm?usuario=${usuario}&senha=${senha}`;
-            let resp = await axios.post(url);
+        
+        try {
+            const url = 'http://localhost:5010/login/adm';
+            const resp = await axios.post(url, { usuario, senha });
 
-           
             if (resp.data.token) {
-            
                 localStorage.setItem('token', resp.data.token);
-
-               
                 navigate('/admin/notificacoes');
             } else {
                 alert('Usuário ou senha incorretos');
             }
-   
-    
+        } catch (error) {
+            if (error.response && error.response.status === 401) {
+                alert('Usuário ou senha incorretos');
+            } else {
+                alert('Erro ao realizar o login. Tente novamente mais tarde.');
+            }
+        }
     }
 
     return (
