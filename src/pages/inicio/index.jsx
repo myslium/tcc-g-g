@@ -102,10 +102,10 @@ export default function Inicio() {
             </div>
 
             <div className="pilares">
-                <Cardspilar titulo='FOCO NO CLIENTE' topico={`Compromisso
-Agilidade
-Assertividade
-Parceria`} />
+                <Cardspilar titulo='FOCO NO CLIENTE' topico={` Compromisso
+ Agilidade
+ Assertividade
+ Parceria`} />
                 <Cardspilar titulo='RESPONSABILIDADE' topico={`Integridade
 Justiça
 Ética
