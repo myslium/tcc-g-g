@@ -49,7 +49,7 @@ export default function Cabecalho(props) {
                 <nav className={menuAberto ? 'aberto' : ''}>
                     <ul>
                         {props.onLogout ? (
-                            <li onClick={props.onLogout}>{props.titulo1}</li> 
+                            <li className='oi' onClick={props.onLogout}>{props.titulo1}</li> 
                         ) : (
                             <li>
                                 <Link to={props.link1}>{props.titulo1}</Link> 
