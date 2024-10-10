@@ -53,7 +53,7 @@ export default function Vagas() {
                     <div className="textovaga">
                         <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
                         <p>Sobre a vaga: - Estamos procurando por uma pessoa alinhada com nossos valores para atuar como Técnico de Informática, em um contexto dinâmico de uma empresa em ascensão no mercado…</p>
-                        <a href="">Mais sobre</a>
+                        <a href="/saibamais">Mais sobre</a>
                     </div>
                     <div className="image">
                         <img className='vagaimg' src="/assets/images/vagas/TI.png" alt="" />

@@ -8,6 +8,7 @@ import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
 import Vagasadmin from './admin/gerenciandovagas';
 import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
+import Saibamais from './pages/saibamaisvaga/index.jsx';
 
 
 export default function Navegacao() {
@@ -20,6 +21,8 @@ export default function Navegacao() {
                 <Route path='/vagas' element={<Vagas/>} />
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
+                <Route path='/saibamais' element={<Saibamais/>} />
+
 
               
                 <Route path='/admin/gerenciamento' element={
@@ -37,6 +40,8 @@ export default function Navegacao() {
                         <Vagasadmin />
                     </ProtectedRoute>
                 } />
+
+                
             </Routes>
         </BrowserRouter>
     );
