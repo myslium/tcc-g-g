@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 import '@fortawesome/fontawesome-free/js/all.js';
-
+import Tituloelogo from '../../componentes/tituloelogo'
 import Cabecalho from '../../componentes/cabeçalho'
 import Footer from '../../componentes/footer';
 
@@ -20,12 +20,10 @@ export default function Vagas() {
             link4 = '/falecomconsultor'
 
             />
-            <div className="topo">
-                <div className="conttopo">
-                    <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />
-                    <h1>VAGAS</h1>
-                </div>
-            </div>
+             <div className='topo'>
+               < Tituloelogo  titulo='Vagas'/>
+             </div>
+             
 
             <div className="botooes">
 
