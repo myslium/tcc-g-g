@@ -7,9 +7,29 @@
 
     .topo{
  
-            margin-top: 20px;
+            margin-top: 3vw;
+            width: 80vw;
+            margin-left: 9vw;
+           
 
+            div {
+                background-color: #E5DBEB;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1vw 0vw;
 
+                img {
+                    width: 8.5vw;
+                }
+                h1 {
+                    font-family: 'Ultra', sans-serif;
+                    font-weight: 500;
+                    font-size: 3vw;
+                    color: #240A39;
+                    text-transform: uppercase;
+                }
+            }
         
         
     }

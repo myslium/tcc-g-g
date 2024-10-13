@@ -21,7 +21,10 @@ export default function Vagas() {
 
             />
              <div className='topo'>
-               < Tituloelogo  titulo='Vagas'/>
+                <div>
+                    <img src="/assets/images/cabecalho/logo.png" alt="" />
+                    <h1>Vagas</h1>
+                </div>
              </div>
              
 
