@@ -62,5 +62,64 @@
     }
 }
 
+.ultima-parte-notas {
+    display: flex;
+    flex-direction: column;
+    margin: 3vw 9vw 0vw 9vw;
+
+    .nova-nota {
+        background-color: #E5DBEB;
+        padding: 2vw 10vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1vw;
+
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            color: #230733;
+            font-weight: 700;
+            font-size: 2vw;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 3vw;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 2vw;
+
+                input {
+                    width: 25vw;
+                    height: 3vw;
+                    border-radius: 1vw;
+                    border: 0.2vw solid #cdbdd6;
+                    padding: 0.5vw 1vw;
+                    outline: none;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.3vw;
+                    color: #230733;
+
+                    
+                }
+            }
+
+            textarea {
+                width: 54vw !important;
+                height: 10vw !important;
+                border-radius: 1vw;
+                border: 0.2vw solid #cdbdd6;
+                padding: 0.5vw 1vw;
+                outline: none;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.3vw;
+                color: #230733;
+            }
+        }
+    }
+}
+
     
 }

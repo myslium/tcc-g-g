@@ -93,6 +93,39 @@ function reset() {
             </p>
         </div>
        </div>
+
+       <TituloMenor titulo ='Notas fixadas'/>
+
+       <section className='ultima-parte-notas'>
+
+            <div className='nova-nota'>
+
+                <h1>Anote aqui...</h1>
+                
+                <div className='inputs'>
+
+                    <div>
+                        <input type="text" placeholder='Titulo'/>
+                        <input type="date" />
+
+                    </div>
+
+                    <textarea placeholder='Conteúdo'></textarea>
+
+                </div>
+            </div>
+
+            <div className='notas-adicionadas'>
+
+                <div className='card-nota'>
+                    <i className='fa fa-check icon'></i>
+                    <div className='titulo'>
+                        <img src="/assets/images/notaspincel.png" alt="" />
+                        <h1>Organizar currículos</h1>
+                    </div>
+                </div>
+            </div>
+       </section>
            
     </div>
        
