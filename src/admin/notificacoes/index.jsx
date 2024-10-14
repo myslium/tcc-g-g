@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import Cabecalho from '../../componentes/cabeçalho'
-import Tituloelogo from '../../componentes/tituloelogo'
+import TituloMenor from '../../componentes/titulomenor';
+import ContCard from '../../componentes/contcard';
+import CardVisaoGeral from '../../componentes/cardvisao';
+
+
+
 import { useNavigate } from 'react-router-dom'; 
 import './index.scss'
 
@@ -32,108 +37,65 @@ function reset() {
             />
 
 
-        <div className="topo">
-                <div className="conttopo">
-                    <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />
-                    <h1>INTERESSADOS NO SEU SERVIÇO</h1>
-                </div>
-            </div>
-<div className="cards-interessados">
+       <TituloMenor
+        titulo = 'Interesses no seu serviço'
+       />
+    
+    
+    <div className="cards-interessados">
 
         
-            <div className="contcard">
-                <div className="textinho">
-                      <h1 className='titulointeressado'>Cacau Show</h1>
-                <p className='textointeressado'>A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.</p>
-                </div>
-                <a className='vejamais' href="">VEJA MAIS</a>
+     <ContCard titulo = 'Cacau Show' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
 
-                <div>
-                    <button className="marcalida">
-                        MARCAR COMO LIDA
-                    </button>
-                </div>
 
-                </div>
-          
+            <ContCard titulo = 'Nestle' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
 
-           
-            <div className="contcard">
-                <div className="textinho">
-                      <h1 className='titulointeressado'>Nestle</h1>
-                <p className='textointeressado'>A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.</p>
-                </div>
-              
-                <a className='vejamais' href="">VEJA MAIS</a>
+            <ContCard titulo = 'Nestle' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
+            <ContCard titulo = 'Nestle' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
+                
 
-                <div>
-                    <button className="marcalida">
-                        MARCAR COMO LIDA
-                    </button>
-                </div>
-    
-            </div>
-
+                
             
-            </div>
+            
+    </div>
          
 
 
             
-        <div className="topo">
-                <div className="conttopo">
-                    <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />
-                    <h1>VISÃO GERAL</h1>
-                </div>
-        </div>
-
+        <TituloMenor titulo='Visão geral'/>
 
         <div className="visaogeral">
 
+            <CardVisaoGeral titulo='Cacau Show' vaga='Analista' data='13/10/2024'/>
+
+            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
                
+            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
+            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
+            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
+            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
+         </div>
 
-                    <div className="card">
-                        <h1>
-                            CACAU SHOW
-                        </h1>
-                        <h2>
-                            VAGAS ADM
-                        </h2>
-                        <h3>13/10/2024</h3>
+         
+       <TituloMenor
+        titulo = 'Metas'
+       />
 
-                    </div>
-                
-            
+       <div className='metas'>
 
+         <img src="/assets/images/grafico.png" alt="" />
 
-                
-            
+        <div className='resultado'>
+            <h1>Feedback</h1>
 
-                    <div className="card">
-                        <h1>
-                            Nestle
-                        </h1>
-                        <h2>
-                            VAGAS ADM
-                        </h2>
-                        <h3>13/10/2024</h3>
-
-        
-                    </div>
-
-               
-                
-
-
-            </div>
-           
+            <p>
+            Seu gráfico mostra que você teve um desempenho melhor em agosto em comparação a julho. O aumento de 12 para 18 vagas fechadas é um ótimo sinal. Esse aumento pode ser um reflexo de melhores técnicas de recrutamento ou um aumento na demanda. Continue a analisar o que funcionou bem e considere aplicar essas estratégias em futuros meses.
+            </p>
         </div>
+       </div>
+           
+    </div>
        
-
-       
-       
-
-        
        
     )
 }

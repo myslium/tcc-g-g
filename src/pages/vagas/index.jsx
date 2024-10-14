@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import Tituloelogo from '../../componentes/tituloelogo'
 import Cabecalho from '../../componentes/cabeçalho'
 import Footer from '../../componentes/footer';
+import TituloMenor from '../../componentes/titulomenor';
 
 export default function Vagas() {
     return (
@@ -20,12 +21,8 @@ export default function Vagas() {
             link4 = '/falecomconsultor'
 
             />
-             <div className='topo'>
-                <div>
-                    <img src="/assets/images/cabecalho/logo.png" alt="" />
-                    <h1>Vagas</h1>
-                </div>
-             </div>
+            
+            <TituloMenor titulo='Vagas'/>
              
 
             <div className="botooes">

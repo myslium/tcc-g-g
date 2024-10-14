@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.scss';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     const [usuario, setUsuario] = useState('');
@@ -67,6 +68,7 @@ export default function Login() {
                 </div>
                 <div className="spacer"></div>
             </div>
+            <Link to='/admin/notificacoes'>d</Link>
         </div>
     );
 }

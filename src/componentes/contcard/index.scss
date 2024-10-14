@@ -1,0 +1,78 @@
+.comp-card-admin {
+    .contcard{
+  
+        background-color: #E5DBEB;
+        border-radius: 10px;
+        width: 18vw;
+        height: 16vw;
+        padding: 1vw 2vw 4vw 2vw;
+       
+    
+        .textinho
+        {
+    
+      .titulointeressado{
+            font-size: 1.5vw;
+            text-align: justify;
+            color: #4B1972;
+            font-family: 'Ultra',sans-serif;
+            font-weight: 500;
+    
+         
+        }
+        .textointeressado{
+            font-size: 0.9vw;
+            text-align: justify;
+        }
+    
+    
+        }
+    
+      
+        a {
+            text-decoration: none;
+            color: #B54FCF;
+            font-weight: 700;
+            font-size: 1.2vw;
+
+            
+        }
+        a:hover {
+            color: #491257;
+
+        }
+
+       
+
+       
+         
+     
+            button {
+                display: flex;
+                gap: 0.5vw;
+                background-color: #B54FCF;
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 4vw;
+                border-radius: 0.5vw;
+                border: none;
+                padding: 1vw;
+                font-size: 0.8vw;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #240A39;
+                transform: translateY(-2px);
+            }
+
+           
+           
+
+        
+        
+       
+        
+              
+    }
+}
