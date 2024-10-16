@@ -100,7 +100,15 @@ function reset() {
 
             <div className='nova-nota'>
 
-                <h1>Anote aqui...</h1>
+                <div className='titulo-notas'>
+
+                    <h1>Anote aqui...</h1>
+
+                    <button>Ver notas</button>
+
+                </div>
+
+               
                 
                 <div className='inputs'>
 
@@ -118,11 +126,21 @@ function reset() {
             <div className='notas-adicionadas'>
 
                 <div className='card-nota'>
-                    <i className='fa fa-check icon'></i>
+                    <i id='check' className='fa fa-check icon'></i>
                     <div className='titulo'>
                         <img src="/assets/images/notaspincel.png" alt="" />
                         <h1>Organizar currículos</h1>
+
+                        
                     </div>
+                        <p>sddsdsdsdsdssdad</p>
+
+                        <div className='icones'>
+                            <i className='fa fa-trash'></i>
+                            <i className='fa fa-pencil'></i>
+
+                            <h3>10/10/2024</h3>
+                        </div>
                 </div>
             </div>
        </section>
