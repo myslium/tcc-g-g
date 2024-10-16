@@ -74,13 +74,40 @@
         flex-direction: column;
         border-radius: 1vw;
 
-        h1 {
+        .titulo-notas {
+
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+
+            h1 {
             font-family: 'Ubuntu', sans-serif;
             color: #230733;
             font-weight: 700;
             font-size: 2vw;
+            }
+
+            button {
+                display: flex;
+                gap: 0.5vw;
+                background-color: #B54FCF;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 0.5vw;
+                border: none;
+                padding: 1vw 2vw;
+                font-size: 0.8vw;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #240A39;
+                transform: translateY(-2px);
+            }
+
         }
 
+        
         .inputs {
             display: flex;
             flex-direction: column;
@@ -118,6 +145,14 @@
                 color: #230733;
             }
         }
+    }
+
+    .notas-adicionadas {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        margin-top: 2vw;
     }
 }
 

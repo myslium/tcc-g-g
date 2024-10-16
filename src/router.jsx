@@ -26,6 +26,8 @@ export default function Navegacao() {
 
               
                 <Route path='/admin/gerenciamento' element={
+                       
+                       
                     <ProtectedRoute>
                         <Gerenciamento />
                     </ProtectedRoute>
@@ -33,6 +35,8 @@ export default function Navegacao() {
                   
                 } />
                 <Route path='/admin/notificacoes' element={
+                      
+                        
                     <ProtectedRoute>
                         <Notificacoes />
                     </ProtectedRoute>         
@@ -40,6 +44,8 @@ export default function Navegacao() {
                     
                 } />
                 <Route path='/admin/gerenciandovagas' element={
+                     
+                       
                    <ProtectedRoute>
                     <Vagasadmin />
                    </ProtectedRoute>

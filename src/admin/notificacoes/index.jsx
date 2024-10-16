@@ -3,6 +3,7 @@ import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
 import CardVisaoGeral from '../../componentes/cardvisao';
+import CardNotas from '../../componentes/cardnotas';
 
 
 
@@ -100,7 +101,15 @@ function reset() {
 
             <div className='nova-nota'>
 
-                <h1>Anote aqui...</h1>
+                <div className='titulo-notas'>
+
+                    <h1>Anote aqui...</h1>
+
+                    <button>Ver notas</button>
+
+                </div>
+
+               
                 
                 <div className='inputs'>
 
@@ -117,13 +126,8 @@ function reset() {
 
             <div className='notas-adicionadas'>
 
-                <div className='card-nota'>
-                    <i className='fa fa-check icon'></i>
-                    <div className='titulo'>
-                        <img src="/assets/images/notaspincel.png" alt="" />
-                        <h1>Organizar currículos</h1>
-                    </div>
-                </div>
+               <CardNotas titulo='Organizar currículos' texto='Quero jogar roblox, quem ai gosta de roblox?Eu amo, e ninguém ama mais que eu' data='10/10/2024'/>
+               <CardNotas titulo='Organizar currículos' texto='Quero jogar roblox, quem ai gosta de roblox?Eu amo, e ninguém ama mais que eu' data='10/10/2024'/>
             </div>
        </section>
            
