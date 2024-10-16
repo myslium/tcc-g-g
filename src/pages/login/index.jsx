@@ -68,7 +68,7 @@ export default function Login() {
                 </div>
                 <div className="spacer"></div>
             </div>
-            <Link to='/admin/notificacoes'>d</Link>
+           
         </div>
     );
 }
