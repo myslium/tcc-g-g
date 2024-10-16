@@ -52,12 +52,31 @@ export default function Vagas() {
                 <div className="cartavaga">
                     <div className="textovaga">
                         <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
-                        <p>Sobre a vaga: - Estamos procurando por uma pessoa alinhada com nossos valores para atuar como Técnico de Informática, em um contexto dinâmico de uma empresa em ascensão no mercado…</p>
-                        <a href="">Mais sobre</a>
+                        <h4> Requisitos </h4>
+                        <p> - Formação em Administração, Logística ou áreas relacionadas.<br/>
+                            - Experiência prévia em controle de estoque.<br/>
+                            - Experiência prévia em controle de estoque.</p>
+
+                    <div className='botoixinhos'>
+                        <a className='teste' href=""> <i className="fa-solid fa-location-dot"></i>&nbsp;São paulo, SP</a>
                     </div>
+
+                    <div className='botoixinhos'>
+                        <a className='teste' href=""> <i className="fa-solid fa-briefcase"></i>&nbsp;Cargos</a>
+                    </div>
+
+                    <div className='botoixinhos'>
+                        <a className='teste' href=""> <i class="fa-regular fa-building"></i>&nbsp;Presencial</a>
+                    </div>
+
+                    <div className='botoixinhos'>
+                        <a className='teste' href=""> <i class="fa-solid fa-sack-dollar"></i>&nbsp;R$3.500,00</a>
+                    </div>
+
+                    </div>
+
                     <div className="image">
-                        <img className='vagaimg' src="/assets/images/vagas/TI.png" alt="" />
-                        <a className='botaovaga' href="">Candidatar-se</a>
+                        <a className='botaovagaa' href="">Candidatar-se</a>
                     </div>
 
                 </div>
