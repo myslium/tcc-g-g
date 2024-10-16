@@ -20,6 +20,9 @@ export default function Falecomconsultor() {
     const [beneficios, setBeneficios] = useState('');
     const [requisitos, setRequisitos] = useState('');
     const [descricao, setDescricao] = useState('');
+    const [quantidade, setQuantidade,] = useState('');   
+    const [vencimento, setVencimento] = useState('');
+
 
     async function novaVaga() {
 
@@ -34,11 +37,14 @@ export default function Falecomconsultor() {
             "salario": Number(salario),
             "beneficios": beneficios,
             "requisicoes": requisitos,
-            "descricao": descricao
+            "descricao": descricao,
+             "vencimento":  vencimento,
+             "quantidade": quantidade
+
         };
 
         const url = 'http://localhost:5010/vagas';
-        let resp = await axios.post(url, paramCorpo);
+     await axios.post(url, paramCorpo);
 
 
 
@@ -192,7 +198,20 @@ export default function Falecomconsultor() {
                         
                     </div>
 
+                    <div className='duo'>
 
+                        <div>
+                            <label>Prazo:</label>
+                            <input className = 'pequeno'type="text" value={vencimento} onChange={e => setVencimento(e.target.value)}/>
+
+                        </div>
+                    
+                         <div>
+                            <label>Quantidade vagas</label>
+                            <input className = 'pequeno'type="text" value={quantidade} onChange={e => setQuantidade(e.target.value)}/>
+                        </div>
+                    
+                    </div>
                    
 
                     <div className='botao'>

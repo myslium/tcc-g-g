@@ -1,144 +1,158 @@
 .pagina-interessados{
 
     
-    .topo{
- 
-        display: flex;
-        color: #000000;
-        padding: 2vw 0vw 0vw 0vw;
-        margin: 0vw 1vw 0vw 5vw;
-        padding-left: 16vw;
-        z-index: 1000; 
-        box-sizing: border-box; 
+    
+    
 
-
-    .conttopo{
-    
-        display: flex;
-        background-color: #E5DBEB;
-        width: 70%;  
-        align-items: center;
-        text-align: center;
-        gap: 5px; 
-        justify-content: center;
-        padding: 15px 16px;
-
-
-    
-    h1 {
-        font-size: 2vw;
-        font-family: 'Montserrat';
-        font-weight: 800; 
-        margin: 0;
-    }
-    
-    .geg {
-        height: 60px;
-    }}
-    
-    
-}
 
 .cards-interessados{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3vw 0vw 0vw 10vw;
+    gap: 5vw;
 
-
-    .contcard{
-  
-    background-color: #E5DBEB;
-    border-radius: 10px;
-    width: 18vw;
-    height: 15vw;
-    padding: 2vw;
-   
-    margin: 4vw;
-
-    .textinho
-    {
-
-  .titulointeressado{
-        font-size: 1.5vw;
-        text-align: justify;
-  
-
-     
-    }
-    .textointeressado{
-        font-size: 0.8vw;
-        text-align: justify;
-     
-    }
-
-
-    }
-
-  
-    .vejamais{
-       text-decoration: none;
-       color: #B54FCF;
-       font-weight: 600;
-       padding-left: 13vw;
-       font-size: 0.8vw;
-     
-    }
-    .marcalida{
-        background-color: #B54FCF;
-        color: #fff;
-        font-weight: 600;
-        margin-bottom: 4vw;
-        margin-top: 4vw;
-        margin-left: 0;
-        padding: 0.5vw;
-        font-size: 0.8vw;
-       
-
-    }
-          
-}
 }
 
 .visaogeral{
 
-    margin-top: 3vw;
+    
     background-color:#E5DBEB;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3vw 0vw 0vw 9vw;
     padding: 2vw;
     gap: 3vw;
-    width: 70vw;
-    margin-left: 12.5vw;
+    width: 77vw;
     border-radius: 10px;
     
 
 
 
-    .card{
-        background-color: #FDF7FE;
-        text-align: center;
-        font-family: 'Montserrat';
-        width: 10vw;
-        height: 7vw;
-        padding: 3vw;
-        border-radius: 30px;
+    
+}
+
+.metas {
+    display: flex;
+    justify-content: space-between;
+   
+    margin: 4vw 9vw;
+
+    img {
+        width: 30vw;
+    }
+
+    .resultado {
+        width: 20vw;
+        height: 25vw;
+        padding: 2vw;
+        border-radius: 2vw;
+        background-color: #E5DBEB;
+
+
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2vw;
+            color: #4a1569;
+        }
+        p {
+            font-size: 1.2vw;
+            color: #230733;
+            font-weight: 400;
+        }
+    }
+}
+
+.ultima-parte-notas {
+    display: flex;
+    flex-direction: column;
+    margin: 3vw 9vw 0vw 9vw;
+
+    .nova-nota {
+        background-color: #E5DBEB;
+        padding: 2vw 10vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1vw;
+
+        .titulo-notas {
+
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+
+            h1 {
+            font-family: 'Ubuntu', sans-serif;
+            color: #230733;
+            font-weight: 700;
+            font-size: 2vw;
+            }
+
+            button {
+                display: flex;
+                gap: 0.5vw;
+                background-color: #B54FCF;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 0.5vw;
+                border: none;
+                padding: 1vw 2vw;
+                font-size: 0.8vw;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #240A39;
+                transform: translateY(-2px);
+            }
+
+        }
+
         
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 3vw;
 
-        h1{
-            color: #4B1972;
-            font-weight: 900; 
-            font-size: 1.5vw;
+            div {
+                display: flex;
+                align-items: center;
+                gap: 2vw;
 
+                input {
+                    width: 25vw;
+                    height: 3vw;
+                    border-radius: 1vw;
+                    border: 0.2vw solid #cdbdd6;
+                    padding: 0.5vw 1vw;
+                    outline: none;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.3vw;
+                    color: #230733;
+
+                    
+                }
+            }
+
+            textarea {
+                width: 54vw !important;
+                height: 10vw !important;
+                border-radius: 1vw;
+                border: 0.2vw solid #cdbdd6;
+                padding: 0.5vw 1vw;
+                outline: none;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.3vw;
+                color: #230733;
+            }
         }
-        h2{
-            color:#240A39;
-            font-weight: 900;
-            font-size: 1vw; 
-        }
-        h3{
-            color: #841B86;
-            font-weight: 900; 
-            font-size: 1vw;
-        }
+    }
+
+    .notas-adicionadas {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        margin-top: 2vw;
     }
 }
 

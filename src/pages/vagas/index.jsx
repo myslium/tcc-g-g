@@ -1,9 +1,10 @@
 import React from 'react'
 import './index.scss'
 import '@fortawesome/fontawesome-free/js/all.js';
-
+import Tituloelogo from '../../componentes/tituloelogo'
 import Cabecalho from '../../componentes/cabeçalho'
 import Footer from '../../componentes/footer';
+import TituloMenor from '../../componentes/titulomenor';
 
 export default function Vagas() {
     return (
@@ -20,12 +21,9 @@ export default function Vagas() {
             link4 = '/falecomconsultor'
 
             />
-            <div className="topo">
-                <div className="conttopo">
-                    <img className='geg' src="/assets/images/cabecalho/logo.png" alt="" />
-                    <h1>VAGAS</h1>
-                </div>
-            </div>
+            
+            <TituloMenor titulo='Vagas'/>
+             
 
             <div className="botooes">
 
@@ -52,27 +50,8 @@ export default function Vagas() {
                 <div className="cartavaga">
                     <div className="textovaga">
                         <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
-                        <h4> Requisitos </h4>
-                        <p> - Formação em Administração, Logística ou áreas relacionadas.<br/>
-                            - Experiência prévia em controle de estoque.<br/>
-                            - Experiência prévia em controle de estoque.</p>
-
-                    <div className='botoixinhos'>
-                        <a className='teste' href=""> <i className="fa-solid fa-location-dot"></i>&nbsp;São paulo, SP</a>
-                    </div>
-
-                    <div className='botoixinhos'>
-                        <a className='teste' href=""> <i className="fa-solid fa-briefcase"></i>&nbsp;Cargos</a>
-                    </div>
-
-                    <div className='botoixinhos'>
-                        <a className='teste' href=""> <i class="fa-regular fa-building"></i>&nbsp;Presencial</a>
-                    </div>
-
-                    <div className='botoixinhos'>
-                        <a className='teste' href=""> <i class="fa-solid fa-sack-dollar"></i>&nbsp;R$3.500,00</a>
-                    </div>
-
+                        <p>Sobre a vaga: - Estamos procurando por uma pessoa alinhada com nossos valores para atuar como Técnico de Informática, em um contexto dinâmico de uma empresa em ascensão no mercado…</p>
+                        <a href="">Mais sobre</a>
                     </div>
 
                     <div className="image">

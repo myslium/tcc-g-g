@@ -3,6 +3,7 @@ import './index.scss';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
 
+
 export default function Login() {
     const [usuario, setUsuario] = useState('');
     const [senha, setSenha] = useState('');
@@ -67,6 +68,7 @@ export default function Login() {
                 </div>
                 <div className="spacer"></div>
             </div>
+           
         </div>
     );
 }

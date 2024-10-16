@@ -232,8 +232,8 @@
             }
 
             textarea{
-                width: 48vw;
-                height: 16vw;
+                width: 48vw !important;
+                height: 16vw !important;
                 border-radius: 1.5vw;
                 border: 2px solid #C7C4C4;
                 outline: none;
@@ -242,6 +242,7 @@
                 font-size: 1.3vw;
                 color: #313131;
                 font-weight: 500;
+                margin-bottom: 1.8rem;
                 box-shadow: 0px 5px 3px #e6e6e6;
             }
 
