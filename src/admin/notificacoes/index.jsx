@@ -3,6 +3,7 @@ import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
 import CardVisaoGeral from '../../componentes/cardvisao';
+import CardNotas from '../../componentes/cardnotas';
 
 
 
@@ -125,23 +126,8 @@ function reset() {
 
             <div className='notas-adicionadas'>
 
-                <div className='card-nota'>
-                    <i id='check' className='fa fa-check icon'></i>
-                    <div className='titulo'>
-                        <img src="/assets/images/notaspincel.png" alt="" />
-                        <h1>Organizar currículos</h1>
-
-                        
-                    </div>
-                        <p>sddsdsdsdsdssdad</p>
-
-                        <div className='icones'>
-                            <i className='fa fa-trash'></i>
-                            <i className='fa fa-pencil'></i>
-
-                            <h3>10/10/2024</h3>
-                        </div>
-                </div>
+               <CardNotas titulo='Organizar currículos' texto='Quero jogar roblox, quem ai gosta de roblox?Eu amo, e ninguém ama mais que eu' data='10/10/2024'/>
+               <CardNotas titulo='Organizar currículos' texto='Quero jogar roblox, quem ai gosta de roblox?Eu amo, e ninguém ama mais que eu' data='10/10/2024'/>
             </div>
        </section>
            

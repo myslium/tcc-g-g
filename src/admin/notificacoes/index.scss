@@ -149,44 +149,10 @@
 
     .notas-adicionadas {
 
-        .card-nota {
-            background-color: #F6E9F9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 20vw;
-            height: 15vw;
-            padding: 2vw;
-            border-radius: 1.5vw;
-
-            #check {
-                margin-left: 17vw;
-            }
-
-            .titulo {
-                display: flex;
-                align-items: center;
-                gap: 1vw;
-
-                img {
-                    width: 3vw;
-                    height: 3vw;
-                }
-
-                h1 {
-                    font-family: 'Ultra', sans-serif;
-                    font-size: 1.3vw;
-                    font-weight: 500;
-                }
-            }
-
-            p {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 1.2vw;
-            }
-
-        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        margin-top: 2vw;
     }
 }
 

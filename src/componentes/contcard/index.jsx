@@ -15,14 +15,6 @@ export default function ContCard(props) {
                
                <Link to='/admin/gerenciandovagas'><p>Veja Mais</p></Link>
                
-
-                <button>
-                    MARCAR COMO LIDA
-                    <i className='fa fa-check'></i>
-                </button>
-                    
-            
-                  
                   
               
 
