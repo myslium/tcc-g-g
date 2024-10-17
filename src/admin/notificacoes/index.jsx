@@ -4,17 +4,48 @@ import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
 import CardVisaoGeral from '../../componentes/cardvisao';
 import CardNotas from '../../componentes/cardnotas';
-
-
+import axios from 'axios'
 
 import { useNavigate } from 'react-router-dom'; 
 import './index.scss'
 
 
+
+
 export default function Notificacoes(){
     const navigate = useNavigate(); 
 
+    const [titulo,settitulo]= useState('')
+    const [data,setdata]= useState('')
+    const [conteudo,setconteudo] = useState('')
+    const [cards,setcards] = useState([])
+
     
+
+
+
+
+
+    
+
+  async function adicionarnota(){
+
+    const obj = {
+        "titulo" : titulo,
+        "corpo":conteudo,
+        "data":data
+    }
+    const url = 'http://localhost:5010/inserirNota'
+    let oi =  await axios.post(url,obj) 
+
+}   
+
+async function vernotas(){
+    const url = 'http://localhost:5010/inserirNota'
+    let oi =  await axios.get(url) 
+    setcards(oi.data)
+
+}
 
 function reset() {
     localStorage.removeItem('token'); 
@@ -105,7 +136,9 @@ function reset() {
 
                     <h1>Anote aqui...</h1>
 
-                    <button>Ver notas</button>
+                    <button onClick={vernotas}>Ver notas</button>
+                    <button  onClick={adicionarnota} >Fixar</button>
+
 
                 </div>
 
@@ -114,20 +147,29 @@ function reset() {
                 <div className='inputs'>
 
                     <div>
-                        <input type="text" placeholder='Titulo'/>
-                        <input type="date" />
+                        <input type="text" placeholder='Titulo' value={titulo} onChange={e => settitulo(e.target.value)} />
+                        <input type="date" value={data} onChange={e=> setdata(e.target.value)} />
 
                     </div>
 
-                    <textarea placeholder='Conteúdo'></textarea>
+                    <textarea placeholder='Conteúdo' value={conteudo} onChange={e=> setconteudo(e.target.value)} ></textarea>
 
                 </div>
             </div>
 
             <div className='notas-adicionadas'>
+            {cards.map((item,pos)=>
+               <CardNotas
+               titulo = {item.titulo}
+               texto = {item.corpo}
+               data = {item.data}
+               pos = {pos}
+               />
 
-               <CardNotas titulo='Organizar currículos' texto='Quero jogar roblox, quem ai gosta de roblox?Eu amo, e ninguém ama mais que eu' data='10/10/2024'/>
-               <CardNotas titulo='Organizar currículos' texto='Quero jogar roblox, quem ai gosta de roblox?Eu amo, e ninguém ama mais que eu' data='10/10/2024'/>
+
+            )}
+
+              
             </div>
        </section>
            

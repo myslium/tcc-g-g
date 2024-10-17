@@ -6,7 +6,7 @@ export default function CardNotas(props) {
     return (
         <div className='comp-cardnotas'>
             
-            <div className='card-nota'>
+            <div key={props.pos} className='card-nota'>
                    
                     <div className='titulo'>
                         <img src="/assets/images/notaspincel.png" alt="" />
