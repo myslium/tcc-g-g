@@ -27,11 +27,13 @@ export default function CarrosselVagas() {
         }
     }
 
+    async function buscarVagas() {
+        const response = await axios.get('http://localhost:5010/vagas');
+        setVagas(response.data);
+    }
+
     useEffect(() => {
-        async function buscarVagas() {
-            const response = await axios.get('http://localhost:5010/vagas');
-            setVagas(response.data);
-        }
+       
         buscarVagas();
     }, []);
 

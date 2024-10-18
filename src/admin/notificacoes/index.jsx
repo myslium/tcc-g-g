@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
@@ -13,11 +13,21 @@ import './index.scss'
 export default function Notificacoes(){
     const navigate = useNavigate(); 
 
-    const [titulo,settitulo]= useState('')
-    const [data,setdata]= useState('')
-    const [conteudo,setconteudo] = useState('')
-    const [cards,setcards] = useState([])
-    const [alterando, setAlterando] = useState(-1)
+    const [titulo, settitulo] = useState('');
+    const [data, setdata] = useState('');
+    const [conteudo, setconteudo] = useState('');
+    const [cards, setcards] = useState([]);
+    const [alterando, setAlterando] = useState(-1);
+
+    async function vernotas() {
+        const url = 'http://localhost:5010/inserirNota';
+        let resp = await axios.get(url);
+        setcards(resp.data);
+    }
+
+    useEffect(() => {
+        vernotas();
+    }, []);
 
     
   async function adicionarnota(){
@@ -65,12 +75,7 @@ export default function Notificacoes(){
 
 }   
 
-async function vernotas(){
-    const url = 'http://localhost:5010/inserirNota'
-    let resp =  await axios.get(url) 
-    setcards(resp.data)
 
-}
 
 function reset() {
     localStorage.removeItem('token'); 
@@ -172,7 +177,7 @@ async function alterar(pos,id) {
 
                     <h1>Anote aqui...</h1>
 
-                    <button onClick={vernotas}>Ver notas</button>
+                    
                     <button onClick={adicionarnota} >Fixar</button>
 
 
