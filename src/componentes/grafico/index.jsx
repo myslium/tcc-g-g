@@ -11,7 +11,7 @@ export default function BarChartComponent() {
         const response = await axios.get('http://localhost:5010/vagas/s');
         const dadosTratados = response.data.map(item => ({
           name: `Mês ${item.mes}`,
-          vagas: item.quantidade 
+          mes: item.quantidade 
         }));
         setDados(dadosTratados);
       } catch (error) {
@@ -23,14 +23,14 @@ export default function BarChartComponent() {
   }, []);
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="60%" height={400}>
       <BarChart data={dados}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="vagas" fill="#8884d8" />
+        <Bar dataKey="mes" fill="#8884d8" />
     
       </BarChart>
     </ResponsiveContainer>
