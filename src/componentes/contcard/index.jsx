@@ -13,7 +13,7 @@ export default function ContCard(props) {
                <p className='textointeressado'>{props.texto}</p>
                </div>
                
-               <Link to='/admin/gerenciandovagas'><p>Veja Mais</p></Link>
+               <Link to='/admin/gerenciamento'><p>Veja Mais</p></Link>
                
                   
               

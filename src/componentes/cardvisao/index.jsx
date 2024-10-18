@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,7 +29,7 @@ export default function CarrosselVagas() {
 
     useEffect(() => {
         async function buscarVagas() {
-            const response = await axios.get('http://localhost:5010/vagas1');
+            const response = await axios.get('http://localhost:5010/vagas');
             setVagas(response.data);
         }
         buscarVagas();
@@ -46,6 +47,7 @@ export default function CarrosselVagas() {
                         <h1>{vaga.nome_empresa}</h1>
                         <h2>{vaga.cargo}</h2>
                         <h3>{new Date(vaga.data_criacao).toLocaleDateString()}</h3>
+                        <Link to={`/admin/gerenciamento/${vaga.id}`}><button>Ver</button></Link>
                     </div>
                 );
             }
