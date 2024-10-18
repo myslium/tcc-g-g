@@ -12,7 +12,7 @@ export default function BarChartComponent() {
         const response = await axios.get('http://localhost:5010/vagas/s');
         const dadosTratados = response.data.map((item, pos) => ({
           name: `Mês ${item.mes}`,
-          vagas: item.quantidade,
+          mes: item.quantidade,
           fill: cor[pos % cor.length]
         }));
         setDados(dadosTratados);
@@ -32,7 +32,7 @@ export default function BarChartComponent() {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="vagas" fill='#77138b' radius={[10, 10, 0, 0]} />
+        <Bar dataKey="mes" fill='#77138b' radius={[10, 10, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );

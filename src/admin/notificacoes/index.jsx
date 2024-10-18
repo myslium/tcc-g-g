@@ -5,7 +5,6 @@ import ContCard from '../../componentes/contcard';
 import CarrosselVagas from '../../componentes/cardvisao';
 import BarChartComponent from '../../componentes/grafico';
 import axios from 'axios'
-import moment from 'moment';
 
 import { useNavigate } from 'react-router-dom'; 
 import './index.scss'
@@ -24,6 +23,7 @@ export default function Notificacoes(){
         const url = 'http://localhost:5010/inserirNota';
         let resp = await axios.get(url);
         setcards(resp.data);
+        
     }
 
     useEffect(() => {
@@ -91,14 +91,11 @@ async function excluir(id) {
     
 }
 
-async function alterar(pos,id) {
-   
+async function alterar(pos, id) {
     settitulo(cards[pos].titulo)
     setconteudo(cards[pos].corpo)
-    let data = moment(cards[pos].dt_dia).format('YYYY-MM-DD')
-    setdata(data)
+    setdata(new Date(cards[pos].data).toLocaleDateString())
     setAlterando(id)
-    
 }
 
     return(
@@ -108,7 +105,7 @@ async function alterar(pos,id) {
                 titulo1='Sair' 
                 onLogout={reset} 
                 titulo2='Vagas'
-                link2='/grafico'
+                link2='/admin/vagasAdmin'
                 titulo3='Notificações'
                 link3='/admin/notificacoes'
                 titulo4='Gerenciamento Vagas'
