@@ -107,7 +107,7 @@ async function alterar(pos,id) {
                 titulo1='Sair' 
                 onLogout={reset} 
                 titulo2='Vagas'
-                link2='/admin/gerenciamentoVagas'
+                link2='/grafico'
                 titulo3='Notificações'
                 link3='/admin/notificacoes'
                 titulo4='Gerenciamento Vagas'

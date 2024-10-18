@@ -9,6 +9,7 @@ import Gerenciamento from './admin/gerenciamento';
 import Vagasadmin from './admin/gerenciandovagas';
 import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
+import GraficoDeMetas from './componentes/grafico'
 
 
 export default function Navegacao() {
@@ -22,6 +23,7 @@ export default function Navegacao() {
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
                 <Route path='/saibamais' element={<Saibamais/>} />
+                <Route path='/grafico' element={<GraficoDeMetas />} />
 
 
               
