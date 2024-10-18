@@ -38,15 +38,26 @@ export default function Falecomconsultor() {
             "beneficios": beneficios,
             "requisicoes": requisitos,
             "descricao": descricao,
-             "vencimento":  vencimento,
-             "quantidade": quantidade
+            "vencimento": vencimento,
+            "quantidade": quantidade
 
         };
 
         const url = 'http://localhost:5010/vagas';
      await axios.post(url, paramCorpo);
-
-
+    setEmpresa('');
+    setContato('');
+    setCnpj(0);
+    setCargo('');
+    setTipoContrato('');
+    setLocal('');
+    setModelo('');
+    setSalario('');
+    setBeneficios('');
+    setRequisitos('');
+    setDescricao('');
+    setQuantidade('');   
+    setVencimento('');
 
 
     }
@@ -202,7 +213,7 @@ export default function Falecomconsultor() {
 
                         <div>
                             <label>Prazo:</label>
-                            <input className = 'pequeno'type="text" value={vencimento} onChange={e => setVencimento(e.target.value)}/>
+                            <input className = 'pequeno'type="date" value={vencimento} onChange={e => setVencimento(e.target.value)}/>
 
                         </div>
                     
