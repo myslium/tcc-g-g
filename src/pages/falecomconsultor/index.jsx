@@ -45,8 +45,19 @@ export default function Falecomconsultor() {
 
         const url = 'http://localhost:5010/vagas';
      await axios.post(url, paramCorpo);
-
-
+    setEmpresa('');
+    setContato('');
+    setCnpj(0);
+    setCargo('');
+    setTipoContrato('');
+    setLocal('');
+    setModelo('');
+    setSalario('');
+    setBeneficios('');
+    setRequisitos('');
+    setDescricao('');
+    setQuantidade('');   
+    setVencimento('');
 
 
     }
