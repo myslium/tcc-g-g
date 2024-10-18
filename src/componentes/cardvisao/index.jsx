@@ -56,14 +56,14 @@ export default function CarrosselVagas() {
     return (
         <div className="carrossel">
             <button onClick={() => navegarCarrossel('anterior')}>               
-            <i className="fa fa-angle-left" aria-hidden="true" style={{ fontSize: '10vw' }}></i></button>
+            <i className="fa fa-angle-left" aria-hidden="true" style={{ fontSize: '3vw' }}></i></button>
             <div className='comp-visao-geral '>
                     <div className="cards-container">
                 {vagas.length > 0 && aparecerVagas()}
             </div>
             </div>
         
-            <button onClick={() => navegarCarrossel('proximo')}>   <i className="fa fa-angle-right" aria-hidden="true" style={{ fontSize: '10vw' }} ></i></button>
+            <button onClick={() => navegarCarrossel('proximo')}>   <i className="fa fa-angle-right" aria-hidden="true" style={{ fontSize: '3vw' }} ></i></button>
         </div>
     );
 }
