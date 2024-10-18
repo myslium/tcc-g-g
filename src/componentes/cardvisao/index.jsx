@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,6 +47,7 @@ export default function CarrosselVagas() {
                         <h1>{vaga.nome_empresa}</h1>
                         <h2>{vaga.cargo}</h2>
                         <h3>{new Date(vaga.data_criacao).toLocaleDateString()}</h3>
+                        <Link to={`/admin/gerenciandovagas/${vaga.id}`}><button>Ver</button></Link>
                     </div>
                 );
             }

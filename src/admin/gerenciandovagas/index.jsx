@@ -1,17 +1,14 @@
 import { useState } from 'react';
-import axios from 'axios'; // Certifique-se de importar o axios
+import axios from 'axios'; 
 import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
-import Footer from '../../componentes/footer'; // Certifique-se de importar o Footer
 import './index.scss';
-
 import { useNavigate } from 'react-router-dom'; 
 
-
-
-export default function Vagasadmin(){
+export default function Vagasadmin() {
     const navigate = useNavigate(); 
 
+    const [vagaId, setVagaId] = useState(''); // ID da vaga para edição
     const [empresa, setEmpresa] = useState('');
     const [contato, setContato] = useState('');
     const [cnpj, setCnpj] = useState('');
@@ -28,13 +25,10 @@ export default function Vagasadmin(){
 
     function reset() {
         localStorage.removeItem('token'); 
-        navigate('/')
+        navigate('/');
     }
 
-
-
-
-    async function novaVaga() {
+    async function adicionarVaga() {
         const paramCorpo = {
             nome_empresa: empresa,
             contato_empresa: contato,
@@ -52,9 +46,57 @@ export default function Vagasadmin(){
         };
 
         const url = 'http://localhost:5010/vagas';
+        await axios.post(url, paramCorpo); 
+        resetarCampos();
+    }
+
+    async function editarVaga() {
+        const paramCorpo = {
+            nome_empresa: empresa,
+            contato_empresa: contato,
+            cnpj,
+            cargo,
+            tipo_contrato: tipoContrato,
+            localizacao: local,
+            modelo_trabalho: modelo,
+            salario: Number(salario),
+            beneficios,
+            requisicoes: requisitos,
+            descricao,
+            vencimento,
+            quantidade,
+        };
+
+        const url = `http://localhost:5010/vagas/${vagaId}`; 
         await axios.put(url, paramCorpo);
+
         
-       
+   
+        setEmpresa(empresa);
+        setContato(contato);
+        setCnpj(cnpj);
+        setCargo(cargo);
+        setTipoContrato(tipoContrato);
+        setLocal(local);
+        setModelo(modelo);
+        setSalario(salario);
+        setBeneficios(beneficios);
+        setRequisitos(requisitos);
+        setDescricao(descricao);
+        setQuantidade(quantidade);
+        setVencimento(vencimento);
+    }
+
+    async function deletarVaga() {
+        const url = `http://localhost:5010/vagas/${vagaId}`; 
+        await axios.delete(url);
+
+        
+        resetarCampos();
+    }
+
+    function resetarCampos() {
+        setVagaId('');
         setEmpresa('');
         setContato('');
         setCnpj('');
@@ -72,7 +114,7 @@ export default function Vagasadmin(){
 
     return (
         <div className="pagina-confirmados">
-             <Cabecalho
+            <Cabecalho
                 titulo1='Sair' 
                 onLogout={reset} 
                 titulo2='Vagas'
@@ -83,12 +125,10 @@ export default function Vagasadmin(){
                 link4='/admin/gerenciamento'
             />
 
-
-
-            <Tituloelogo titulo='' />
+            <Tituloelogo titulo='Novas vagas' />
 
             <section className='terceira-parte'>
-                <p>Preencha as informações abaixo com os requisitos da sua vaga</p>
+                <h1>empresa:</h1>
 
                 <div className='vagas'>
                     <div className='div-grande'>
@@ -165,12 +205,12 @@ export default function Vagasadmin(){
                     </div>
 
                     <div className='botao'>
-                        <button onClick={novaVaga}>Enviar</button>
+                        <button onClick={deletarVaga}><i className="fa fa-trash" aria-hidden="true"></i>&nbsp;Deletar</button>
+                        <button onClick={editarVaga}><i className="fa fa-edit" aria-hidden="true"></i>&nbsp;Editar</button>
+                        <button onClick={adicionarVaga}><i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar</button>
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </div>
     );
 }
