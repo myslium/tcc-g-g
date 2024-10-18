@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
-import CardVisaoGeral from '../../componentes/cardvisao';
+import CarrosselVagas from '../../componentes/cardvisao';
 import CardNotas from '../../componentes/cardnotas';
 import axios from 'axios'
 
@@ -98,14 +98,9 @@ function reset() {
 
         <div className="visaogeral">
 
-            <CardVisaoGeral titulo='Cacau Show' vaga='Analista' data='13/10/2024'/>
-
-            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
-               
-            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
-            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
-            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
-            <CardVisaoGeral titulo='Nestle' vaga ='Financeiro' data ='31/10/2024'/>
+         
+         
+         <CarrosselVagas/>
          </div>
 
          
