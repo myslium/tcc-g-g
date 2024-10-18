@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
@@ -24,6 +24,37 @@ export default function Gerenciamento() {
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
 
+  
+    async function carregarVaga() {
+        try {
+            const response = await axios.get(`http://localhost:5010/vagas/${vagaId}`);
+            const vaga = response.data;
+
+            setEmpresa(vaga.nome_empresa);
+            setContato(vaga.contato_empresa);
+            setCnpj(vaga.cnpj);
+            setCargo(vaga.cargo);
+            setTipoContrato(vaga.tipo_contrato);
+            setLocal(vaga.localizacao);
+            setModelo(vaga.modelo_trabalho);
+            setSalario(vaga.salario);
+            setBeneficios(vaga.beneficios);
+            setRequisitos(vaga.requisicoes);
+            setDescricao(vaga.descricao);
+            setQuantidade(vaga.quantidade);
+            setVencimento(vaga.vencimento);
+        } catch (error) {
+            console.error("Erro ao carregar vaga:", error);
+        }
+    }
+
+
+    useEffect(() => {
+        if (vagaId) {
+            carregarVaga();
+        }
+    }, [vagaId]);
+
     function reset() {
         localStorage.removeItem('token'); 
         navigate('/');
@@ -47,6 +78,7 @@ export default function Gerenciamento() {
         };
 
         const url = 'http://localhost:5010/vagas';
+        alert('Vaga adicionada com sucesso!');
         await axios.post(url, paramCorpo); 
         resetarCampos();
     }
@@ -70,27 +102,15 @@ export default function Gerenciamento() {
 
         const url = `http://localhost:5010/vagas/${vagaId}`; 
         await axios.put(url, paramCorpo);
-        
-        setEmpresa(empresa);
-        setContato(contato);
-        setCnpj(cnpj);
-        setCargo(cargo);
-        setTipoContrato(tipoContrato);
-        setLocal(local);
-        setModelo(modelo);
-        setSalario(salario);
-        setBeneficios(beneficios);
-        setRequisitos(requisitos);
-        setDescricao(descricao);
-        setQuantidade(quantidade);
-        setVencimento(vencimento);
+        alert('Vaga editada com sucesso!');
     }
 
     async function deletarVaga() {
         const url = `http://localhost:5010/vagas/${vagaId}`; 
         await axios.delete(url);
-        
         resetarCampos();
+
+        alert('Vaga deletada com sucesso!');
     }
 
     function resetarCampos() {
