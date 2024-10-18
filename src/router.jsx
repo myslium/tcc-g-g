@@ -43,11 +43,11 @@ export default function Navegacao() {
                         
                     
                 } />
-                <Route path='/admin/gerenciandovagas/:id' element={
+                <Route path='/admin/gerenciamento/:id' element={
                      
                        
                    <ProtectedRoute>
-                    <Vagasadmin />
+                    <Gerenciamento />
                    </ProtectedRoute>
                  
                    
