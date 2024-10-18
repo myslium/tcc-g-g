@@ -3,8 +3,8 @@ import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
 import CarrosselVagas from '../../componentes/cardvisao';
-import CardNotas from '../../componentes/cardnotas';
 import axios from 'axios'
+import moment from 'moment';
 
 import { useNavigate } from 'react-router-dom'; 
 import './index.scss'
@@ -17,6 +17,7 @@ export default function Notificacoes(){
     const [data,setdata]= useState('')
     const [conteudo,setconteudo] = useState('')
     const [cards,setcards] = useState([])
+    const [alterando, setAlterando] = useState(-1)
 
     
   async function adicionarnota(){
@@ -25,17 +26,39 @@ export default function Notificacoes(){
         alert('Preencha todos os campos!')
     }
     else {
-        const obj = {
-        "titulo": titulo,
-        "corpo":conteudo,
-        "data":data
-        }
-    const url = 'http://localhost:5010/inserirNota'
-    await axios.post(url,obj) 
 
-    settitulo('')
-    setconteudo('')
-    setdata('')
+        const obj = {
+            "titulo": titulo,
+            "corpo":conteudo,
+            "data":data
+        }
+
+        if (alterando === -1 ) {
+           
+            const url = 'http://localhost:5010/inserirNota'
+            await axios.post(url,obj) 
+
+            settitulo('')
+            setconteudo('')
+            setdata('')
+
+
+        }
+
+        else {
+            
+            const url = `http://localhost:5010/inserirNota/${alterando}`
+            await axios.put(url, obj )
+            alert('Nota alterada!')
+            settitulo('')
+            setconteudo('')
+            setdata('')
+
+            setAlterando(-1)
+
+            await vernotas()
+        }
+        
     }
 
   
@@ -54,7 +77,23 @@ function reset() {
     navigate('/')
 }
 
+async function excluir(id) {
+    const url = `http://localhost:5010/inserirNota/${id}`
+    await axios.delete(url)
 
+    await vernotas()
+    
+}
+
+async function alterar(pos,id) {
+   
+    settitulo(cards[pos].titulo)
+    setconteudo(cards[pos].corpo)
+    let data = moment(cards[pos].dt_dia).format('YYYY-MM-DD')
+    setdata(data)
+    setAlterando(id)
+    
+}
 
     return(
         <div className="pagina-interessados">
@@ -134,7 +173,7 @@ function reset() {
                     <h1>Anote aqui...</h1>
 
                     <button onClick={vernotas}>Ver notas</button>
-                    <button  onClick={adicionarnota} >Fixar</button>
+                    <button onClick={adicionarnota} >Fixar</button>
 
 
                 </div>
@@ -156,12 +195,26 @@ function reset() {
 
             <div className='notas-adicionadas'>
             {cards.map((item,pos)=>
-               <CardNotas
-               titulo = {item.titulo}
-               texto = {item.corpo}
-               data = {new Date(item.data_publicacao).toLocaleDateString()}
-               pos = {pos}
-               />
+              
+              <div key={pos} className='card-nota'>
+                   
+              <div className='titulo'>
+                  <img src="/assets/images/notaspincel.png" alt="" />
+                  <h1>{item.titulo}</h1>
+                  <i id='check' className='fa fa-check icon'></i>
+
+                  
+              </div>
+                  <p>{item.corpo}</p>
+
+                  <div className='icones'>
+                    <button onClick={() => excluir(item.id)}><i id='icon' className='fa fa-trash'></i></button>
+                    <button onClick={() => alterar(pos,item.id)}><i id='icon' className='fa fa-pencil'></i></button>
+                      
+
+                      <h3>{(new Date(item.data_publicacao).toLocaleDateString())}</h3>
+                  </div>
+               </div>
 
 
             )}
