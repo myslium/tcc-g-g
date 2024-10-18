@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.scss';
 
+
+
 export default function CarrosselVagas() {
     const [vagas, setVagas] = useState([]); 
     const [carros, setCarros] = useState(0); 
@@ -53,14 +55,15 @@ export default function CarrosselVagas() {
 
     return (
         <div className="carrossel">
-            <button onClick={() => navegarCarrossel('anterior')}>               <i className="fa fa-angle-left" aria-hidden="true"></i></button>
+            <button onClick={() => navegarCarrossel('anterior')}>               
+            <i className="fa fa-angle-left" aria-hidden="true" style={{ fontSize: '10vw' }}></i></button>
             <div className='comp-visao-geral '>
                     <div className="cards-container">
                 {vagas.length > 0 && aparecerVagas()}
             </div>
             </div>
         
-            <button onClick={() => navegarCarrossel('proximo')}>   <i className="fa fa-angle-right" aria-hidden="true"></i></button>
+            <button onClick={() => navegarCarrossel('proximo')}>   <i className="fa fa-angle-right" aria-hidden="true" style={{ fontSize: '10vw' }} ></i></button>
         </div>
     );
 }
