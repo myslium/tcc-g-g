@@ -5,15 +5,22 @@
 
   
 
-    
+    .topo{
+ 
+            margin-top: 20px;
+
+
+        
+        
+    }
 
     
     .botooes{
         display: flex;
-        padding: 5vw 9vw;
+        padding: 5vw 2vw;
         align-items: center;
-        margin-left: 12vw;
-        gap: 100px;
+        margin-left: 8vw;
+        gap: 50px;
           
 
         .bb{
@@ -39,20 +46,44 @@
     }
 
 
-
     .vagas{
-        padding: 0vw 0vw 0vw 3vw;
+     
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
 
         .cartavaga{
             display: flex;
             flex-direction: row;
             background-color: #E5DBEB;
-            width: 80vw;
+            width: 70%;
             height: 30vw;
             border-radius: 20px;
-            margin: 0vw 0vw 3vw 6vw;
+            margin-bottom:  6vw;
             box-shadow: 5px 5px  #c2b8b8;
+          
+
+            .botoazinhos{
+                display: flex;
+                padding: 20px 0px 0px 0px;  
+                gap:3vw;
+               
+                color: #B54FCF;
+                
+                
+            }
+
+            i{
+                font-size: 1vw;
+                background-color: #B54FCF;
+            }
+           
+
+            .aff{
+                display: flex;
+                align-items: center; 
+            }
 
             .textovaga{
                 padding: 3vw;
@@ -60,19 +91,23 @@
                 flex-direction: column;
                 gap: 0.5vw;
                 width: 40vw;
+            
+
                 .profissaovaga{
-                    font-size: 2vw;
+                    font-size:2.5vw;
+                    font-family: 'Ubuntu', sans-serif;
+                    color: #240A39;
+                }
+                h4{
+                    font-size:1.6vw; 
+                    margin: 0; 
                 }
 
-                p{
-                    font-size: 1vw;
-                }
                 a{
                     color: #B54FCF;
                     text-decoration: none;
                     font-size: 1vw;
                 }
-
 
                 @media(max-width: 667px) {
 
@@ -97,52 +132,42 @@
             .image{
                 padding-top: 2vw;
 
-
-
                 .vagaimg{
-
                 width: 30vw;
                 border-radius: 50px;
                 padding: 2vw;
             }
 
-                .botaovaga{
-                    background-color: #B54FCF;
-                    border-radius: 25px;
-                    padding: 1.3vw 6vw;
-                    color: #ffffff;
-                    text-decoration: none;
-                    margin: 0vw 0vw 0vw 6vw;
-                    font-size: 20px;
-                   
-                }
-
-                .botaovagaa{
-                    background-color: #B54FCF;
-                    border-radius: 25px;
-                    padding: 0.9vw 6vw;
-                    color: #ffffff;
-                    text-decoration: none;
-                    margin: 4vw 0vw 4vw 4vw;
-                    font-size: 20px;
-                   
-                }
+   
+            .botaovagaa{
+                display: flex;
+                background-color: #B54FCF;
+                border-radius: 20px;
+                padding: 1vw 4vw;
+                margin-right: 2vw;
+                color: #ffffff;
+                text-decoration: none;
+                margin-top: 2vw ;
+                font-size: 18px; 
+                text-transform: uppercase;
+                font-weight: 600;
+                
+            }
 
                 @media(max-width:768px) {
-                    .botaovaga{
+                    .botaovagaa{
+                        display: flex;
                         background-color: #B54FCF;
                         border-radius: 25px;
-                        padding: 1.3vw 6vw;
+                        padding: 1vw 6vw;
                         color: #ffffff;
                         text-decoration: none;
-                        margin: 0vw 0vw 0vw 6vw;
-                        font-size: 10px;
-                       
+                        margin-top: 2vw ;
+                        font-size: 20px; 
                     }
                     
                 }
-                
-            
+
             }
           
 

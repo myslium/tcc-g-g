@@ -27,21 +27,25 @@ export default function Vagas() {
 
             <div className="botooes">
 
-                <div className='bb'>
-                
-                    <a className='botaobb' href=""><i  className="fa-solid fa-arrow-down-wide-short"> 
-                    </i>&nbsp;Filtros</a>
-                </div>
+            <div className='bb'>
+                   
+                   <a className='botaobb' href=""> <i className="fa-solid fa-location-dot"></i>&nbsp;Cidade, Estado ou Região</a>
+               </div>
 
                 <div className='bb'>
                    
                     <a className='botaobb' href=""> <i className="fa-solid fa-briefcase"></i>&nbsp;Cargos</a>
                 </div>
+                
+                <div className='bb'>
+                   
+                   <a className='botaobb' href=""> <i class="fa-solid fa-building"></i>&nbsp;Regime de Trabalho</a>
+               </div>
 
                 <div className='bb'>
                    
-                    <a className='botaobb' href=""> <i className="fa-solid fa-location-dot"></i>&nbsp;Cidade, Estado ou Região</a>
-                </div>
+                   <a className='botaobb' href=""> <i class="fa-solid fa-sack-dollar"></i>&nbsp;Remuneração</a>
+               </div>
 
             </div>
 
@@ -50,74 +54,40 @@ export default function Vagas() {
                 <div className="cartavaga">
                     <div className="textovaga">
                         <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
-                        <p>Sobre a vaga: - Estamos procurando por uma pessoa alinhada com nossos valores para atuar como Técnico de Informática, em um contexto dinâmico de uma empresa em ascensão no mercado…</p>
-                        <a href="">Mais sobre</a>
+                        <h4>Requisitos</h4>
+                        <ul>
+                            <li>Formação em Administração, Logística ou áreas relacionadas.</li>
+                            <li>Experiência prévia em controle de estoque.</li>
+                            <li>Experiência prévia em controle de estoque.</li>
+                        </ul>
+    
+                        <div className='botoazinhos'>
+
+                            <div className='aff'>
+                                <i className="fa-solid fa-location-dot"></i>
+                                &nbsp;São Paulo, SP
+                            </div>
+
+                            <div className='aff'>
+                                <i className="fa-solid fa-briefcase"></i>&nbsp;CLT
+                            </div>
+                
+                            <div className='aff'>
+                                <i class="fa-solid fa-building"></i>&nbsp;Presencial
+                            </div>
+                        
+                            <div className='aff'>
+                                <i class="fa-solid fa-sack-dollar"></i>&nbsp;R$3.500,00
+                            </div>
+                        
+                        </div>
+
                     </div>
 
                     <div className="image">
                         <a className='botaovagaa' href="">Candidatar-se</a>
                     </div>
-
                 </div>
-
-
-                <div className="cartavaga">
-                    <div className="textovaga">
-                        <h1 className='profissaovaga'>Enfermeiro(a)</h1>
-                        <p>O profissional de enfermagem atua na promoção, prevenção, recuperação e reabilitação da saúde, com autonomia e em consonância com os preceitos éticos e legais.</p>
-                        <a href="">Mais sobre</a>
-                    </div>
-                    <div className="image">
-                        <img className='vagaimg' src="/assets/images/vagas/enfermeira (1).png" alt="" />
-                        <a className='botaovaga' href="">Candidatar-se</a>
-                    </div>
-
-                </div>
-
-
-                <div className="cartavaga">
-                    <div className="textovaga">
-                        <h1 className='profissaovaga'>Auxiliar de escritório</h1>
-                        <p>O Auxiliar de Escritório é o responsável por produzir e organizar documentos, preparar relatórios e planilhas, controlar o estoque, materiais e afins. Além disso, ele pode realizar rotinas bancárias, atendimento pessoal e telefônico.</p>
-                        <a href="">Mais sobre</a>
-                    </div>
-                    <div className="image">
-                        <img className='vagaimg' src="/assets/images/vagas/auxiliar.png" alt="" />
-                        <a className='botaovaga' href="">Candidatar-se</a>
-                    </div>
-
-                </div>
-
-
-                <div className="cartavaga">
-                    <div className="textovaga">
-                        <h1 className='profissaovaga'>Analista de Laboratório</h1>
-                        <p>O papel principal de um Analista de Laboratório envolve a realização de testes e análises em amostras biológicas, químicas ou físicas. Contudo, são responsáveis por garantir a precisão e a confiabilidade dos resultados, o que é crucial para a tomada de decisões baseada em dados em muitas indústrias.</p>
-                        <a href="">Mais sobre</a>
-                    </div>
-                    <div className="image">
-                        <img className='vagaimg' src="/assets/images/vagas/laboratorio.png" alt="" />
-                        <a className='botaovaga' href="">Candidatar-se</a>
-                    </div>
-
-                </div>
-
-
-
-                <div className="cartavaga">
-                    <div className="textovaga">
-                        <h1 className='profissaovaga'>Analista de Estoque</h1>
-                        <p>Um Analista de Estoque controla o estoque de matérias-primas e materiais em uma empresa, verificando as quantidades necessárias, recebendo e registrando suas entradas e saídas, para atender ao abastecimento das áreas de produção.</p>
-                        <a href="">Mais sobre</a>
-                    </div>
-                    <div className='image'>
-                        <img className='vagaimg' src='assets/images/vagas/estoque (1).png' />
-                        <a className='botaovaga' href=""> Candidatar-se</a>
-
-                    </div>
-
-                </div>
-
 
             </div>
 

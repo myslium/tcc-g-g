@@ -15,6 +15,7 @@
     flex-direction: row; 
     flex-wrap: nowrap; 
     gap: 3vw;
+    scroll-behavior: smooth;
 
     .comp-visao-geral {
         display: flex; 
