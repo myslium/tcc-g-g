@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
 import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
 import './index.scss';
-import { useNavigate, useParams } from 'react-router-dom'; 
+import { useNavigate, useParams } from 'react-router-dom';
 
 export default function Gerenciamento() {
-    const navigate = useNavigate(); 
-    const { id } = useParams(); 
+    const navigate = useNavigate();
+    const { id } = useParams();
 
-    const [vagaId, setVagaId] = useState(id || ''); 
+    const [vagaId, setVagaId] = useState(id || '');
     const [empresa, setEmpresa] = useState('');
     const [contato, setContato] = useState('');
     const [cnpj, setCnpj] = useState('');
@@ -24,7 +24,7 @@ export default function Gerenciamento() {
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
 
-  
+
     async function carregarVaga() {
         try {
             const response = await axios.get(`http://localhost:5010/vagas/${vagaId}`);
@@ -41,8 +41,10 @@ export default function Gerenciamento() {
             setBeneficios(vaga.beneficios);
             setRequisitos(vaga.requisicoes);
             setDescricao(vaga.descricao);
-            setQuantidade(vaga.quantidade);
-            setVencimento(vaga.vencimento);
+            setQuantidade(vaga.qtd_vagas );
+            const dataVencimentoFormatada = vaga.data_vencimento ? vaga.data_vencimento.split('T')[0] : '';
+            setVencimento(dataVencimentoFormatada);
+            
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
         }
@@ -56,7 +58,7 @@ export default function Gerenciamento() {
     }, [vagaId]);
 
     function reset() {
-        localStorage.removeItem('token'); 
+        localStorage.removeItem('token');
         navigate('/');
     }
 
@@ -79,7 +81,7 @@ export default function Gerenciamento() {
 
         const url = 'http://localhost:5010/vagas';
         alert('Vaga adicionada com sucesso!');
-        await axios.post(url, paramCorpo); 
+        await axios.post(url, paramCorpo);
         resetarCampos();
     }
 
@@ -100,13 +102,13 @@ export default function Gerenciamento() {
             quantidade,
         };
 
-        const url = `http://localhost:5010/vagas/${vagaId}`; 
+        const url = `http://localhost:5010/vagas/${vagaId}`;
         await axios.put(url, paramCorpo);
         alert('Vaga editada com sucesso!');
     }
 
     async function deletarVaga() {
-        const url = `http://localhost:5010/vagas/${vagaId}`; 
+        const url = `http://localhost:5010/vagas/${vagaId}`;
         await axios.delete(url);
         resetarCampos();
 
@@ -133,8 +135,8 @@ export default function Gerenciamento() {
     return (
         <div className="pagina-confirmados">
             <Cabecalho
-                titulo1='Sair' 
-                onLogout={reset} 
+                titulo1='Sair'
+                onLogout={reset}
                 titulo2='Vagas'
                 link2='/admin/vagasadmin'
                 titulo3='Notificações'
@@ -225,11 +227,19 @@ export default function Gerenciamento() {
                     <div className='botao'>
                         {vagaId ? (
                             <>
-                                <button onClick={deletarVaga}><i className="fa fa-trash" aria-hidden="true"></i>&nbsp;Deletar</button>
-                                <button onClick={editarVaga}><i className="fa fa-edit" aria-hidden="true"></i>&nbsp;Editar</button>
+                                <button onClick={deletarVaga}>
+                                    <i className="fa fa-trash" aria-hidden="true"></i>&nbsp;Deletar
+                                </button>
+                                <button onClick={editarVaga}>
+                                    <i className="fa fa-edit" aria-hidden="true"></i>&nbsp;Editar
+                                </button>
                             </>
-                        ) : null}
-                        <button onClick={adicionarVaga}><i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar</button>
+                        ) : (
+                            <button onClick={adicionarVaga}>
+                                <i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar
+                            </button>
+                        )}
+
                     </div>
                 </div>
             </section>
