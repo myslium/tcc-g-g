@@ -1,32 +1,72 @@
-.comp-visao-geral {
+.visaogeral {
+    background-color: #E5DBEB;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3vw 0vw 0vw 9vw;
+    padding: 4vw;
+    gap: 3vw;
+    width: 73.5%;
+    border-radius: 10px;
+}
 
-    .card{
-        display: flex;
-        flex-direction: column;
-        background-color: #FDF7FE;
-        text-align: center;
-        width: 10vw;
-        height: 7vw;
-        padding: 1vw 3vw 5vw 3vw;
-        border-radius: 2vw;
+.carrossel {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 3vw;
+
+    .comp-visao-geral {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between;
+
+        .cards-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
         
+        .card {
+            display: flex;
+            flex-direction: column;
+            background-color: #FDF7FE;
+            text-align: center;
+            width: 10vw;
+            height: 7vw;
+            padding: 1vw 3vw 5vw 3vw;
+            border-radius: 2vw;
 
-        h1{
-            font-family: 'Ultra', sans-serif;
-            color: #4B1972;
-            font-weight: 400; 
-            font-size: 1.3vw;
-           
+            h1 {
+                font-family: 'Ultra', sans-serif;
+                color: #4B1972;
+                font-weight: 400; 
+                font-size: 1.3vw;
+            }
+            h2 {
+                color: #59446b;
+                font-weight: 900;
+                font-size: 1.2vw; 
+            }
+            h3 {
+                color: #841B86;
+                font-weight: 900; 
+                font-size: 1.3vw;
+            }
         }
-        h2{
-            color:#59446b;
-            font-weight: 900;
-            font-size: 1.2vw; 
-        }
-        h3{
-            color: #841B86;
-            font-weight: 900; 
-            font-size: 1.3vw;
+
+        .vagas-todas {
+            display: flex;        
+            flex-wrap: nowrap;   
+            gap: 3vw;            
         }
     }
+
+    button {
+        display: flex;
+        align-items: center; /* Centraliza o ícone verticalmente */
+        border: none; /* Remove a borda do botão */
+        background-color: transparent; /* Deixa o fundo do botão transparente */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        
 }
+}   
