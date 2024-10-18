@@ -21,17 +21,24 @@ export default function Notificacoes(){
     
   async function adicionarnota(){
 
-    const obj = {
+    if(titulo ==='' && data === '' && conteudo === '') {
+        alert('Preencha todos os campos!')
+    }
+    else {
+        const obj = {
         "titulo": titulo,
         "corpo":conteudo,
         "data":data
-    }
+        }
     const url = 'http://localhost:5010/inserirNota'
     await axios.post(url,obj) 
 
     settitulo('')
     setconteudo('')
     setdata('')
+    }
+
+  
 
 }   
 
