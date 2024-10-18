@@ -8,10 +8,12 @@ export default function BarChartComponent() {
   useEffect(() => {
     async function fetchData() {
       try {
+        const cor = ['#c014c0','#681268']
         const response = await axios.get('http://localhost:5010/vagas/s');
-        const dadosTratados = response.data.map(item => ({
+        const dadosTratados = response.data.map((item, pos) => ({
           name: `Mês ${item.mes}`,
-          vagas: item.quantidade 
+          vagas: item.quantidade,
+          fill: cor[pos % cor.length]
         }));
         setDados(dadosTratados);
       } catch (error) {
@@ -23,16 +25,16 @@ export default function BarChartComponent() {
   }, []);
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="50%" height={450}>
       <BarChart data={dados}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="vagas" fill="#8884d8" />
-    
+        <Bar dataKey="vagas" fill='#77138b' radius={[10, 10, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );
+  
 }

@@ -3,6 +3,7 @@ import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
 import CarrosselVagas from '../../componentes/cardvisao';
+import BarChartComponent from '../../componentes/grafico';
 import axios from 'axios'
 import moment from 'moment';
 
@@ -156,8 +157,7 @@ async function alterar(pos,id) {
 
        <div className='metas'>
 
-         <img src="/assets/images/grafico.png" alt="" />
-
+        <BarChartComponent/>
         <div className='resultado'>
             <h1>Feedback</h1>
 
