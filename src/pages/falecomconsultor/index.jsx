@@ -38,8 +38,8 @@ export default function Falecomconsultor() {
             "beneficios": beneficios,
             "requisicoes": requisitos,
             "descricao": descricao,
-             "vencimento":  vencimento,
-             "quantidade": quantidade
+            "vencimento": vencimento,
+            "quantidade": quantidade
 
         };
 
@@ -202,7 +202,7 @@ export default function Falecomconsultor() {
 
                         <div>
                             <label>Prazo:</label>
-                            <input className = 'pequeno'type="text" value={vencimento} onChange={e => setVencimento(e.target.value)}/>
+                            <input className = 'pequeno'type="date" value={vencimento} onChange={e => setVencimento(e.target.value)}/>
 
                         </div>
                     

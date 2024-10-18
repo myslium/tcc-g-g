@@ -10,8 +10,6 @@ import { useNavigate } from 'react-router-dom';
 import './index.scss'
 
 
-
-
 export default function Notificacoes(){
     const navigate = useNavigate(); 
 
@@ -21,29 +19,26 @@ export default function Notificacoes(){
     const [cards,setcards] = useState([])
 
     
-
-
-
-
-
-    
-
   async function adicionarnota(){
 
     const obj = {
-        "titulo" : titulo,
+        "titulo": titulo,
         "corpo":conteudo,
         "data":data
     }
     const url = 'http://localhost:5010/inserirNota'
-    let oi =  await axios.post(url,obj) 
+    await axios.post(url,obj) 
+
+    settitulo('')
+    setconteudo('')
+    setdata('')
 
 }   
 
 async function vernotas(){
     const url = 'http://localhost:5010/inserirNota'
-    let oi =  await axios.get(url) 
-    setcards(oi.data)
+    let resp =  await axios.get(url) 
+    setcards(resp.data)
 
 }
 
@@ -162,7 +157,7 @@ function reset() {
                <CardNotas
                titulo = {item.titulo}
                texto = {item.corpo}
-               data = {item.data}
+               data = {new Date(item.data_publicacao).toLocaleDateString()}
                pos = {pos}
                />
 
