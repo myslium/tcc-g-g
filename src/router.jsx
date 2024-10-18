@@ -6,7 +6,7 @@ import Falecomconsultor from './pages/falecomconsultor';
 import Login from './pages/login';
 import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
-import VagasAdmin from './admin/vagasAdmin/index.jsx';
+import Vagasadmin from './admin/gerenciandovagas/index.jsx';
 import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
@@ -57,7 +57,7 @@ export default function Navegacao() {
                      
                        
                      <ProtectedRoute>
-                      <VagasAdmin/>
+                      <Vagasadmin/>
                      </ProtectedRoute>
                    
                      

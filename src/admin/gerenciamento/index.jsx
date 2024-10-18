@@ -138,7 +138,7 @@ export default function Gerenciamento() {
                 titulo1='Sair'
                 onLogout={reset}
                 titulo2='Vagas'
-                link2='/admin/vagasadmin'
+                link2='/admin/gerenciandovagas'
                 titulo3='Notificações'
                 link3='/admin/notificacoes'
                 titulo4='Gerenciamento Vagas'
