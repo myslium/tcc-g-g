@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import Cabecalho from '../../componentes/cabeçalho';
 import Footer from '../../componentes/footer';
 import TituloMenor from '../../componentes/titulomenor';
+import { Link } from 'react-router-dom';
 
 export default function Vagas() {
     return (
@@ -76,7 +77,8 @@ export default function Vagas() {
                         </div>
 
                         <div className="image">
-                            <a className='botaovagaa' href="">Candidatar-se</a>
+                            <Link to ='/cadastro'className='botaovagaa'>Candidatar-se </Link>
+                         
                         </div>
                     </div>
                 </div>
