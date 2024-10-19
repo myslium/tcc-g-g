@@ -21,7 +21,7 @@ export default function Inicio() {
 
             />
 
-            <div className="faixa" style={{ backgroundImage: `url('/assets/images/inicio/preview.svg')` }} >
+            <div className="faixa" style={{ backgroundImage: `url('/assets/images/inicio/image.png')` }} >
 
 
                 <div className='texto-faixa'>
