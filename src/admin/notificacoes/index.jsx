@@ -5,6 +5,7 @@ import ContCard from '../../componentes/contcard';
 import CarrosselVagas from '../../componentes/cardvisao';
 import BarChartComponent from '../../componentes/grafico';
 import axios from 'axios'
+import moment from 'moment';
 
 import { useNavigate } from 'react-router-dom'; 
 import './index.scss'
@@ -94,7 +95,7 @@ async function excluir(id) {
 async function alterar(pos, id) {
     settitulo(cards[pos].titulo)
     setconteudo(cards[pos].corpo)
-    setdata(new Date(cards[pos].data).toLocaleDateString())
+    setdata(moment(cards[pos].data).format('YYYY-MM-DD'))
     setAlterando(id)
 }
 
