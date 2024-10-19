@@ -6,12 +6,16 @@
     .faixa{
         width: 100%;
         height: 40vw;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        
 
         .fundo
         {
             position: relative;
-            width: 100%;
+            width: 60%;
             height: 40vw;
         }
     }

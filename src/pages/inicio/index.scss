@@ -5,55 +5,54 @@
 
 
    
-     .faixa {
-
-        height: 45.9vw;
+    .faixa {
+        height: 44vw;
         background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-
+        background-color: #EFCAFE;  
+        background-size: contain;  
+        background-position: center; 
+    
         .texto-faixa {
             display: flex;
             justify-content: space-between;
             padding-left: 10vw;
             padding-right: 10vw;
             padding-top: 6vw;
+            
             h2 {
                 font-family: 'Urbanist', sans-serif;
                 font-weight: 700;
                 color: #6E2275;
                 font-size: 4vw;
             }
-            
         }
-        
-     }
+    }
+    
 
     
 
      .recrutando {
         background-color: #ffffff;
         margin: 0;
-        padding-bottom: 5%;
+        padding: 5% 0%;
         height: 100%;
         position: relative;
 
         .conteudo {
-            padding: 5% 7% 19% 7%;
+            padding: 2% 7% 2% 7%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             position: relative;
-            background-image: url('data:image/svg+xml;utf8,<svg width="1437" height="752" viewBox="0 0 1437 752" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
-            background-size: cover;
-            background-repeat: no-repeat;
-            gap: 3vw;
+            background-color: #E5DBEB;
+           
+            gap: 5vw;
 
             img {
                 border-radius: 40px;
-                width: 57vw;
-                height: auto;
+                width: auto;
+                height: 37vw;;
             }
 
             .text {
@@ -79,27 +78,32 @@
 
                 a {
                     text-decoration: none;
+
+                    .link {
+                        display: flex;
+                   
+                        justify-content: start;
+                        margin-right: 40px;
+                        text-decoration: none;
+                        gap: 0.5vw;
+                        font-size: 2.5vw;  
+                       align-items: center;
+                        
+
+                        p {
+                            color: #8822A1;
+                        }
+
+                        svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
+                            overflow: visible;
+                            box-sizing: content-box;
+                            font-size: 1.5vw;
+                            margin-top: 0.6vw;
+                          
+                        }
+                    }
                 }
 
-                .link {
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: start;
-                    margin-right: 40px;
-                    text-decoration: none;
-                    gap: 0.5vw;
-                    font-size: 2.5vw;
-
-                    p {
-                        color: #8822A1;
-                    }
-
-                    img {
-                        width: 2vw;
-                        height: 2vw;
-                        margin-bottom: 1.5px;
-                    }
-                }
             }
         }
 
