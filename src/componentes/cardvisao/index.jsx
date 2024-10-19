@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 
 export default function CarrosselVagas() {
-    const [vagas, setVagas] = useState([]); 
-    const [carros, setCarros] = useState(0); 
+    const [vagas, setVagas] = useState([]);
+    const [carros, setCarros] = useState(0);
 
     function navegarCarrossel(direcao) {
         if (direcao === 'proximo') {
-          
+
             if (carros < vagas.length - 3) {
                 setCarros(carros + 3);
             } else {
@@ -22,7 +22,7 @@ export default function CarrosselVagas() {
             if (carros >= 3) {
                 setCarros(carros - 3);
             } else {
-                setCarros(0); 
+                setCarros(0);
             }
         }
     }
@@ -33,7 +33,7 @@ export default function CarrosselVagas() {
     }
 
     useEffect(() => {
-       
+
         buscarVagas();
     }, []);
 
@@ -49,24 +49,26 @@ export default function CarrosselVagas() {
                         <h1>{vaga.nome_empresa}</h1>
                         <h2>{vaga.cargo}</h2>
                         <h3>{new Date(vaga.data_criacao).toLocaleDateString()}</h3>
-                        <Link to={`/admin/gerenciamento/${vaga.id}`}><button>Ver</button></Link>
+                        <Link to={`/admin/gerenciamento/${vaga.id}`} className="link-btn">
+                            <button><i className="fa-solid fa-ellipsis"></i></button>
+                        </Link>
                     </div>
                 );
             }
         }
-        return elementos; 
+        return elementos;
     }
 
     return (
         <div className="carrossel">
-            <button onClick={() => navegarCarrossel('anterior')}>               
-            <i className="fa fa-angle-left" aria-hidden="true" style={{ fontSize: '3vw' }}></i></button>
+            <button onClick={() => navegarCarrossel('anterior')}>
+                <i className="fa fa-angle-left" aria-hidden="true" style={{ fontSize: '3vw' }}></i></button>
             <div className='comp-visao-geral '>
-                    <div className="cards-container">
-                {vagas.length > 0 && aparecerVagas()}
+                <div className="cards-container">
+                    {vagas.length > 0 && aparecerVagas()}
+                </div>
             </div>
-            </div>
-        
+
             <button onClick={() => navegarCarrossel('proximo')}>   <i className="fa fa-angle-right" aria-hidden="true" style={{ fontSize: '3vw' }} ></i></button>
         </div>
     );
