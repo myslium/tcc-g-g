@@ -18,6 +18,8 @@ export default function Inicio() {
             link3 = '/vagas'
             titulo4 = 'Acompanhe o processo'
             link4 = '/falecomconsultor'
+            link5 = '/bot'
+            titulo5 = 'fa-solid fa-robot'
 
             />
 
@@ -39,7 +41,10 @@ export default function Inicio() {
             <div className="recrutando">
 
                 <div className="conteudo">
-                    <img src="/assets/images/inicio/segunda.jpg" alt="" />
+                    <div className="imseg">
+                        <img src="/assets/images/inicio/segunda.jpg" alt="" />
+                    </div>
+                  
                     <div className="text">
                         <h1>RECRUTANDO PESSOAS E DESTACANDO TALENTOS!</h1>
                         <p>GENTE&GESTÃO tem foco onde pode causar impacto e como pode acelerar planos, pois acredita que apoiar empresas gera oportunidade e emprego</p>

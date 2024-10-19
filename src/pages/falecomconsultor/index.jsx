@@ -79,7 +79,7 @@ export default function Falecomconsultor() {
             />
 
             <section className='primeira-parte'>
-                <img src="/assets/images/consultor/primeiraimg.png" alt="" />
+                <img src="/assets/images/consultor/primeira.png" alt="" />
             </section>
 
             <Tituloelogo 

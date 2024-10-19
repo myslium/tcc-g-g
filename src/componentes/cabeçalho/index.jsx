@@ -58,6 +58,9 @@ export default function Cabecalho(props) {
                         <li><Link to={props.link2}>{props.titulo2}</Link></li>
                         <li><Link to={props.link3}>{props.titulo3}</Link></li>
                         <li><Link to={props.link4}>{props.titulo4}</Link></li>
+                        <li><Link  className="robot-link" to={props.link5}><i className={props.titulo5} ></i>
+                        <span>robot</span></Link></li>
+
                         <li>
                             <Link to='/login'>
                                 <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" />
