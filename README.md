@@ -62,10 +62,7 @@ CREATE TABLE candidato_final (
 );
 
 
-
-
-
-
+# Tabela Não sei
 
 CREATE TABLE candidato (
   id_candidato INT PRIMARY KEY AUTO_INCREMENT,
