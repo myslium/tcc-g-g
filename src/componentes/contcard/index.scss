@@ -1,57 +1,83 @@
 .comp-card-admin {
-    .contcard{
-  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3vw;
+    scroll-behavior: smooth;
+
+    .contcard {
         background-color: #E5DBEB;
         border-radius: 10px;
         width: 18vw;
         height: 13vw;
         padding: 1vw 2vw 4vw 2vw;
-       
-    
-        .textinho
-        {
-    
-      .titulointeressado{
-            font-size: 1.5vw;
-            text-align: justify;
-            color: #4B1972;
-            font-family: 'Ultra',sans-serif;
-            font-weight: 500;
-    
-         
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        gap: 1vw;
+
+        .textinho {
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            flex-direction: column; 
+            justify-content: flex-start; 
+            gap: 0.5vw; 
+        
+            .titulointeressado {
+                font-size: 1.9vw;
+                color: #000000;
+                text-align: start;
+                font-weight: 500;
+                white-space: nowrap; 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                margin: 0%;
+            }
+        
+            .oi {
+                max-height: 8.5vw; 
+                overflow: hidden; 
+                position: relative;
+           
+                p {
+                    text-align: start;
+                    font-size: 1.3vw;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    word-wrap: break-word;
+                }
+            }
         }
-        .textointeressado{
-            font-size: 0.9vw;
-            text-align: justify;
-        }
-    
-    
-        }
-    
-      
         a {
-            text-decoration: none;
+
             color: #B54FCF;
             font-weight: 700;
-            font-size: 1.2vw;
+            font-size: 0.9vw;
+            position: absolute;
+            bottom: 0vw;
+            right: 1.6vw;
 
-            
+            &:hover {
+                color: #491257;
+            }
         }
-        a:hover {
-            color: #491257;
+    }
 
+    button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        i {
+            font-size: 3vw;
+            color: #841B86;
         }
-
-       
-
-       
-         
-     
-
-        
-        
-       
-        
-              
     }
 }
