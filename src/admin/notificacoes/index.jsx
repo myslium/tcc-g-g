@@ -120,19 +120,10 @@ async function alterar(pos, id) {
     
     
     <div className="cards-interessados">
-
         
-     <ContCard titulo = 'Cacau Show' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
+     <ContCard />
 
-
-            <ContCard titulo = 'Nestle' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
-
-            <ContCard titulo = 'Nestle' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
-            <ContCard titulo = 'Nestle' texto = 'A Insight Recruiters precisa da sua expertise para otimizar o gerenciamento de currículos e vagas, melhorar nossas estratégias de recrutamento, e utilizar tecnologias avançadas. Seu atendimento personalizado pode ajudar a aumentar nossa eficiência e encontrar os melhores talentos.'/>
-                
-
-                
-            
+     
             
     </div>
          
@@ -156,13 +147,7 @@ async function alterar(pos, id) {
        <div className='metas'>
 
         <BarChartComponent/>
-        <div className='resultado'>
-            <h1>Feedback</h1>
-
-            <p>
-            Seu gráfico mostra que você teve um desempenho melhor em agosto em comparação a julho. O aumento de 12 para 18 vagas fechadas é um ótimo sinal. Esse aumento pode ser um reflexo de melhores técnicas de recrutamento ou um aumento na demanda. Continue a analisar o que funcionou bem e considere aplicar essas estratégias em futuros meses.
-            </p>
-        </div>
+     
        </div>
 
        <TituloMenor titulo ='Notas fixadas'/>
