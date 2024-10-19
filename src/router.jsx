@@ -10,7 +10,7 @@ import VagasAdmin from './admin/gerenciandovagas/index.jsx';
 import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
-
+import Robo from './pages/bot/index.jsx';
 
 export default function Navegacao() {
     return (
@@ -23,6 +23,7 @@ export default function Navegacao() {
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
                 <Route path='/saibamais' element={<Saibamais/>} />
+                <Route path='/bot' element={<Robo/>} />
 
 
               
