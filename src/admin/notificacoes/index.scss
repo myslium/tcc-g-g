@@ -1,5 +1,5 @@
 .pagina-interessados{
-
+padding-bottom: 2vw ;
     
     
     
@@ -53,6 +53,7 @@
             color: #230733;
             font-weight: 700;
             font-size: 2vw;
+   
             }
 
             button {
@@ -136,9 +137,11 @@
     
             .titulo {
                 display: flex;
-                align-items: center;
-                margin-left: 2vw;
+              
                 gap: 0.5vw;
+                justify-content: center;
+             
+
     
                 img {
                     width: 2vw;
@@ -146,9 +149,13 @@
                 }
     
                 h1 {
+                    width: 60%;
                     font-family: 'Ultra', sans-serif;
                     font-size: 1.3vw;
                     font-weight: 500;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin: 0;
                 }
     
                 #check {
@@ -161,17 +168,20 @@
                 font-family: 'Montserrat', sans-serif;
                 font-size: 1.2vw;
                 margin-left: 1vw;
+                text-align: center;
             }
     
             .icones {
                 display: flex;
                 align-items: center;
                 gap: 0.5vw;
+                justify-content: center;
 
                button {
                 background-color: #F6E9F9;
                 border: none;
                 width: 1vw;
+      
 
                 #icon {
                     width: 1vw;
@@ -184,8 +194,11 @@
     
              
                 h3 {
-                    margin-left: 0.5vw;
-                    font-size: 1vw;
+                   
+                    font-size: 1.3vw;
+                    margin: 0;
+                  
+                
                 }
             }
     
