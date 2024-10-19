@@ -1,26 +1,62 @@
 import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import './index.scss'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios'
+import { useEffect, useState } from 'react';
 
 
 
 export default function ConfirmarCandidato() {
-
+    const [nome, setNome] = useState('')
+    const [emailCandidato, setEmailCandidato] = useState('')
+    const [cpfCandidato, setCpfCandidato] = useState('')
+    const [status, setStatus] = useState('')
+    const [idCandidato, setIdCandidato] = useState(0)
     const navigate = useNavigate()
+
+    const { id } = useParams()
+
+    async function buscarCandidato() {
+      
+        const url = `http://localhost:5010/candidato/${id}`
+        const resp = await axios.get(url)
+        setEmailCandidato(resp.data.email)
+        setCpfCandidato(resp.data.cpf)
+        setIdCandidato(id)
+
+    }
+
+    async function adicionar() {
+
+        const confirmarCandidato = {
+            "id": idCandidato,
+            "nome": nome,
+            "status": status
+        }
+
+        const url = `http://localhost:5010/confirmarCandidato`
+        await axios.post(url, confirmarCandidato)
+        alert('Candidato Confirmado!')
+    }
+
 
     function reset() {
         localStorage.removeItem('token'); 
         navigate('/')
     }
 
+    useEffect( () => { 
+        buscarCandidato()    
+    }, [])
+ 
     return (
         <div className='pagina-confirmar'>
             <Cabecalho
              titulo1='Sair' 
              onLogout={reset} 
              titulo2='Vagas'
-             link2='/admin/vagasAdmin'
+             link2='/admin/gerenciandovagas'
              titulo3='Notificações'
              link3='/admin/notificacoes'
              titulo4='Gerenciamento Vagas'
@@ -29,26 +65,32 @@ export default function ConfirmarCandidato() {
 
             <TituloMenor titulo='Confirmação de candidato'/>
 
-            <section className='formulario'>
-                <div className='inputs'>
-                    <label>Candidato:</label>
-                    <input type="text" />
-                    <label>CPF:</label>
-                    <input type="text" />
-                    <label>Email:</label>
-                    <input type="text" />
-                    <label>Status:</label>
-                    <input type="text" />
+                <section className='formulario'>
 
-                    <div>
-                         <button>Currículo</button>
+                    <div className='inputs'>
+                        
+                        <label>Candidato:</label>
+                        <input type="text" placeholder='Nome do candidato' value={nome} onChange={e => setNome(e.target.value)}/>
+                        <label>CPF:</label>
+                        <input type="text" value={cpfCandidato} onChange={e => setCpfCandidato(e.target.value)} />
+                        <label>Email:</label>
+                        <input type="text" value={emailCandidato} onChange={e => setEmailCandidato(e.target.value)}/>
+                        <label>Status:</label>
+                        <input type="text" placeholder='Aprovado ou em andamento?' value={status} onChange={e => setStatus(e.target.value)}/>
+
+                        <div>
+                            <button>Currículo</button>
+                        </div>
+                       
+                    
                     </div>
-                   
-                </div>
-            </section>
-            <div className='botao'>
-                <button>Confirmar</button>
-            </div>
+                    <div className='botao'>
+                        <button onClick={adicionar}>Confirmar</button>
+                    </div>
+                </section>
+          
+            
+           
         </div>
     )
 }
