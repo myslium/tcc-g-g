@@ -19,7 +19,7 @@ export default function Inicio() {
             titulo4 = 'Acompanhe o processo'
             link4 = '/falecomconsultor'
             link5 = '/bot'
-            titulo5 = 'ROBOZINHO'
+            titulo5 = 'fa-solid fa-robot'
 
             />
 
