@@ -6,7 +6,7 @@ import Falecomconsultor from './pages/falecomconsultor';
 import Login from './pages/login';
 import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
-import Vagasadmin from './admin/gerenciandovagas/index.jsx';
+import VagasAdmin from './admin/gerenciandovagas/index.jsx';
 import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
@@ -53,11 +53,11 @@ export default function Navegacao() {
                  
                    
                 } />
-                  <Route path='/admin/vagasAdmin' element={
+                  <Route path='/admin/gerenciandovagas' element={
                      
                        
                      <ProtectedRoute>
-                      <Vagasadmin/>
+                      <VagasAdmin/>
                      </ProtectedRoute>
                    
                      
@@ -70,6 +70,14 @@ export default function Navegacao() {
                     </ProtectedRoute>
                   }
                   />
+
+                <Route path='/admin/confirmacao/:id' element= {
+
+                    <ProtectedRoute>
+                        <ConfirmarCandidato/>
+                    </ProtectedRoute>
+                    }
+                />
 
                 
             </Routes>
