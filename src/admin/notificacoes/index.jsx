@@ -146,13 +146,7 @@ async function alterar(pos, id) {
        <div className='metas'>
 
         <BarChartComponent/>
-        <div className='resultado'>
-            <h1>Feedback</h1>
-
-            <p>
-            Seu gráfico mostra que você teve um desempenho melhor em agosto em comparação a julho. O aumento de 12 para 18 vagas fechadas é um ótimo sinal. Esse aumento pode ser um reflexo de melhores técnicas de recrutamento ou um aumento na demanda. Continue a analisar o que funcionou bem e considere aplicar essas estratégias em futuros meses.
-            </p>
-        </div>
+     
        </div>
 
        <TituloMenor titulo ='Notas fixadas'/>
