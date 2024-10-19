@@ -73,7 +73,14 @@ export default function Navegacao() {
                     </ProtectedRoute>
                     }
                 />
+                <Route path='/admin/enviarvaga' element={
 
+                    <ProtectedRoute>
+                        <EnviarVaga/>
+                    </ProtectedRoute>
+
+                }
+                />
                 
             </Routes>
         </BrowserRouter>

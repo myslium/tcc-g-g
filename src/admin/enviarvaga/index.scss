@@ -1,0 +1,146 @@
+.pagina-enviarvaga {
+    .formulario {
+        position: relative;
+        margin: 3vw 9vw 3vw 9vw;
+        width: 75vw;
+        height: 45vw;
+        border: 0.2vw solid #C7C4C4;
+        border-radius: 1vw;
+        padding: 3vw;
+
+        h1 {
+            font-family: 'Ultra', sans-serif;
+            font-size: 2vw;
+            color: #D60BB5;
+            font-weight: 400;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5vw;
+
+            label {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                color: #380f5a;
+                font-size: 1.5vw;
+              
+            }
+
+            input {
+                width: 50vw;
+                height: 3.5vw;
+                padding: 0.4vw 1vw;
+                border-radius: 1.5vw;
+                border: 0.15vw solid #C7C4C4;
+                outline: none;
+                padding: 2px 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.3vw;
+                color: #313131;
+                font-weight: 500;
+                box-shadow: 0vw 0.3vw 3px #e6e6e6;
+                
+            }
+
+            div {
+                margin-top: 2vw;
+                button {
+                    padding: 1vw 5vw;
+                    background-color: #B54FCF;
+                    border-radius: 1.3vw;
+                    border: 5px solid #B54FCF;
+                    color: #fff;
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 1.5vw;
+                    font-weight: 600;
+                    transition: 0.3s ease-in-out;
+                }
+
+                button:hover{
+                    
+                        background-color: #240A39;
+                        color: white;
+                        transform: translateY(-2px);
+                        transition: all 0.3s ease;
+                        border: 5px solid #240A39;
+                      
+                }
+            }
+           
+        }
+
+        .botao {
+            position: absolute;
+            right: 6vw;
+            top: 49vw;
+
+            button {
+                padding: 1vw 5vw;
+                background-color: #B54FCF;
+                border-radius: 1.3vw;
+                border: 5px solid #B54FCF;
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.5vw;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+
+            button:hover{
+                
+                    background-color: #240A39;
+                    color: white;
+                    transform: translateY(-2px);
+                    transition: all 0.3s ease;
+                    border: 5px solid #240A39;
+                  
+            }
+        }
+
+        .selecionados {
+            width: 60vw;
+            border: 0.2vw solid #C7C4C4;
+            border-radius: 1vw;
+            padding: 3vw 2vw;
+            display: flex;
+            align-items: center;
+          
+            gap: 2vw;
+
+            
+            .pesquisar {
+                width: 14vw;
+                height: 4vw;
+                position: relative;
+
+                #icon {
+                    top: 1.3vw;
+                    position: absolute;
+                    left: 1.2vw;
+                    color: #fff;
+                    font-size: 1.4vw;
+                    cursor: pointer;
+                }
+
+                #cpf {
+                    width: 14vw;
+                    height: 4vw;
+                    background-color: #B54FCF;
+                    border: none;
+                    padding: 0vw 3vw;
+                }
+                #cpf::placeholder {
+                    font-size: 1.5vw;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+           
+          
+        }
+
+    }
+}
