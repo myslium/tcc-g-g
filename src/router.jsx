@@ -10,6 +10,7 @@ import VagasAdmin from './admin/gerenciandovagas/index.jsx';
 import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
+import EnviarVaga from './admin/enviarvaga/index.jsx';
 
 
 export default function Navegacao() {
@@ -70,7 +71,14 @@ export default function Navegacao() {
                     </ProtectedRoute>
                     }
                 />
+                <Route path='/admin/enviarvaga' element={
 
+                    <ProtectedRoute>
+                        <EnviarVaga/>
+                    </ProtectedRoute>
+
+                }
+                />
                 
             </Routes>
         </BrowserRouter>
