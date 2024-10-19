@@ -19,33 +19,15 @@
 
 .metas {
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-evenly;
+    align-items: center;
+
+   height: 28vw;
     margin: 4vw 9vw;
 
-    img {
-        width: 30vw;
-    }
+  
 
-    .resultado {
-        width: 20vw;
-        height: 25vw;
-        padding: 2vw;
-        border-radius: 2vw;
-        background-color: #E5DBEB;
-
-
-        h1 {
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 2vw;
-            color: #4a1569;
-        }
-        p {
-            font-size: 1.2vw;
-            color: #230733;
-            font-weight: 400;
-        }
-    }
+   
 }
 
 .ultima-parte-notas {

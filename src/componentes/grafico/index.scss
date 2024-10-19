@@ -1,42 +1,47 @@
 .barchart-container {
-    width: 100%;
-    height: 300px;
-    background-color: #FDF7FE;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .recharts-bar {
-    &:nth-child(1) {
-      fill: #c014c0; 
-    }
-  
-    &:nth-child(2) {
-      fill: #681268; 
-    }
-  }
-  
-  .recharts-legend-item {
-    font-size: 14px;
-    color: #77138b;
-  }
-  .resultado {
-    width: 20vw;
-    height: 25vw;
-    padding: 2vw;
-    border-radius: 2vw;
-    background-color: #E5DBEB;
-  
-    h1 {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 2vw;
-        color: #4a1569;
-    }
-  
-    p {
-        font-size: 1.2vw;
-        color: #230733;
-        font-weight: 400;
-    }
-  }
-  
+  width: 100%;
+  height:  100%; 
+  background-color: #FDF7FE;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;  
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.recharts-bar {
+&:nth-child(1) {
+  fill: #c014c0; 
+}
+
+&:nth-child(2) {
+  fill: #681268; 
+}
+}
+
+.recharts-legend-item {
+font-size: 14px;
+color: #77138b;
+}
+
+.resultado {
+width: 20vw;
+height: 25vw;
+padding: 2vw;
+border-radius: 2vw;
+background-color: #E5DBEB;
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2vw;
+    color: #4a1569;
+}
+
+p {
+    font-size: 1.35vw;
+    color: #230733;
+    font-weight: 400;
+}
+}
