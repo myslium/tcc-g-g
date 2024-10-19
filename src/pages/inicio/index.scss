@@ -6,7 +6,7 @@
 
 
     .faixa {
-        height: 40vw;
+        height: 42vw;
         background-repeat: no-repeat;
         background-color: #EFCAFE;
         background-size: contain;
@@ -35,7 +35,7 @@
         background-color: #ffffff;
         margin: 0;
         padding: 2% 0;
-        height: 39vw;
+        height: 35vw;
         position: relative;
        justify-content: center;
 
@@ -169,12 +169,14 @@
                 h3 {
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 500;
-                    font-size: 1.5vw;
+                    font-size: 1vw;
                     color: #000;
+                    margin: 0;
                 }
 
                 img {
-                    width: 2vw;
+                    width: 1.5vw;
+                    margin-bottom: 0.2vw;
                 }
             }
 
