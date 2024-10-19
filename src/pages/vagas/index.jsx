@@ -16,7 +16,7 @@ export default function Vagas() {
                 link2='/sobre'
                 titulo3='Vagas'
                 link3='/vagas'
-                titulo4='Acompanhe o processo'
+                titulo4 = 'Fale com consultor'
                 link4='/falecomconsultor'
             />
 
