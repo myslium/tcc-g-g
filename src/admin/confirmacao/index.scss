@@ -1,7 +1,9 @@
 .pagina-confirmar {
+ 
 
     .formulario {
-        margin: 3vw 9vw 0vw 9vw;
+        position: relative;
+        margin: 3vw 9vw 3vw 9vw;
         width: 75vw;
         height: 37vw;
         border: 0.2vw solid #C7C4C4;
@@ -64,5 +66,35 @@
            
         }
 
+        .botao {
+            position: absolute;
+            right: 6vw;
+            top: 41vw;
+
+            button {
+                padding: 1vw 5vw;
+                background-color: #B54FCF;
+                border-radius: 1.3vw;
+                border: 5px solid #B54FCF;
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.5vw;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+
+            button:hover{
+                
+                    background-color: #240A39;
+                    color: white;
+                    transform: translateY(-2px);
+                    transition: all 0.3s ease;
+                    border: 5px solid #240A39;
+                  
+            }
+        }
+
     }
+
+    
 }

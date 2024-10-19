@@ -4,57 +4,69 @@
     box-sizing: border-box;
 
 
-   
-     .faixa {
 
-        height: 45.9vw;
+    .faixa {
+        height: 42vw;
         background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
+        background-color: #EFCAFE;
+        background-size: contain;
+        background-position: center;
 
         .texto-faixa {
             display: flex;
             justify-content: space-between;
-            padding-left: 10vw;
-            padding-right: 10vw;
-            padding-top: 6vw;
+            padding-left: 19vw;
+            padding-right: 15vw;
+            padding-top: 4.7vw;
+
             h2 {
                 font-family: 'Urbanist', sans-serif;
                 font-weight: 700;
                 color: #6E2275;
-                font-size: 4vw;
+                font-size: 3.5vw;
             }
-            
         }
-        
-     }
+    }
 
-    
 
-     .recrutando {
+
+
+    .recrutando {
         background-color: #ffffff;
         margin: 0;
-        padding-bottom: 5%;
-        height: 100%;
+        padding: 2% 0;
+        height: 35vw;
         position: relative;
+       justify-content: center;
 
         .conteudo {
-            padding: 5% 7% 19% 7%;
+           
             display: flex;
+            height: 34vw;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             position: relative;
-            background-image: url('data:image/svg+xml;utf8,<svg width="1437" height="752" viewBox="0 0 1437 752" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V607L713.522 752L0 607V0Z" fill="%23E5DBEB"/></svg>');
-            background-size: cover;
-            background-repeat: no-repeat;
-            gap: 3vw;
+            background-color: #E5DBEB;
+            gap: 5vw;
 
-            img {
-                border-radius: 40px;
-                width: 57vw;
-                height: auto;
+            .imseg {
+                width: 50vw;
+                height: 30vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2vw;
+                background-color: #ffffff;
+
+                img {
+
+                    width: auto;
+                    height: 26vw;
+                    border-radius: 2vw;
+                }
             }
+
 
             .text {
                 display: flex;
@@ -79,36 +91,42 @@
 
                 a {
                     text-decoration: none;
+
+                    .link {
+                        display: flex;
+
+                        justify-content: start;
+                        margin-right: 40px;
+                        text-decoration: none;
+                        gap: 0.5vw;
+                        font-size: 2.5vw;
+                        align-items: center;
+
+
+                        p {
+                            color: #8822A1;
+                        }
+
+                        svg:not(:host).svg-inline--fa,
+                        svg:not(:root).svg-inline--fa {
+                            overflow: visible;
+                            box-sizing: content-box;
+                            font-size: 1.5vw;
+                            margin-top: 0.6vw;
+
+                        }
+                    }
                 }
 
-                .link {
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: start;
-                    margin-right: 40px;
-                    text-decoration: none;
-                    gap: 0.5vw;
-                    font-size: 2.5vw;
-
-                    p {
-                        color: #8822A1;
-                    }
-
-                    img {
-                        width: 2vw;
-                        height: 2vw;
-                        margin-bottom: 1.5px;
-                    }
-                }
             }
         }
 
-        
 
-       
+
+
     }
 
-    
+
 
     .cartaovaga {
         .cartao {
@@ -120,137 +138,141 @@
             padding-top: 5vw;
             padding-left: 5vw;
             font-family: 'Montserrat', sans-serif;
-          
 
-          
+
+
             @media (max-width: 768px) {
-                flex-direction: column; 
-                align-items: center; 
-                gap: 2vw;    
+                flex-direction: column;
+                align-items: center;
+                gap: 2vw;
                 flex-wrap: wrap;
                 padding-left: 1vw;
 
 
-               
+
             }
         }
-    
-       .mostrar {
-        display: flex;
-        justify-content: end;
-        align-items: end;
-        padding-right: 4vw;
-        padding-bottom: 2vw;
-        a {
+
+        .mostrar {
             display: flex;
-            align-items: center;
-            gap: 0.5vw;
-            text-decoration: none;
+            justify-content: end;
+            align-items: end;
+            padding-right: 4vw;
+            padding-bottom: 2vw;
 
-            h3 {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 500;
-                font-size: 1.5vw;
-                color: #000;
-            }
-           
-            img {
-                width: 2vw;
-            }
-        }
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.5vw;
+                text-decoration: none;
 
-        @media (max-width: 768px) {
-            
+                h3 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    font-size: 1vw;
+                    color: #000;
+                    margin: 0;
+                }
+
+                img {
+                    width: 1.5vw;
+                    margin-bottom: 0.2vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            
-            
+
+
+            }
+
         }
-     
-       }
-    
+
     }
 
     .pilares {
         display: flex;
-        flex-wrap: nowrap; 
-        justify-content: space-between; 
+        flex-wrap: nowrap;
+        justify-content: space-between;
         margin: 3vw 0vw;
-    
+
         @media (max-width: 768px) {
-            flex-wrap: wrap; 
-            flex-direction: row; 
+            flex-wrap: wrap;
+            flex-direction: row;
             gap: 2vw;
             justify-content: center;
             align-items: center;
         }
     }
-        .ultima {
-                background-color: #E5DBEB;
-                width: 100%;
-                height: 45vw;
-                position: relative;
-                background-size: 90%;
-                background-repeat: no-repeat;
-                
 
-                .consultor {
-                    width: 45vw;
-                    height: 20vw;
-                    margin-left: 4vw;
-                    padding-top: 5vw;
+    .ultima {
+        background-color: #E5DBEB;
+        width: 100%;
+        height: 45vw;
+        position: relative;
+        background-size: 90%;
+        background-repeat: no-repeat;
 
-                    .frase {
-                        display: flex;
-                        align-items: center;
 
-                        img {
-                            height: 7vw;
-                        }
+        .consultor {
+            width: 45vw;
+            height: 20vw;
+            margin-left: 4vw;
+            padding-top: 5vw;
 
-                        h1 {
-                            font-family: 'Ubuntu', sans-serif;
-                            font-weight: 400;
-                            font-size: 2vw;
-                            color: #240A39;
-                        }
-                    }
+            .frase {
+                display: flex;
+                align-items: center;
 
-                    .botao {
-                        background-color: #B54FCF;
-                        border: 5px solid #B54FCF;
-                        padding: 1.6vw 3.4vw;
-                        border-radius: 50px;
-                        margin-left: 8vw;
-
-                        font: 600 1.5vw 'Ubuntu';
-                        color: #fff;
-                        cursor: pointer;
-                        transition: 0.2s ease-in-out;
-                    }
-
-                    .botao:hover {
-                        background-color: #E5DBEB;
-                        border: 5px solid #B54FCF;
-                        color: #000;
-                    }
+                img {
+                    height: 7vw;
                 }
 
-                    .ultima-imagem {
-                        width: 50vw;
-                        height: 35vw;
-                        position: absolute;
-                        right: 5vw;
-                        bottom: 0;
-                    }
+                h1 {
+                    font-family: 'Ubuntu', sans-serif;
+                    font-weight: 400;
+                    font-size: 2vw;
+                    color: #240A39;
+                }
+            }
+
+            .botao {
+                background-color: #B54FCF;
+                border: 5px solid #B54FCF;
+                padding: 1.6vw 3.4vw;
+                border-radius: 50px;
+                margin-left: 8vw;
+
+                font: 600 1.5vw 'Ubuntu';
+                color: #fff;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+
+            .botao:hover {
+                background-color: #E5DBEB;
+                border: 5px solid #B54FCF;
+                color: #000;
+            }
+        }
+
+        .ultima-imagem {
+            width: 50vw;
+            height: 35vw;
+            position: absolute;
+            right: 5vw;
+            bottom: 0;
+        }
 
 
 
 
-           @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-          
+
 
             .consultor {
                 width: 60vw;
@@ -265,7 +287,7 @@
                     }
 
                 }
-               
+
 
 
             }
@@ -273,10 +295,10 @@
             .botao {
                 font-size: 3vw;
             }
-            
-           }         
 
-           @media (max-width: 468px) {
+        }
+
+        @media (max-width: 468px) {
 
 
             height: 55vw;
@@ -284,26 +306,28 @@
             .consultor {
 
                 width: 90vw;
+
                 .frase {
                     img {
                         height: 9vw;
                     }
+
                     h1 {
                         font-size: 4.5vw;
                     }
                 }
 
-                
-            .botao {
 
-                padding: 3vw 3vw;
-                font-size: 3vw;
+                .botao {
+
+                    padding: 3vw 3vw;
+                    font-size: 3vw;
+                }
             }
-            }
 
-           }
-     }
+        }
+    }
 
 
-  
+
 }

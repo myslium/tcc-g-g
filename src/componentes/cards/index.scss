@@ -6,13 +6,13 @@
     .card {
         background-color: #E5DBEB;
         width: 25vw;
-        height: 35vw;
+        height: 31vw;
         margin: 10px;
         transition: transform 0.2s;
 
         img {
             width: 100%;
-            height: auto;
+            height: 14vw;
         }
 
         .texto {
@@ -22,7 +22,7 @@
                 text-align: start;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 800;
-                font-size: 2vw;
+                font-size: 1.8vw;
                 margin: 0;
             }
 

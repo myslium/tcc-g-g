@@ -64,14 +64,6 @@ export default function Navegacao() {
                      
                   } />
 
-                  <Route path='/admin/confirmacao' element= {
-
-                    <ProtectedRoute>
-                        <ConfirmarCandidato/>
-                    </ProtectedRoute>
-                  }
-                  />
-
                 <Route path='/admin/confirmacao/:id' element= {
 
                     <ProtectedRoute>
