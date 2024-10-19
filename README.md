@@ -52,7 +52,21 @@ CREATE TABLE candidato_confirmado (
   FOREIGN KEY (id_formulario) REFERENCES formularios(id)
 );
 
-# Tabela candidato
+# Tabela ENVIAR CANDIDATO
+CREATE TABLE candidato_final (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    vaga VARCHAR(100) NOT NULL,
+    email_empresa VARCHAR(200) NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    data_postagem DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
+
+
 CREATE TABLE candidato (
   id_candidato INT PRIMARY KEY AUTO_INCREMENT,
   id_vaga INT,
