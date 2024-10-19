@@ -11,6 +11,7 @@ import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
 import Robo from './pages/bot/index.jsx';
+import NotFound from './pages/noterro';
 
 export default function Navegacao() {
     return (
@@ -24,6 +25,7 @@ export default function Navegacao() {
                 <Route path='/login' element={<Login/>} />
                 <Route path='/saibamais' element={<Saibamais/>} />
                 <Route path='/bot' element={<Robo/>} />
+                <Route path='*' element={<NotFound/>} />
 
 
               
