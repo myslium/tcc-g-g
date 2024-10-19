@@ -18,6 +18,8 @@ export default function Inicio() {
             link3 = '/vagas'
             titulo4 = 'Acompanhe o processo'
             link4 = '/falecomconsultor'
+            link5 = '/bot'
+            titulo5 = 'ROBOZINHO'
 
             />
 
