@@ -1,4 +1,5 @@
 import Cabecalho from '../../componentes/cabeçalho'
+import TituloMenor from '../../componentes/titulomenor';
 import './index.scss'
 import { useNavigate } from 'react-router-dom';
 
@@ -25,6 +26,29 @@ export default function ConfirmarCandidato() {
              titulo4='Gerenciamento Vagas'
              link4='/admin/gerenciamento'
             />
+
+            <TituloMenor titulo='Confirmação de candidato'/>
+
+            <section className='formulario'>
+                <div className='inputs'>
+                    <label>Candidato:</label>
+                    <input type="text" />
+                    <label>CPF:</label>
+                    <input type="text" />
+                    <label>Email:</label>
+                    <input type="text" />
+                    <label>Status:</label>
+                    <input type="text" />
+
+                    <div>
+                         <button>Currículo</button>
+                    </div>
+                   
+                </div>
+            </section>
+            <div className='botao'>
+                <button>Confirmar</button>
+            </div>
         </div>
     )
 }

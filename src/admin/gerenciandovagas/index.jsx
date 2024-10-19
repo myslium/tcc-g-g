@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import TituloMenor from '../../componentes/titulomenor'
+import { format, isBefore } from 'date-fns'
 
 export default function VagasAdmin() {
     const [vagas, setVagas] = useState([])
     const [candidatos, setCandidatos] = useState([])
+    const [tempo, setTempo] = useState('')
     const navigate = useNavigate();
 
     function reset() {
@@ -19,6 +21,17 @@ export default function VagasAdmin() {
         const url = `http://localhost:5010/vagas`
         const resp = await axios.get(url)
         setVagas(resp.data)
+        
+        let partesData = resp.data.data_vencimento ? resp.data.data_vencimento.split('T')[0] : '';
+        let dataVencimento = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+        if(dataVencimento < new Date()) {
+            setTempo("Fechada");
+        }
+        else {
+            setTempo('Em andamento')
+        }
+        
+       
     }
 
     async function buscarCandidatos() {
@@ -26,6 +39,9 @@ export default function VagasAdmin() {
         const resp = await axios.get(url)
         setCandidatos(resp.data)
     }
+
+    
+
 
     useEffect(() => {
         vagasCandidatos()
@@ -77,7 +93,7 @@ export default function VagasAdmin() {
                         </div>
                         
                         <div className='tempo'>
-                            <h2>Fechada</h2>
+                            <h2>{tempo}</h2>
                         </div>
                     </section>
                 )
