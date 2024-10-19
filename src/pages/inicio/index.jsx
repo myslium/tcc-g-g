@@ -39,14 +39,14 @@ export default function Inicio() {
             <div className="recrutando">
 
                 <div className="conteudo">
-                    <img src="/assets/images/inicio/segunda.png" alt="" />
+                    <img src="/assets/images/inicio/segunda.jpg" alt="" />
                     <div className="text">
                         <h1>RECRUTANDO PESSOAS E DESTACANDO TALENTOS!</h1>
                         <p>GENTE&GESTÃO tem foco onde pode causar impacto e como pode acelerar planos, pois acredita que apoiar empresas gera oportunidade e emprego</p>
                         <Link to='/sobre'>
                             <div className='link'>
                                 <p> saiba mais</p>
-                                <i class="fa-solid fa-arrow-right"></i>
+                                <i class="fa-solid fa-arrow-right img"></i>
                             </div>
                         </Link>
                     </div>
