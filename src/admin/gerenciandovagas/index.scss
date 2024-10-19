@@ -1,3 +1,81 @@
 .pagina-vagasadmin{
+    min-height: 100vh;
+
+   .filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 9vw;
+    padding: 4vw 0vw;
+    margin-right: 9vw;
+
+    button {
+        background-color: #E5DBEB;
+        padding: 1.4vw 3vw;
+        border: none;
+        border-radius: 1.5vw;
+        font-size: 1vw;
+        font-weight: 600;
+        color: rgb(82, 82, 82);
+        cursor: pointer;
     
+    }
+   }
+
+   .vagas {
+    margin: 0vw 9vw 3vw 9vw;
+    padding: 3vw;
+    background-color: #E5DBEB;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+    .titulo {
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7vw;
+            font-weight: 700;
+            color: black;
+        }
+
+    }
+    .curriculos {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2vw;
+
+        button {
+            background-color: #B54FCF;
+            padding: 1vw 3vw;
+            border: 0.3vw solid #B54FCF;
+            border-radius: 1vw;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1vw;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+        button:hover {
+            background-color: #E5DBEB;
+            color: #030303;
+            transform: translateY(-2px);
+        }
+    }
+
+    .tempo {
+        display: flex;
+        justify-content: right;
+
+        h2 {
+            color: #2c2c2c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+    }
+   }
 }
