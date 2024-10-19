@@ -9,7 +9,7 @@ export default function BarChartComponent() {
     async function fetchData() {
       try {
         const cor = ['#c014c0','#681268']
-        const response = await axios.get('http://localhost:5010/vagas/s');
+        const response = await axios.get('http://localhost:5010/formulario/s');
         const dadosTratados = response.data.map((item, pos) => ({
           name: `Mês ${item.mes}`,
           mes: item.quantidade,
