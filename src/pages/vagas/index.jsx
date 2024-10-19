@@ -48,13 +48,16 @@ export default function Vagas() {
                 <div className="vagas">
                     <div className="cartavaga">
                         <div className="textovaga">
-                            <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
+                            <div className="texy">
+                                <h1 className='profissaovaga'>Analista de Suporte em TI</h1>
                             <h4>Requisitos</h4>
                             <ul>
                                 <li>Formação em Administração, Logística ou áreas relacionadas.</li>
                                 <li>Experiência prévia em controle de estoque.</li>
                                 <li>Experiência prévia em controle de estoque.</li>
-                            </ul>
+                            </ul> 
+                            </div>
+                           
 
                             <div className='botoazinhos'>
                                 <div className='aff'>
