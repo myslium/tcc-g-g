@@ -3,9 +3,11 @@ import { useState } from 'react'
 import Intro from '../../componentes/intro'
 import { useNavigate } from 'react-router-dom'
 import Cabecalho from '../../componentes/cabeçalho'
+import Duvida from '../../componentes/duvida'
 
 export default function Robo(){
   const [resposta,setresposta] = useState('')
+  const [respondendo,setrespondendo] = useState('')
   const navigate = useNavigate()
   let oi = true
 
@@ -15,26 +17,43 @@ export default function Robo(){
       let ola = ('Basta ir na opção vagas acima e selecionar a vaga desejada')
 
       setresposta(ola)
+      setrespondendo(<Duvida
+      sim = {sim}
+      nao= {nao}
+      />)
+
       
     },
   1*1000);
-    
-
+   
   }
 
   function disponiveis(){
+    setresposta('')
+    setrespondendo('')
+
     setTimeout(() => {
       let ola = ('Vá no link acima no site "vagas" acima e ter acesso a pagina')
       setresposta(ola)
-      
+      setrespondendo(<Duvida
+        sim = {sim}
+        nao= {nao}
+        />)
+  
     },
   1*1000);
     
   }
   function empresa(){
     setTimeout(() => {
-      let ola = (' ir na opção "Acompanhe o processo"')
+      let ola = (' Ir na opção "Acompanhe o processo"')
       setresposta(ola)
+      setrespondendo(<Duvida
+        sim = {sim}
+        nao= {nao}
+        />)
+  
+
       
     },
   1*1000);
@@ -62,11 +81,10 @@ export default function Robo(){
   function nao(){
     
     setTimeout(() => {
-      let ola= ('Obrigada por confiar em nossos serviços, até a próxima!!')
-      setresposta(ola)
+    alert('Obrigada por confiar em nossos serviços, até a próxima!!')
       
     },
-  1*1000);
+  0.5*1000);
     
     oi = false
     navigate('/')
@@ -110,26 +128,21 @@ while (oi === true){
         
 
         <div className='resposta'>
+          <div className="lalis"><img src="/assets/images/consultor/lisinha.png" alt="" />
+          </div>
+          <div className="lala">
           <button className='resp'><p>{resposta}</p></button>
+          <button className='resp'><p>{respondendo}</p></button>
         </div>
-
-        <div className="msg">
-          <button className='botaopergunta'>Mais uma dúvida?</button>
-          <div className="botaoresposta">
-          <button onClick={sim}>sim</button>
-          <button on onClick={nao}>não</button>
-</div>
         </div>
-        <div className='resposta'>
-      <button className='resp'><p>{resposta}</p></button>
 
        
         </div>
+        
       
 
  </div>
    
-    </div>
 
   )
 
