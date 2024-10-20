@@ -17,19 +17,29 @@ export default function ConfirmarCandidato() {
 
     async function alterarCandidato() {
         const url = `http://localhost:5010/candidato/${id}`;
-        const resp = await axios.put(url);
+        const resp = await axios.get(url);
         setNome(resp.data.nome);
         setEmailCandidato(resp.data.email);
         setCpfCandidato(resp.data.cpf);
         setIdCandidato(id);
         setStatus(resp.data.status); }
 
-    async function adicionar() {
-      
-        const url = `http://localhost:5010/candidato/${id}`;
-        await axios.put(url, { status }); 
-        navigate('/admin/gerenciandovagas'); 
-    }
+        async function adicionar() {
+            const url = `http://localhost:5010/candidato/${id}`;
+            try {
+                let dados = {
+                    nome,
+                    email: emailCandidato,
+                    cpf: cpfCandidato,
+                    status
+                }
+                await axios.put(url,dados );
+                navigate('/admin/gerenciandovagas');
+            } catch (error) {
+                console.error("Erro ao adicionar candidato:", error);
+            }
+        }
+        
 
     function reset() {
         localStorage.removeItem('token');
