@@ -11,13 +11,22 @@ export default function Vagas() {
     const [vagas, setVagas] = useState([]);
     const [pesquisar, setPesquisar] = useState('');
 
-    async function buscarVagas() {
-        const response = await axios.get('http://localhost:5010/vagas');
-        setVagas(response.data);
+    async function vagasCandidatos() {
+        const url = `http://localhost:5010/vagas`;
+        const resp = await axios.get(url);
+        
+        const vagasComStatus = resp.data.map(vaga => {
+            const partesData = vaga.data_vencimento.split('T')[0];
+            const dataVencimento = new Date(partesData);
+            const status = dataVencimento < new Date() ? "Fechada" : "Em andamento";
+            return { ...vaga, status };
+        });
+
+        setVagas(vagasComStatus);
     }
 
     useEffect(() => {
-        buscarVagas();
+        vagasCandidatos();
     }, []);
 
     async function buscarVagasPorCargo() {
@@ -64,10 +73,12 @@ export default function Vagas() {
                         onChange={aoMudarTermoDeBusca}
                     />
                     <button className='on' onClick={buscarVagasPorCargo}>Buscar</button>
-            </div>
+                </div>
 
                 <div className="vagas">
-                    {vagas.map(vaga => (
+                    {vagas
+                        .filter(vaga => vaga.status !== "Fechada") 
+                        .map(vaga => (
                         <div key={vaga.id} className="cartavaga">
                             <div className="textovaga">
                                 <div className="texy">
@@ -81,6 +92,17 @@ export default function Vagas() {
                                         </ul>
                                     ) : (
                                         <p>Sem requisitos especificados</p>
+                                    )}
+
+                                    <h4>Beneficios</h4>
+                                        {vaga.beneficios ? (
+                                        <ul>
+                                            {vaga.beneficios.split(',').map((beneficio, index) => (
+                                                <li key={index}>{beneficio.trim()}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p>Sem beneficios especificados</p>
                                     )}
                                 </div>
 
