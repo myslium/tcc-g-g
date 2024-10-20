@@ -12,7 +12,6 @@ export default function ConfirmarCandidato() {
     const [status, setStatus] = useState('');
     const [idCandidato, setIdCandidato] = useState(0);
     const navigate = useNavigate();
-
     const { id } = useParams();
 
     async function alterarCandidato() {
@@ -22,25 +21,41 @@ export default function ConfirmarCandidato() {
         setEmailCandidato(resp.data.email);
         setCpfCandidato(resp.data.cpf);
         setIdCandidato(id);
-        setStatus(resp.data.status); }
+        setStatus(resp.data.status); 
+    }
 
-        async function adicionar() {
-            const url = `http://localhost:5010/candidato/${id}`;
-            try {
-                let dados = {
-                    nome,
-                    email: emailCandidato,
-                    cpf: cpfCandidato,
-                    status
-                }
-                await axios.put(url,dados );
-                navigate('/admin/gerenciandovagas');
-                alert('Candidato Confirmado!');
-            } catch (error) {
-                console.error("Erro ao adicionar candidato:", error);
-            }
+    async function adicionar() {
+        const url = `http://localhost:5010/candidato/${id}`;
+        try {
+            let dados = {
+                nome,
+                email: emailCandidato,
+                cpf: cpfCandidato,
+                status
+            };
+            await axios.put(url, dados);
+            navigate('/admin/gerenciandovagas');
+            alert('Candidato Confirmado!');
+        } catch (error) {
+            console.error("Erro ao adicionar candidato:", error);
         }
-        
+    }
+
+    async function baixarCurriculo() {
+        const url = `http://localhost:5010/candidatocurr/${id}`;
+        try {
+            const response = await axios.get(url, {
+                responseType: 'blob'
+            });
+            const urlBlob = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = urlBlob;
+           
+        } catch (error) {
+            console.error("Erro ao baixar o currículo:", error);
+        }
+    }
+    
 
     function reset() {
         localStorage.removeItem('token');
@@ -50,7 +65,7 @@ export default function ConfirmarCandidato() {
     useEffect(() => { 
         alterarCandidato();
     }, []);
- 
+
     return (
         <div className='pagina-confirmar'>
             <Cabecalho
@@ -78,7 +93,7 @@ export default function ConfirmarCandidato() {
                     <input type="text" placeholder='Aprovado ou em andamento?' value={status} onChange={e => setStatus(e.target.value)} />
                     
                     <div>
-                        <button>Currículo</button>
+                        <button onClick={baixarCurriculo}>Baixar Currículo</button>
                     </div>
                 </div>
                 <div className='botao'>
