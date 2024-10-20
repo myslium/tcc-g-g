@@ -14,7 +14,7 @@
 
         .input-container {
             position: relative;
-            width: 50%; 
+            width: 60%; 
             display: flex;
             align-items: center;
             margin: 2vw 0vw;
@@ -48,14 +48,12 @@
 
             button {
                 margin-left: 1vw;
-                padding: 1vw 2vw;
-                font-size: 1.3vw;
+                padding: 0.8vw 1.5vw; 
+                font-size: 1vw; 
                 background-color: #b54fcf;
                 color: #fff;
                 border: none;
                 border-radius: 1vw;
-               
-              
             }
         }
     }
@@ -65,14 +63,15 @@
         flex-direction: column; 
         align-items: center;
         justify-content: center;
-        width: 70%; 
+        width: 60%;
 
         .cartavaga {
+
             display: flex;
             flex-direction: row; 
             background-color: #e5dbeb;
             width: 100%;
-            height: 30vw;
+            height: 25vw;
             border-radius: 20px;
             margin-bottom: 2vw;
             box-shadow: 5px 5px #c2b8b8;
@@ -82,7 +81,7 @@
                 margin: 0;
 
                 li {
-                    font-size: 1.5vw;
+                    font-size: 1.3vw; 
                 }
             }
 
@@ -90,9 +89,9 @@
                 display: flex;
                 justify-content: space-around;
                 color: #b54fcf;
-                font-size: 1.5vw;
+                font-size: 1.5vw; 
                 flex-wrap: wrap;
-                width: 60vw;
+                width: 55vw;
 
                 .aff {
                     display: flex;
@@ -101,50 +100,46 @@
             }
 
             i {
-                font-size: 2vw;
+                font-size: 1.8vw; 
                 background-color: #b54fcf;
             }
 
             .textovaga {
-                padding: 2.5vw;
+                padding: 0.5vw 2.5vw 2.5vw 2.5vw;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                width: 40vw;
+                width: 34vw;
 
                 .texy {
                     padding: 2vw;
                     display: flex;
                     flex-direction: column;
                     gap: 1.8vw;
-                    width: 40vw;
+                    width: 33vw;
 
                     .profissaovaga {
-                        font-size: 2vw;
+                        font-size: 2vw; 
                         margin: 0;
                         font-family: 'Ubuntu', sans-serif;
                         color: #240a39;
                     }
 
                     h4 {
-                        font-size: 1.6vw;
+                        font-size: 1.4vw; 
                         margin: 0;
                     }
 
-                    a {
-                        color: #b54fcf;
-                        text-decoration: none;
-                        font-size: 1vw;
-                    }
+                  
                 }
             }
 
             .image {
-                padding-top: 2vw;
+                padding-top: 0.5vw;
                 height: 10vw;
 
                 .vagaimg {
-                    width: 30vw;
+                    width: 20vw;
                     border-radius: 50px;
                     padding: 2vw;
                 }
@@ -153,11 +148,11 @@
                     display: flex;
                     background-color: #b54fcf;
                     border-radius: 20px;
-                    padding: 0.7vw 4vw;
-                    margin: 2vw;
+                    padding: 0.6vw 2.5vw; 
+                    margin: 1.5vw;
                     color: #ffffff;
                     text-decoration: none;
-                    font-size: 1.3vw;
+                    font-size: 1.2vw;
                     text-transform: uppercase;
                     font-weight: 600;
 
