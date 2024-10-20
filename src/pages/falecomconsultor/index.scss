@@ -193,13 +193,13 @@
               
     
                 .grande {
-                    width: 48vw;
-                    height: 3.5vw;
+                    width: 46vw;
+                    height: 0.5vw;
                     border-radius: 1.5vw;
                     border: 2px solid #C7C4C4;
                     margin-bottom: 2rem;
                     outline: none;
-                    padding: 2px 10px;
+                    padding: 1.5vw;
                     font-family: 'Montserrat', sans-serif;
                     font-size: 1.3vw;
                     color: #313131;
@@ -222,12 +222,12 @@
                 
 
                     .pequeno {
-                        width: 22.5vw;
-                        height: 3.5vw;
+                        width: 21vw;
+                        height: 0.5vw;
                         border-radius: 1.5vw;
                         border: 2px solid #C7C4C4;
                         outline: none;
-                        padding: 2px 10px;
+                        padding: 1.5vw;
                         font-family: 'Montserrat', sans-serif;
                         font-size: 1.3vw;
                         color: #313131;
@@ -238,19 +238,27 @@
             }
 
             textarea{
-                width: 48vw !important;
-                height: 16vw !important;
+                width: 45vw !important;
+                height: 14vw !important;
                 border-radius: 1.5vw;
                 border: 2px solid #C7C4C4;
                 outline: none;
-                padding: 10px 10px;
+                padding: 2vw ;
                 font-family: 'Montserrat', sans-serif;
                 font-size: 1.3vw;
                 color: #313131;
                 font-weight: 500;
                 margin-bottom: 1.8rem;
                 box-shadow: 0px 5px 3px #e6e6e6;
+            
             }
+            .grandee {
+                width: 45vw !important;
+                height: 5vw !important;
+                padding: 2vw ;
+              
+            }
+
 
             .botao {
                 margin-top: 2rem;

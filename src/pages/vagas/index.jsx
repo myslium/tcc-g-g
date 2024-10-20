@@ -9,22 +9,20 @@ import axios from 'axios';
 
 export default function Vagas() {
     const [vagas, setVagas] = useState([]);
-    const [pesquisar, setPesquisar] = useState(''); 
+    const [pesquisar, setPesquisar] = useState('');
 
-  
     async function buscarVagas() {
         const response = await axios.get('http://localhost:5010/vagas');
         setVagas(response.data);
     }
 
     useEffect(() => {
-
         buscarVagas();
     }, []);
 
     async function buscarVagasPorCargo() {
         if (!pesquisar) {
-            return; 
+            return;
         }
 
         try {
@@ -36,7 +34,7 @@ export default function Vagas() {
     }
 
     function aoMudarTermoDeBusca(event) {
-        setPesquisar(event.target.value); 
+        setPesquisar(event.target.value);
     }
 
     return (
@@ -62,7 +60,7 @@ export default function Vagas() {
                         type="text"
                         placeholder="Buscar Cargos"
                         value={pesquisar}
-                        onChange={aoMudarTermoDeBusca} 
+                        onChange={aoMudarTermoDeBusca}
                     />
                     <button className='on' onClick={buscarVagasPorCargo}>Buscar</button>
                 </div>
@@ -74,11 +72,15 @@ export default function Vagas() {
                                 <div className="texy">
                                     <h1 className='profissaovaga'>{vaga.cargo}</h1>
                                     <h4>Requisitos</h4>
-                                    <ul>
-                                        {vaga.requisicoes.split(',').map((requisito, index) => (
-                                            <li key={index}>{requisito}</li>
-                                        ))}
-                                    </ul>
+                                    {vaga.requisicoes ? (
+                                        <ul>
+                                            {vaga.requisicoes.split(',').map((requisito, index) => (
+                                                <li key={index}>{requisito.trim()}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p>Sem requisitos especificados</p>
+                                    )}
                                 </div>
 
                                 <div className='botoazinhos'>
