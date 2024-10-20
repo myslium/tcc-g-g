@@ -63,3 +63,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.on {
+
+    background-color: #B54FCF;
+    border-radius: 1.3vw;
+    border: 5px solid #B54FCF;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.on:hover{
+    
+        background-color: #240A39 !important;
+        color: white;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+        border: 5px solid #240A39;
+      
+}

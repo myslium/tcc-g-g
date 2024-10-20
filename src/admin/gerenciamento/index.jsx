@@ -41,10 +41,10 @@ export default function Gerenciamento() {
             setBeneficios(vaga.beneficios);
             setRequisitos(vaga.requisicoes);
             setDescricao(vaga.descricao);
-            setQuantidade(vaga.qtd_vagas );
+            setQuantidade(vaga.qtd_vagas);
             const dataVencimentoFormatada = vaga.data_vencimento ? vaga.data_vencimento.split('T')[0] : '';
             setVencimento(dataVencimentoFormatada);
-            
+
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
         }
@@ -199,7 +199,12 @@ export default function Gerenciamento() {
 
                     <div className='div-grande'>
                         <label>Requisitos:</label>
-                        <input className='grande' type="text" value={requisitos} onChange={e => setRequisitos(e.target.value)} />
+                        <textarea
+                            className='grandee'
+                            value={requisitos}
+                            onChange={e => setRequisitos(e.target.value)}
+
+                        />
                     </div>
 
                     <div className='div-grande'>

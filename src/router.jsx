@@ -7,8 +7,7 @@ import Login from './pages/login';
 import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
 import VagasAdmin from './admin/gerenciandovagas/index.jsx';
-import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
-import Saibamais from './pages/saibamaisvaga/index.jsx';
+import ProtectedRoute from './utils/protectedRoute.js';
 import EnviarVaga from './admin/enviarvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
 import Cadastro from './pages/cadastro/index.jsx';
@@ -25,7 +24,7 @@ export default function Navegacao() {
                 <Route path='/vagas' element={<Vagas/>} />
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
-                <Route path='/saibamais' element={<Saibamais/>} />
+
                 <Route path='/bot' element={<Robo/>} />
                 <Route path='*' element={<NotFound/>} />
                 <Route path='/cadastro/:id' element={<Cadastro/>} />

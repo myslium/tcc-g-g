@@ -9,19 +9,33 @@ import axios from 'axios';
 
 export default function Vagas() {
     const [vagas, setVagas] = useState([]);
+    const [pesquisar, setPesquisar] = useState('');
+
+    async function buscarVagas() {
+        const response = await axios.get('http://localhost:5010/vagas');
+        setVagas(response.data);
+    }
 
     useEffect(() => {
-        async function fetchVagas() {
-            try {
-                const response = await axios.get('http://localhost:5010/vagas'); // Ajuste a URL da API conforme necessário
-                setVagas(response.data);
-            } catch (error) {
-                console.error("Erro ao buscar vagas:", error);
-            }
+        buscarVagas();
+    }, []);
+
+    async function buscarVagasPorCargo() {
+        if (!pesquisar) {
+            return;
         }
 
-        fetchVagas();
-    }, []);
+        try {
+            const response = await axios.get(`http://localhost:5010/vagas/cargo/${pesquisar}`);
+            setVagas(response.data);
+        } catch (error) {
+            console.error("Erro ao buscar vagas filtradas:", error);
+        }
+    }
+
+    function aoMudarTermoDeBusca(event) {
+        setPesquisar(event.target.value);
+    }
 
     return (
         <div className='pagina-vagas'>
@@ -39,26 +53,16 @@ export default function Vagas() {
             <TituloMenor titulo='Vagas' />
 
             <div className="botooes1">
-                <div className="botooes">
-                    <div className="input-container">
-                        <i className="fa-solid fa-location-dot oi"></i>
-                        <input className='botaobb' type="text" placeholder="Cidade, Estado ou Região" />
-                    </div>
-
-                    <div className="input-container">
-                        <i className="fa-solid fa-briefcase oi"></i>
-                        <input className='botaobb' type="text" placeholder="Cargos" />
-                    </div>
-
-                    <div className="input-container">
-                        <i className="fa-solid fa-building oi"></i>
-                        <input className='botaobb' type="text" placeholder="Regime de Trabalho" />
-                    </div>
-
-                    <div className="input-container">
-                        <i className="fa-solid fa-sack-dollar oi"></i>
-                        <input className='botaobb' type="text" placeholder="Remuneração" />
-                    </div>
+                <div className="input-container">
+                    <i className="fa-solid fa-magnifying-glass oi"></i>
+                    <input
+                        className='botaobb'
+                        type="text"
+                        placeholder="Buscar Cargos"
+                        value={pesquisar}
+                        onChange={aoMudarTermoDeBusca}
+                    />
+                    <button className='on' onClick={buscarVagasPorCargo}>Buscar</button>
                 </div>
 
                 <div className="vagas">
@@ -68,11 +72,15 @@ export default function Vagas() {
                                 <div className="texy">
                                     <h1 className='profissaovaga'>{vaga.cargo}</h1>
                                     <h4>Requisitos</h4>
-                                    <ul>
-                                        {vaga.requisicoes.split(',').map((requisito, index) => (
-                                            <li key={index}>{requisito}</li>
-                                        ))}
-                                    </ul> 
+                                    {vaga.requisicoes ? (
+                                        <ul>
+                                            {vaga.requisicoes.split(',').map((requisito, index) => (
+                                                <li key={index}>{requisito.trim()}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p>Sem requisitos especificados</p>
+                                    )}
                                 </div>
 
                                 <div className='botoazinhos'>
@@ -92,7 +100,7 @@ export default function Vagas() {
                             </div>
 
                             <div className="image">
-                                <Link to={`/cadastro/${vaga.id}`} className='botaovagaa'>Candidatar-se</Link>
+                                <Link to={`/cadastro/${vaga.id}`} className='botaovagaa on'>Candidatar-se</Link>
                             </div>
                         </div>
                     ))}

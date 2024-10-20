@@ -12,40 +12,48 @@
         flex-direction: column;
         align-items: center;
 
-        .botooes {
+        .input-container {
+            position: relative;
+            width: 60%; 
             display: flex;
-            padding: 3vw 2vw;
             align-items: center;
-            gap: 2vw;
-            width: 78vw;
+            margin: 2vw 0vw;
 
-            .input-container {
-                position: relative;
+            .oi {
+                position: absolute;
+                left: 1.5vw;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgb(94, 94, 94);
+                font-size: 1.5vw;
+                pointer-events: none;
+            }
+
+            input {
                 width: 100%;
-                display: flex;
-                align-items: center;
+                padding: 1vw 1.5vw 1vw 4vw;
+                font-size: 1.3vw;
+                border: none;
+                outline: none;
+                background-color: #e5dbeb;
+                border-radius: 1.5vw !important;
+                color: rgb(94, 94, 94);
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease;
 
-                .oi {
-                    position: absolute;
-                    left: 1.5vw;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: rgb(94, 94, 94);
-                    font-size: 1.5vw;
-                    pointer-events: none;
+                &:focus {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
                 }
+            }
 
-                input {
-                    width: 100%;
-                    padding: 1vw 1.5vw 1vw 4vw;
-                    font-size: 1.3vw;
-                    border: none;
-                    outline: none;
-                    background-color: #e5dbeb;
-                    border-radius: 1.5vw !important;
-                    color: rgb(94, 94, 94);
-                    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-                }
+            button {
+                margin-left: 1vw;
+                padding: 1.2vw 1.5vw; 
+                font-size: 1vw; 
+                background-color: #b54fcf;
+                color: #fff;
+                border: none;
+                border-radius: 1vw;
             }
         }
     }
@@ -55,14 +63,15 @@
         flex-direction: column; 
         align-items: center;
         justify-content: center;
-        width: 70%; 
+        width: 60%;
 
         .cartavaga {
+
             display: flex;
             flex-direction: row; 
             background-color: #e5dbeb;
             width: 100%;
-            height: 30vw;
+            height: 25vw;
             border-radius: 20px;
             margin-bottom: 2vw;
             box-shadow: 5px 5px #c2b8b8;
@@ -72,7 +81,7 @@
                 margin: 0;
 
                 li {
-                    font-size: 1.5vw;
+                    font-size: 1.3vw; 
                 }
             }
 
@@ -80,61 +89,57 @@
                 display: flex;
                 justify-content: space-around;
                 color: #b54fcf;
-                font-size: 1.5vw;
+                font-size: 1.5vw; 
                 flex-wrap: wrap;
-                width: 60vw;
+                width: 55vw;
+
+                .aff {
+                    display: flex;
+                    align-items: center;
+                }
             }
 
             i {
-                font-size: 2vw;
+                font-size: 1.8vw; 
                 background-color: #b54fcf;
             }
 
-            .aff {
-                display: flex;
-                align-items: center;
-            }
-
             .textovaga {
-                padding: 2.5vw;
+                padding: 0.5vw 2.5vw 2.5vw 2.5vw;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                width: 40vw;
+                width: 34vw;
 
                 .texy {
                     padding: 2vw;
                     display: flex;
                     flex-direction: column;
                     gap: 1.8vw;
-                    width: 40vw;
+                    width: 33vw;
 
                     .profissaovaga {
-                        font-size: 2vw;
+                        font-size: 2vw; 
                         margin: 0;
                         font-family: 'Ubuntu', sans-serif;
                         color: #240a39;
                     }
 
                     h4 {
-                        font-size: 1.6vw;
+                        font-size: 1.55vw; 
                         margin: 0;
                     }
 
-                    a {
-                        color: #b54fcf;
-                        text-decoration: none;
-                        font-size: 1vw;
-                    }
+                  
                 }
             }
 
             .image {
-                padding-top: 2vw;
+                padding-top: 0.5vw;
                 height: 10vw;
 
                 .vagaimg {
-                    width: 30vw;
+                    width: 20vw;
                     border-radius: 50px;
                     padding: 2vw;
                 }
@@ -143,13 +148,17 @@
                     display: flex;
                     background-color: #b54fcf;
                     border-radius: 20px;
-                    padding: 0.7vw 4vw;
-                    margin: 2vw;
+                    padding: 0.6vw 2.5vw; 
+                    margin: 1.5vw;
                     color: #ffffff;
                     text-decoration: none;
-                    font-size: 1.3vw;
+                    font-size: 1.2vw;
                     text-transform: uppercase;
                     font-weight: 600;
+
+                    &:hover {
+                        background-color: #9c3bb2;
+                    }
                 }
             }
         }
