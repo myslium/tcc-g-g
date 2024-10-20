@@ -4,30 +4,23 @@ import TituloMenor from '../../componentes/titulomenor';
 import Footer from '../../componentes/footer';
 import './index.scss';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 export default function Cadastro() {
     const [nome, setNome] = useState('');
     const [emailCandidato, setEmailCandidato] = useState('');
     const [cpfCandidato, setCpfCandidato] = useState('');
     const [curriculo, setCurriculo] = useState(null);
-    const [idVaga, setIdVaga] = useState(null);
-
-    // Função para obter o id_vaga da URL
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id_vaga');
-        if (id) {
-            setIdVaga(id);
-        }
-    }, []);
+    const { id } = useParams(); // Captura o ID da URL
 
     async function adicionar() {
+        console.log("ID da Vaga:", id); // Debug
         const formData = new FormData();
         formData.append('nome', nome);
         formData.append('email', emailCandidato);
         formData.append('cpf', cpfCandidato);
         formData.append('curriculo', curriculo);
-        formData.append('id_vaga', idVaga); 
+        formData.append('id_vaga', id); // Usando o ID da URL
 
         const url = `http://localhost:5010/candidatoNovo`;
 
