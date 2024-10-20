@@ -1,3 +1,47 @@
 .lisa-secao{
-    background-color: #6665a8;
+    .botons{
+       display: flex;
+        flex-direction: row;  
+        
+    .lisa{
+       
+        img{
+            width: 6vw;
+        }
+
+    }
+  .lalo{
+    display: block;
+  
+        .butao{
+        background-color: #f5d9f8;
+        flex-direction: column;
+        display: flex; 
+         border-radius: 10px;
+         margin: 1vw;
+        }
+    }}
+    .perguntas{
+        display: block;
+        margin-left: 80%;
+        text-align: justify;
+
+
+        .lala{
+        background-color: #b06db6;
+        color: #fff;
+        border-radius: 10px;
+        display: flex; 
+        flex-direction: row;
+         border-radius: 10px;
+         margin: 1vw;
+
+
+        p{
+            padding: 1 .5vw;
+        }
+
+    
+    }
+    }
 }
