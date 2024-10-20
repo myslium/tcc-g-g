@@ -8,7 +8,6 @@ import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
 import VagasAdmin from './admin/gerenciandovagas/index.jsx';
 import ProtectedRoute from './utils/protectedRoute.js';
-
 import EnviarVaga from './admin/enviarvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
 import Cadastro from './pages/cadastro/index.jsx';
