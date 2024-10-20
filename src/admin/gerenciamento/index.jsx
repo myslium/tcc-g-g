@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
@@ -24,8 +24,7 @@ export default function Gerenciamento() {
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
 
-
-    async function carregarVaga() {
+    const carregarVaga = useCallback(async () => {
         try {
             const response = await axios.get(`http://localhost:5010/vagas/${vagaId}`);
             const vaga = response.data;
@@ -48,14 +47,13 @@ export default function Gerenciamento() {
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
         }
-    }
-
+    }, [vagaId]);
 
     useEffect(() => {
         if (vagaId) {
             carregarVaga();
         }
-    }, [vagaId]);
+    }, [vagaId, carregarVaga]);
 
     function reset() {
         localStorage.removeItem('token');
@@ -111,7 +109,6 @@ export default function Gerenciamento() {
         const url = `http://localhost:5010/vagas/${vagaId}`;
         await axios.delete(url);
         resetarCampos();
-
         alert('Vaga deletada com sucesso!');
     }
 
@@ -199,20 +196,12 @@ export default function Gerenciamento() {
 
                     <div className='div-grande'>
                         <label>Requisitos:</label>
-                        <textarea
-                            className='grandee'
-                            value={requisitos}
-                            onChange={e => setRequisitos(e.target.value)}
-
-                        />
+                        <textarea className='grandee' value={requisitos} onChange={e => setRequisitos(e.target.value)} />
                     </div>
 
                     <div className='div-grande'>
                         <label>Beneficios:</label>
-                        <textarea
-                          className='grandee'
-                          value={beneficios} onChange={e => setBeneficios(e.target.value)} 
-                        />
+                        <textarea className='grandee' value={beneficios} onChange={e => setBeneficios(e.target.value)} />
                     </div>
 
                     <div className='div-grande'>
@@ -247,7 +236,6 @@ export default function Gerenciamento() {
                                 <i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar
                             </button>
                         )}
-
                     </div>
                 </div>
             </section>
