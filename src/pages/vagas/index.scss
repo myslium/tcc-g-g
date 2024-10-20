@@ -12,40 +12,50 @@
         flex-direction: column;
         align-items: center;
 
-        .botooes {
+        .input-container {
+            position: relative;
+            width: 50%; 
             display: flex;
-            padding: 3vw 2vw;
             align-items: center;
-            gap: 2vw;
-            width: 78vw;
+            margin: 2vw 0vw;
 
-            .input-container {
-                position: relative;
+            .oi {
+                position: absolute;
+                left: 1.5vw;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgb(94, 94, 94);
+                font-size: 1.5vw;
+                pointer-events: none;
+            }
+
+            input {
                 width: 100%;
-                display: flex;
-                align-items: center;
+                padding: 1vw 1.5vw 1vw 4vw;
+                font-size: 1.3vw;
+                border: none;
+                outline: none;
+                background-color: #e5dbeb;
+                border-radius: 1.5vw !important;
+                color: rgb(94, 94, 94);
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease;
 
-                .oi {
-                    position: absolute;
-                    left: 1.5vw;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: rgb(94, 94, 94);
-                    font-size: 1.5vw;
-                    pointer-events: none;
+                &:focus {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
                 }
+            }
 
-                input {
-                    width: 100%;
-                    padding: 1vw 1.5vw 1vw 4vw;
-                    font-size: 1.3vw;
-                    border: none;
-                    outline: none;
-                    background-color: #e5dbeb;
-                    border-radius: 1.5vw !important;
-                    color: rgb(94, 94, 94);
-                    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-                }
+            button {
+                margin-left: 1vw;
+                padding: 1vw 2vw;
+                font-size: 1.3vw;
+                background-color: #b54fcf;
+                color: #fff;
+                border: none;
+                border-radius: 1vw;
+               
+              
             }
         }
     }
@@ -83,16 +93,16 @@
                 font-size: 1.5vw;
                 flex-wrap: wrap;
                 width: 60vw;
+
+                .aff {
+                    display: flex;
+                    align-items: center;
+                }
             }
 
             i {
                 font-size: 2vw;
                 background-color: #b54fcf;
-            }
-
-            .aff {
-                display: flex;
-                align-items: center;
             }
 
             .textovaga {
@@ -150,6 +160,10 @@
                     font-size: 1.3vw;
                     text-transform: uppercase;
                     font-weight: 600;
+
+                    &:hover {
+                        background-color: #9c3bb2;
+                    }
                 }
             }
         }
