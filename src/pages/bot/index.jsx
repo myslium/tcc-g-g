@@ -9,6 +9,7 @@ import TituloMenor from '../../componentes/titulomenor'
 export default function Robo(){
   const [resposta,setresposta] = useState('')
   const [respondendo,setrespondendo] = useState('')
+  
   const navigate = useNavigate()
   let oi = true
 
@@ -96,9 +97,17 @@ export default function Robo(){
 
   function sim(){
     oi = true
-    let ola = 'CLIQUE NAS OPÇÕES ACIMA PARA OBTER A RESPOSTA'
     setTimeout(() => {
-      setresposta(ola)
+      setrespondendo(
+
+        <Intro
+        mensagem = 'Aqui estão as perguntas'
+        cadastro = {cadastro}
+        disponiveis = {disponiveis}
+        empresa = {empresa}
+        cargo = {cargo}
+        />
+      )
       
       
     },
@@ -177,6 +186,7 @@ while (oi === true){
 
 
         <Intro
+        mensagem = 'Ola sou a Lisa assistente do G&G. Estou aqui para esclarecer suas dúvidas.As dúvidas abaixo são as mais frequentes pelo nosso público, caso nenhuma delas seja a sua, tudo certo! Fale conosco através do nosso Email e faremos o possível para esclarecer.'
         cadastro = {cadastro}
         disponiveis = {disponiveis}
         empresa = {empresa}
@@ -190,7 +200,7 @@ while (oi === true){
           </div>
           <div className="lala">
           <button className='resp'><p>{resposta}</p></button>
-          <p>{respondendo}</p>
+          <p className='respondendo'> {respondendo}</p>
         </div>
         </div>
 

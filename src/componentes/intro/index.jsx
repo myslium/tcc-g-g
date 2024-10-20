@@ -14,7 +14,7 @@ export default function Intro (props){
         ' </div>
 
         <div className="lisamsg">
-    <button className='butao' ><p>Ola sou a Lisa assistente do G&G. Estou aqui para esclarecer suas dúvidas.As dúvidas abaixo são as mais frequentes pelo nosso público, caso nenhuma delas seja a sua, tudo certo! Fale conosco através do nosso Email e faremos o possível para esclarecer.</p></button>
+    <button className='butao' ><p>{props.mensagem}</p></button>
     <button  className='butao'><p>Veja se algumas dessas corresponde a sua: </p></button>
     </div></div>
     <div className="perguntas">
