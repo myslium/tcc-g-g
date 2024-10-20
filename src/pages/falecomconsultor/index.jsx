@@ -196,13 +196,15 @@ export default function Falecomconsultor() {
                             placeholder="Ex: Experiência mínima de 2 anos, Conhecimento em React, etc."
                         />
                     </div>
-
                     <div className='div-grande'>
-
-
                         <label>Beneficios:</label>
-                        <input className='grande' type="text" value={beneficios} onChange={e => setBeneficios(e.target.value)} />
+                        <textarea
+                          className='grandee'
+                          value={beneficios} onChange={e => setBeneficios(e.target.value)} 
+                            placeholder="Ex: Vale refeicão, Vale transporte, etc."
+                        />
                     </div>
+
 
                     <div className='div-grande'>
                         <label>Por que quer trabalhar com a G&G?</label>

@@ -208,8 +208,11 @@ export default function Gerenciamento() {
                     </div>
 
                     <div className='div-grande'>
-                        <label>Benefícios:</label>
-                        <input className='grande' type="text" value={beneficios} onChange={e => setBeneficios(e.target.value)} />
+                        <label>Beneficios:</label>
+                        <textarea
+                          className='grandee'
+                          value={beneficios} onChange={e => setBeneficios(e.target.value)} 
+                        />
                     </div>
 
                     <div className='div-grande'>
