@@ -11,6 +11,7 @@ import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import EnviarVaga from './admin/enviarvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
+import Cadastro from './pages/cadastro/index.jsx';
 import Robo from './pages/bot/index.jsx';
 import NotFound from './pages/noterro';
 
@@ -27,6 +28,7 @@ export default function Navegacao() {
                 <Route path='/saibamais' element={<Saibamais/>} />
                 <Route path='/bot' element={<Robo/>} />
                 <Route path='*' element={<NotFound/>} />
+                <Route path='/cadastro' element={<Cadastro/>} />
 
 
               

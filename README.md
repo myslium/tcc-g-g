@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Tabela TB_ADMIN
+CREATE TABLE TB_ADMIN (
+  ID_ADMIN INT PRIMARY KEY AUTO_INCREMENT,
+  DS_USUARIO VARCHAR(200),
+  DS_SENHA VARCHAR(200)
+);
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tabela formularios
+CREATE TABLE formularios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    id_vaga INT NOT NULL,  -- Altere para INT para corresponder ao tipo da coluna id em vagas
+    email VARCHAR(200) NOT NULL UNIQUE,
+    curriculo BLOB NOT NULL,
+    data_inscricao DATETIME,
+    FOREIGN KEY (id_vaga) REFERENCES vagas(id) -- Define a chave estrangeira
+);
 
-## Available Scripts
+# Tabela vagas
+CREATE TABLE vagas (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nome_empresa VARCHAR(100) NOT NULL,
+  contato_empresa VARCHAR(100) NOT NULL,
+  cnpj VARCHAR(20) NOT NULL,
+  cargo VARCHAR(100) NOT NULL,
+  tipo_contrato VARCHAR(50) NOT NULL,
+  localizacao VARCHAR(100) NOT NULL,
+  modelo_trabalho VARCHAR(50) NOT NULL,
+  salario DECIMAL(10, 2) NOT NULL,
+  beneficios TEXT,
+  requisicoes TEXT,
+  descricao TEXT,
+  data_criacao DATETIME,
+  data_vencimento DATETIME,
+  qtd_vagas INT
+);
 
-In the project directory, you can run:
+# Tabela conteudos
+CREATE TABLE conteudos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  titulo VARCHAR(255) NOT NULL,
+  corpo TEXT,
+  data_publicacao DATETIME
+);
 
-### `npm start`
+# Tabela candidato_confirmado
+CREATE TABLE candidato_confirmado (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  id_formulario INT,
+  nome VARCHAR(100) NOT NULL,
+  status VARCHAR(100) NOT NULL,
+  FOREIGN KEY (id_formulario) REFERENCES formularios(id)
+);
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Tabela ENVIAR CANDIDATO
+CREATE TABLE candidato_final (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    vaga VARCHAR(100) NOT NULL,
+    email_empresa VARCHAR(200) NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    data_postagem DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Tabela Não sei
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+CREATE TABLE candidato (
+  id_candidato INT PRIMARY KEY AUTO_INCREMENT,
+  id_vaga INT,
+  FOREIGN KEY (id_vaga) REFERENCES vagas(id)
+);
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

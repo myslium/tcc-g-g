@@ -1,0 +1,92 @@
+.pagina-cadastro {
+   
+   .centro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        padding-bottom: 4vw;
+    }
+    .formulario {
+        position: relative;
+        margin: 3vw 9vw 3vw 9vw;
+        width: 55vw;
+        height: auto; 
+        border: 0.2vw solid #C7C4C4;
+        border-radius: 1vw;
+        padding: 3vw;
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+
+            label {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                color: #380f5a;
+                font-size: 1.5vw;
+            }
+
+            .input {
+                width: 50vw;
+                height: 3.5vw;
+                padding: 0.4vw 1vw;
+                border-radius: 1.5vw;
+                border: 0.15vw solid #C7C4C4;
+                outline: none;
+                padding: 2px 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.3vw;
+                color: #313131;
+                font-weight: 500;
+                box-shadow: 0vw 0.3vw 3px #e6e6e6;
+            }
+
+            .curriculo {
+                background-color: #B54FCF;
+                display: block;
+                border-radius: 1vw;
+                border: 5px solid #B54FCF;
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.2vw;
+                font-weight: 400;
+                transition: 0.3s ease-in-out;
+                width: 12vw;
+                margin-top: 1vw;
+               padding: 0.8vw 0;
+                text-align: center;
+           
+
+             
+            }
+        }
+
+        .botao {
+            position: absolute;
+            right: 6vw;
+            top: 31vw;
+
+            button {
+                padding: 1vw 5vw;
+                background-color: #B54FCF;
+                border-radius: 1.3vw;
+                border: 5px solid #B54FCF;
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.5vw;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+
+            button:hover {
+                background-color: #240A39;
+                color: white;
+                transform: translateY(-2px);
+                transition: all 0.3s ease;
+                border: 5px solid #240A39;
+            }
+        }
+    }
+}
