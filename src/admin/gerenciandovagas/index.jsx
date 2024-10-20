@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import TituloMenor from '../../componentes/titulomenor'
-import { format, isBefore } from 'date-fns'
+
 
 export default function VagasAdmin() {
     const [vagas, setVagas] = useState([])
@@ -98,6 +98,13 @@ export default function VagasAdmin() {
                     </section>
                 )
             })}
+
+            <div className='botaoadicionar'>
+                <Link to='/admin/enviarvaga'>
+                     <button>Adicionar</button>
+                </Link>
+                
+            </div>
         </div>
     );
 }

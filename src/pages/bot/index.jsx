@@ -106,11 +106,12 @@ while (oi === true){
             link2 = '/sobre'
             titulo3 = 'Vagas'
             link3 = '/vagas'
-            titulo4 = 'Acompanhe o processo'
+         titulo4 = 'Fale com consultor'
             link4 = '/falecomconsultor'
             link5 = '/bot'
-            titulo5 = 'ROBOZINHO'
-
+            titulo5 = 'fa-solid fa-robot'
+               tituloo5= 'ROBOT'
+            
             />
 
             <div className="cont-robo">

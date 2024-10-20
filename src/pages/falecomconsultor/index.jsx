@@ -73,13 +73,13 @@ export default function Falecomconsultor() {
             link2 = '/sobre'
             titulo3 = 'Vagas'
             link3 = '/vagas'
-            titulo4 = 'Acompanhe o processo'
+            titulo4 = 'Fale com consultor'
             link4 = '/falecomconsultor'
 
             />
 
             <section className='primeira-parte'>
-                <img src="/assets/images/consultor/primeiraimg.png" alt="" />
+                <img src="/assets/images/consultor/primeira.png" alt="" />
             </section>
 
             <Tituloelogo 

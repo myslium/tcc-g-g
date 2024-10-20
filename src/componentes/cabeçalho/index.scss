@@ -87,11 +87,38 @@
                     &:hover {
                         color: #ffffff;
                     }
+
+                    i {
+                        font-size: 10vw; // Ajuste conforme necessário
+                    }
                 }
 
+                // Estilo para o link do robô
+                .robot-link {
+                    display: flex;
+                    flex-direction: column; // Coloca o texto abaixo do ícone
+                    align-items: center; // Centraliza o conteúdo
+                    text-decoration: none; // Remove sublinhado
+                    color: #000; // Cor padrão do texto e ícone
+                    font-family: 'Urbanist', sans-serif;
+
+                    i {
+                        font-size: 2rem; // Ajuste o tamanho do ícone
+                    }
+
+                    span {
+                        font-size: 1rem; // Tamanho do texto "robot"
+                        margin-top: 5px; // Espaçamento entre o ícone e o texto
+                        text-align: center; // Centraliza o texto
+                    }
+
+                    &:hover {
+                        color: #ffffff; // Cor ao passar o mouse
+                    }
+                }
             }
-            
-            .oi { 
+
+            .oi {
                 color: #000;
                 text-decoration: none;
                 font-family: 'Urbanist', sans-serif;
@@ -125,6 +152,7 @@
 
                     a {
                         font-size: 14px;
+                        text-align: center;
                     }
                 }
             }
