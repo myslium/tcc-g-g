@@ -39,15 +39,16 @@ export default function Cadastro() {
 
     return (
         <div className='pagina-cadastro'>
-            <Cabecalho
-                titulo1='Início'
-                link1='/'
-                titulo2='Vagas'
-                link2='/admin/gerenciandovagas'
-                titulo3='Notificações'
-                link3='/admin/notificacoes'
-                titulo4='Gerenciamento Vagas'
-                link4='/admin/gerenciamento'
+           <Cabecalho
+             titulo1 = 'Início'
+              link1='/'
+            titulo2 = 'Sobre G&G'
+            link2 = '/sobre'
+            titulo3 = 'Vagas'
+            link3 = '/vagas'
+            titulo4 = 'Fale com consultor'
+            link4 = '/falecomconsultor'
+
             />
 
             <TituloMenor titulo='Candidatar-se' />
