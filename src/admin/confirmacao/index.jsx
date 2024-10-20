@@ -10,19 +10,21 @@ export default function ConfirmarCandidato() {
     const [emailCandidato, setEmailCandidato] = useState('');
     const [cpfCandidato, setCpfCandidato] = useState('');
     const [status, setStatus] = useState('');
-    const [idCandidato, setIdCandidato] = useState(0);
     const navigate = useNavigate();
     const { id } = useParams();
 
-    async function buscar() {
-        const url = `http://localhost:5010/candidato/${id}`;
-        const resp = await axios.get(url);
-        setNome(resp.data.nome);
-        setEmailCandidato(resp.data.email);
-        setCpfCandidato(resp.data.cpf);
-        setIdCandidato(id);
-        setStatus(resp.data.status); 
-    }
+    useEffect(() => {
+        async function buscar() {
+            const url = `http://localhost:5010/candidato/${id}`;
+            const resp = await axios.get(url);
+            setNome(resp.data.nome);
+            setEmailCandidato(resp.data.email);
+            setCpfCandidato(resp.data.cpf);
+            setStatus(resp.data.status); 
+        }
+        
+        buscar();
+    }, [id]); 
 
     async function adicionar() {
         const url = `http://localhost:5010/candidato/${id}`;
@@ -50,21 +52,19 @@ export default function ConfirmarCandidato() {
             const urlBlob = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = urlBlob;
-           
+            link.setAttribute('download', 'curriculo.pdf'); 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         } catch (error) {
             console.error("Erro ao baixar o currículo:", error);
         }
     }
     
-
     function reset() {
         localStorage.removeItem('token');
         navigate('/');
     }
-
-    useEffect(() => { 
-        buscar();
-    }, []);
 
     return (
         <div className='pagina-confirmar'>
