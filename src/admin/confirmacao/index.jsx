@@ -35,6 +35,7 @@ export default function ConfirmarCandidato() {
                 }
                 await axios.put(url,dados );
                 navigate('/admin/gerenciandovagas');
+                alert('Candidato Confirmado!');
             } catch (error) {
                 console.error("Erro ao adicionar candidato:", error);
             }
