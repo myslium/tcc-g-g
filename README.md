@@ -7,13 +7,14 @@ CREATE TABLE TB_ADMIN (
 
 # Tabela formularios
 CREATE TABLE formularios (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR(100) NOT NULL,
-  cpf VARCHAR(11) NOT NULL UNIQUE,
-  vaga VARCHAR(100) NOT NULL,
-  email VARCHAR(200) NOT NULL UNIQUE,
-  curriculo BLOB NOT NULL,
-  data_inscricao DATETIME
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    id_vaga INT NOT NULL,  -- Altere para INT para corresponder ao tipo da coluna id em vagas
+    email VARCHAR(200) NOT NULL UNIQUE,
+    curriculo BLOB NOT NULL,
+    data_inscricao DATETIME,
+    FOREIGN KEY (id_vaga) REFERENCES vagas(id) -- Define a chave estrangeira
 );
 
 # Tabela vagas

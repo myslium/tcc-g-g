@@ -8,6 +8,10 @@ export default function EnviarVaga() {
 
     const navigate = useNavigate()
 
+    function sendEmail(e) {
+        
+    }
+
     function reset() {
         localStorage.removeItem('token')
         navigate('/')
@@ -27,32 +31,53 @@ export default function EnviarVaga() {
             />
 
             <TituloMenor titulo='Enviar Vaga'/>
-
-            <section className='formulario'>
+            <form className='formulario'>
 
                 <div className='inputs'>
-                    
-                    <label>Empresa:</label>
-                    <input type="text"/>
-                    <label>E-mail comercial:</label>
-                    <input type="text"/>
-                    <label>Vaga:</label>
-                    <input type="text" />
-                    
-                    <h1>Selecione os candidatos</h1>
+                        
+                        <label>Empresa:</label>
+                        <input type="text"/>
+                        <label>E-mail comercial:</label>
+                        <input type="text"/>
+                        <label>Vaga:</label>
+                        <input type="text" />
+                        
+                        <h1>Selecione os candidatos</h1>
+                            <div className='pesquisar'>
+                            <i id='icon'className='fa fa-search'></i>
+                            <input id ='pesquisa-cpf'type="text" placeholder='cpf'/>
+                        </div>
 
-                    <div className='selecionados'>
-                       <div className='pesquisar'>
-                        <i id='icon'className='fa fa-search'></i>
-                        <input id = 'cpf'type="text" placeholder='cpf'/>
-                       </div>
+                        <div className='selecionados'>
+                        
+                        <div className='candidatos'>
+                                <div className='card'>
+                                    <h2>Mariana</h2>
+                                    <input type="file" />
+                                </div>
+                                <div className='card'>
+                                    <h2>Mariana</h2>
+                                    <input type="file" />
+                                </div>
+                                <div className='card'>
+                                    <h2>Mariana</h2>
+                                    <input type="file" />
+                                </div>
+                                <div className='card'>
+                                    <h2>Mariana</h2>
+                                    <input type="file" />
+                                </div>
+                        </div>
+                        </div>
+                    
                     </div>
-                
-                </div>
-                <div className='botao'>
+
+            </form>
+
+               
+            <div className='botao'>
                     <button>Confirmar</button>
-                </div>
-            </section>
+            </div>
         </div>
     )
 }
