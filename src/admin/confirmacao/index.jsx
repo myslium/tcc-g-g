@@ -14,7 +14,7 @@ export default function ConfirmarCandidato() {
     const navigate = useNavigate();
     const { id } = useParams();
 
-    async function alterarCandidato() {
+    async function buscar() {
         const url = `http://localhost:5010/candidato/${id}`;
         const resp = await axios.get(url);
         setNome(resp.data.nome);
@@ -63,7 +63,7 @@ export default function ConfirmarCandidato() {
     }
 
     useEffect(() => { 
-        alterarCandidato();
+        buscar();
     }, []);
 
     return (
