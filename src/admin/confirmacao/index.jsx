@@ -49,10 +49,20 @@ export default function ConfirmarCandidato() {
             const response = await axios.get(url, {
                 responseType: 'blob'
             });
+    
+            const extensao = response.headers['content-type'] === 'application/pdf' ? 'pdf' :
+                             response.headers['content-type'] === 'application/msword' ? 'doc' :
+                             response.headers['content-type'] === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ? 'docx' : '';
+    
+            if (!extensao) {
+                alert("Formato de arquivo não suportado");
+                return;
+            }
+    
             const urlBlob = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = urlBlob;
-            link.setAttribute('download', 'curriculo.pdf'); 
+            link.setAttribute('download', `curriculo.${extensao}`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -84,13 +94,31 @@ export default function ConfirmarCandidato() {
             <section className='formulario'>
                 <div className='inputs'>
                     <label>Candidato:</label>
-                    <input type="text" placeholder='Nome do candidato' value={nome} onChange={e => setNome(e.target.value)} />
+                    <input 
+                        type="text" 
+                        placeholder='Nome do candidato' 
+                        value={nome} 
+                        onChange={e => setNome(e.target.value)} 
+                    />
                     <label>CPF:</label>
-                    <input type="text" value={cpfCandidato} onChange={e => setCpfCandidato(e.target.value)} />
+                    <input 
+                        type="text" 
+                        value={cpfCandidato} 
+                        onChange={e => setCpfCandidato(e.target.value)} 
+                    />
                     <label>Email:</label>
-                    <input type="text" value={emailCandidato} onChange={e => setEmailCandidato(e.target.value)} />
+                    <input 
+                        type="text" 
+                        value={emailCandidato} 
+                        onChange={e => setEmailCandidato(e.target.value)} 
+                    />
                     <label>Status:</label>
-                    <input type="text" placeholder='Aprovado ou em andamento?' value={status} onChange={e => setStatus(e.target.value)} />
+                    <input 
+                        type="text" 
+                        placeholder='Aprovado ou em andamento?' 
+                        value={status} 
+                        onChange={e => setStatus(e.target.value)} 
+                    />
                     
                     <div>
                         <button onClick={baixarCurriculo}>Baixar Currículo</button>
