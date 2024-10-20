@@ -4,22 +4,30 @@
 
     .cont-robo{
     align-items: center;
-    margin: 4vw;
+    margin: 5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     gap: 0.3;
 
         .resposta{
             display: flex;
             flex-direction: row;
+            font-size: 0.7vw;
+
             .lala{
             display: block;
             gap: 0.3vw;
             .resp{
-                background-color: #f5d9f8;
+                border: 1px solid #E5DBEB;
+                background-color:#E5DBEB ;
                 border-radius: 10px;
                 display: block;
                 margin: 0.3vw;
                 p{
-                    padding: 2px;
+                    padding: 7px;
+                    font-weight: 700;
+                    font-size: 0.7vw;
+                    max-width: 15vw;
                 }
 
             }}
