@@ -7,7 +7,7 @@ import Login from './pages/login';
 import Notificacoes from './admin/notificacoes';
 import Gerenciamento from './admin/gerenciamento';
 import VagasAdmin from './admin/gerenciandovagas/index.jsx';
-import ProtectedRoute from './componentes/protectedRoute/protectedRoute.js';
+import ProtectedRoute from './utils/protectedRoute.js';
 import Saibamais from './pages/saibamaisvaga/index.jsx';
 import EnviarVaga from './admin/enviarvaga/index.jsx';
 import ConfirmarCandidato from './admin/confirmacao/index.jsx';
