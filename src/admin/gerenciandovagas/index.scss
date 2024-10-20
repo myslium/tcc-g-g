@@ -1,109 +1,139 @@
 .pagina-vagasadmin{
     min-height: 100vh;
 
-   .filtros {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 9vw;
-    padding: 4vw 0vw;
-    margin-right: 9vw;
-
-    button {
-        background-color: #E5DBEB;
-        padding: 1.4vw 3vw;
-        border: none;
-        border-radius: 1.5vw;
-        font-size: 1vw;
-        font-weight: 600;
-        color: rgb(82, 82, 82);
-        cursor: pointer;
-    
-    }
-   }
-
-   .vagas {
-    margin: 0vw 9vw 3vw 9vw;
-    padding: 3vw;
-    background-color: #E5DBEB;
-    border-radius: 1vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-
-    .titulo {
+    .botooes1 {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 3vw;
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.7vw;
-            font-weight: 700;
-            color: black;
-        }
 
-    }
-    .curriculos {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2vw;
+        .input-container {
+            position: relative;
+            width: 60%; 
+            display: flex;
+            align-items: center;
+            margin: 2vw 0vw;
 
-        button {
-            background-color: #B54FCF;
-            padding: 1vw 3vw;
-            border: 0.3vw solid #B54FCF;
-            border-radius: 1vw;
-            color: #ffffff;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1vw;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.2s ease-in-out;
+            .oi {
+                position: absolute;
+                left: 1.5vw;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgb(94, 94, 94);
+                font-size: 1.5vw;
+                pointer-events: none;
+            }
+
+            .botaobb{
+                width: 100%;
+                padding: 1vw 1.5vw 1vw 4vw;
+                font-size: 1.3vw;
+                border: none;
+                outline: none;
+                background-color: #e5dbeb;
+                border-radius: 1.5vw !important;
+                color: rgb(94, 94, 94);
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease;
+
+                &:focus {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            button {
+                margin-left: 1vw;
+                padding: 1.2vw 1.5vw; 
+                font-size: 1vw; 
+                background-color: #b54fcf;
+                color: #fff;
+                border: none;
+                border-radius: 1vw;
+            }
         }
-        button:hover {
+        .vagas {
+            margin: 0vw 9vw 3vw 9vw;
+            width: 60vw;
+            padding: 3vw;
             background-color: #E5DBEB;
-            color: #030303;
-            transform: translateY(-2px);
-        }
-    }
-
-    .tempo {
-        display: flex;
-        justify-content: right;
-
-        h2 {
-            color: #2c2c2c;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-        }
-    }
-   }
-
-   .botaoadicionar {
-    display: flex;
-    justify-content: end;
-    padding-right: 9vw;
-    padding-bottom: 3vw;
-    button {
-        padding: 1vw 5vw;
-        background-color: #B54FCF;
-        border-radius: 1.3vw;
-        border: 5px solid #B54FCF;
-        color: #fff;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 1.5vw;
-        font-weight: 600;
-        transition: 0.3s ease-in-out;
-    }
-
-    button:hover{
+            border-radius: 1vw;
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
         
-            background-color: #240A39;
-            color: white;
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-            border: 5px solid #240A39;
-          
+            .titulo {
+                display: flex;
+                align-items: center;
+                gap: 3vw;
+                h1 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.7vw;
+                    font-weight: 700;
+                    color: black;
+                }
+        
+            }
+            .curriculos {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 2vw;
+        
+                button {
+                    background-color: #B54FCF;
+                    padding: 1vw 3vw;
+                    border: 0.3vw solid #B54FCF;
+                    border-radius: 1vw;
+                    color: #ffffff;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1vw;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                }
+                button:hover {
+                    background-color: #E5DBEB;
+                    color: #030303;
+                    transform: translateY(-2px);
+                }
+            }
+        
+            .tempo {
+                display: flex;
+                justify-content: right;
+        
+                h2 {
+                    color: #2c2c2c;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                }
+            }
+           }
+        
+           .botaoadicionar {
+           
+            button {
+                padding: 1vw 5vw;
+                background-color: #B54FCF;
+                border-radius: 1.3vw;
+                border: 5px solid #B54FCF;
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.5vw;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+        
+            button:hover{
+                
+                    background-color: #240A39;
+                    color: white;
+                    transform: translateY(-2px);
+                    transition: all 0.3s ease;
+                    border: 5px solid #240A39;
+                  
+            }
+           }
     }
-   }
+
+   
 }

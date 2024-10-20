@@ -63,7 +63,7 @@ export default function Vagas() {
                         onChange={aoMudarTermoDeBusca}
                     />
                     <button className='on' onClick={buscarVagasPorCargo}>Buscar</button>
-                </div>
+            </div>
 
                 <div className="vagas">
                     {vagas.map(vaga => (

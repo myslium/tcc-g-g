@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import axios from 'axios'; 
-import './index.scss'; // Importando o arquivo SCSS
+import './index.scss'; 
 
 export default function BarChartComponent() {
   const [dados, setDados] = useState([]);

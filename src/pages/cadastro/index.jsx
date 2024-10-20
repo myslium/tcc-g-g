@@ -31,6 +31,10 @@ export default function Cadastro() {
                 },
             });
             alert('Candidato Confirmado!');
+            setNome('')
+            setEmailCandidato('')
+            setCpfCandidato('')
+            setCurriculo(null)
         } catch (error) {
             console.error("Erro ao adicionar candidato:", error);
             alert('Erro ao confirmar candidato.');

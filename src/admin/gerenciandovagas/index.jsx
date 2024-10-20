@@ -8,11 +8,35 @@ import TituloMenor from '../../componentes/titulomenor';
 export default function VagasAdmin() {
     const [vagas, setVagas] = useState([]);
     const [candidatos, setCandidatos] = useState([]);
+    const [pesquisar, setPesquisar] = useState('')
     const navigate = useNavigate();
 
     function reset() {
         localStorage.removeItem('token');
         navigate('/');
+    }
+
+    function validarData(data) {
+        const regexData = /^\d{4}-\d{2}-\d{2}$/;
+        return regexData.test(data);
+    }
+    
+    async function buscarVagasPorData() {
+        if (!validarData(pesquisar)) {
+            alert('Por favor, insira uma data válida no formato Ano-Mês-Dia');
+            return;
+        }
+    
+        try {
+            const response = await axios.get(`http://localhost:5010/vagas/data/${pesquisar}`);
+            setVagas(response.data);
+        } catch (error) {
+            console.error("Erro ao buscar vagas filtradas:", error);
+        }
+    }
+
+    function aoMudarTermoDeBusca(event) {
+        setPesquisar(event.target.value);
     }
 
     async function vagasCandidatos() {
@@ -47,7 +71,7 @@ export default function VagasAdmin() {
                 titulo1='Sair'
                 onLogout={reset}
                 titulo2='Vagas'
-                link2='/admin/vagasAdmin'
+                link2='/admin/gerenciandovagas'
                 titulo3='Notificações'
                 link3='/admin/notificacoes'
                 titulo4='Gerenciamento Vagas'
@@ -56,11 +80,19 @@ export default function VagasAdmin() {
 
             <TituloMenor titulo='Gerenciamento de vagas' />
 
-            <section className='filtros'>
-                <button>Data vencimento</button>
-                <button><i className="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Cargos</button>
-                <button><i className="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Cidade, estado ou região</button>
-            </section>
+            <div className="botooes1">
+                <div className="input-container">
+                    <i className="fa-solid fa-magnifying-glass oi"></i>
+                    <input
+                        className='botaobb'
+                        type="text"
+                        placeholder="Buscar vagas por data"
+                        value={pesquisar}
+                        onChange={aoMudarTermoDeBusca}
+                    />
+                    <button className='on' onClick={buscarVagasPorData}>Buscar</button>
+                </div>
+           
 
             {vagas.map(item => {
       
@@ -96,6 +128,7 @@ export default function VagasAdmin() {
                 <Link to='/admin/enviarvaga'>
                     <button>Adicionar</button>
                 </Link>
+            </div>
             </div>
         </div>
     );

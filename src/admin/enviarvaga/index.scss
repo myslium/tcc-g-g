@@ -77,14 +77,21 @@
                 height: 4vw;
                 position: relative;
 
-                #icon{
-                    top: 1.3vw;
+                button {
                     position: absolute;
-                    left: 1.2vw;
-                    color: #fff;
-                    font-size: 1.4vw;
                     cursor: pointer;
+                    top: 1.3vw;
+                    left: 0.7vw;
+                    background-color: #B54FCF;
+                    border: none;
+                    #icon{
+                     
+                        color: #fff;
+                        font-size: 1.4vw;
+                        
+                    }
                 }
+               
 
                 #pesquisa-cpf {
                     width: 14vw;

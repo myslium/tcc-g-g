@@ -70,7 +70,8 @@ export default function EnviarVaga() {
 
                         <h1>Selecione os candidatos</h1>
                             <div className='pesquisar'>
-                            <i id='icon' className='fa fa-search' onClick={buscarCPF}></i>
+                            <button onClick={buscarCPF}><i id='icon' className='fa fa-search' ></i></button>
+                            
                             <input id ='pesquisa-cpf'type="text" placeholder='cpf' value={cpfCandidato} onChange={e => setCpfCandidato(e.target.value)}/>
                         </div>
 
