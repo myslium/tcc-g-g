@@ -2,13 +2,21 @@ import './index.scss'
 import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 
 export default function EnviarVaga() {
 
+    const [empresa, setEmpresa] = useState('')
+    const [emailEmpresa, setEmailEmpresa] = useState('')
+    const [vaga, setVaga] = useState('')
+
+
     const navigate = useNavigate()
 
     function sendEmail(e) {
+        e.preventDefault()
+        
         
     }
 
@@ -31,16 +39,16 @@ export default function EnviarVaga() {
             />
 
             <TituloMenor titulo='Enviar Vaga'/>
-            <form className='formulario'>
+            <form className='formulario' onSubmit={sendEmail}>
 
                 <div className='inputs'>
                         
                         <label>Empresa:</label>
-                        <input type="text"/>
+                        <input type="text" value={empresa} onChange={e => setEmpresa(e.target.value)}/>
                         <label>E-mail comercial:</label>
-                        <input type="text"/>
+                        <input type="text" value={emailEmpresa} onChange={e => setEmailEmpresa(e.target.value)}/>
                         <label>Vaga:</label>
-                        <input type="text" />
+                        <input type="text" value={vaga} onChange={e => setVaga(e.target.value)}/>
                         
                         <h1>Selecione os candidatos</h1>
                             <div className='pesquisar'>
