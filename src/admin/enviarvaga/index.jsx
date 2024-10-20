@@ -3,22 +3,18 @@ import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-
+import emailjs from '@emailjs/browser'
 
 export default function EnviarVaga() {
 
     const [empresa, setEmpresa] = useState('')
     const [emailEmpresa, setEmailEmpresa] = useState('')
     const [vaga, setVaga] = useState('')
-
+    const [curriculo, setCurriculo] = useState(null)
 
     const navigate = useNavigate()
 
-    function sendEmail(e) {
-        e.preventDefault()
-        
-        
-    }
+   
 
     function reset() {
         localStorage.removeItem('token')
@@ -39,7 +35,7 @@ export default function EnviarVaga() {
             />
 
             <TituloMenor titulo='Enviar Vaga'/>
-            <form className='formulario' onSubmit={sendEmail}>
+            <form className='formulario'>
 
                 <div className='inputs'>
                         
@@ -50,6 +46,8 @@ export default function EnviarVaga() {
                         <label>Vaga:</label>
                         <input type="text" value={vaga} onChange={e => setVaga(e.target.value)}/>
                         
+                </div>
+
                         <h1>Selecione os candidatos</h1>
                             <div className='pesquisar'>
                             <i id='icon'className='fa fa-search'></i>
@@ -59,27 +57,24 @@ export default function EnviarVaga() {
                         <div className='selecionados'>
                         
                         <div className='candidatos'>
-                                <div className='card'>
-                                    <h2>Mariana</h2>
-                                    <input type="file" />
-                                </div>
-                                <div className='card'>
-                                    <h2>Mariana</h2>
-                                    <input type="file" />
-                                </div>
-                                <div className='card'>
-                                    <h2>Mariana</h2>
-                                    <input type="file" />
-                                </div>
-                                <div className='card'>
-                                    <h2>Mariana</h2>
-                                    <input type="file" />
-                                </div>
+                               
+                                  
+                                   <label className='curriculo-label'>
+                                        <input
+                                            type="file"
+                                            onChange={e => setCurriculo(e.target.files[0])}
+                                            style={{ display: 'none' }}
+                                        />
+                                        <span className='curriculo'>Currículo</span>
+                                    </label>
+                               
+                             
+                               
+        
                         </div>
                         </div>
                     
-                    </div>
-
+                   
             </form>
 
                
