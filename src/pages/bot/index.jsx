@@ -4,6 +4,7 @@ import Intro from '../../componentes/intro'
 import { useNavigate } from 'react-router-dom'
 import Cabecalho from '../../componentes/cabeçalho'
 import Duvida from '../../componentes/duvida'
+import TituloMenor from '../../componentes/titulomenor'
 
 export default function Robo(){
   const [resposta,setresposta] = useState('')
@@ -14,17 +15,27 @@ export default function Robo(){
   
   function cadastro(){
     setTimeout(() => {
-      let ola = ('Basta ir na opção vagas acima e selecionar a vaga desejada')
+      let ola = ('Para se cadastrar na vaga desejada basta apenas ir no link do Cabeçalho chamado "VAGAS" ele te direcionará a uma página com as vagas disponiveis em nossa plataforma, ao clicar na desejada tem a opção de se cadastrar e ali você será direcionado para um formulario')
 
       setresposta(ola)
-      setrespondendo(<Duvida
-      sim = {sim}
-      nao= {nao}
-      />)
-
-      
     },
   1*1000);
+
+  
+  setTimeout(() => {
+    setrespondendo(
+      <Duvida
+      sim = {sim}
+      nao = {nao}
+      />
+    )
+
+    
+  },
+3*1000);
+
+  
+
    
   }
 
@@ -33,42 +44,61 @@ export default function Robo(){
     setrespondendo('')
 
     setTimeout(() => {
-      let ola = ('Vá no link acima no site "vagas" acima e ter acesso a pagina')
+      let ola = (`Em nossa plataforma para ter acesso as vagas disponíveis basta ir no link "VAGAS" e lá estará disponível todas as vagas disponiveis ou terá enderessado o status dela como aberta, fechada, etc.`)
       setresposta(ola)
-      setrespondendo(<Duvida
-        sim = {sim}
-        nao= {nao}
-        />)
-  
     },
   1*1000);
+
+  
+  setTimeout(() => {
+    setrespondendo(
+      <Duvida
+      sim = {sim}
+      nao = {nao}
+      />
+    )
+
+    
+  },
+3*1000);
+
+  
+
+
+
     
   }
   function empresa(){
     setTimeout(() => {
-      let ola = (' Ir na opção "Acompanhe o processo"')
+      let ola = ('Para uma empresa cadastrar uma vaga ou ter interesse em nossos serviços basta ir em "FALE COM O CONSULTOR"  lá você preencherá um formulário para preencher detalhadamente a vaga' 
+
+      )
       setresposta(ola)
-      setrespondendo(<Duvida
-        sim = {sim}
-        nao= {nao}
-        />)
-  
 
       
     },
   1*1000);
+
+
+  setTimeout(() => {
+    setrespondendo(
+      <Duvida
+      sim = {sim}
+      nao = {nao}
+      />
+    )
+
     
+  },
+3*1000);
+
   }
 
   function sim(){
     oi = true
+    let ola = 'CLIQUE NAS OPÇÕES ACIMA PARA OBTER A RESPOSTA'
     setTimeout(() => {
-      setresposta(<Intro
-        cadastro = {cadastro}
-        disponiveis = {disponiveis}
-        empresa = {empresa}
-      
-      />)
+      setresposta(ola)
       
       
     },
@@ -81,13 +111,39 @@ export default function Robo(){
   function nao(){
     
     setTimeout(() => {
-    alert('Obrigada por confiar em nossos serviços, até a próxima!!')
+    alert('Em caso de outra dúvida não esclarecida, fale conosco pelo nosso Email, obrigada!!')
       
     },
   0.5*1000);
     
     oi = false
     navigate('/')
+
+  }
+
+  function cargo(){
+    setTimeout(() => {
+      let ola = ('Em nossa página "VAGAS" lá nós temos vagas com acesso filtrado, ou seja, você pode preencher de acordo com suas preferências e as melhores vagas surgirão para você! ' 
+
+      )
+      setresposta(ola)
+
+      
+    },
+  1*1000);
+
+
+  setTimeout(() => {
+    setrespondendo(
+      <Duvida
+      sim = {sim}
+      nao = {nao}
+      />
+    )
+
+    
+  },
+3*1000);
 
   }
 
@@ -113,6 +169,7 @@ while (oi === true){
                tituloo5= 'ROBOT'
             
             />
+            <TituloMenor titulo = 'Lisa assistente'/>
 
             <div className="cont-robo">
 
@@ -123,6 +180,7 @@ while (oi === true){
         cadastro = {cadastro}
         disponiveis = {disponiveis}
         empresa = {empresa}
+        cargo = {cargo}
         />
 
         
@@ -132,7 +190,7 @@ while (oi === true){
           </div>
           <div className="lala">
           <button className='resp'><p>{resposta}</p></button>
-          <button className='resp'><p>{respondendo}</p></button>
+          <p>{respondendo}</p>
         </div>
         </div>
 
