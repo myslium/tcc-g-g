@@ -17,19 +17,18 @@ export default function ConfirmarCandidato() {
 
     async function alterarCandidato() {
         const url = `http://localhost:5010/candidato/${id}`;
-        const resp = await axios.get(url); // Alterar para GET
+        const resp = await axios.put(url);
         setNome(resp.data.nome);
         setEmailCandidato(resp.data.email);
         setCpfCandidato(resp.data.cpf);
         setIdCandidato(id);
-        setStatus(resp.data.status); // Definir o status também, se disponível
-    }
+        setStatus(resp.data.status); }
 
     async function adicionar() {
-        // Aqui você pode implementar a lógica para confirmar o candidato
+      
         const url = `http://localhost:5010/candidato/${id}`;
-        await axios.put(url, { status }); // Enviando o novo status, por exemplo
-        navigate('/admin/gerenciandovagas'); // Redirecionar após a confirmação
+        await axios.put(url, { status }); 
+        navigate('/admin/gerenciandovagas'); 
     }
 
     function reset() {
