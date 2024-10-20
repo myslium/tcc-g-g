@@ -28,7 +28,7 @@ export default function Navegacao() {
                 <Route path='/saibamais' element={<Saibamais/>} />
                 <Route path='/bot' element={<Robo/>} />
                 <Route path='*' element={<NotFound/>} />
-                <Route path='/cadastro' element={<Cadastro/>} />
+                <Route path='/cadastro/:id' element={<Cadastro/>} />
 
 
               

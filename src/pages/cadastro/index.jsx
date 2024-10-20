@@ -1,16 +1,25 @@
+import React, { useEffect, useState } from 'react';
 import Cabecalho from '../../componentes/cabeçalho';
 import TituloMenor from '../../componentes/titulomenor';
 import Footer from '../../componentes/footer';
 import './index.scss';
-
 import axios from 'axios';
-import { useState } from 'react';
 
 export default function Cadastro() {
     const [nome, setNome] = useState('');
     const [emailCandidato, setEmailCandidato] = useState('');
     const [cpfCandidato, setCpfCandidato] = useState('');
     const [curriculo, setCurriculo] = useState(null);
+    const [idVaga, setIdVaga] = useState(null);
+
+    // Função para obter o id_vaga da URL
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id_vaga');
+        if (id) {
+            setIdVaga(id);
+        }
+    }, []);
 
     async function adicionar() {
         const formData = new FormData();
@@ -18,6 +27,7 @@ export default function Cadastro() {
         formData.append('email', emailCandidato);
         formData.append('cpf', cpfCandidato);
         formData.append('curriculo', curriculo);
+        formData.append('id_vaga', idVaga); 
 
         const url = `http://localhost:5010/candidatoNovo`;
 
@@ -79,14 +89,12 @@ export default function Cadastro() {
                         />
 
                         <label className='curriculo-label'>
-
                             <input
-
                                 type="file"
                                 onChange={e => setCurriculo(e.target.files[0])}
                                 style={{ display: 'none' }}
                             />
-                            <span className='curriculo'>Currículo</span> {/* Texto personalizado */}
+                            <span className='curriculo'>Currículo</span>
                         </label>
                     </div>
 
@@ -96,7 +104,7 @@ export default function Cadastro() {
                 </section>
             </div>
 
-            <Footer/>
+            <Footer />
         </div>
     );
 }
