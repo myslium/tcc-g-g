@@ -164,8 +164,8 @@
     }
 
     .login {
-        width: 3.2vw;
-        height: 3.5vw;
+        width: 2.5vw;
+        height: 2.8vw;
     }
 
     .login:hover {
@@ -191,6 +191,10 @@
 
         nav {
             display: none;
+        }
+
+        a{
+            font-size: 2vw;
         }
 
         .login {
