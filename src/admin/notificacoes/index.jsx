@@ -24,12 +24,13 @@ export default function Notificacoes() {
         const url = 'http://localhost:5010/inserirNota';
         let resp = await axios.get(url);
         setcards(resp.data);
-
+       
+        
     }
 
     useEffect(() => {
-
-        vernotas();
+    
+        vernotas()
     }, []);
 
 
@@ -54,7 +55,8 @@ export default function Notificacoes() {
                 settitulo('')
                 setconteudo('')
                 setdata('')
-
+                alert('notas adicionadas com sucesso')
+                window.location.reload();
 
             }
 
