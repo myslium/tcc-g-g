@@ -28,6 +28,7 @@ export default function Notificacoes() {
     }
 
     useEffect(() => {
+
         vernotas();
     }, []);
 
