@@ -12,7 +12,7 @@ export default function Vagas() {
     const [pesquisar, setPesquisar] = useState('');
 
     async function vagasCandidatos() {
-        const url = `http://localhost:5010/vagas`;
+        const url = `http://localhost:5010/vagasa`;
         const resp = await axios.get(url);
         
         const vagasComStatus = resp.data.map(vaga => {

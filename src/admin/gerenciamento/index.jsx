@@ -23,6 +23,7 @@ export default function Gerenciamento() {
     const [descricao, setDescricao] = useState('');
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
+    const [aprovado, setAprovado] = useState('não'); // Novo campo de aprovado
 
     const carregarVaga = useCallback(async () => {
         try {
@@ -43,7 +44,7 @@ export default function Gerenciamento() {
             setQuantidade(vaga.qtd_vagas);
             const dataVencimentoFormatada = vaga.data_vencimento ? vaga.data_vencimento.split('T')[0] : '';
             setVencimento(dataVencimentoFormatada);
-
+            setAprovado(vaga.aprovado); // Carregando valor do campo aprovado
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
         }
@@ -75,6 +76,7 @@ export default function Gerenciamento() {
             descricao,
             vencimento,
             quantidade,
+            aprovado, // Adicionando o campo aprovado
         };
 
         const url = 'http://localhost:5010/vagas';
@@ -98,6 +100,7 @@ export default function Gerenciamento() {
             descricao,
             vencimento,
             quantidade,
+            aprovado, // Incluindo o campo aprovado na edição
         };
 
         const url = `http://localhost:5010/vagas/${vagaId}`;
@@ -127,6 +130,7 @@ export default function Gerenciamento() {
         setDescricao('');
         setQuantidade('');
         setVencimento('');
+        setAprovado('não');
     }
 
     return (
@@ -145,7 +149,7 @@ export default function Gerenciamento() {
             <Tituloelogo titulo='Novas vagas' />
 
             <section className='terceira-parte'>
-                <h1>empresa:</h1>
+                <h1>Empresa:</h1>
 
                 <div className='vagas'>
                     <div className='div-grande'>
@@ -200,7 +204,7 @@ export default function Gerenciamento() {
                     </div>
 
                     <div className='div-grande'>
-                        <label>Beneficios:</label>
+                        <label>Benefícios:</label>
                         <textarea className='grandee' value={beneficios} onChange={e => setBeneficios(e.target.value)} />
                     </div>
 
@@ -218,6 +222,16 @@ export default function Gerenciamento() {
                         <div>
                             <label>Quantidade de vagas:</label>
                             <input className='pequeno' type="text" value={quantidade} onChange={e => setQuantidade(e.target.value)} />
+                        </div>
+                    </div>
+
+                    <div className='duo'>
+                        <div>
+                            <label>Aprovado:</label>
+                            <select value={aprovado} onChange={e => setAprovado(e.target.value)}>
+                                <option value="sim">Sim</option>
+                                <option value="não">Não</option>
+                            </select>
                         </div>
                     </div>
 
