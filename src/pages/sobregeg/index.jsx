@@ -18,6 +18,8 @@ export default function SobreGeG() {
             link3 = '/vagas'
            titulo4 = 'Fale com consultor'
             link4 = '/falecomconsultor'
+            tituloo5 = 'ROBOT'
+            link5= '/bot'
             aparecer={true}  
 
             />
@@ -63,7 +65,7 @@ export default function SobreGeG() {
             <div className="cont">
             <div className="textautonomo">
                 <h1 className='titulogis'>GISLAINE</h1>
-                <h1 className='textogislaine'>Meu nome é <strong>Gislaine</strong>, sou casada e mãe de quatro filhos além de ter uma carreira de <strong>dez anos na área de recursos humanos.</strong>  Atualmente coordeno uma equipe se seleção, trabalhando com vagas administrativa e operacionais. Basicamente <strong>a área de R&S é a área responsável pela captação, divulgação de vagas, triagem de currículos e alinhamento de perfil junto ao requisitante,</strong> realizo entrevista por competência e aplico testes e encaminho o candidato para vaga. Sou apaixonada pelo que faço o que tora meu trabalho fácil de ser administrado. Não recruto currículos e sim pessoas com vontade e motivação. O currículos nos mostra a experiência necessária pra desempenhar a função.</h1>
+                <h1 className='textogislaine'>Meu nome é <strong>Gislaine</strong>, sou casada e mãe de quatro filhos além de ter uma carreira de <strong>dez anos</strong> na área de recursos humanos.  Atualmente trabalho com vagas administrativa e operacionais. Basicamente <strong>a área de R&S é a área responsável pela captação</strong>, divulgação de vagas, triagem de currículos e alinhamento de perfil junto ao requisitante, realizo entrevista por competência e aplico testes e encaminho o candidato para vaga. currículos e sim pessoas com vontade e motivação.</h1>
 
 
             </div>

@@ -12,15 +12,14 @@ footer {
     .footer-content {
         display: flex;
         width: 100%;
-    
         align-items: center;
-        gap: 80px ;
+        gap: 5vw;
 
         .logo {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-left:  100px;
+            margin-left:  2vw;
 
             img {
                 width: 100px;
@@ -50,7 +49,6 @@ footer {
 
                 .h3 {
                     font-size: 18px;
-                    margin-bottom: 0px;
                     font-weight: 700;
                     color: #e0dede;
                 }

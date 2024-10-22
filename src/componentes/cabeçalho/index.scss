@@ -23,7 +23,7 @@
         margin: 0 auto;
 
         .h1 {
-            font-size: 2.4vw;
+            font-size: 2rem;
             font-family: 'Ubuntu', sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -40,13 +40,14 @@
         display: none;
         cursor: pointer;
         margin-right: 3vw;
+        z-index: 1000;
 
         .bar {
             display: block;
-            width: 3vw;
-            height: 0.4vw;
+            width: 5vw;
+            height: 0.6vw;
             background-color: #000;
-            margin: 0.5vw auto;
+            margin: 0.65vw auto;
             transition: all 0.3s;
         }
 
@@ -55,7 +56,7 @@
         }
 
         &.active .bar:nth-child(1) {
-            transform: translateY(0.9vw) rotate(45deg);
+            transform: translateY(1.7vw) rotate(45deg);
         }
 
         &.active .bar:nth-child(3) {
@@ -102,11 +103,11 @@
                     font-family: 'Urbanist', sans-serif;
 
                     i {
-                        font-size: 2vw;
+                        font-size: 2rem;
                     }
 
                     span {
-                        font-size: 1vw;
+                        font-size: 1rem;
                         margin-top: 0.5vw;
                         text-align: center;
                     }
@@ -135,11 +136,11 @@
         &.aberto {
             display: block;
             position: absolute;
-            top: 6vw;
+            top: 7vw;
             left: 0;
             right: 0;
             background-color: #BDB1C2;
-            z-index: 1000;
+            z-index: 999;
             padding: 1vw 0;
 
             ul {
@@ -150,7 +151,7 @@
                     margin: 1vw 0;
 
                     a {
-                        font-size: 1.4vw;
+                        font-size: 1rem;
                         text-align: center;
                     }
                 }
@@ -164,8 +165,8 @@
     }
 
     .login {
-        width: 2.5vw;
-        height: 2.8vw;
+        width: 2.8vw;
+        height: 3vw;
     }
 
     .login:hover {
@@ -175,13 +176,13 @@
     @media (max-width: 768px) {
         .imh1 {
             .h1 {
-                font-size: 3.50vw;
+                font-size: 2rem;
                 font-family: 'Urbanist', serif;
                 font-weight: 700;
             }
 
             .geg {
-                height: 10.5vw;
+                height: 10vw;
             }
         }
 
@@ -198,8 +199,8 @@
         }
 
         .login {
-            width: 2vw;
-            height: 2.5vw;
+            width: 2.8vw;
+            height: 3vw;
         }
 
         .login:hover {
