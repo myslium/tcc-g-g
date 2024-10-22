@@ -26,9 +26,9 @@ CREATE TABLE vagas (
     descricao TEXT,
     data_criacao DATETIME,
     data_vencimento DATETIME,
+    aprovado ENUM('sim', 'não'),
     qtd_vagas INT
 );
-
 # Tabela de Formulários
 CREATE TABLE formularios (
     id INT PRIMARY KEY AUTO_INCREMENT,
