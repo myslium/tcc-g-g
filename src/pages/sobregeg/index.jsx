@@ -31,7 +31,7 @@ export default function SobreGeG() {
 
             <div className="cartaotexto">
                 <div className="cardizinho">
-                <h1>Quem é G&G?</h1>
+                <h1> <strong>Quem é G&G?</strong></h1>
                 <p>Fundada em 07/09/2014, a <b>G&G</b> se destaca por oferecer um serviço personalizado, garantindo maior disponibilidade e flexibilidade para os clientes, com direção e solidez. O crescimento da G&G é resultado de um trabalho comprometido, focado em desenvolver soluções inovadoras e prestar serviços de alta qualidade que superam as expectativas. <b>Há um investimento contínuo na contratação dos melhores profissionais, sempre em conformidade com as leis trabalhistas.</b></p>
                 </div>
             </div>

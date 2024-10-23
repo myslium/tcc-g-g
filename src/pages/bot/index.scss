@@ -7,19 +7,19 @@
     margin: 5vw;
     margin-left: 10vw;
     margin-right: 10vw;
-    gap: 0.3;
+    gap: 1.3vw;
 
         .resposta{
             display: flex;
             flex-direction: row;
-            font-size: 0.7vw;
+            font-size: 1vw;
             .respondendo{
                 display: block;
                 p{
-                    padding: 7px;
-                    font-weight: 700;
-                    font-size: 0.7vw;
-                    max-width: 10vw;
+                    padding: 2vw;
+                    font-weight: 500;
+                    font-size: 1vw;
+                    max-width: 20vw;
                     width: 8vw;
                 }
 
@@ -27,7 +27,7 @@
 
             .lala{
             display: block;
-            gap: 0.3vw;
+            gap: 1.3vw;
             .resp{
                 border: 1px solid #E5DBEB;
                 background-color:#E5DBEB ;
@@ -35,19 +35,43 @@
                 display: block;
                 margin: 0.3vw;
                 p{
-                    padding: 7px;
-                    font-weight: 700;
-                    font-size: 0.7vw;
+                    padding: 2vw;
+                    font-weight: 500;
+                    font-size: 1vw;
                     max-width: 15vw;
                 }
 
             }}
             .lalis{
             img{
-                width: 6vw;
+                width: 7vw;
             }}
         }
 
 
 }
+}
+@media (max-width: 768px) {
+    .cont-robo
+    {
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+
+        .resposta{
+            font-size: 1.5vw;
+
+            .respondendo{
+                display: block;
+                p{
+                    padding: 1vw;
+                    font-weight: 500;
+                    font-size: 1.5vw;
+                    max-width: 20vw;
+                    width: 8vw;
+                }
+
+            }
+        }
+    }
 }
