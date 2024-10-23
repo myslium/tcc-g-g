@@ -77,12 +77,12 @@
                 width: 40vw;
 
                 h1 {
-                    font-size: 1.5vw;
+                    font-size: 2vw;
                     margin: 0;
                 }
 
                 p {
-                    font-size: 1vw;
+                    font-size: 1.5vw;
                     color: #252525;
                     margin: 0;
                     line-height: 1.5;
@@ -98,7 +98,7 @@
                         margin-right: 40px;
                         text-decoration: none;
                         gap: 0.5vw;
-                        font-size: 0.6rem;
+                        font-size: 1vw;
                         align-items: center;
 
 
@@ -110,8 +110,8 @@
                         svg:not(:root).svg-inline--fa {
                             overflow: visible;
                             box-sizing: content-box;
-                            font-size: 0.7rem;
-                            margin-top: 0.6vw;
+                            font-size: 1.3vw;
+                            margin-top: 0.3vw;
 
                         }
                     }
