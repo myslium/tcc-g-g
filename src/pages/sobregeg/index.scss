@@ -5,7 +5,7 @@
 
     .faixa{
         width: 100%;
-        height: 50vw;
+        height: 40vw;
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -66,7 +66,7 @@
             text-align: center;
             color: #000000;
             font-weight: 700;
-            font-size: 2vw;
+            font-size: 3vw;
             padding-top: 1vw;
             padding-left: 3vw;
             padding-bottom: 2vw;
@@ -88,7 +88,7 @@
         .h1{
             font-weight: 800;
             color: #B314DB;
-            width: 15vw;
+            width: 20vw;
             font-size: 2vw;
         }
         .imglupa{
@@ -150,7 +150,7 @@
         .gislaine{
             width: 20vw;
             height:20vw;
-            padding-top: 5vw;
+            padding-top: 4vw;
             padding-left: 3vw;
           
             
@@ -162,9 +162,8 @@
             .textogislaine{
             font-family: 'Montserrat', sans-serif;    
             font-weight: 400;
-            font-size: 1.6vw;
+            font-size: 1.7vw;
             padding: 0vw 1.5vw 1.5vw 2.3vw;
-            
             text-align: center;
             text-wrap: wrap;
             width: 40vw;
@@ -202,55 +201,249 @@
 
     }
 
+    @media (max-width: 768px) {
 
+        .cartaotexto{
+            .cardizinho{
+                justify-content: center;
+                padding: 3vw;
+                width: 50vw;
+                height: 65vw;
+                margin: 12vw;
+                border: 1px solid #c1aad8;
+
+                h1{
+                    font-size: 2.4vw;
+                }
+                p{
+                    font-size: 2.4vw;
+                    width: 40vw;
+                }
+            }
+        }
+  
+        .texto3{ //texto pretinho
+            p{
+                text-align: center;
+                width: 50vw;
+                font-size: 4vw;
+            }
+         
+        }
+        .textlupa{ // texto e imagem da lupa
+            .h1{
+                font-size: 3vw;
+                padding: 1vw;
+                text-wrap: wrap;
+
+            }
+            .imglupa{
+                width: 20vw;
+                height: 20vw;
+                padding: 2vw;
+            }
+        }
+        .cartaotexto2{ //card com foto da mulher virando em coluna
+            justify-content: center;
+            padding: 2.4vw;
+            width: 50vw;
+            height: 60vw;
+            margin: 12vw;
+            margin-left: 20vw;
+            border: 1px solid #c1aad8;
+            .conteudo{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            .texto{
+                width: 40vw;
+                margin: 0;
+                padding: 2vw;
+                text-align: center;
+                text-wrap: wrap;
+
+                p{
+                    font-size: 2.4vw;
+                    line-height: 3.1VW;
+                }
+
+
+            }
+            .imagem{
+                width: 40vw;
+                height: 20vw;
+        
+            }
+         
+        }}
+        
+    
+        .cartaoautonomo{ // Gislaine NAO QUER MUDAR O TAMANHO DA FONTEEEEE
+            justify-content: center;
+            padding: 2vw;
+            width: 50vw;
+            height: 60vw;
+            margin: 12vw;
+            margin-left: 20vw;
+            border: 1px solid #c1aad8;
+
+            .cont{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+
+            }
+            .textoautonomo{
+                width: 30vw;
+                margin: 0;
+                padding: 1vw;
+                text-align: center;
+
+                
+                .textogislaine{
+                    .titulogis{
+                    font-size: 2.4vw;
+                    }
+                    .textogislaine{
+                        font-size: 2.4vw;
+                    }
+                }    
+                
+
+            }
+
+
+    
+    
+            
+        }}
+        @media (max-width: 468px) {
+
+            
+        .cartaotexto{
+            .cardizinho{
+                justify-content: center;
+                padding: 3vw;
+                width: 50vw;
+                height: 70vw;
+                margin: 12vw;
+                border: 1px solid #c1aad8;
+
+                h1{
+                    font-size: 3vw;
+                }
+                p{
+                    font-size: 2.5vw;
+                    width: 40vw;
+                }
+            }
+        }
+
+            .texto3{ //texto pretinho
+                p{
+                    text-align: center;
+                    width: 50vw;
+                    font-size: 3.5vw;
+                }
+             
+            }
+            .textlupa{ // texto e imagem da lupa
+                .h1{
+                    font-size: 3vw;
+                    padding: 1vw;
+                    text-wrap: wrap;
+    
+                }
+                .imglupa{
+                    width: 20vw;
+                    height: 20vw;
+                    padding: 2vw;
+                }
+            }
+            .cartaotexto2{ //card com foto da mulher virando em coluna
+                justify-content: center;
+                padding: 2.4vw;
+                width: 50vw;
+                height: 60vw;
+                margin: 12vw;
+                margin-left: 20vw;
+                border: 1px solid #c1aad8;
+                .conteudo{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                .texto{
+                    width: 35vw;
+                    margin: 0;
+                    padding: 2vw;
+                    text-align: center;
+                    text-wrap: wrap;
+    
+                    p{
+                        font-size: 2.4vw;
+                        line-height: 3.1VW;
+                    }
+    
+    
+                }
+                .imagem{
+                    width: 45vw;
+                    height: 20vw;
+            
+                }
+             
+            }}
+            
+        
+            .cartaoautonomo{ // Gislaine NAO QUER MUDAR O TAMANHO DA FONTEEEEE
+                justify-content: center;
+                padding: 3vw;
+                width: 50vw;
+                height: 55vw;
+                margin: 12vw;
+                margin-left: 20vw;
+                border: 1px solid #c1aad8;
+
+                .cont{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+    
+                }
+                .textoautonomo{
+                    width: 30vw;
+                    margin: 0;
+                    padding: 1vw;
+                    text-align: center;
+    
+                    
+                    .textogislaine{
+                        .titulogis{
+                        font-size: 2.7vw;
+                        }
+                        .textogislaine{
+                            font-size: 2.5vw;
+                        }
+                    }    
+                    .gislaine{
+                        width: 6vw;
+                        padding-top: 2vw;
+                    }
+    
+                }
+            }
+       }    
 
 
 }
 
 
-@media (max-width: 768px) {
-    .texto3{
-        p{
-            text-align: center;
-            text-align: justify;
-            width: 50vw;
-
-        }
      
-    }
-
-    .textautonomo{
-
-        .titulogis{
-            font-size: 3vw;
-            text-align: center;
-        }
-
-        
-    }}
-    @media (max-width: 468px) {
-        .text{
-            h1{
-                font-size: 0.3rem;
-            }
-            p{
-                text-align: center;
-                text-align: justify;
-                width: 50vw;
-                font-size: 0.3rem;
-    
-            }
-         
-        }
-    
-        .textautonomo{
-    
-            .titulogis{
-                font-size: 3vw;
-                text-align: center;
-            }
-    
-            
-        }
-
-   }         
