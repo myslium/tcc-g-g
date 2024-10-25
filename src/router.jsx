@@ -14,6 +14,7 @@ import Cadastro from './pages/cadastro/index.jsx';
 import Robo from './pages/bot/index.jsx';
 import NotFound from './pages/noterro';
 import Pagamento from './pages/pagamento/index.jsx';
+import Cartaogg from './pages/cartaogg/index.jsx';
 
 export default function Navegacao() {
     return (
@@ -30,6 +31,8 @@ export default function Navegacao() {
                 <Route path='*' element={<NotFound/>} />
                 <Route path='/cadastro/:id' element={<Cadastro/>} />
                 <Route path='/pagamento' element={<Pagamento/>} />
+                <Route path='/cartaogg' element={<Cartaogg/>} />
+
 
 
 

@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-export default async function Falecomconsultor(){
+export default function Falecomconsultor(){
     const [nomeemp, setnomeemp] = useState('')
     const [cnpj, setcnpj] = useState('')
     const navigation = useNavigate()
@@ -105,7 +105,7 @@ export default async function Falecomconsultor(){
                        <input className='oioio' type="text" value={cnpj} onChange={e=> setcnpj(e.target.value)} />
                     </div>
                     <div className="botao">
-                        <button onClick={verificacao}>VERIFICAÇÃO</button>
+                        <button onClick={verificacao} >VERIFICAÇÃO</button>
                     </div></div>
                    
                 </div>
