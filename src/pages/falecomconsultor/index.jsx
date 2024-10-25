@@ -105,7 +105,7 @@ export default function Falecomconsultor(){
                        <input className='oioio' type="text" value={cnpj} onChange={e=> setcnpj(e.target.value)} />
                     </div>
                     <div className="botao">
-                        <button onClick={verificacao} >VERIFICAÇÃO</button>
+                        <button className='on' onClick={verificacao} >VERIFICAÇÃO</button>
                     </div></div>
                    
                 </div>
