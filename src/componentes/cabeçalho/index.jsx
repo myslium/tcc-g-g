@@ -48,30 +48,39 @@ export default function Cabecalho(props) {
                 </div>
                 <nav className={menuAberto ? 'aberto' : ''}>
                     <ul>
-
                         <li>
                             <Link to={props.link1}>{props.titulo1}</Link>
                         </li>
+                        <li>
+                            <Link to={props.link2}>{props.titulo2}</Link>
+                        </li>
+                        <li>
+                            <Link to={props.link3}>{props.titulo3}</Link>
+                        </li>
+                        <li>
+                            <Link to={props.link4}>{props.titulo4}</Link>
+                        </li>
 
-                        <li><Link to={props.link2}>{props.titulo2}</Link></li>
-                        <li><Link to={props.link3}>{props.titulo3}</Link></li>
-                        <li><Link to={props.link4}>{props.titulo4}</Link></li>
-                        <li><Link className="robot-link" to={props.link5}><i className={props.titulo5} ></i>
-                            <span>{props.tituloo5}</span></Link></li>
                         {props.onLogout ? (
-
-                            <li className='oi' onClick={props.onLogout}>{props.titulo01}
-
+                            <li className='oi' onClick={props.onLogout}>
+                                {props.titulo01}
                                 <i className="fa fa-arrow-left icone" aria-hidden="true"></i>
                             </li>
-
-
                         ) : (
-                            <li>
-                                <Link to='/login'>
-                                    <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" />
-                                </Link>
-                            </li>
+                            <>
+                              <li>
+                                    <Link className="robot-link" to={props.link5}>
+                                        <i className={props.titulo5}></i>
+                                        <span>{props.tituloo5}</span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to='/login'>
+                                        <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" />
+                                    </Link>
+                                </li>
+                              
+                            </>
                         )}
                     </ul>
                 </nav>
@@ -79,3 +88,4 @@ export default function Cabecalho(props) {
         </header>
     );
 }
+
