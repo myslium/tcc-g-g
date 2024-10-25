@@ -29,18 +29,16 @@
         }
 
         .aprovado {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2vw;
+            font-size: 1.2rem;
             padding: 0.5rem 1rem;
-            background-color: #B54FCF;
+            background-color: #8D60B2;
             color: #fff;
             border: none;
-            border-radius: 1.5vw;
+            border-radius: 0.5vw;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
-            box-shadow: 0px 5px 3px #e6e6e6;
+            box-shadow: 3px 3px 5px #4d4d4d;
+           
         }
 
         .vagas {
@@ -157,7 +155,7 @@
             }
         }
 
-        // Media Queries
+      
         @media (max-width: 1200px) {
             .div-grande {
                 .grande {
