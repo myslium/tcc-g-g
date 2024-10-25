@@ -59,5 +59,21 @@ CREATE TABLE candidato_final (
     data_postagem DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+# Tabela interesse nos nossos serviços
 
+CREATE TABLE interesse 
+(id INT PRIMARY KEY AUTO_INCREMENT,
+empresa VARCHAR(100) NOT NULL,
+cnpj int NOT NULL);
+
+# Tabela de recibo
+
+CREATE TABLE receita (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    vaga VARCHAR(100) NOT NULL, 
+    salario DECIMAL(10, 2) NOT NULL, 
+    qtd_vagas INT NOT NULL, 
+    id_interesse INT,
+    FOREIGN KEY (id_interesse) REFERENCES interesse(id)
+);
 

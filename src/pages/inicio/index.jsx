@@ -17,7 +17,7 @@ export default function Inicio() {
             titulo3 = 'Vagas'
             link3 = '/vagas'
             titulo4 = 'Fale com consultor'
-            link4 = '/falecomconsultor'
+            link4 = '/cartaogg'
             link5 = '/bot'
             titulo5 = 'fa-solid fa-robot'
             tituloo5= 'ROBOT'

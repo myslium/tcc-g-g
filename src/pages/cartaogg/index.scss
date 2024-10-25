@@ -1,0 +1,133 @@
+.cartao-gg{
+    .ultimo{
+        
+        width: 60vw;
+        height: 40vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-size: 60vw;
+        margin-left: 15vw;
+
+        .preencha{
+                font-size: 1.4vw;
+                font-weight: 600;
+                padding: 2VW;
+            }
+        .conteudo{
+            padding: 4vw;
+            align-items: center;
+            padding-top: 10vw;
+            padding-left: 4vw;
+
+            .choquei{
+                display: flex;
+                flex-direction: row;
+
+            .inputs{
+                display: flex;
+                flex-direction: row;
+                gap: 0.8vw;
+                .quadrado{
+                    display: flex;
+                    flex-direction: column;
+              
+                .oioio{
+                    padding: 1.3vw 3vw;
+                    width: 4vw;
+                    border-radius: 40px;
+                    background-color: #ffffff;
+                    border: 1px solid #3e3e3e;
+                }
+                p{
+                    font-size: 1.5vw;
+                    font-weight: 900;
+                } 
+             }
+            }
+            }
+            .botao{
+                button{
+                    background-color: #8D60B2;
+                    border: 1px solid #B54FCF;
+                    color: #ffffff;
+                    padding: 1vw 3vw;
+                    border-radius: 50px;
+                    font-size: 1vw;
+                    font-weight: 900;
+                    margin-top: 10vw;
+                    margin-left: 10vw;
+                }
+            }
+
+            .estimado{
+                display: flex;
+                flex-direction: row;
+                font-size: 2vw;
+            }
+        }
+    }
+
+    .receita{
+        display: flex;
+        flex-direction: row;
+        background-color: #8D60B2;
+        border-radius: 40px;
+        width: 60vw;
+        justify-content: center;
+        align-items: center;
+        margin: 2vw;
+        margin-left: 15vw;
+        gap: 18vw;
+        border: 2px solid #3e3e3e;
+        .separacao1{
+            display: flex;
+            flex-direction: column;
+            font-size: 1vw;
+            padding: 0;
+            text-align: left;
+            h1{
+                color: #E5DBEB;
+                font-weight: 900;
+            }
+            p{
+                color: #E5DBEB;
+                font-weight: 400;
+                font-size: 1.5vw;
+            }
+        }
+        .separacao2{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.5vw;
+            gap: 15vw;
+            padding: 2vw;
+
+            img{
+                width: 4vw;
+                background-color: #E5DBEB;
+                padding: 1vw;
+                border-radius: 700px;
+            }
+            h1{
+                color: #E5DBEB;
+                font-weight: 400;
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    .pagamentos{
+        padding: 5vw;
+        padding-left: 16vw;
+        button{
+            background-color: #EFCAFE;
+            padding: 2vw 4vw;
+            font-size: 1.3vw;
+            border-radius: 30px;
+
+        }
+    }
+}
