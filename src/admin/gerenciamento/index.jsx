@@ -136,7 +136,7 @@ export default function Gerenciamento() {
     return (
         <div className="pagina-confirmados">
             <Cabecalho
-                titulo1='Sair'
+                titulo01='Sair'
                 onLogout={reset}
                 titulo2='Vagas'
                 link2='/admin/gerenciandovagas'

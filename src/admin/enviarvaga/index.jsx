@@ -44,7 +44,7 @@ export default function EnviarVaga() {
     return (
         <div className='pagina-enviarvaga'>
             <Cabecalho
-              titulo1='Sair'
+              titulo01='Sair'
               onLogout={reset}
               titulo2='Vagas'
               link2='/admin/gerenciandovagas'

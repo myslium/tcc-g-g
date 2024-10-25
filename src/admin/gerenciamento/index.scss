@@ -28,20 +28,17 @@
             margin-bottom: 3vw;
         }
 
-
         .aprovado {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2vw;
+            font-size: 1.2rem;
             padding: 0.5rem 1rem;
-            background-color: #B54FCF;
+            background-color: #8D60B2;
             color: #fff;
             border: none;
-            border-radius: 1.5vw;
+            border-radius: 0.5vw;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
-            box-shadow: 0px 5px 3px #e6e6e6;
+            box-shadow: 3px 3px 5px #4d4d4d;
+           
         }
 
         .vagas {
@@ -71,7 +68,7 @@
                     outline: none;
                     padding: 1.5vw;
                     font-family: 'Montserrat', sans-serif;
-                    font-size: 1.3vw;
+                    font-size: 1.3vw; 
                     color: #313131;
                     font-weight: 500;
                     box-shadow: 0px 5px 3px #e6e6e6;
@@ -96,7 +93,7 @@
                         outline: none;
                         padding: 1.5vw;
                         font-family: 'Montserrat', sans-serif;
-                        font-size: 1.3vw;
+                        font-size: 1.3vw; 
                         color: #313131;
                         font-weight: 500;
                         box-shadow: 0px 5px 3px #e6e6e6;
@@ -112,7 +109,7 @@
                 outline: none;
                 padding: 2vw;
                 font-family: 'Montserrat', sans-serif;
-                font-size: 1.3vw;
+                font-size: 1.3vw; 
                 color: #313131;
                 font-weight: 500;
                 margin-bottom: 1.8rem;
@@ -142,7 +139,7 @@
                     border: 5px solid #B54FCF;
                     color: #fff;
                     font-family: 'Ubuntu', sans-serif;
-                    font-size: 1.5vw;
+                    font-size: 1.5vw; 
                     font-weight: 600;
                     transition: 0.3s ease-in-out;
                     margin-left: 1vh;
@@ -157,18 +154,20 @@
                 }
             }
         }
+
+      
         @media (max-width: 1200px) {
-            
             .div-grande {
                 .grande {
-                    
                     width: 46vw;
                     height: 0.5vw;
+                    font-size: 2vw; 
                 }
 
                 textarea {
                     width: 46vw !important;
                     height: 20vw !important;
+                    font-size: 2vw; 
                 }
             }
 
@@ -177,10 +176,10 @@
                     .pequeno {
                         width: 21vw;
                         height: 0.5vw;
+                        font-size: 2vw; 
                     }
                 }
             }
-
         }
 
         @media (max-width: 768px) {
@@ -194,16 +193,15 @@
 
                 .div-grande {
                     .grande {
-                        
                         width: 70vw;
                         height: 5vw;
-                        font-size: 2.5vw;
+                        font-size: 3vw; 
                     }
 
                     textarea {
                         width: 70vw !important;
                         height: 20vw !important;
-                        font-size: 2.5vw;
+                        font-size: 3vw; 
                     }
                 }
 
@@ -212,7 +210,7 @@
                         .pequeno {
                             width: 33vw;
                             height: 5vw;
-                            font-size: 2.5vw;
+                            font-size: 3vw; 
                         }
                     }
                 }
@@ -221,7 +219,7 @@
                     bottom: -1rem;
                     button {
                         padding: 1vw 4.1vw;
-                        font-size: 3vw;
+                        font-size: 3vw; 
                     }
                 }
             }
@@ -232,20 +230,20 @@
 
             .vagas {
                 label {
-                    font-size: 3.5vw;
+                    font-size: 3.5vw; 
                 }
 
                 .div-grande {
                     .grande {
                         width: 80vw;
                         height: 8vw;
-                        font-size: 3.5vw;
+                        font-size: 4vw; 
                     }
 
                     textarea {
                         width: 80vw !important;
                         height: 30vw !important;
-                        font-size: 3.8vw;
+                        font-size: 4.5vw; 
                     }
                 }
 
@@ -254,7 +252,7 @@
                         .pequeno {
                             width: 37vw;
                             height: 8vw;
-                            font-size: 3.5vw;
+                            font-size: 4vw; 
                         }
                     }
                 }
@@ -263,7 +261,7 @@
                     bottom: 0;
                     button {
                         padding: 3.5vw 8.5vw;
-                        font-size: 4vw;
+                        font-size: 5vw; 
                     }
                 }
             }

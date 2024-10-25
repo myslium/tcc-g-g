@@ -106,7 +106,7 @@ export default function Notificacoes() {
         <div className="pagina-interessados">
 
             <Cabecalho
-                titulo1='Sair'
+                titulo01='Sair'
                 onLogout={reset}
                 titulo2='Vagas'
                 link2='/admin/gerenciandovagas'
