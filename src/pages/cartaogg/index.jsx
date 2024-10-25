@@ -28,7 +28,7 @@ export default function Cartaogg(){
                 <TituloMenor titulo ='Valores'/>
 
                   
-            <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/ultimo.png')` }}>
+            <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/oioi.png')` }}>
 
                 <div className='conteudo'>
 
@@ -57,10 +57,9 @@ export default function Cartaogg(){
                     </div>
 
                     <div className="estimado">
-                        <p>Valor estimado</p>
-                        <br /> <p>R$--</p>
+                        <p></p>
+                        <br /> <p></p>
 
-                        <input type="checkbox" name="Outra vaga" id="" />
                     </div>
                     </div>
                    
