@@ -3,9 +3,30 @@ import Cabecalho from '../../componentes/cabeçalho'
 import Footer from '../../componentes/footer'
 import Tituloelogo from '../../componentes/tituloelogo'
 import './index.scss'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+
+export default async function Falecomconsultor(){
+    const [nomeemp, setnomeemp] = useState('')
+    const [cnpj, setcnpj] = useState('')
+    const navigation = useNavigate()
 
 
-export default function Falecomconsultor(){
+    async function verificacao(){
+        const url = `https://api.cnpjs.dev/v1/${cnpj}`;
+        let resp = await axios.get(url);
+        
+        if(resp.data === 'false'){ ///arrumar amanhã direitinho
+            alert('CNPJ inválido')
+        }
+        else{
+            navigation('/pages/pagamento')
+
+        }
+       
+
+    }
 
 
 
@@ -66,11 +87,30 @@ export default function Falecomconsultor(){
 
                     </div>
                 </div>
+                
             </section>
+            <Tituloelogo titulo='INTERESSE NO NOSSO SERVIÇO' />
+            
+            <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/ultimo.png')` }}>
+            <p className='preencha'>Preencha os campos:</p>
 
-            <Tituloelogo titulo='ENTRE EM CONTATO CONOSCO!' />
+                <div className='conteudo'>
 
-            <Footer />
+                    <div className="choquei">
+
+                    <div className='inputs'>
+                        <p>NOME DA EMPRESA:</p>
+                       <input className='oioio' type="text" value={nomeemp} onChange={e=> setnomeemp(e.target.value)} />
+                       <p>CNPJ:</p>
+                       <input className='oioio' type="text" value={cnpj} onChange={e=> setcnpj(e.target.value)} />
+                    </div>
+                    <div className="botao">
+                        <button onClick={verificacao}>VERIFICAÇÃO</button>
+                    </div></div>
+                   
+                </div>
+            </div>
+
 
 
         </div>

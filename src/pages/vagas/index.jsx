@@ -132,7 +132,7 @@ export default function Vagas() {
                 </div>
             </div>
 
-            <Footer />
+            < Footer />
         </div>
     );
 }
