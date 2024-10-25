@@ -133,7 +133,7 @@ Resultados`} />
                         <img src="/assets/images/cabecalho/logo.png" alt="Logo" />
                         <h1>Quer aumentar a produtividade da sua empresa e economizar?</h1>
                     </div>
-                    <Link to='/falecomconsultor'>
+                    <Link to='/pagamento'>
                         <button className='botao'>Fale com o consultor</button>
                     </Link>
                 </div>
