@@ -71,7 +71,7 @@ export default function VagasAdmin() {
     return (
         <div className='pagina-vagasadmin'>
             <Cabecalho
-                titulo1='Sair'
+                titulo01='Sair'
                 onLogout={reset}
                 titulo2='Vagas'
                 link2='/admin/gerenciandovagas'
