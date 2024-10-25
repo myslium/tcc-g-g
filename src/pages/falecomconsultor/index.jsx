@@ -112,7 +112,7 @@ export default function Falecomconsultor(){
             </div>
 
 
-
+<Footer/>
         </div>
     )
 }

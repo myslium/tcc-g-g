@@ -10,10 +10,10 @@
             justify-content: center;
             position: relative;
             background-size: 60vw;
-            margin-left: 15vw;
+            margin-left: 20%;
 
             .preencha{
-                    font-size: 1.4vw;
+                    font-size: 1.5vw;
                     font-weight: 600;
                     padding: 2VW;
                 }
@@ -28,15 +28,18 @@
                 .inputs{
                     display: flex;
                     flex-direction: column;
+                   
                     .oioio{
-                        padding: 2vw 5vw;
-                        width: 4vw;
+                        padding: 0vw 5vw;
+                        width: 60%;
+                        height: 35%;
                         border-radius: 30px;
                         background-color: transparent;
                         border: 2px solid #EFCAFE;
+                        font-size: 2vw;
                     }
                     p{
-                        font-size: 1.5vw;
+                        font-size: 1.7vw;
                         font-weight: 900;
                     }
                 }
