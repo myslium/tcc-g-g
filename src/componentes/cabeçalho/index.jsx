@@ -14,13 +14,7 @@ export default function Cabecalho(props) {
         };
     }, []);
 
-    useEffect(() => {
-        atualizarTitulo();
-    }, [menuAberto, larguraTela]);
 
-    const atualizarLarguraTela = () => {
-        setLarguraTela(window.innerWidth);
-    };
 
     const atualizarTitulo = () => {
         if (larguraTela <= 768 || menuAberto) {
@@ -30,6 +24,14 @@ export default function Cabecalho(props) {
         }
     };
 
+    useEffect(() => {
+        atualizarTitulo();
+    }, [menuAberto, larguraTela]);
+
+    const atualizarLarguraTela = () => {
+        setLarguraTela(window.innerWidth);
+    };
+    
     const toggleMenu = () => {
         setMenuAberto(!menuAberto);
     };
