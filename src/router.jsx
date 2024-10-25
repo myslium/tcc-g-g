@@ -28,7 +28,6 @@ export default function Navegacao() {
                 <Route path='/login' element={<Login/>} />
 
                 <Route path='/bot' element={<Robo/>} />
-                <Route path='*' element={<NotFound/>} />
                 <Route path='/cadastro/:id' element={<Cadastro/>} />
                 <Route path='/pagamento' element={<Pagamento/>} />
                 <Route path='/cartaogg' element={<Cartaogg/>} />
@@ -89,6 +88,8 @@ export default function Navegacao() {
 
                 }
                 />
+                <Route path='*' element={<NotFound/>} />
+
                 
             </Routes>
         </BrowserRouter>

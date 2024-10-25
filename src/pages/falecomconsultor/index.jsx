@@ -17,11 +17,11 @@ export default function Falecomconsultor(){
         const url = `https://api.cnpjs.dev/v1/${cnpj}`;
         let resp = await axios.get(url);
         
-        if(resp.data === 'false'){ ///arrumar amanhã direitinho
+        if(resp.data.status === 400){ 
             alert('CNPJ inválido')
         }
         else{
-            navigation('/pages/pagamento')
+            navigation('/cartaogg')
 
         }
        

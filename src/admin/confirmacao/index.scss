@@ -9,6 +9,9 @@
         border: 0.2vw solid #C7C4C4;
         border-radius: 1vw;
         padding: 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .inputs {
             display: flex;

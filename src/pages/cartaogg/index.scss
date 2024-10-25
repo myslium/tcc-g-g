@@ -1,4 +1,9 @@
 .cartao-gg{
+    .tudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .ultimo{
         
         width: 60vw;
@@ -9,12 +14,11 @@
         justify-content: center;
         position: relative;
         background-size: 60vw;
-        margin-left: 15vw;
 
         .preencha{
                 font-size: 1.4vw;
                 font-weight: 600;
-                padding: 2VW;
+                padding: 2vw;
             }
         .conteudo{
             padding: 4vw;
@@ -79,7 +83,6 @@
         justify-content: center;
         align-items: center;
         margin: 2vw;
-        margin-left: 15vw;
         gap: 18vw;
         border: 2px solid #3e3e3e;
         .separacao1{
@@ -120,14 +123,18 @@
     }
 
     .pagamentos{
-        padding: 5vw;
-        padding-left: 16vw;
-        button{
+        .porco{
+            padding: 6vw;
             background-color: #EFCAFE;
             padding: 2vw 4vw;
             font-size: 1.3vw;
             border-radius: 30px;
 
+            .porcoimg{
+                width: 2vw;
+            }
         }
+
     }
+}
 }

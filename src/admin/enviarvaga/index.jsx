@@ -13,27 +13,68 @@ export default function EnviarVaga() {
     const [cpfCandidato, setCpfCandidato] = useState('')
     const [curriculo, setCurriculo] = useState(null)
 
+    const [cv_Url, set_CVUrl] = useState(null)
+    const [cv_Extensao, set_CVExtensao] = useState(null)
+
     const navigate = useNavigate()
 
     async function buscarCPF() {
-        const url = await axios.get(`http://localhost:5010/conferirCandidato/${cpfCandidato}`, {
-            responseType: 'blob'  
-        }) 
-        const resp = window.URL.createObjectURL(new Blob([url.data]))
-        setCurriculo(resp) 
-       
+      
+        try {
+            const url = `http://localhost:5010/candidatocurrc/${cpfCandidato}`;
+            const response = await axios.get(url, {
+                responseType:  'LONGBLOB'  
+            });
+
+            const extensao = response.headers['content-type'] === 'application/pdf' ? 'pdf' :
+                             response.headers['content-type'] === 'application/msword' ? 'doc' :
+                             response.headers['content-type'] === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ? 'docx' : '';
+    
+            if (!extensao) {
+                alert("Formato de arquivo não suportado");
+                return;
+            }
+    
+            const urlBlob = window.URL.createObjectURL(new Blob([response.data]));
+            set_CVUrl(urlBlob);
+            set_CVExtensao(extensao);
+            
+        } catch (error) {
+            alert('erro')
+            console.error("Erro ao baixar o currículo:", error);
+        }
+    }
+
+
+    function baixarCV() {
+        if (!cv_Url) {
+            alert('Procure o candidato por CPF antes.');
+            return;
+        }
+
+        const link = document.createElement('a');
+        link.href = cv_Url;
+        link.setAttribute('download', `curriculo.${cv_Extensao}`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 
     async function adicionarCandidatoFinal() {
 
-        const corpo = {
-            "vaga": vaga,
-            "email_empresa": emailEmpresa,
-            "descricao": descricao
+       const corpo = {
+            "emailEmpresa" : emailEmpresa,
+            "vaga":vaga,
+           "descricao":descricao,
+            "curriculo":curriculo
         }
-        const url = `http://localhost:5010/candidatofinal`
-        await axios.post(url, corpo)
-        alert('Candidato final!')
+      
+        const url = `http://localhost:5010/email/${emailEmpresa}`
+        await axios.post(url, corpo.curriculo)
+        alert('Foi?')
+
+     
+       
     }
 
     function reset() {
@@ -41,6 +82,7 @@ export default function EnviarVaga() {
         navigate('/')
     }
 
+    
     return (
         <div className='pagina-enviarvaga'>
             <Cabecalho
@@ -55,7 +97,7 @@ export default function EnviarVaga() {
             />
 
             <TituloMenor titulo='Enviar Vaga'/>
-            <form className='formulario'>
+            <div className='formulario'>
 
                 <div className='inputs'>
                         
@@ -76,22 +118,15 @@ export default function EnviarVaga() {
                         </div>
 
                         <div className='selecionados'>
-                       
-                             <div className='candidatos'>
-                                    <label className='curriculo-label'>
-                                    {curriculo && (
-                                  
-                                    <a href={curriculo} download="curriculo.pdf">Baixar Curriculo</a>
-                                )}
-                                            <span className='curriculo'>Currículo</span>
-                                        </label>
-                            </div>
+                            <div className='candidatos'>
+                            <button className= 'butt on'onClick={baixarCV}>Baixar Currículo</button>
+                        </div>
                        
                            
-                        </div>
+                    </div>
                     
                    
-            </form>
+            </div>
 
                
             <div className='botao'>

@@ -27,7 +27,7 @@ export default function Cartaogg(){
 
                 <TituloMenor titulo ='Valores'/>
 
-                  
+                  <div className="tudo">
             <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/oioi.png')` }}>
 
                 <div className='conteudo'>
@@ -65,6 +65,7 @@ export default function Cartaogg(){
                    
                 </div>
             </div>
+            
 
             <div className="receita">
                 <div className="separacao1">
@@ -85,7 +86,8 @@ export default function Cartaogg(){
 
 
             <div className="pagamentos">
-                <button className="porco"><img src="assets/images/consultor/porco.png" alt="" />Forma de pagamento</button>
+                <button className="porco"><img className="porcoimg" src="assets/images/consultor/porco.png" alt="" />Forma de pagamento</button>
+            </div>
             </div>
             
 
