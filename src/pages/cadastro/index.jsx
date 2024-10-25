@@ -52,7 +52,6 @@ export default function Cadastro() {
             link3 = '/vagas'
             titulo4 = 'Fale com consultor'
             link4 = '/falecomconsultor'
-            tituloo5= 'ROBOT'
             link5 = '/bot'
             aparecer={true}  
 

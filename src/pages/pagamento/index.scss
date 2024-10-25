@@ -1,11 +1,33 @@
+.pagina-pagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .texto-pagamento {
+
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        font-size: 1.8vw;
+        padding-top: 2vw;
+
+        a {
+            color: #000;
+        }
+    }
     .terceira-parte {
 
-        margin-top: 2rem;
-        margin-bottom: 5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border: 1px solid #BDB1C2;
+        border-radius: 20px;
+        padding: 2vh 14%; 
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+      
 
         p {
             font-family: 'Roboto', sans-serif;
@@ -132,6 +154,32 @@
             }
         }
 
+        @media (max-width: 1200px) {
+            
+            .div-grande {
+                .grande {
+                    
+                    width: 46vw;
+                    height: 0.5vw;
+                }
+
+                textarea {
+                    width: 46vw !important;
+                    height: 20vw !important;
+                }
+            }
+
+            .duo {
+                div {
+                    .pequeno {
+                        width: 21vw;
+                        height: 0.5vw;
+                    }
+                }
+            }
+
+        }
+
 
         @media (max-width: 768px) {
 
@@ -147,14 +195,17 @@
                 .div-grande {
 
                     .grande {
+                        
                         width: 70vw;
                         height: 5vw;
+                        font-size: 2.5vw;
                     }
 
 
                     textarea {
                         width: 70vw !important;
                         height: 20vw !important;
+                        font-size: 2.5vw;
                     }
                 }
 
@@ -164,6 +215,7 @@
                         .pequeno {
                             width: 33vw;
                             height: 5vw;
+                            font-size: 2.5vw;
                         }
                     }
                 }
@@ -197,12 +249,14 @@
                     .grande {
                         width: 80vw;
                         height: 8vw;
+                        font-size: 3.5vw;
                     }
 
 
                     textarea {
                         width: 80vw !important;
                         height: 30vw !important;
+                        font-size: 3.8vw;
                     }
                 }
 
@@ -212,6 +266,7 @@
                         .pequeno {
                             width: 37vw;
                             height: 8vw;
+                            font-size: 3.5vw;
                         }
                     }
                 }
@@ -228,3 +283,7 @@
             
         }
     }
+
+
+}
+ 
