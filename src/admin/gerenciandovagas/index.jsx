@@ -124,11 +124,11 @@ export default function VagasAdmin() {
                 );
             })}
 
-            <div className='botaoadicionar'>
+          
                 <Link to='/admin/enviarvaga'>
                     <button>Adicionar</button>
                 </Link>
-            </div>
+                
             </div>
         </div>
     );
