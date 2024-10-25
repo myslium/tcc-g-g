@@ -6,7 +6,7 @@
     align-items: center;
     color: #f5f4f4;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 1vw 0;
     z-index: 1000;
     box-sizing: border-box;
 
@@ -23,7 +23,7 @@
         margin: 0 auto;
 
         .h1 {
-            font-size: 2.25vw;
+            font-size: 2rem;
             font-family: 'Ubuntu', sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -39,14 +39,15 @@
     .menu-toggle {
         display: none;
         cursor: pointer;
-        margin-right: 40px;
+        margin-right: 3vw;
+        z-index: 1000;
 
         .bar {
             display: block;
-            width: 30px;
-            height: 4px;
+            width: 5vw;
+            height: 0.6vw;
             background-color: #000;
-            margin: 5px auto;
+            margin: 0.65vw auto;
             transition: all 0.3s;
         }
 
@@ -55,11 +56,11 @@
         }
 
         &.active .bar:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
+            transform: translateY(1.7vw) rotate(45deg);
         }
 
         &.active .bar:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
+            transform: translateY(-0.9vw) rotate(-45deg);
         }
     }
 
@@ -82,38 +83,37 @@
                     font-family: 'Urbanist', sans-serif;
                     font-weight: 700;
                     text-transform: uppercase;
-                    font-size: 17px;
+                    font-size: 1.3vw;
 
                     &:hover {
                         color: #ffffff;
                     }
 
                     i {
-                        font-size: 10vw; // Ajuste conforme necessário
+                        font-size: 1.3vw; 
                     }
                 }
 
-                // Estilo para o link do robô
                 .robot-link {
                     display: flex;
-                    flex-direction: column; // Coloca o texto abaixo do ícone
-                    align-items: center; // Centraliza o conteúdo
-                    text-decoration: none; // Remove sublinhado
-                    color: #000; // Cor padrão do texto e ícone
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #000;
                     font-family: 'Urbanist', sans-serif;
 
                     i {
-                        font-size: 2rem; // Ajuste o tamanho do ícone
+                        font-size: 1.3vw;
                     }
 
                     span {
-                        font-size: 1rem; // Tamanho do texto "robot"
-                        margin-top: 5px; // Espaçamento entre o ícone e o texto
-                        text-align: center; // Centraliza o texto
+                        font-size: 1.3vw;
+                        margin-top: 0.5vw;
+                        text-align: center;
                     }
 
                     &:hover {
-                        color: #ffffff; // Cor ao passar o mouse
+                        color: #ffffff;
                     }
                 }
             }
@@ -124,7 +124,7 @@
                 font-family: 'Urbanist', sans-serif;
                 font-weight: 700;
                 text-transform: uppercase;
-                font-size: 17px;
+                font-size: 1.3vw;
                 cursor: pointer;
 
                 &:hover {
@@ -136,22 +136,22 @@
         &.aberto {
             display: block;
             position: absolute;
-            top: 60px;
+            top: 7vw;
             left: 0;
             right: 0;
             background-color: #BDB1C2;
-            z-index: 1000;
-            padding: 10px 0;
+            z-index: 999;
+            padding: 1vw 0;
 
             ul {
                 flex-direction: column-reverse;
                 align-items: center;
 
                 li {
-                    margin: 10px 0;
+                    margin: 1vw 0;
 
                     a {
-                        font-size: 14px;
+                        font-size: 1rem;
                         text-align: center;
                     }
                 }
@@ -165,8 +165,8 @@
     }
 
     .login {
-        width: 32px;
-        height: 35px;
+        width: 2.8vw;
+        height: 3vw;
     }
 
     .login:hover {
@@ -176,13 +176,13 @@
     @media (max-width: 768px) {
         .imh1 {
             .h1 {
-                font-size: 3.50vw;
+                font-size: 2rem;
                 font-family: 'Urbanist', serif;
                 font-weight: 700;
             }
 
             .geg {
-                height: 10.5vw;
+                height: 10vw;
             }
         }
 
@@ -194,9 +194,13 @@
             display: none;
         }
 
+        a{
+            font-size: 2vw;
+        }
+
         .login {
-            width: 20px;
-            height: 25px;
+            width: 2.8vw;
+            height: 3vw;
         }
 
         .login:hover {
@@ -207,5 +211,56 @@
             margin: 0 auto;
             justify-content: center;
         }
+    }
+    
+    @media (max-width: 468px) {
+        .imh1 {
+            .h1 {
+                font-size: 2vw;
+                font-family: 'Urbanist', serif;
+                font-weight: 700;
+            }
+
+            .geg {
+                height: 10vw;
+            }
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
+
+        a{
+            font-size: 1vw;
+        }
+
+        .login {
+            width: 2.8vw;
+            height: 3vw;
+        }
+
+        .robot-link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            font-family: 'Urbanist', sans-serif;
+
+            i {
+                font-size: 2vw;
+            }
+
+            span {
+                font-size: 2vw;
+                margin-top: 0.5vw;
+                text-align: center;
+            }
+
+       }
     }
 }

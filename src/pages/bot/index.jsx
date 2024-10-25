@@ -176,6 +176,7 @@ while (oi === true){
             link5 = '/bot'
             titulo5 = 'fa-solid fa-robot'
                tituloo5= 'ROBOT'
+               aparecer={true}  
             
             />
             <TituloMenor titulo = 'Lisa assistente'/>

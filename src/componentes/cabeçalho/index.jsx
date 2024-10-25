@@ -60,12 +60,13 @@ export default function Cabecalho(props) {
                         <li><Link to={props.link4}>{props.titulo4}</Link></li>
                         <li><Link  className="robot-link" to={props.link5}><i className={props.titulo5} ></i>
                         <span>{props.tituloo5}</span></Link></li>
-
-                        <li>
-                            <Link to='/login'>
-                                <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" />
-                            </Link>
-                        </li>
+                        {props.aparecer && (
+                            <li>
+                                <Link to='/login'>
+                                    <img className="login" src="/assets/images/cabecalho/perfil.png" alt="Perfil" />
+                                </Link>
+                            </li>
+                        )}
                     </ul>
                 </nav>
             </div>

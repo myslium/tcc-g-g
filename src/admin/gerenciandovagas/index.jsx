@@ -8,7 +8,7 @@ import TituloMenor from '../../componentes/titulomenor';
 export default function VagasAdmin() {
     const [vagas, setVagas] = useState([]);
     const [candidatos, setCandidatos] = useState([]);
-    const [pesquisar, setPesquisar] = useState('')
+    const [pesquisar, setPesquisar] = useState('');
     const navigate = useNavigate();
 
     function reset() {
@@ -20,13 +20,13 @@ export default function VagasAdmin() {
         const regexData = /^\d{4}-\d{2}-\d{2}$/;
         return regexData.test(data);
     }
-    
+
     async function buscarVagasPorData() {
         if (!validarData(pesquisar)) {
             alert('Por favor, insira uma data válida no formato Ano-Mês-Dia');
             return;
         }
-    
+
         try {
             const response = await axios.get(`http://localhost:5010/vagas/data/${pesquisar}`);
             setVagas(response.data);
@@ -43,15 +43,18 @@ export default function VagasAdmin() {
         const url = `http://localhost:5010/vagas`;
         const resp = await axios.get(url);
 
-        
         const vagasComStatus = resp.data.map(vaga => {
             const partesData = vaga.data_vencimento.split('T')[0];
             const dataVencimento = new Date(partesData);
-            const status = dataVencimento < new Date() ? "Fechada" : "Em andamento";
-            return { ...vaga, status };
+            const diasRestantes = Math.ceil((dataVencimento - new Date()) / (1000 * 60 * 60 * 24));
+            const status = dataVencimento < new Date() ? "Fechada" : `${diasRestantes} dias restantes`;
+
+            return { ...vaga, status, diasRestantes };
         });
 
-        setVagas(vagasComStatus);
+       
+        const vagasAbertas = vagasComStatus.filter(vaga => vaga.status !== "Fechada");
+        setVagas(vagasAbertas);
     }
 
     async function buscarCandidatos() {
@@ -92,37 +95,35 @@ export default function VagasAdmin() {
                     />
                     <button className='on' onClick={buscarVagasPorData}>Buscar</button>
                 </div>
-           
 
-            {vagas.map(item => {
-      
-                const candidatoVaga = candidatos.filter(c => c.id_vaga === item.id);
-                
-                return (
-                    <section className='vagas' key={item.id}>
-                        <div className='titulo'>
-                            <h1>{item.cargo}</h1>
-                            <h1>{(new Date(item.data_vencimento).toLocaleDateString())}</h1>
-                        </div>
-                        
-                        <div className='curriculos'>
-                            {candidatoVaga.length > 0 ? (
-                                candidatoVaga.map(item2 => (
-                                    <Link to={`/admin/confirmacao/${item2.id}`} key={item2.id}>
-                                        <button>Ver currículo</button>
-                                    </Link>
-                                ))
-                            ) : (
-                                <p>Sem currículos disponíveis</p>
-                            )}
-                        </div>
-                        
-                        <div className='tempo'>
-                            <h2>{item.status}</h2>
-                        </div>
-                    </section>
-                );
-            })}
+                {vagas.map(item => {
+                    const candidatoVaga = candidatos.filter(c => c.id_vaga === item.id);
+
+                    return (
+                        <section className='vagas' key={item.id}>
+                            <div className='titulo'>
+                                <h1>{item.cargo}</h1>
+                                <h1>{(new Date(item.data_vencimento).toLocaleDateString())}</h1>
+                            </div>
+
+                            <div className='curriculos'>
+                                {candidatoVaga.length > 0 ? (
+                                    candidatoVaga.map(item2 => (
+                                        <Link to={`/admin/confirmacao/${item2.id}`} key={item2.id}>
+                                            <button>Ver currículo</button>
+                                        </Link>
+                                    ))
+                                ) : (
+                                    <p>Sem currículos disponíveis</p>
+                                )}
+                            </div>
+
+                            <div className='tempo'>
+                                <h2>{item.status}</h2>
+                            </div>
+                        </section>
+                    );
+                })}
 
           
                 <Link to='/admin/enviarvaga'>

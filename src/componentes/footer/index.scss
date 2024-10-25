@@ -5,6 +5,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 6vw;
 
 
 
@@ -12,24 +13,23 @@ footer {
     .footer-content {
         display: flex;
         width: 100%;
-    
         align-items: center;
-        gap: 80px ;
+        gap: 5vw;
 
         .logo {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-left:  100px;
+            margin-left:  2vw;
 
             img {
-                width: 100px;
+                width: 8vw;
                 filter: brightness(0) invert(1);
 
             }
 
             span {
-                font-size: 18px;
+                font-size: 1.5vw;
                 font-weight: 200;
                 color: #d8d6d6;
             }
@@ -46,18 +46,17 @@ footer {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-                gap: 10px;
+                gap: 1vw;
 
                 .h3 {
-                    font-size: 18px;
-                    margin-bottom: 0px;
+                    font-size: 1.5vw;
                     font-weight: 700;
                     color: #e0dede;
                 }
 
                 .p {
                     margin: 0;
-                    font-size: 16px;
+                    font-size: 1.5vw;
                     color: #ccc;
                     margin-bottom: 2.45px;
                 }
@@ -65,11 +64,11 @@ footer {
             }
 
             .footer-bottom {
-                width: 55vw;
+                width: 90%;
                 border-top: 1px solid #e9e8e8b2;
                 padding: 18px 0px 0px 0px;
                 text-align: center;
-                font-size: 14px;
+                font-size: 1.5vw;
                 color: #bbb;
 
                 .p {
@@ -90,6 +89,7 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 0px !important;
+        padding-left: 0;
 
         .contact {
             margin-top: 15px;
@@ -103,6 +103,40 @@ footer {
 
         .logo {
             margin-left:0px !important;
+         }
+
+    }
+
+    
+
+    .footer-bottom {
+        width: 90%;
+    }
+
+
+    
+
+}
+
+@media (max-width: 468px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center !important;
+        gap: 0px !important;
+        padding-left: 0;
+
+        .contact {
+            margin-top: 1.5vw;
+            text-align: center;
+
+            .text { 
+                text-align: center;
+            }
+        }
+
+        .logo {
+            margin-left:0px !important;
+            width: 10vw;
          }
 
     }

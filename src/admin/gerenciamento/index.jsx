@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
@@ -23,9 +23,9 @@ export default function Gerenciamento() {
     const [descricao, setDescricao] = useState('');
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
+    const [aprovado, setAprovado] = useState('não'); // Novo campo de aprovado
 
-
-    async function carregarVaga() {
+    const carregarVaga = useCallback(async () => {
         try {
             const response = await axios.get(`http://localhost:5010/vagas/${vagaId}`);
             const vaga = response.data;
@@ -44,18 +44,17 @@ export default function Gerenciamento() {
             setQuantidade(vaga.qtd_vagas);
             const dataVencimentoFormatada = vaga.data_vencimento ? vaga.data_vencimento.split('T')[0] : '';
             setVencimento(dataVencimentoFormatada);
-
+            setAprovado(vaga.aprovado); // Carregando valor do campo aprovado
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
         }
-    }
-
+    }, [vagaId]);
 
     useEffect(() => {
         if (vagaId) {
             carregarVaga();
         }
-    }, [vagaId]);
+    }, [vagaId, carregarVaga]);
 
     function reset() {
         localStorage.removeItem('token');
@@ -77,6 +76,7 @@ export default function Gerenciamento() {
             descricao,
             vencimento,
             quantidade,
+            aprovado, // Adicionando o campo aprovado
         };
 
         const url = 'http://localhost:5010/vagas';
@@ -100,6 +100,7 @@ export default function Gerenciamento() {
             descricao,
             vencimento,
             quantidade,
+            aprovado, // Incluindo o campo aprovado na edição
         };
 
         const url = `http://localhost:5010/vagas/${vagaId}`;
@@ -111,7 +112,6 @@ export default function Gerenciamento() {
         const url = `http://localhost:5010/vagas/${vagaId}`;
         await axios.delete(url);
         resetarCampos();
-
         alert('Vaga deletada com sucesso!');
     }
 
@@ -130,6 +130,7 @@ export default function Gerenciamento() {
         setDescricao('');
         setQuantidade('');
         setVencimento('');
+        setAprovado('não');
     }
 
     return (
@@ -148,7 +149,7 @@ export default function Gerenciamento() {
             <Tituloelogo titulo='Novas vagas' />
 
             <section className='terceira-parte'>
-                <h1>empresa:</h1>
+                <h1>Empresa:</h1>
 
                 <div className='vagas'>
                     <div className='div-grande'>
@@ -199,17 +200,12 @@ export default function Gerenciamento() {
 
                     <div className='div-grande'>
                         <label>Requisitos:</label>
-                        <textarea
-                            className='grandee'
-                            value={requisitos}
-                            onChange={e => setRequisitos(e.target.value)}
-
-                        />
+                        <textarea className='grandee' value={requisitos} onChange={e => setRequisitos(e.target.value)} />
                     </div>
 
                     <div className='div-grande'>
                         <label>Benefícios:</label>
-                        <input className='grande' type="text" value={beneficios} onChange={e => setBeneficios(e.target.value)} />
+                        <textarea className='grandee' value={beneficios} onChange={e => setBeneficios(e.target.value)} />
                     </div>
 
                     <div className='div-grande'>
@@ -229,6 +225,16 @@ export default function Gerenciamento() {
                         </div>
                     </div>
 
+                    <div className='duo'>
+                        <div>
+                            <label>Aprovado:</label>
+                            <select value={aprovado} onChange={e => setAprovado(e.target.value)}>
+                                <option value="sim">Sim</option>
+                                <option value="não">Não</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div className='botao'>
                         {vagaId ? (
                             <>
@@ -244,7 +250,6 @@ export default function Gerenciamento() {
                                 <i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar
                             </button>
                         )}
-
                     </div>
                 </div>
             </section>

@@ -6,7 +6,7 @@
 
 
     .faixa {
-        height: 37vw;
+        height: 50vw;
         background-repeat: no-repeat;
         background-color: #EFCAFE;
         background-size: contain;
@@ -34,15 +34,15 @@
     .recrutando {
         background-color: #ffffff;
         margin: 0;
-        padding: 2% 0;
-        height: 35vw;
+        padding: 3% 0;
+        height: 30vw;
         position: relative;
        justify-content: center;
 
         .conteudo {
            
             display: flex;
-            height: 34vw;
+            height: 30vw;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
@@ -51,8 +51,8 @@
             gap: 5vw;
 
             .imseg {
-                width: 50vw;
-                height: 30vw;
+                width: 45vw;
+                height: 26vw;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -62,7 +62,7 @@
                 img {
 
                     width: auto;
-                    height: 26vw;
+                    height: 24vw;
                     border-radius: 2vw;
                 }
             }
@@ -78,13 +78,12 @@
 
                 h1 {
                     font-size: 2vw;
-                    width: 15vw;
                     margin: 0;
                 }
 
                 p {
-                    font-size: 1.7vw;
-                    color: #524E4E;
+                    font-size: 1.5vw;
+                    color: #252525;
                     margin: 0;
                     line-height: 1.5;
                 }
@@ -99,7 +98,7 @@
                         margin-right: 40px;
                         text-decoration: none;
                         gap: 0.5vw;
-                        font-size: 2.5vw;
+                        font-size: 1vw;
                         align-items: center;
 
 
@@ -111,8 +110,8 @@
                         svg:not(:root).svg-inline--fa {
                             overflow: visible;
                             box-sizing: content-box;
-                            font-size: 1.5vw;
-                            margin-top: 0.6vw;
+                            font-size: 1.3vw;
+                            margin-top: 0.3vw;
 
                         }
                     }

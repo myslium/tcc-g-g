@@ -1,47 +1,16 @@
-.pagina-confirmados {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .tituloelogo {
-        width: 80%;
-        margin: 10vh;
-    }
-
     .terceira-parte {
-        position: relative; 
-        border: 1px solid #BDB1C2;
-        border-radius: 20px;
-        padding: 2vh 14%; 
+
         margin-top: 2rem;
         margin-bottom: 5rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        h1 {
-            font-family: 'Ultra', sans-serif;
-            font-size: 3vw;
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.7vw;
             font-weight: 400;
-            color: #D60BB5;
-            text-align: left;
-            margin-bottom: 3vw;
-        }
-
-        /* Adicionando a classe para o botão de aprovado */
-        .aprovado {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2vw;
-            padding: 0.5rem 1rem;
-            background-color: #B54FCF;
-            color: #fff;
-            border: none;
-            border-radius: 1.5vw;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            box-shadow: 0px 5px 3px #e6e6e6;
         }
 
         .vagas {
@@ -57,11 +26,13 @@
                 font-size: 1.5vw;
                 margin-bottom: 1vw;
             }
+            
 
             .div-grande {
                 display: flex;
                 flex-direction: column;
-
+              
+    
                 .grande {
                     width: 46vw;
                     height: 0.5vw;
@@ -75,8 +46,10 @@
                     color: #313131;
                     font-weight: 500;
                     box-shadow: 0px 5px 3px #e6e6e6;
+    
                 }
             }
+            
 
             .duo {
                 display: flex;
@@ -87,6 +60,7 @@
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 2rem;
+                
 
                     .pequeno {
                         width: 21vw;
@@ -104,39 +78,38 @@
                 }
             }
 
-            textarea {
+            textarea{
                 width: 45vw !important;
                 height: 14vw !important;
                 border-radius: 1.5vw;
                 border: 2px solid #C7C4C4;
                 outline: none;
-                padding: 2vw;
+                padding: 2vw ;
                 font-family: 'Montserrat', sans-serif;
                 font-size: 1.3vw;
                 color: #313131;
                 font-weight: 500;
                 margin-bottom: 1.8rem;
                 box-shadow: 0px 5px 3px #e6e6e6;
+            
             }
-
             .grandee {
                 width: 45vw !important;
                 height: 5vw !important;
-                padding: 2vw;
+                padding: 2vw ;
+              
             }
 
+
             .botao {
-                position: absolute;
-                bottom: -1.6rem;
-                left: 50%;
-                transform: translateX(-50%);
+                margin-top: 2rem;
+                width: 50vw;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: end;
+                align-items: end;
 
                 button {
-                    display: flex;
-                    padding: 0.5vw 4vw;
+                    padding: 1vw 5vw;
                     background-color: #B54FCF;
                     border-radius: 1.3vw;
                     border: 5px solid #B54FCF;
@@ -145,22 +118,26 @@
                     font-size: 1.5vw;
                     font-weight: 600;
                     transition: 0.3s ease-in-out;
-                    margin-left: 1vh;
                 }
 
-                button:hover {
-                    background-color: #240A39;
-                    color: white;
-                    transform: translateY(-2px);
-                    transition: all 0.3s ease;
-                    border: 5px solid #240A39;
+                button:hover{
+                    
+                        background-color: #240A39;
+                        color: white;
+                        transform: translateY(-2px);
+                        transition: all 0.3s ease;
+                        border: 5px solid #240A39;
+                      
                 }
             }
         }
 
+
         @media (max-width: 768px) {
-            padding: 3vh 9%;
-            margin-top: 0.3rem;
+
+            p {
+                font-size: 2.5vw;
+            }
 
             .vagas {
                 label {
@@ -168,10 +145,12 @@
                 }
 
                 .div-grande {
+
                     .grande {
                         width: 70vw;
                         height: 5vw;
                     }
+
 
                     textarea {
                         width: 70vw !important;
@@ -180,6 +159,7 @@
                 }
 
                 .duo {
+
                     div {
                         .pequeno {
                             width: 33vw;
@@ -189,28 +169,36 @@
                 }
 
                 .botao {
-                    bottom: -1rem;
+                    width: 75vw;
+                    
                     button {
-                        padding: 1vw 4.1vw;
+                        padding: 2vw 8vw;
                         font-size: 3vw;
                     }
                 }
             }
+
+            
         }
 
         @media (max-width: 468px) {
-            padding: 4vh 15%;
+            p {
+                font-size: 3vw;
+            }
 
             .vagas {
+
                 label {
                     font-size: 3.5vw;
                 }
 
                 .div-grande {
+
                     .grande {
                         width: 80vw;
                         height: 8vw;
                     }
+
 
                     textarea {
                         width: 80vw !important;
@@ -219,6 +207,7 @@
                 }
 
                 .duo {
+
                     div {
                         .pequeno {
                             width: 37vw;
@@ -228,13 +217,14 @@
                 }
 
                 .botao {
-                    bottom: 0;
+                    width: 85vw;
+                    
                     button {
-                        padding: 3.5vw 8.5vw;
+                        padding: 4vw 20vw;
                         font-size: 4vw;
                     }
                 }
             }
+            
         }
     }
-}

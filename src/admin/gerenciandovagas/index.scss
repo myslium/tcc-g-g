@@ -2,13 +2,14 @@
     min-height: 100vh;
 
     .botooes1 {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5vw;
 
         .input-container {
             position: relative;
-            width: 60%; 
+            width: 65%; 
             display: flex;
             align-items: center;
             margin: 2vw 0vw;
@@ -42,8 +43,8 @@
 
             button {
                 margin-left: 1vw;
-                padding: 1.2vw 1.5vw; 
-                font-size: 1vw; 
+                padding: 1vw 1.5vw; 
+                font-size: 1.2vw; 
                 background-color: #b54fcf;
                 color: #fff;
                 border: none;
@@ -80,12 +81,12 @@
         
                 button {
                     background-color: #B54FCF;
-                    padding: 1vw 3vw;
+                    padding: 0.8vw 2.3vw;
                     border: 0.3vw solid #B54FCF;
                     border-radius: 1vw;
                     color: #ffffff;
                     font-family: 'Montserrat', sans-serif;
-                    font-size: 1vw;
+                    font-size: 1.2vw;
                     font-weight: 700;
                     cursor: pointer;
                     transition: 0.2s ease-in-out;
@@ -105,6 +106,7 @@
                     color: #2c2c2c;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 600;
+                    font-size: 1.5vw;
                 }
             }
            }

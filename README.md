@@ -26,9 +26,9 @@ CREATE TABLE vagas (
     descricao TEXT,
     data_criacao DATETIME,
     data_vencimento DATETIME,
+    aprovado ENUM('sim', 'não'),
     qtd_vagas INT
 );
-
 # Tabela de Formulários
 CREATE TABLE formularios (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -36,7 +36,7 @@ CREATE TABLE formularios (
     cpf VARCHAR(11) NOT NULL UNIQUE,
     id_vaga INT,
     email VARCHAR(200) NOT NULL UNIQUE,
-    curriculo BLOB NOT NULL,
+    curriculo LONGBLOB NOT NULL,
     data_inscricao DATETIME,
     status VARCHAR(100) NULL,
     FOREIGN KEY (id_vaga) REFERENCES vagas(id)
