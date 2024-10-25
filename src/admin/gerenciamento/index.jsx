@@ -228,7 +228,7 @@ export default function Gerenciamento() {
                     <div className='duo'>
                         <div>
                             <label>Aprovado:</label>
-                            <select value={aprovado} onChange={e => setAprovado(e.target.value)}>
+                            <select className='aprovado' value={aprovado} onChange={e => setAprovado(e.target.value)}>
                                 <option value="sim">Sim</option>
                                 <option value="não">Não</option>
                             </select>
