@@ -221,18 +221,13 @@ export default function Cartaogg() {
                 <div className='line'></div>
 
                 <div className="pagamentos">
-                    <button onClick={porco}  className="porco">
+                    <button onClick={porco} className="porco">
                         <img className="porcoimg" src="/assets/images/consultor/porco.png" alt="porco" />
                         Forma de pagamento
                     </button>
-<<<<<<< HEAD
                     {oiporco}
                     <h1 className='pix'>{pixx}</h1>
-                    {outroo}
-                   
-
-=======
->>>>>>> 2c09ee233ed9c96580a524c29ecc7b6ae6369e94
+               
                 </div>
             </div>
 
