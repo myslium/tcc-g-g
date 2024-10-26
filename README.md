@@ -64,7 +64,7 @@ CREATE TABLE candidato_final (
 CREATE TABLE interesse 
 (id INT PRIMARY KEY AUTO_INCREMENT,
 empresa VARCHAR(100) NOT NULL,
-cnpj int NOT NULL);
+cnpj VARCHAR(18) NOT NULL);
 
 # Tabela de recibo
 
