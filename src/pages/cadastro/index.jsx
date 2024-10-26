@@ -94,7 +94,7 @@ export default function Cadastro() {
                                 onChange={e => setCurriculo(e.target.files[0])}
                                 style={{ display: 'none' }}
                             />
-                            <span className='curriculo'>Currículo</span>
+                            <span className='curriculo on'>Anexar Arquivo</span>
                         </label>
                     </div>
 

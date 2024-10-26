@@ -64,6 +64,7 @@
                     border-radius: 20px;
                     font-size: 1vw;
                     font-weight: 900;
+                    margin: 3vw 0;
                   
                 }
                 button:hover{
@@ -83,19 +84,32 @@
                    flex-direction: column;
 
                     h3 {
-                        font-size: 2vw;
+                        font-size: 1.5vw;
                         text-transform: uppercase;
+                        margin: 0;
 
                     }
                     p {
-                        font-size: 1.5vw;
+                        font-size: 1.2vw;
                         font-weight: 400;
                     }
             }    
             .opcao {
                     display: flex;
-                    align-items: center;
+                    align-items: start;
                     gap: 1vw;
+                    margin-right: 0.5vw;
+                    h3 {
+                        font-size: 1.2vw;
+                  
+                        margin: 0;
+
+                    }
+                    input{
+                        margin-top: 0.5vw;
+                        width: 1vw;
+                        height: 1vw;
+                    }
             }     
             }
             
