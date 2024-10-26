@@ -20,7 +20,7 @@ export default function Inicio() {
             link4 = '/cartaogg'
             link5 = '/bot'
             titulo5 = 'fa-solid fa-robot'
-            tituloo5= 'ROBOT'
+            tituloo5= 'AJUDA'
             aparecer={true}  
 
             />

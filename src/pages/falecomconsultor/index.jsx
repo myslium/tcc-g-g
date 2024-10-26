@@ -29,18 +29,19 @@ export default function Falecomconsultor(){
 
     return (
         <div className='pagina-falecomconsultor'>
-            <Cabecalho
-                titulo1='Início'
-                link1='/'
-                titulo2='Sobre G&G'
-                link2='/sobre'
-                titulo3='Vagas'
-                link3='/vagas'
-                titulo4='Fale com consultor'
-                link4='/falecomconsultor'
-                tituloo5 = 'ROBOT'
-                link5 = '/bot'
-                aparecer={true}  
+          <Cabecalho
+             titulo1 = 'Início'
+            link1='/'
+            titulo2 = 'Sobre G&G'
+            link2 = '/sobre'
+            titulo3 = 'Vagas'
+            link3 = '/vagas'
+            titulo4 = 'Fale com consultor'
+          link4='/falecomconsultor'
+            link5 = '/bot'
+            titulo5 = 'fa-solid fa-robot'
+            tituloo5= 'AJUDA'
+            aparecer={true}  
 
             />
 
