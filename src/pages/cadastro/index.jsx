@@ -44,17 +44,18 @@ export default function Cadastro() {
     return (
         <div className='pagina-cadastro'>
            <Cabecalho
-             titulo1 = 'Início'
-              link1='/'
-            titulo2 = 'Sobre G&G'
-            link2 = '/sobre'
-            titulo3 = 'Vagas'
-            link3 = '/vagas'
-            titulo4 = 'Fale com consultor'
-            link4 = '/falecomconsultor'
-            link5 = '/bot'
-            aparecer={true}  
-
+                titulo1 = 'Início'
+                link1='/'
+                titulo2 = 'Sobre G&G'
+                link2 = '/sobre'
+                titulo3 = 'Vagas'
+                link3 = '/vagas'
+                titulo4 = 'Fale com consultor'
+                link4='/falecomconsultor'
+                link5 = '/bot'
+                titulo5 = 'fa-solid fa-robot'
+                tituloo5= 'AJUDA'
+                aparecer={true}  
             />
 
             <TituloMenor titulo='Candidatar-se' />
