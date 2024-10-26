@@ -17,12 +17,17 @@ export default function Cartaogg() {
     const [addVaga, setAddVaga] = useState(false);
    const [receita, setReceita] = useState([]);
 
-    async function Tpp() {
-        const sal = Number(salario);
-        const qtd = Number(qtd_vagas);
+   async function Tpp() {
+    const sal = Number(salario);
+    const qtd = Number(qtd_vagas);
+     
+    if (isNaN(sal) || isNaN(qtd)) {
+        alert("Por favor, insira valores numéricos válidos para salário e quantidade de vagas.");
+        return;
+    } else {
         let sa = ((sal * 0.85) * qtd).toFixed(2);
         setTpp(sa);
-
+      
         if (sa !== "0.00") {
             const url = `http://localhost:5010/receita`;
             let dados = {
@@ -35,6 +40,8 @@ export default function Cartaogg() {
             alert(`Valor calculado e adicionado ao seu cartão! ID: ${resp.data.id}`);
         }
     }
+}
+
 
     useEffect(() => {
         if (addVaga) resetar();
@@ -54,6 +61,17 @@ export default function Cartaogg() {
         setTpp(0);
         setVaga('');
         setAddVaga(false);
+    }
+
+    function total (item) {
+        let soma  =0
+
+        for( let i = 0; i < item.length; i++){
+            soma += item[i].s;
+    
+        }
+        return soma;
+
     }
 
     return (
@@ -118,9 +136,9 @@ export default function Cartaogg() {
                     </div>
                 </div>
                 
-                <div className="botao">
-                    <button onClick={pagar}>Ver Receita</button>
-                </div>
+               
+                    <button className="butt on" onClick={pagar}>Ver Receita</button>
+               
 
                 {receita.map(item => (
                     <div key={item.id} className="receita">
@@ -128,13 +146,12 @@ export default function Cartaogg() {
                             <h1>RECEITA</h1>
                             <p>Nome da empresa: {item.empresa}</p>
                             <p>Vaga: {item.vaga}</p>
-                            <p>Subtotal: R$ {item.subtotal}</p>
-                            <p>Valor da vaga: R$ {item.valor}</p>
+                            <p>Subtotal: R$ {item.salario }</p>
                         </div>
 
                         <div className="separacao2">
                             <img src="/assets/images/cabecalho/logo.png" alt="" />
-                            <h1>valor final : R$--</h1>
+                            <h1>valor final : R${total(item)}</h1>
                         </div>
                     </div>
                 ))}

@@ -167,6 +167,15 @@
         }
     }
 
+    .butt{
+        padding: 1vw 2vw;
+        background-color: #8D60B2;
+        border: #8D60B2;
+        color: #E5DBEB;
+        font-weight: 700;
+        font-size: 1.5vw;
+    }
+
     .line {
         width: 60vw;
         height: 1vw;
@@ -179,9 +188,9 @@
             display: flex;
             align-items: center;
             gap: 1vw;
-            padding: 2vw;
+            padding: 1.5vw;
             background-color: #EFCAFE;
-            font-size: 1.7vw;
+            font-size: 1.4vw;
             font-weight: 900;
             border-radius: 30px;
 
