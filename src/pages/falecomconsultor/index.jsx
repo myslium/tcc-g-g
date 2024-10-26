@@ -21,7 +21,7 @@ export default function Falecomconsultor(){
             alert('CNPJ inválido')
         }
         else{
-            let url2 = 'http://localhost:5010/interesse';
+            let url = 'http://localhost:5010/interesse';
             let empresa = {
                 'empresa': nomeemp,
                 'cnpj': cnpj

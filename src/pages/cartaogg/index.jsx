@@ -10,53 +10,45 @@ import TituloMenor from '../../componentes/titulomenor';
 export default function Cartaogg() {
     const { id } = useParams();
 
-
     const [salario, setSalario] = useState(0);
     const [qtd_vagas, setQtd_vagas] = useState(0);
     const [tpp, setTpp] = useState(0);
     const [vaga, setVaga] = useState('');
     const [addVaga, setAddVaga] = useState(false);
-    const [receita, setReceita] = useState([]);
+   const [receita, setReceita] = useState([]);
 
-    function Tpp() {
+    async function Tpp() {
         const sal = Number(salario);
         const qtd = Number(qtd_vagas);
-        let sa = ((sal * (85 / 100)) * qtd).toFixed(2);
+        let sa = ((sal * 0.85) * qtd).toFixed(2);
         setTpp(sa);
+
+        if (sa !== "0.00") {
+            const url = `http://localhost:5010/receita`;
+            let dados = {
+                salario: salario,
+                qtd_vagas: qtd_vagas,
+                vaga: vaga,
+                id_interesse: id
+            };
+            let resp = await axios.post(url, dados);
+            alert(`Valor calculado e adicionado ao seu cartão! ID: ${resp.data.id}`);
+        }
     }
 
     useEffect(() => {
-        resetar();
+        if (addVaga) resetar();
     }, [addVaga]);
 
-    useEffect(() => {
-        inserir();
-    }, [tpp]);
-
-
-    async function inserir() {
-        const url = `http://localhost:5010/receita`;
-        let dados = {
-
-            salario: salario,
-            qtd_vagas: qtd_vagas,
-            vaga: vaga,
-            id_interesse: id
-        }
-        let resp = await axios.post(url, dados);
-        alert('Valor calculado! e adicionado ao seu cartão!')
-
-
-    }
     async function pagar() {
         const url = `http://localhost:5010/receita/${id}`;
-        await axios.post(url);
-
+        let resposta = await axios.get(url);
+        setReceita(resposta.data);
     }
 
+ 
 
     function resetar() {
-
         setSalario(0);
         setQtd_vagas(0);
         setTpp(0);
@@ -110,7 +102,7 @@ export default function Cartaogg() {
                             <div className='final-cartao'>
                                 <div className='estimado'>
                                     <h3>Valor estimado:</h3>
-                                    <p>R$:{tpp}</p>
+                                    <p>R$: {tpp}</p>
                                 </div>
 
                                 <div className='opcao'>
@@ -118,24 +110,26 @@ export default function Cartaogg() {
                                     <input
                                         type="checkbox"
                                         checked={addVaga}
-                                        onChange={e => {
-                                            setAddVaga(e.target.checked);
-
-                                        }}
+                                        onChange={e => setAddVaga(e.target.checked)}
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div className="botao">
+                    <button onClick={pagar}>Ver Receita</button>
+                </div>
+
                 {receita.map(item => (
                     <div key={item.id} className="receita">
                         <div className="separacao1">
                             <h1>RECEITA</h1>
                             <p>Nome da empresa: {item.empresa}</p>
                             <p>Vaga: {item.vaga}</p>
-                            <p>Subtotal: R${item.subtotal}</p>
-                            <p>Valor da vaga: R${item.valor}</p>
+                            <p>Subtotal: R$ {item.subtotal}</p>
+                            <p>Valor da vaga: R$ {item.valor}</p>
                         </div>
 
                         <div className="separacao2">
@@ -144,7 +138,6 @@ export default function Cartaogg() {
                         </div>
                     </div>
                 ))}
-
 
                 <div className='line'></div>
 
