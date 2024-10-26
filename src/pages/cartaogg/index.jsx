@@ -1,6 +1,6 @@
 import Cabecalho from '../../componentes/cabeçalho';
 import Footer from '../../componentes/footer';
-import Tituloelogo from '../../componentes/tituloelogo';
+
 import './index.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -164,9 +164,11 @@ export default function Cartaogg() {
                         Forma de pagamento
                     </button>
 
-                    
+
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }
