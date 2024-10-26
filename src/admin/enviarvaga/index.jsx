@@ -60,11 +60,11 @@ export default function EnviarVaga() {
             emailEmpresa: emailEmpresa,
             vaga: vaga,
             descricao: descricao,
-            cpf: cpfCandidato, // Adicione o CPF do candidato
-            curriculo: curriculo // Certifique-se de que isso está definido corretamente
+            cpf: cpfCandidato, 
+            curriculo: curriculo 
         };
 
-        const url = `http://localhost:5010/mandaremail`; // Verifique se este é o endpoint correto
+        const url = `http://localhost:5010/mandaremail`; 
         try {
             await axios.post(url, corpo);
             alert('E-mail enviado com sucesso!');
