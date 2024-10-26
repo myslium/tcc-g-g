@@ -28,9 +28,9 @@ export default function Falecomconsultor(){
                     'empresa': nomeemp,
                     'cnpj': formattedCNPJ
                 };
-                await axios.post(url, empresa); 
+                let postResp = await axios.post(url, empresa);
                 alert('CNPJ válido!');
-                navigation(`/cartaogg/${nomeemp}`);
+                navigation(`/cartaogg/${postResp.data.id}`);
             }
         } catch (error) {
           
