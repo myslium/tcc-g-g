@@ -7,15 +7,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import TituloMenor from '../../componentes/titulomenor';
 
-export default function Cartaogg(){
-    const { empresa } = useParams();
+export default function Cartaogg() {
+    const { id } = useParams();
 
-    const [nomeEmpresa, setNomeEmpresa] = useState(empresa);
+
     const [salario, setSalario] = useState(0);
     const [qtd_vagas, setQtd_vagas] = useState(0);
     const [tpp, setTpp] = useState(0);
     const [vaga, setVaga] = useState('');
     const [addVaga, setAddVaga] = useState(false);
+    const [receita, setReceita] = useState([]);
 
     function Tpp() {
         const sal = Number(salario);
@@ -23,15 +24,39 @@ export default function Cartaogg(){
         let sa = ((sal * (85 / 100)) * qtd).toFixed(2);
         setTpp(sa);
     }
-    
+
     useEffect(() => {
         resetar();
     }, [addVaga]);
 
+    useEffect(() => {
+        inserir();
+    }, [tpp]);
+
+
+    async function inserir() {
+        const url = `http://localhost:5010/receita`;
+        let dados = {
+
+            salario: salario,
+            qtd_vagas: qtd_vagas,
+            vaga: vaga,
+            id_interesse: id
+        }
+        let resp = await axios.post(url, dados);
+        alert('Valor calculado! e adicionado ao seu cartão!')
+
+
+    }
+    async function pagar() {
+        const url = `http://localhost:5010/receita/${id}`;
+        await axios.post(url);
+
+    }
 
 
     function resetar() {
-        setNomeEmpresa('');
+
         setSalario(0);
         setQtd_vagas(0);
         setTpp(0);
@@ -39,7 +64,7 @@ export default function Cartaogg(){
         setAddVaga(false);
     }
 
-    return(
+    return (
         <div className="cartao-gg">
             <Cabecalho
                 titulo1='Início'
@@ -55,7 +80,7 @@ export default function Cartaogg(){
                 aparecer={true}
             />
 
-            <TituloMenor titulo='Valores'/>
+            <TituloMenor titulo='Valores' />
 
             <div className="tudo">
                 <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/oioi.png')` }}>
@@ -71,7 +96,7 @@ export default function Cartaogg(){
                                     <p>SALÁRIO:</p>
                                     <input className='oioio' type="text" value={salario} onChange={e => setSalario(e.target.value)} />
                                 </div>
-                                
+
                                 <div className="quadrado">
                                     <p>QTD VAGAS:</p>
                                     <input className='oioio' type="text" value={qtd_vagas} onChange={e => setQtd_vagas(e.target.value)} />
@@ -90,34 +115,36 @@ export default function Cartaogg(){
 
                                 <div className='opcao'>
                                     <h3>Outra vaga?</h3>
-                                    <input 
-                                        type="checkbox" 
-                                        checked={addVaga} 
+                                    <input
+                                        type="checkbox"
+                                        checked={addVaga}
                                         onChange={e => {
                                             setAddVaga(e.target.checked);
-                                           
-                                        }} 
+
+                                        }}
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {receita.map(item => (
+                    <div key={item.id} className="receita">
+                        <div className="separacao1">
+                            <h1>RECEITA</h1>
+                            <p>Nome da empresa: {item.empresa}</p>
+                            <p>Vaga: {item.vaga}</p>
+                            <p>Subtotal: R${item.subtotal}</p>
+                            <p>Valor da vaga: R${item.valor}</p>
+                        </div>
 
-                <div className="receita">
-                    <div className="separacao1">
-                        <h1>RECEITA</h1>
-                        <p>Nome da empresa: {nomeEmpresa}</p>
-                        <p>Vaga: Desenvolvedor</p>
-                        <p>Subtotal: R$</p>
-                        <p>Valor da vaga:</p>
+                        <div className="separacao2">
+                            <img src="/assets/images/cabecalho/logo.png" alt="" />
+                            <h1>valor final : R$--</h1>
+                        </div>
                     </div>
+                ))}
 
-                    <div className="separacao2">
-                        <img src="/assets/images/cabecalho/logo.png" alt="" />
-                        <h1>valor final : R$--</h1>
-                    </div>
-                </div>
 
                 <div className='line'></div>
 

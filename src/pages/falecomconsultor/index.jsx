@@ -21,6 +21,13 @@ export default function Falecomconsultor(){
             alert('CNPJ inválido')
         }
         else{
+            let url2 = 'http://localhost:5010/interesse';
+            let empresa = {
+                'empresa': nomeemp,
+                'cnpj': cnpj
+            }
+            await axios.get(url, empresa);
+            alert('CNPJ válido!')
             navigation(`/cartaogg/${nomeemp}`)
         }
     }
