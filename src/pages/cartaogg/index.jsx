@@ -1,10 +1,11 @@
 import Cabecalho from '../../componentes/cabeçalho';
 import Footer from '../../componentes/footer';
-
+import Porco from '../../componentes/porco';
 import './index.scss';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import TituloMenor from '../../componentes/titulomenor';
 
 export default function Cartaogg() {
@@ -15,6 +16,9 @@ export default function Cartaogg() {
     const [vaga, setVaga] = useState('');
     const [addVaga, setAddVaga] = useState(false);
    const [receita, setReceita] = useState([]);
+   const[pixx,setpixx] = useState('')
+   const navigatee = useNavigate()
+
 
    async function Tpp() {
     const sal = Number(salario);
@@ -73,8 +77,33 @@ export default function Cartaogg() {
     
         return soma;
     }
-    
 
+
+
+    const [oiporco,setoiporco] = useState('')
+    const[outroo,setoutroo]= useState('')
+
+    function porco(){
+        let porcooo = <Porco
+        p1 = 'Pix'
+        function1 = {pix}
+        p2 = 'Outro...'
+        function2 = {outro}
+        />
+        setoiporco(porcooo)
+       
+
+    } 
+    function pix(){
+        let oioa = navigatee('/pix')
+        setpixx(oioa) 
+
+    }
+    function outro(){
+        let oioi = navigatee('/whats')
+        setoutroo(oioi)
+    }
+    
     return (
         <div className="cartao-gg">
             <Cabecalho
@@ -160,11 +189,14 @@ export default function Cartaogg() {
                 <div className='line'></div>
 
                 <div className="pagamentos">
-                    <button className="porco">
+                    <button onClick={porco}  className="porco">
                         <img className="porcoimg" src="/assets/images/consultor/porco.png" alt="porco" />
                         Forma de pagamento
                     </button>
-
+                    {oiporco}
+                    <h1 className='pix'>{pixx}</h1>
+                    {outroo}
+                   
 
                 </div>
             </div>

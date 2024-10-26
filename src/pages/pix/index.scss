@@ -1,0 +1,54 @@
+.pix-comp{
+    background-color:#fbeee5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pixinho{
+        margin: 3vw;
+        gap: 3vw;
+        height: 50vw;
+
+    .tituloo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .titu{
+            font-size: 2.5vw;
+            width: 60vw;
+            text-align: center;
+            color:#7272ff;
+            
+        }
+        .back{
+            img{
+                width: 3vw;
+            }
+        }
+        
+
+    }
+        .imagens{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2vw;
+            padding: 3vw;
+            .paga{
+                width: 20vw;
+                padding: 2vw;
+            }
+            .qrcode{
+                width: 17vw;
+                padding: 2vw;
+
+            }
+
+
+            }
+       
+        
+    }
+    
+}

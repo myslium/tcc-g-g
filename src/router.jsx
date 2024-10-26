@@ -15,6 +15,8 @@ import Robo from './pages/bot/index.jsx';
 import NotFound from './pages/noterro';
 import Pagamento from './pages/pagamento/index.jsx';
 import Cartaogg from './pages/cartaogg/index.jsx';
+import Whats from './pages/whats/index.jsx';
+import Pix from './pages/pix/index.jsx';
 
 export default function Navegacao() {
     return (
@@ -26,12 +28,14 @@ export default function Navegacao() {
                 <Route path='/vagas' element={<Vagas/>} />
                 <Route path='/falecomconsultor' element={<Falecomconsultor />} />
                 <Route path='/login' element={<Login/>} />
-
+                <Route path='/pix' element={<Pix/>} />
                 <Route path='/bot' element={<Robo/>} />
                 <Route path='/cadastro/:id' element={<Cadastro/>} />
                 <Route path='/pagamento' element={<Pagamento/>} />
                 <Route path='/cartaogg' element={<Cartaogg/>} />
                 <Route path='/cartaogg/:id' element={<Cartaogg/>} />
+                <Route path='/whats' element={<Whats/>} />
+
 
 
 

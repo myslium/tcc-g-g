@@ -1,0 +1,29 @@
+.porco-comp{
+    .porquinho{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        padding: 1vw;
+        padding-left: 3vw;
+        align-items: center;
+        .b1{
+            background-color: #edcffe;
+            width: 6vw;
+            padding: 0.3vw;
+            border-radius: 20px;
+            font-size: 1vw;
+
+        }
+        .b2{
+            background-color: #cfd8fe;
+            width: 6vw;
+            padding: 0.3vw;
+            border-radius: 20px;
+            font-size: 1vw;
+
+
+
+        }
+    }
+
+}
