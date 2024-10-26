@@ -7,7 +7,7 @@ export default function Pix() {
         <div className="pix-comp">
             <div className="pixinho">
                 <div className="tituloo">
-                <a className='back' href="/"><img src="/assets/images/consultor/back.png" alt="" /></a>
+                <a className='back' href="/pagamento"><img src="/assets/images/consultor/back.png" alt="" /></a>
                 <h1 className='titu'>Escaneie o QRCODE para ser direcionado até a página de pagamento. <br /> Obrigada por confiar em nossos serviços!</h1>
                </div> 
                <div className="imagens">
