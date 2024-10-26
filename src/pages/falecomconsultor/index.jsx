@@ -21,11 +21,8 @@ export default function Falecomconsultor(){
             alert('CNPJ inválido')
         }
         else{
-            navigation('/cartaogg')
-
+            navigation(`/cartaogg/${nomeemp}`)
         }
-       
-
     }
 
 
@@ -104,9 +101,12 @@ export default function Falecomconsultor(){
                        <p>CNPJ:</p>
                        <input className='oioio' type="text" value={cnpj} onChange={e=> setcnpj(e.target.value)} />
                     </div>
-                    <div className="botao">
+                   
+                     <div className="botao">
                         <button className='on' onClick={verificacao} >VERIFICAÇÃO</button>
-                    </div></div>
+                    </div>
+                   
+                   </div>
                    
                 </div>
             </div>

@@ -31,6 +31,7 @@ export default function Navegacao() {
                 <Route path='/cadastro/:id' element={<Cadastro/>} />
                 <Route path='/pagamento' element={<Pagamento/>} />
                 <Route path='/cartaogg' element={<Cartaogg/>} />
+                <Route path='/cartaogg/:empresa' element={<Cartaogg/>} />
 
 
 
