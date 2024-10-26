@@ -1,4 +1,5 @@
 import Cabecalho from '../../componentes/cabeçalho';
+import Footer from '../../componentes/footer';
 
 import './index.scss';
 import { useEffect, useState } from 'react';
@@ -163,8 +164,12 @@ export default function Cartaogg() {
                         <img className="porcoimg" src="/assets/images/consultor/porco.png" alt="porco" />
                         Forma de pagamento
                     </button>
+
+
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

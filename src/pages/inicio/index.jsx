@@ -53,7 +53,7 @@ export default function Inicio() {
                         <Link to='/sobre'>
                             <div className='link'>
                                 <p> saiba mais</p>
-                                <i class="fa-solid fa-arrow-right img"></i>
+                                <i className="fa-solid fa-arrow-right img"></i>
                             </div>
                         </Link>
                     </div>

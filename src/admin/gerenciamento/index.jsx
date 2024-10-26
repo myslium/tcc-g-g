@@ -23,7 +23,7 @@ export default function Gerenciamento() {
     const [descricao, setDescricao] = useState('');
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
-    const [aprovado, setAprovado] = useState('não'); // Novo campo de aprovado
+    const [aprovado, setAprovado] = useState('não'); 
 
     const carregarVaga = useCallback(async () => {
         try {
@@ -44,7 +44,7 @@ export default function Gerenciamento() {
             setQuantidade(vaga.qtd_vagas);
             const dataVencimentoFormatada = vaga.data_vencimento ? vaga.data_vencimento.split('T')[0] : '';
             setVencimento(dataVencimentoFormatada);
-            setAprovado(vaga.aprovado); // Carregando valor do campo aprovado
+            setAprovado(vaga.aprovado);
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
         }
@@ -76,7 +76,7 @@ export default function Gerenciamento() {
             descricao,
             vencimento,
             quantidade,
-            aprovado, // Adicionando o campo aprovado
+            aprovado, 
         };
 
         const url = 'http://localhost:5010/vagas';
@@ -100,7 +100,7 @@ export default function Gerenciamento() {
             descricao,
             vencimento,
             quantidade,
-            aprovado, // Incluindo o campo aprovado na edição
+            aprovado,
         };
 
         const url = `http://localhost:5010/vagas/${vagaId}`;
