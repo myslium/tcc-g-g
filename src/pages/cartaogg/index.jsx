@@ -63,15 +63,16 @@ export default function Cartaogg() {
         setAddVaga(false);
     }
 
-    function total (item) {
-        let soma  =0
-
-        for( let i = 0; i < item.length; i++){
-            soma += item[i].s;
+    function total(receita) {
+        let soma = 0;
     
+        for (let i = 0; i < receita.length; i++) {
+            for (let j = 0; j < receita[i].salarios.length; j++) {
+                soma += receita[i].salarios[j].s;
+            }
         }
+    
         return soma;
-
     }
 
     return (
