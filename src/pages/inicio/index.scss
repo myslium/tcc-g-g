@@ -105,7 +105,7 @@
                         p {
                             color: #8822A1;
                         }
-
+                    
                         svg:not(:host).svg-inline--fa,
                         svg:not(:root).svg-inline--fa {
                             overflow: visible;
@@ -113,8 +113,20 @@
                             font-size: 1.3vw;
                             margin-top: 0.3vw;
 
+
                         }
+                        .img:hover{
+    
+                     
+                            transform: translateX(0.4vw);
+                            transition: all 0.5s ease;
+                         
+                          
+                    
+                        }
+                       
                     }
+                
                 }
 
             }
@@ -176,6 +188,15 @@
                 img {
                     width: 1.5vw;
                     margin-bottom: 0.2vw;
+                }
+                img:hover{
+    
+                     
+                    transform: translateX(0.4vw);
+                    transition: all 0.5s ease;
+                 
+                  
+            
                 }
             }
 
