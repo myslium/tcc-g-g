@@ -3,13 +3,12 @@ import Footer from '../../componentes/footer';
 
 import './index.scss';
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import TituloMenor from '../../componentes/titulomenor';
 
 export default function Cartaogg() {
-    const { id } = useParams();
-
+    const {id} = useParams()
     const [salario, setSalario] = useState(0);
     const [qtd_vagas, setQtd_vagas] = useState(0);
     const [tpp, setTpp] = useState(0);
@@ -38,6 +37,7 @@ export default function Cartaogg() {
             };
             let resp = await axios.post(url, dados);
             alert(`Valor calculado e adicionado ao seu cartão! ID: ${resp.data.id}`);
+            
         }
     }
 }
@@ -45,6 +45,7 @@ export default function Cartaogg() {
 
     useEffect(() => {
         if (addVaga) resetar();
+        
     }, [addVaga]);
 
     async function pagar() {
@@ -58,22 +59,23 @@ export default function Cartaogg() {
     function resetar() {
         setSalario(0);
         setQtd_vagas(0);
-        setTpp(0);
         setVaga('');
+        setTpp(0)
         setAddVaga(false);
     }
 
-    function total(receita) {
+
+    function total(item) {
         let soma = 0;
     
-        for (let i = 0; i < receita.length; i++) {
-            for (let j = 0; j < receita[i].salarios.length; j++) {
-                soma += receita[i].salarios[j].s;
+        for (let i = 0; i < item.length; i++) {
+            for (let j = 0; j < item[i].salarios.length; j++) {
+                soma += item[i].salarios[j].s;
             }
-        }
     
         return soma;
-    }
+    }}
+    
 
     return (
         <div className="cartao-gg">
