@@ -163,6 +163,8 @@ export default function Cartaogg() {
                         <img className="porcoimg" src="/assets/images/consultor/porco.png" alt="porco" />
                         Forma de pagamento
                     </button>
+
+                    
                 </div>
             </div>
         </div>

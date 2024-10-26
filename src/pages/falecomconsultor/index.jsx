@@ -13,25 +13,35 @@ export default function Falecomconsultor(){
     const navigation = useNavigate()
 
 
-    async function verificacao(){
+    async function verificacao() {
         const url = `https://api.cnpjs.dev/v1/${cnpj}`;
-        let resp = await axios.get(url);
         
-        if(resp.data.status === 400){ 
-            alert('CNPJ inválido')
-        }
-        else{
-            let url = 'http://localhost:5010/interesse';
-            let empresa = {
-                'empresa': nomeemp,
-                'cnpj': cnpj
+        try {
+            let resp = await axios.get(url);
+    
+            if (resp.data.status === 400 || resp.data.status === 404) {
+                alert('CNPJ inválido');
+            } else {
+                let url = 'http://localhost:5010/interesse';
+                let empresa = {
+                    'empresa': nomeemp,
+                    'cnpj': cnpj
+                };
+                await axios.post(url, empresa); 
+                alert('CNPJ válido!');
+                navigation(`/cartaogg/${nomeemp}`);
             }
-            await axios.get(url, empresa);
-            alert('CNPJ válido!')
-            navigation(`/cartaogg/${nomeemp}`)
+        } catch (error) {
+           
+            if (error.response && (error.response.status === 400 || error.response.status === 404)) {
+                alert('CNPJ inválido');
+            } else {
+                console.error('Erro na verificação:', error);
+                alert('Ocorreu um erro ao verificar o CNPJ. Tente novamente mais tarde.');
+            }
         }
     }
-
+    
 
 
     return (
