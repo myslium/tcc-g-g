@@ -80,9 +80,7 @@ export default function Vagas() {
                 </div>
 
                 <div className="vagas">
-                    {vagas
-                        .filter(vaga => vaga.status !== "Fechada") 
-                        .map(vaga => (
+                    {vagas.map(vaga => (
                         <div key={vaga.id} className="cartavaga">
                             <div className="textovaga">
                                 <div className="texy">
