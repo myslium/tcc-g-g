@@ -23,7 +23,7 @@ export default function EnviarVaga() {
         try {
             const url = `http://localhost:5010/candidatocurrc/${cpfCandidato}`;
             const response = await axios.get(url, {
-                responseType:  'LONGBLOB'  
+                responseType:  'blob'  
             });
 
             const extensao = response.headers['content-type'] === 'application/pdf' ? 'pdf' :
