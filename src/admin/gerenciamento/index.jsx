@@ -23,8 +23,7 @@ export default function Gerenciamento() {
     const [descricao, setDescricao] = useState('');
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
-    const [aprovado, setAprovado] = useState('não');
-    const [error, setError] = useState(''); 
+    const [aprovado, setAprovado] = useState('não'); 
 
     const carregarVaga = useCallback(async () => {
         try {
@@ -46,9 +45,7 @@ export default function Gerenciamento() {
             const dataVencimentoFormatada = vaga.data_vencimento ? vaga.data_vencimento.split('T')[0] : '';
             setVencimento(dataVencimentoFormatada);
             setAprovado(vaga.aprovado);
-            setError(''); 
         } catch (error) {
-            setError("Erro ao carregar vaga. Por favor, tente novamente.");
             console.error("Erro ao carregar vaga:", error);
         }
     }, [vagaId]);
@@ -63,8 +60,6 @@ export default function Gerenciamento() {
         localStorage.removeItem('token');
         navigate('/');
     }
-
-  
 
     async function adicionarVaga() {
         const paramCorpo = {
@@ -84,15 +79,10 @@ export default function Gerenciamento() {
             aprovado, 
         };
 
-        try {
-            await axios.post('http://localhost:5010/vagas', paramCorpo);
-            alert('Vaga adicionada com sucesso!');
-            resetarCampos();
-            setError(''); 
-        } catch (error) {
-            setError("Erro ao adicionar vaga. Por favor, verifique os dados e tente novamente.");
-            console.error("Erro ao adicionar vaga:", error);
-        }
+        const url = 'http://localhost:5010/vagas';
+        alert('Vaga adicionada com sucesso!');
+        await axios.post(url, paramCorpo);
+        resetarCampos();
     }
 
     async function editarVaga() {
@@ -113,26 +103,17 @@ export default function Gerenciamento() {
             aprovado,
         };
 
-        try {
-            await axios.put(`http://localhost:5010/vagas/${vagaId}`, paramCorpo);
-            alert('Vaga editada com sucesso!');
-            setError('');
-        } catch (error) {
-            setError("Erro ao editar vaga. Por favor, tente novamente.");
-            console.error("Erro ao editar vaga:", error);
-        }
+        const url = `http://localhost:5010/vagas/${vagaId}`;
+        await axios.put(url, paramCorpo);
+        alert('Vaga editada com sucesso!');
+        resetarCampos();
     }
 
     async function deletarVaga() {
-        try {
-            await axios.delete(`http://localhost:5010/vagas/${vagaId}`);
-            alert('Vaga deletada com sucesso!');
-            resetarCampos();
-            setError('');
-        } catch (error) {
-            setError("Erro ao deletar vaga. Por favor, tente novamente.");
-            console.error("Erro ao deletar vaga:", error);
-        }
+        const url = `http://localhost:5010/vagas/${vagaId}`;
+        await axios.delete(url);
+        resetarCampos();
+        alert('Vaga deletada com sucesso!');
     }
 
     function resetarCampos() {
@@ -168,28 +149,109 @@ export default function Gerenciamento() {
 
             <Tituloelogo titulo='Novas vagas' />
 
-            {error && <div className="erro-mensagem">{error}</div>} 
-
             <section className='terceira-parte'>
                 <h1>Empresa:</h1>
 
-         
+                <div className='vagas'>
+                    <div className='div-grande'>
+                        <label>Empresa:</label>
+                        <input className='grande' type="text" value={empresa} onChange={e => setEmpresa(e.target.value)} />
+                    </div>
 
-                <div className='botao'>
-                    {vagaId ? (
-                        <>
-                            <button onClick={deletarVaga}>
-                                <i className="fa fa-trash" aria-hidden="true"></i>&nbsp;Deletar
+                    <div className='div-grande'>
+                        <label>E-mail comercial:</label>
+                        <input className='grande' type="text" value={contato} onChange={e => setContato(e.target.value)} />
+                    </div>
+
+                    <div className='duo'>
+                        <div>
+                            <label>Vaga:</label>
+                            <input className='pequeno' type="text" value={cargo} onChange={e => setCargo(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <label>CNPJ:</label>
+                            <input className='pequeno' placeholder=' XX.XXX.XXX/XXXX-XX' type="text" value={cnpj} onChange={e => setCnpj(e.target.value)} />
+                        </div>
+                    </div>
+
+                    <div className='duo'>
+                        <div>
+                            <label>Localização:</label>
+                            <input className='pequeno' type="text" value={local} onChange={e => setLocal(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <label>Tipo de contrato:</label>
+                            <input className='pequeno' type="text" value={tipoContrato} onChange={e => setTipoContrato(e.target.value)} />
+                        </div>
+                    </div>
+
+                    <div className='duo'>
+                        <div>
+                            <label>Salário:</label>
+                            <input className='pequeno' type="text" value={salario} onChange={e => setSalario(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <label>Modelo de atuação:</label>
+                            <input className='pequeno' type="text" value={modelo} onChange={e => setModelo(e.target.value)} />
+                        </div>
+                    </div>
+
+                    <div className='div-grande'>
+                        <label>Requisitos:</label>
+                        <textarea className='grandee' value={requisitos} onChange={e => setRequisitos(e.target.value)} />
+                    </div>
+
+                    <div className='div-grande'>
+                        <label>Benefícios:</label>
+                        <textarea className='grandee' value={beneficios} onChange={e => setBeneficios(e.target.value)} />
+                    </div>
+
+                    <div className='div-grande'>
+                        <label>Por que quer trabalhar com a G&G?</label>
+                        <textarea value={descricao} onChange={e => setDescricao(e.target.value)} />
+                    </div>
+
+                    <div className='duo'>
+                        <div>
+                            <label>Prazo:</label>
+                            <input className='pequeno' type="date" value={vencimento} onChange={e => setVencimento(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <label>Quantidade de vagas:</label>
+                            <input className='pequeno' type="text" value={quantidade} onChange={e => setQuantidade(e.target.value)} />
+                        </div>
+                    </div>
+
+                    <div className='duo'>
+                        <div>
+                            <label>Aprovado:</label>
+                            <select className='aprovado' value={aprovado} onChange={e => setAprovado(e.target.value)}>
+                                <option value="sim">Sim</option>
+                                <option value="não">Não</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className='botao'>
+                        {vagaId ? (
+                            <>
+                                <button onClick={deletarVaga}>
+                                    <i className="fa fa-trash" aria-hidden="true"></i>&nbsp;Deletar
+                                </button>
+                                <button onClick={editarVaga}>
+                                    <i className="fa fa-edit" aria-hidden="true"></i>&nbsp;Editar
+                                </button>
+                            </>
+                        ) : (
+                            <button onClick={adicionarVaga}>
+                                <i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar
                             </button>
-                            <button onClick={editarVaga}>
-                                <i className="fa fa-edit" aria-hidden="true"></i>&nbsp;Editar
-                            </button>
-                        </>
-                    ) : (
-                        <button onClick={adicionarVaga}>
-                            <i className="fa fa-heart" aria-hidden="true"></i>&nbsp;Adicionar
-                        </button>
-                    )}
+                        )}
+                    </div>
                 </div>
             </section>
         </div>
