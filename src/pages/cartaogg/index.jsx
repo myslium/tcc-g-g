@@ -155,17 +155,17 @@ export default function Cartaogg() {
                         <div className="choquei">
                             <div className='inputs'>
                                 <div className="quadrado">
-                                    <p>VAGA:</p>
+                                    <p className='p'>VAGA:</p>
                                     <input className='oioio' type="text" value={vaga} onChange={e => setVaga(e.target.value)} />
                                 </div>
 
                                 <div className="quadrado">
-                                    <p>SALÁRIO:</p>
+                                    <p className='p'>SALÁRIO:</p>
                                     <input className='oioio' type="text" value={salario} onChange={e => setSalario(e.target.value)} />
                                 </div>
 
                                 <div className="quadrado">
-                                    <p>QTD VAGAS:</p>
+                                    <p className='p'>QTD VAGAS:</p>
                                     <input className='oioio' type="text" value={qtd_vagas} onChange={e => setQtd_vagas(e.target.value)} />
                                 </div>
                             </div>
