@@ -17,6 +17,7 @@ export default function ConfirmarCandidato() {
         async function buscar() {
             const url = `http://localhost:5010/candidato/${id}`;
             const resp = await axios.get(url);
+
             setNome(resp.data.nome);
             setEmailCandidato(resp.data.email);
             setCpfCandidato(resp.data.cpf);
@@ -33,7 +34,8 @@ export default function ConfirmarCandidato() {
                 nome,
                 email: emailCandidato,
                 cpf: cpfCandidato,
-                status
+                status,
+                id_vaga: id
             };
             await axios.put(url, dados);
             navigate('/admin/gerenciandovagas');
