@@ -64,23 +64,7 @@ export default function Gerenciamento() {
         navigate('/');
     }
 
-    function resetarCampos() {
-        setVagaId('');
-        setEmpresa('');
-        setContato('');
-        setCnpj('');
-        setCargo('');
-        setTipoContrato('');
-        setLocal('');
-        setModelo('');
-        setSalario('');
-        setBeneficios('');
-        setRequisitos('');
-        setDescricao('');
-        setQuantidade('');
-        setVencimento('');
-        setAprovado('');
-    }
+  
 
     async function adicionarVaga() {
         const paramCorpo = {
