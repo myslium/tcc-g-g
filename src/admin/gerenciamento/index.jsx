@@ -106,6 +106,7 @@ export default function Gerenciamento() {
         const url = `http://localhost:5010/vagas/${vagaId}`;
         await axios.put(url, paramCorpo);
         alert('Vaga editada com sucesso!');
+        resetarCampos();
     }
 
     async function deletarVaga() {
@@ -170,7 +171,7 @@ export default function Gerenciamento() {
 
                         <div>
                             <label>CNPJ:</label>
-                            <input className='pequeno' type="text" value={cnpj} onChange={e => setCnpj(e.target.value)} />
+                            <input className='pequeno' placeholder=' XX.XXX.XXX/XXXX-XX' type="text" value={cnpj} onChange={e => setCnpj(e.target.value)} />
                         </div>
                     </div>
 
