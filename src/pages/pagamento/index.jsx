@@ -9,7 +9,7 @@ export default function Pagamento() {
 
     const [empresa, setEmpresa] = useState('');
     const [contato, setContato] = useState('');
-    const [cnpj, setCnpj] = useState(0);
+    const [cnpj, setCnpj] = useState('');
     const [cargo, setCargo] = useState('');
     const [tipoContrato, setTipoContrato] = useState('');
     const [local, setLocal] = useState('');
@@ -21,9 +21,7 @@ export default function Pagamento() {
     const [quantidade, setQuantidade,] = useState('');
     const [vencimento, setVencimento] = useState('');
 
-
     async function novaVaga() {
-
         const paramCorpo = {
             "nome_empresa": empresa,
             "contato_empresa": contato,
@@ -38,27 +36,34 @@ export default function Pagamento() {
             "descricao": descricao,
             "vencimento": vencimento,
             "quantidade": quantidade
-
         };
-
+    
         const url = 'http://localhost:5010/vagas';
-        await axios.post(url, paramCorpo);
-        setEmpresa('');
-        setContato('');
-        setCnpj(0);
-        setCargo('');
-        setTipoContrato('');
-        setLocal('');
-        setModelo('');
-        setSalario('');
-        setBeneficios('');
-        setRequisitos('');
-        setDescricao('');
-        setQuantidade('');
-        setVencimento('');
-
-
+    
+        try {
+            await axios.post(url, paramCorpo);
+            alert('Vaga cadastrada com sucesso!');
+    
+            setEmpresa('');
+            setContato('');
+            setCnpj('');
+            setCargo('');
+            setTipoContrato('');
+            setLocal('');
+            setModelo('');
+            setSalario('');
+            setBeneficios('');
+            setRequisitos('');
+            setDescricao('');
+            setQuantidade('');
+            setVencimento('');
+    
+        } catch (error) {
+            console.error("Erro ao cadastrar vaga:", error);
+            alert('Erro ao cadastrar vaga. Verifique os dados e tente novamente.');
+        }
     }
+    
     return(
          
        
@@ -103,7 +108,7 @@ export default function Pagamento() {
 
                         <div>
                             <label>CNPJ:</label>
-                            <input className='pequeno' type="text" value={cnpj} onChange={e => setCnpj(e.target.value)} />
+                            <input className='pequeno' placeholder= 'XX.XXX.XXX/XXXX-XX' type="text" value={cnpj} onChange={e => setCnpj(e.target.value)} />
                         </div>
 
                     </div>

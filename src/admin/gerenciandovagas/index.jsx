@@ -32,6 +32,7 @@ export default function VagasAdmin() {
             setVagas(response.data);
         } catch (error) {
             console.error("Erro ao buscar vagas filtradas:", error);
+            alert('Erro ao buscar vagas por data. Por favor, tente novamente mais tarde.');
         }
     }
 
@@ -40,27 +41,35 @@ export default function VagasAdmin() {
     }
 
     async function vagasCandidatos() {
-        const url = `http://localhost:5010/vagas`;
-        const resp = await axios.get(url);
+        const url = `http://localhost:5010/vagasa`;
+        try {
+            const resp = await axios.get(url);
+            const vagasComStatus = resp.data.map(vaga => {
+                const partesData = vaga.data_vencimento.split('T')[0];
+                const dataVencimento = new Date(partesData);
+                const diasRestantes = Math.ceil((dataVencimento - new Date()) / (1000 * 60 * 60 * 24));
+                const status = dataVencimento < new Date() ? "Fechada" : `${diasRestantes} dias restantes`;
 
-        const vagasComStatus = resp.data.map(vaga => {
-            const partesData = vaga.data_vencimento.split('T')[0];
-            const dataVencimento = new Date(partesData);
-            const diasRestantes = Math.ceil((dataVencimento - new Date()) / (1000 * 60 * 60 * 24));
-            const status = dataVencimento < new Date() ? "Fechada" : `${diasRestantes} dias restantes`;
+                return { ...vaga, status, diasRestantes };
+            });
 
-            return { ...vaga, status, diasRestantes };
-        });
-
-       
-        const vagasAbertas = vagasComStatus.filter(vaga => vaga.status !== "Fechada");
-        setVagas(vagasAbertas);
+            const vagasAbertas = vagasComStatus.filter(vaga => vaga.status !== "Fechada");
+            setVagas(vagasAbertas);
+        } catch (error) {
+            console.error("Erro ao buscar vagas e candidatos:", error);
+            alert('Erro ao carregar vagas. Por favor, tente novamente mais tarde.');
+        }
     }
 
     async function buscarCandidatos() {
         const url = `http://localhost:5010/candidatoNovo`;
-        const resp = await axios.get(url);
-        setCandidatos(resp.data);
+        try {
+            const resp = await axios.get(url);
+            setCandidatos(resp.data);
+        } catch (error) {
+            console.error("Erro ao buscar candidatos:", error);
+            alert('Erro ao carregar candidatos. Por favor, tente novamente mais tarde.');
+        }
     }
 
     useEffect(() => {
@@ -125,7 +134,6 @@ export default function VagasAdmin() {
                     );
                 })}
 
-          
                 <Link to='/admin/enviarvaga'>
                     <button>Adicionar</button>
                 </Link>
