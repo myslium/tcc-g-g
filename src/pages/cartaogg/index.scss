@@ -179,6 +179,12 @@
         color: #E5DBEB;
         font-weight: 700;
         font-size: 1.5vw;
+        .butt:hover{
+                
+            background-color: #dbb1ff;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;   
+       }
     }
 
     .line {
@@ -197,13 +203,23 @@
             background-color: #EFCAFE;
             font-size: 2vw;
             font-weight: 900;
-            border-radius: 30px;
+            border-radius: 40px;
+            border: none;
 
             .porcoimg{
                 width: 3.5vw;
                 
             }
         }
+        .porco:hover{
+                
+            background-color: #8a4fbe;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+            color: #000000; 
+            border: 2px solid #dbb1ff;
+    }
+
         .pix{
             font-weight: 800;
             font-size: 1vw;
@@ -216,35 +232,23 @@
 @media (max-width: 768px) {
     .tudo{
         .ultimo{
-        
-            width: 70vw;
-            height: 50vw;
-            background-position: center;
-            background-repeat: no-repeat;
-            align-items: center;
-            justify-content: center;
+            width: 85vw;
+            height: 60vw;
             background-size: 85vw;
             display: flex;
-         .conteudo{
-
-            .choquei{
+                .conteudo{                    
+                .choquei{
                 .inputs{
                     .quadrado{
-                 .p{
-                    font-size: 2.5vw;
-                   } 
-                .oioio{
-                    padding: 2vw 1vw;
-                    width: 14vw;
-                    border-radius: 20px;
-                    outline: none;
-                    font-size: 2vw;
-                    background-color: #ffffffab;
-                    border: 0.2vw solid #C7C4C4;
-                    box-shadow: 0.2vw 0.2vw 2px #b3b3b357;
+                     .p{
+                     font-size: 2.5vw;
+                      } 
+                     .oioio{
+                     padding: 2vw 1vw;
+                     width: 14vw;
+                     font-size: 2vw;
+                     }
                     }
-                   
-            }
                 }
 
                 .botao{
@@ -253,79 +257,68 @@
                     padding-top: 3vw;
     
                     button{
-                        padding: 2vw 4vw;
-                        font-size: 2vw;
-                        margin: 3vw 0;
+                        padding: 2vw 3vw;
+                        font-size: 2.5vw;
                       
                     }
 
                 }
 
-                .final-cartao{
-                    .estimado{
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        text-align: center;
-                        gap: 0.3vw;
-                        h3{
-                            font-size: 2.5vw;
-                        }
-                        p{
-                            font-size: 2.3vw;
-                            font-weight: 700;
-  
-                        }
-                    }
-                    .opcao{
+            .final-cartao{
+               
+            .estimado{
+                gap: 0.5vw;
+                h3{
+                padding-right: 2vw;
+                font-size: 2.5vw;
+                }
+                p{
+                font-size: 2.3vw;
+                font-weight: 700;}
+                }
+                .opcao{
                     h3{
                         font-size: 2.5vw;
                         font-weight: 600;
-                    }
-                    
-                }
-
+                    }  
+                  }
                 }
                 
-            }
-         }
-
-         .butt{
-            padding: 4vw 4vw;
-            font-size: 3.5vw;
+        }//choquei fim
+        }//conteudo fim
+        }
+        .butt{
+            padding: 3vw 4vw;
+            font-size: 3vw;
+            border-radius: 40px;
          }
          .pagamentos{
             .porco{
                 gap: 1vw;
-                padding: 2.5vw;
-                font-size: 2.4vw;
+                padding: 3vw;
+                font-size: 3vw;
                 font-weight: 900;
                 border-radius: 30px;
+                border: none;
     
                 .porcoimg{
-                    width: 3vw;
+                    width: 5vw;
                     
                 }
             }
-            .pix{
-                font-weight: 800;
-                font-size: 2vw;
-                border-radius: 20px;
-    
-            }
+            
             
         }
-    
-
-    }
-}
+ }
 }
 
+
+//celular
 @media (max-width: 468px) {
     .tudo{
         .ultimo{
         
-            width: 80vw;
+            width: 95vw;
             height: 60vw;
             background-size: 95vw;
             display: flex;
@@ -391,7 +384,7 @@
 
          .butt{
             padding: 4vw 4vw;
-            font-size: 3vw;
+            font-size: 2vw;
          }
          .pagamentos{
             .porco{

@@ -8,23 +8,38 @@
         align-items: center;
         .b1{
             background-color: #edcffe;
-            width:10vw;
-            padding: 1.3vw;
-            border-radius: 20px;
-            font-size: 1vw;
+            width:11vw;
+            padding: 1vw;
+            border-radius: 40px;
+            font-size: 1.5vw;
             font-weight: 800;
-
+            border: none;
+           
+            } 
+            .b1:hover{
+                
+                background-color: #2f1546;
+                transform: translateY(-2px);
+                transition: all 0.3s ease;
+                color: #edcffe; 
         }
         .b2{
             background-color: #cfd8fe;
-            width: 10vw;
-            padding: 1.3vw;
-            border-radius: 20px;
-            font-size: 1vw;
+            width: 11vw;
+            padding: 1vw;
+            border-radius: 40px;
+            font-size: 1.5vw;
             font-weight: 800;
-
-
-
+            border: none;
+            
+            }.b2:hover{
+                
+                background-color: #b25b9d;
+                transform: translateY(-2px);
+                transition: all 0.3s ease;
+                color: #edcffe;
+               
+              
         }
     }
 

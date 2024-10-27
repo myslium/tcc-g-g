@@ -114,7 +114,7 @@ export default function Cartaogg() {
         let porcooo = <Porco
         p1 = 'Pix'
         function1 = {pix}
-        p2 = 'Outro...'
+        p2 = 'Outro'
         function2 = {outro}
         />
         setoiporco(porcooo)

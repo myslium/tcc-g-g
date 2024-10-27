@@ -60,13 +60,8 @@
             }
             }
             }
-
-        
-
-    
-
-
-    .primeira-parte {
+///fim do ultimo
+        .primeira-parte {
         width: 100%;
         height: 50vw;
         display: flex;
@@ -79,7 +74,7 @@
             height: 40vw;
         }
     }
-
+//fim da primeira parte
     .segunda-parte {
 
         display: flex;
@@ -137,12 +132,11 @@
 
               
             }
-        }
+        }}
 
        
-
+///responsivo primeiras partes
         @media (max-width: 768px) {
-
             gap: 3vw;
             margin-top: 4vw;
 
@@ -154,8 +148,6 @@
                     p {
                         font-size: 2.5vw;
                     }
-
-                   
                 }
                 .geg-img {
                     width: 35vw;
@@ -172,56 +164,159 @@
                     }
                 }
             }
-          
-            
+
         }
 
-        @media (max-width: 468px) {
 
-            gap: 3vw;
-            
+//card final
 
-            .primeira-div {
 
-                display: flex;
-                flex-direction: column-reverse;
-                gap: 0vw;
-
-                .texto {
-
-                    width: 70vw;
-
-                    p {
-                        font-size: 4vw;
-                    }
-
-                   
-                }
-                .geg-img {
-                    width: 70vw;
-                }
-            }
-
-            .segunda-div {
-                display: flex;
-                flex-direction: column;
-
-                .filhos {
-                    width: 60vw;
-
-                    .img-filho {
-                        height: 20vw;
-                    }
-
-                    h3 {
-                        font-size: 4vw;
-                    }
-                }
-            }
-          
-            
+        @media (max-width: 768px) {
+    .ultimo{
+        
+        width: 75vw;
+        height: 50vw;
+        background-size: 75vw;
+        margin-left: 15%;
+    
+        .preencha{
+        font-size: 2.5vw;
+        padding: 1vw;
         }
+        .conteudo{
+            padding: 2vw;
+            padding-left: 4vw;
+    
+            .choquei{
+                       
+                .inputs{      
+                .oioio{
+                padding: 1vw 2vw;
+                width: 100%;
+                height: 35%;
+                border-radius: 30px;
+                font-size: 2.5vw;
+                 }
+                            p{
+                            font-size: 2.5vw;
+                            font-weight: 900;
+                            width: 27vw;
+                            }
+                        }
+                  .botao{
+                            button{
+                            padding: 2vw 3vw;
+                            font-size: 1.7vw;
+                            margin-top: 15vw;
+                            margin-left: 20vw;
+                            }
+                        }
+            }
+        }
+    }    
+        }
+        
+
+    
+    
+    @media (max-width: 468px) {
+
+        gap: 3vw;
+        
+
+        .primeira-div {
+
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 0vw;
+
+            .texto {
+
+                width: 70vw;
+
+                p {
+                    font-size: 4vw;
+                }
+
+               
+            }
+            .geg-img {
+                width: 70vw;
+            }
+         }
+
+         .segunda-div {
+            display: flex;
+            flex-direction: column;
+
+            .filhos {
+                width: 60vw;
+
+                .img-filho {
+                    height: 20vw;
+                }
+
+                h3 {
+                    font-size: 4vw;
+                }
+            }
+        }
+      
+        
     }
+
+///responsivo final
+@media (max-width: 468px) {
+    .ultimo{
+        
+        width: 80vw;
+        height: 50vw;
+        background-size: 80vw;
+        margin-left: 10%;
+    
+        .preencha{
+        font-size: 3vw;
+        padding-top: 1vw;
+        }
+        .conteudo{
+            padding: 1vw;
+            padding-left: 1vw;
+    
+            .choquei{
+                       
+                .inputs{ 
+
+                .oioio{
+                padding: 1vw 2vw;
+                width: 90%;
+                height: 35%;
+                border-radius: 30px;
+                font-size: 3vw;
+                            }
+                            p{
+                            font-size: 2.5vw;
+                            font-weight: 900;
+                            color: #2a0d36;
+                            width: 26vw;
+                            }
+                        }
+                    .botao{
+                            button{
+                            padding: 2vw 2.5vw;
+                            width: 20vw;
+                            font-size: 2vw;
+                            margin-top: 15vw;
+                            margin-left: 10vw;
+                            }
+                        }
+            }
+        }
+    }    
+
+   
+  
+    
+}
 
 
    
