@@ -42,7 +42,7 @@
                         border: 0.2vw solid #C7C4C4;
                         box-shadow: 0.2vw 0.2vw 2px #b3b3b357;
                     }
-                    p{
+                    .p{
                         font-size: 1.5vw;
                         font-weight: 900;
                         color: #8D60B2;
@@ -81,17 +81,16 @@
                 justify-content: space-between;
             .estimado{
                    display: flex;
-                   flex-direction: column;
+                   gap: 1.5vw;
 
                     h3 {
                         font-size: 1.5vw;
                         text-transform: uppercase;
-                        margin: 0;
 
                     }
                     p {
-                        font-size: 1.2vw;
-                        font-weight: 400;
+                        font-size: 1.5vw;
+                        font-weight: 600;
                     }
             }    
             .opcao {
@@ -174,7 +173,7 @@
     }
 
     .butt{
-        padding: 1vw 2vw;
+        padding: 2vw 2vw;
         background-color: #8D60B2;
         border: #8D60B2;
         color: #E5DBEB;
@@ -194,14 +193,14 @@
             display: flex;
             align-items: center;
             gap: 1vw;
-            padding: 1.5vw;
+            padding: 2vw;
             background-color: #EFCAFE;
-            font-size: 1.4vw;
+            font-size: 2vw;
             font-weight: 900;
             border-radius: 30px;
 
             .porcoimg{
-                width: 2vw;
+                width: 3.5vw;
                 
             }
         }
@@ -213,5 +212,213 @@
         }
 
     }
+}
+@media (max-width: 768px) {
+    .tudo{
+        .ultimo{
+        
+            width: 70vw;
+            height: 50vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            align-items: center;
+            justify-content: center;
+            background-size: 85vw;
+            display: flex;
+         .conteudo{
+
+            .choquei{
+                .inputs{
+                    .quadrado{
+                 .p{
+                    font-size: 2.5vw;
+                   } 
+                .oioio{
+                    padding: 2vw 1vw;
+                    width: 14vw;
+                    border-radius: 20px;
+                    outline: none;
+                    font-size: 2vw;
+                    background-color: #ffffffab;
+                    border: 0.2vw solid #C7C4C4;
+                    box-shadow: 0.2vw 0.2vw 2px #b3b3b357;
+                    }
+                   
+            }
+                }
+
+                .botao{
+                    display: flex;
+                    justify-content: end;
+                    padding-top: 3vw;
+    
+                    button{
+                        padding: 2vw 4vw;
+                        font-size: 2vw;
+                        margin: 3vw 0;
+                      
+                    }
+
+                }
+
+                .final-cartao{
+                    .estimado{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        text-align: center;
+                        gap: 0.3vw;
+                        h3{
+                            font-size: 2.5vw;
+                        }
+                        p{
+                            font-size: 2.3vw;
+                            font-weight: 700;
+  
+                        }
+                    }
+                    .opcao{
+                    h3{
+                        font-size: 2.5vw;
+                        font-weight: 600;
+                    }
+                    
+                }
+
+                }
+                
+            }
+         }
+
+         .butt{
+            padding: 4vw 4vw;
+            font-size: 3.5vw;
+         }
+         .pagamentos{
+            .porco{
+                gap: 1vw;
+                padding: 2.5vw;
+                font-size: 2.4vw;
+                font-weight: 900;
+                border-radius: 30px;
+    
+                .porcoimg{
+                    width: 3vw;
+                    
+                }
+            }
+            .pix{
+                font-weight: 800;
+                font-size: 2vw;
+                border-radius: 20px;
+    
+            }
+            
+        }
+    
+
+    }
+}
+}
+
+@media (max-width: 468px) {
+    .tudo{
+        .ultimo{
+        
+            width: 80vw;
+            height: 60vw;
+            background-size: 95vw;
+            display: flex;
+
+           .conteudo{
+            .choquei{
+                .inputs{
+                    .quadrado{
+                 .p{
+                    font-size: 3vw;
+                   } 
+                .oioio{
+                        padding: 2.3vw 2vw;
+                        width: 20vw;
+                        border-radius: 20px;
+                        outline: none;
+                        font-size: 2vw;
+                        height: 2vw;
+                       
+                    }
+                   
+            }
+                }
+
+                .botao{
+                    display: flex;
+                    justify-content: end;
+                    padding-top: 2vw;
+    
+                    button{
+                        padding: 3.3vw 5vw;
+                        font-size: 2.5vw;
+                        margin: 3vw 0;
+                      
+                    }
+
+                }
+
+                .final-cartao{
+                    .estimado{
+                        h3{
+                            font-size: 2.5vw;
+                        }
+                        p{
+                            font-size: 3vw;
+  
+                        }
+                    }
+                    .opcao{
+                    h3{
+                        font-size: 3vw;
+                        font-weight: 600;
+                    }
+                    
+                }
+
+                }
+                
+                
+
+            }
+         }
+
+         .butt{
+            padding: 4vw 4vw;
+            font-size: 3vw;
+         }
+         .pagamentos{
+            .porco{
+                gap: 1vw;
+                padding: 2.5vw;
+                font-size: 3vw;
+                font-weight: 900;
+                border-radius: 30px;
+    
+                .porcoimg{
+                    width: 4vw;
+                    
+                }
+            }
+            .pix{
+                font-weight: 800;
+                font-size: 2vw;
+                border-radius: 20px;
+    
+            }
+            
+         }
+    
+
+    }
+
+    
+}
 }
 }

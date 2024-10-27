@@ -8,22 +8,49 @@
         align-items: center;
         .b1{
             background-color: #edcffe;
-            width: 6vw;
-            padding: 0.3vw;
+            width:10vw;
+            padding: 1.3vw;
             border-radius: 20px;
             font-size: 1vw;
+            font-weight: 800;
 
         }
         .b2{
             background-color: #cfd8fe;
-            width: 6vw;
-            padding: 0.3vw;
+            width: 10vw;
+            padding: 1.3vw;
             border-radius: 20px;
             font-size: 1vw;
+            font-weight: 800;
 
 
 
         }
+    }
+
+    @media(max-width:768px){
+        .porquinho{
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            .b1{
+                border-radius: 20px;
+                font-size: 2vw;
+                font-weight: 800;
+                width: 23vw;
+    
+            }
+            .b2{
+                width: 23vw;
+                border-radius: 20px;
+                font-size: 2vw;
+                font-weight: 800;
+    
+    
+    
+            }
+        }
+
     }
 
 }
