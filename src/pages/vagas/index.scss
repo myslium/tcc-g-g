@@ -16,7 +16,8 @@
             position: relative;
             display: flex;
             align-items: center;
-            margin: 2vw 0vw;
+            margin: 2vw 0vw;               
+           
 
             .oi {
                 position: absolute;
@@ -55,6 +56,8 @@
                 border-radius: 1vw;
             }
         }
+
+      
     }
 
     .vagas {
@@ -109,12 +112,13 @@
                 flex-direction: column;
                 justify-content: space-between;
                 width: 34vw;
+                gap: 2vw;
 
                 .texy {
                     padding: 2vw;
                     display: flex;
                     flex-direction: column;
-                    gap: 1.8vw;
+                    gap: 1vw;
                     width: 33vw;
 
                     .profissaovaga {
@@ -163,8 +167,7 @@
         }
         @media (max-width: 768px) {
 
-           
-           
+        
             
             .cartavaga {
                 width: 130%;
@@ -172,7 +175,7 @@
 
                 ul {
                     li {
-                        font-size: 1.8vw;
+                        font-size: 2vw;
                     }
                 }
 
@@ -182,14 +185,15 @@
                 }
 
                .textovaga {
+
                     .texy {
-                       
+                       gap: 1vw;
                         .profissaovaga {
                             font-size: 3vw;
                         }
 
                         h4 {
-                            font-size: 1.7vw;
+                            font-size: 2vw;
                         }
                     }
                }
@@ -199,7 +203,7 @@
                 justify-content: end;
                 align-items: end;
                  .botaovagaa {
-                    padding: 1.5vw 4vw;
+                    padding: 1vw 3vw;
                     font-size: 1.5vw;
                  }
                }
