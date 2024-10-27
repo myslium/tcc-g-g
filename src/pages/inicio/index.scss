@@ -35,14 +35,15 @@
         background-color: #ffffff;
         margin: 0;
         padding: 3% 0;
-        height: 30vw;
+        height:100%;
         position: relative;
        justify-content: center;
 
         .conteudo {
            
             display: flex;
-            height: 30vw;
+            padding: 2%;
+            height: 100%;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
@@ -136,6 +137,37 @@
 
 
     }
+    
+    @media(max-width: 468px)
+{
+    .recrutando { 
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        .conteudo{
+            border-radius: 3vw;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        .text{
+            h1{
+                font-size: 2.8vw;
+            }
+            p{
+                font-size: 2.5vw;
+            }
+        }
+      .imseg{
+        margin-top: 2vw;
+        height: 40vw;
+        img{
+            height: 35vw;
+        }
+      }
+    }}
+}
+
 
 
 
@@ -347,7 +379,6 @@
 
         }
     }
-
 
 
 }
