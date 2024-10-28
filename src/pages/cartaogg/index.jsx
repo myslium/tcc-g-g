@@ -132,111 +132,113 @@ export default function Cartaogg() {
     }
 
     return (
-       
 
-            <div className="pagina cartao-gg">
 
-                <Cabecalho
-                    titulo1='Início'
-                    link1='/'
-                    titulo2='Sobre G&G'
-                    link2='/sobre'
-                    titulo3='Vagas'
-                    link3='/vagas'
-                    titulo4='Fale com consultor'
-                    link4='/falecomconsultor'
-                    tituloo5='ROBOT'
-                    link5='/bot'
-                    aparecer={true}
-                />
+        <div className="pagina cartao-gg">
 
-                <TituloMenor titulo='Valores' />
+            <Cabecalho
+                titulo1='Início'
+                link1='/'
+                titulo2='Sobre G&G'
+                link2='/sobre'
+                titulo3='Vagas'
+                link3='/vagas'
+                titulo4='Fale com consultor'
+                link4='/falecomconsultor'
+                link5='/bot'
+                titulo5='fa-solid fa-robot'
+                tituloo5='AJUDA'
+                aparecer={true}
 
-                <div className="tudo">
-                    <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/oioi.png')` }}>
-                        <div className='conteudo'>
-                            <div className="choquei">
-                                <div className='inputs'>
-                                    <div className="quadrado">
-                                        <p className='p'>VAGA:</p>
-                                        <input className='oioio' type="text" value={vaga} onChange={e => setVaga(e.target.value)} />
-                                    </div>
+            />
 
-                                    <div className="quadrado">
-                                        <p className='p'>SALÁRIO:</p>
-                                        <input className='oioio' type="text" value={salario} onChange={e => setSalario(e.target.value)} />
-                                    </div>
+            <TituloMenor titulo='Valores' />
 
-                                    <div className="quadrado">
-                                        <p className='p'>QTD VAGAS:</p>
-                                        <input className='oioio' type="text" value={qtd_vagas} onChange={e => setQtd_vagas(e.target.value)} />
-                                    </div>
+            <div className="tudo">
+                <div className="ultimo" style={{ backgroundImage: `url('/assets/images/consultor/oioi.png')` }}>
+                    <div className='conteudo'>
+                        <div className="choquei">
+                            <div className='inputs'>
+                                <div className="quadrado">
+                                    <p className='p'>VAGA:</p>
+                                    <input className='oioio' type="text" value={vaga} onChange={e => setVaga(e.target.value)} />
                                 </div>
 
-                                <div className="botao">
-                                    <button onClick={Tpp}>VALOR</button>
+                                <div className="quadrado">
+                                    <p className='p'>SALÁRIO:</p>
+                                    <input className='oioio' type="text" value={salario} onChange={e => setSalario(e.target.value)} />
                                 </div>
 
-                                <div className='final-cartao'>
-                                    <div className='estimado'>
-                                        <h3>Valor estimado:</h3>
-                                        <p>R$: {tpp}</p>
-                                    </div>
+                                <div className="quadrado">
+                                    <p className='p'>QTD VAGAS:</p>
+                                    <input className='oioio' type="text" value={qtd_vagas} onChange={e => setQtd_vagas(e.target.value)} />
+                                </div>
+                            </div>
 
-                                    <div className='opcao'>
-                                        <h3>Outra vaga?</h3>
-                                        <input
-                                            type="checkbox"
-                                            checked={addVaga}
-                                            onChange={e => setAddVaga(e.target.checked)}
-                                        />
-                                    </div>
+                            <div className="botao">
+                                <button onClick={Tpp}>VALOR</button>
+                            </div>
+
+                            <div className='final-cartao'>
+                                <div className='estimado'>
+                                    <h3>Valor estimado:</h3>
+                                    <p>R$: {tpp}</p>
+                                </div>
+
+                                <div className='opcao'>
+                                    <h3>Outra vaga?</h3>
+                                    <input
+                                        type="checkbox"
+                                        checked={addVaga}
+                                        onChange={e => setAddVaga(e.target.checked)}
+                                    />
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <button className="butt on" onClick={pagar}>Ver Receita</button>
-
-                    {receita.map(item => (
-                        <div key={item.id_interesse} className="receita">
-                            <div className="separacao1">
-                                <h1>RECEITA</h1>
-                                <p className='n'>Nome da empresa:</p>
-                                <p>{item.empresa}</p>
-
-                                <div>
-                                    <p>Subtotais:</p>
-                                    {item.salarios.map((salario, index) => (
-                                        <p key={index}>R$ {salario}</p>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="separacao2">
-                                <img src="/assets/images/cabecalho/logo.png" alt="" />
-                                <h1>Valor final:
-                                    {total(item.salarios)}</h1>
-                            </div>
-                        </div>
-                    ))}
-
-                    <div className='line'></div>
-
-                    <div className="pagamentos">
-                        <button onClick={porco} className="porco">
-                            <img className="porcoimg" src="/assets/images/consultor/porco.png" alt="porco" />
-                            Forma de pagamento
-                        </button>
-                        {oiporco}
-                        <h1 className='pix'>{pixx}</h1>
-
                     </div>
                 </div>
 
-<Footer/>
+                <button className="butt on" onClick={pagar}>Ver Receita</button>
+
+                {receita.map(item => (
+                    <div key={item.id_interesse} className="receita">
+                        <div className="separacao1">
+                            <h1>RECEITA</h1>
+                            <p className='n'>Nome da empresa:</p>
+                            <p>{item.empresa}</p>
+
+                            <div>
+                                <p>Subtotais:</p>
+                                {item.salarios.map((salario, index) => (
+                                    <p key={index}>R$ {salario}</p>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="separacao2">
+                            <img src="/assets/images/cabecalho/logo.png" alt="" />
+                            <h1>Valor final:
+                                {total(item.salarios)}</h1>
+                        </div>
+                    </div>
+                ))}
+
+                <div className='line'></div>
+
+                <div className="pagamentos">
+                    <button onClick={porco} className="porco">
+                        <img className="porcoimg" src="/assets/images/consultor/porco.png" alt="porco" />
+                        Forma de pagamento
+                    </button>
+                    {oiporco}
+                    <h1 className='pix'>{pixx}</h1>
+
+                </div>
             </div>
-          
-      
+
+            <Footer />
+        </div>
+
+
     );
 }
