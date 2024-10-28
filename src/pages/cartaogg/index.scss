@@ -1,417 +1,486 @@
-.cartao-gg{
-    .tudo{
+.cartao-gg {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .ultimo{
-        
-        width: 60vw;
-        height: 40vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        align-items: center;
-        justify-content: center;
-        background-size: 60vw;
+    min-height: 100vh;
 
-        
-        .conteudo{
-            display: flex;
-            padding-top: 5vw;
-            padding-left: 2vw;
-            
+    .tudo {
 
-            .choquei{
-              
-
-                .inputs{
-                    display: flex;
-                    flex-direction: row;
-                    gap: 1vw;
-                    .quadrado{
-                        display: flex;
-                        flex-direction: column;
-                
-                    .oioio{
-                        padding: 1.3vw 1vw;
-                        width: 14vw;
-                        border-radius: 20px;
-                        outline: none;
-                        font-size: 1.3vw;
-                        background-color: #ffffffab;
-                        border: 0.2vw solid #C7C4C4;
-                        box-shadow: 0.2vw 0.2vw 2px #b3b3b357;
-                    }
-                    .p{
-                        font-size: 1.5vw;
-                        font-weight: 900;
-                        color: #8D60B2;
-                    } 
-                }
-                }
-            }
-            .botao{
-              
-                display: flex;
-                justify-content: end;
-                padding-top: 3vw;
-
-                button{
-                    border: none;
-                    background-color: #8D60B2;
-                    color: #ffffff;
-                    padding: 1.3vw 5vw;
-                    border-radius: 20px;
-                    font-size: 1vw;
-                    font-weight: 900;
-                    margin: 3vw 0;
-                  
-                }
-                button:hover{
-                
-                    background-color: #240A39;
-                    transform: translateY(-2px);
-                    transition: all 0.3s ease;
-                   
-                  
-            }
-            }
-            .final-cartao {
-                display: flex;
-                justify-content: space-between;
-            .estimado{
-                   display: flex;
-                   gap: 1.5vw;
-
-                    h3 {
-                        font-size: 1.5vw;
-                        text-transform: uppercase;
-
-                    }
-                    p {
-                        font-size: 1.5vw;
-                        font-weight: 600;
-                    }
-            }    
-            .opcao {
-                    display: flex;
-                    align-items: start;
-                    gap: 1vw;
-                    margin-right: 0.5vw;
-                    h3 {
-                        font-size: 1.2vw;
-                  
-                        margin: 0;
-
-                    }
-                    input{
-                        margin-top: 0.5vw;
-                        width: 1vw;
-                        height: 1vw;
-                    }
-            }     
-            }
-            
-            
-        }
-
-    }
-
-    .receita{
         display: flex;
-        flex-direction: row;
-        background-color: #8D60B2;
-        padding-left: 2vw;
-        border-radius: 30px;
-        width: 60vw;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin: 2vw;
-        gap: 18vw;
-        border: none;
-        box-shadow: 0.5vw 0.5vw 2px #C7C4C4;
-        .separacao1{
-            display: flex;
-            flex-direction: column;
-            font-size: 1vw;
-            align-items: start;
-            padding: 0;
-            text-align: left;
-            h1{
-                color: #E5DBEB;
-                font-weight: 900;
-            }
-            p{
-                color: #E5DBEB;
-                font-weight: 400;
-                font-size: 1.5vw;
-            }
-            .n{
-                margin: 0;
-            }
-        }
-        .separacao2{
-            display: flex;
-            flex-direction: column;
-            font-size: 1.5vw;
-            gap: 15vw;
-            padding: 2vw;
-   
+        justify-content: center;
+        margin-bottom: 2vw;
 
-            img{
-                width: 6vw;
-                background-color: #ffffff;
-                padding: 1vw;
-                border-radius: 100%;
-            }
-            h1{
-                color: #E5DBEB;
-                font-weight: 400;
-                font-size: 1.5vw;
-            }
-        }
-    }
+        .ultimo {
 
-    .butt{
-        padding: 2vw 2vw;
-        background-color: #8D60B2;
-        border: #8D60B2;
-        color: #E5DBEB;
-        font-weight: 700;
-        font-size: 1.5vw;
-        .butt:hover{
-                
-            background-color: #dbb1ff;
-            transform: translateY(-2px);
-            transition: all 0.3s ease;   
-       }
-    }
-
-    .line {
-        width: 60vw;
-        height: 1vw;
-        border-radius: 5px;
-        background-color: #E5DBEB;
-        margin: 2vw;
-    }
-    .pagamentos{
-        .porco{
-            display: flex;
+            width: 60vw;
+            height: 40vw;
+            background-position: center;
+            background-repeat: no-repeat;
             align-items: center;
-            gap: 1vw;
-            padding: 2vw;
-            background-color: #EFCAFE;
-            font-size: 2vw;
-            font-weight: 900;
-            border-radius: 40px;
-            border: none;
+            justify-content: center;
+            background-size: 60vw;
 
-            .porcoimg{
-                width: 3.5vw;
-                
-            }
-        }
-        .porco:hover{
-                
-            background-color: #8a4fbe;
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-            color: #000000; 
-            border: 2px solid #dbb1ff;
-    }
 
-        .pix{
-            font-weight: 800;
-            font-size: 1vw;
-            border-radius: 20px;
+            .conteudo {
+                display: flex;
+                padding-top: 5vw;
+                padding-left: 2vw;
 
-        }
 
-    }
-}
-@media (max-width: 768px) {
-    .tudo{
-        .ultimo{
-            width: 85vw;
-            height: 60vw;
-            background-size: 85vw;
-            display: flex;
-                .conteudo{                    
-                .choquei{
-                .inputs{
-                    .quadrado{
-                     .p{
-                     font-size: 2.5vw;
-                      } 
-                     .oioio{
-                     padding: 2vw 1vw;
-                     width: 14vw;
-                     font-size: 2vw;
-                     }
+                .choquei {
+
+
+                    .inputs {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1vw;
+
+                        .quadrado {
+                            display: flex;
+                            flex-direction: column;
+
+                            .oioio {
+                                padding: 1.3vw 1vw;
+                                width: 14vw;
+                                border-radius: 20px;
+                                outline: none;
+                                font-size: 1.3vw;
+                                background-color: #ffffffab;
+                                border: 0.2vw solid #C7C4C4;
+                                box-shadow: 0.2vw 0.2vw 2px #b3b3b357;
+                            }
+
+                            .p {
+                                font-size: 1.5vw;
+                                font-weight: 900;
+                                color: #8D60B2;
+                            }
+                        }
                     }
                 }
 
-                .botao{
+                .botao {
+
                     display: flex;
                     justify-content: end;
                     padding-top: 3vw;
-    
-                    button{
-                        padding: 2vw 3vw;
-                        font-size: 2.5vw;
-                      
-                    }
 
-                }
-
-            .final-cartao{
-               
-            .estimado{
-                gap: 0.5vw;
-                h3{
-                padding-right: 2vw;
-                font-size: 2.5vw;
-                }
-                p{
-                font-size: 2.3vw;
-                font-weight: 700;}
-                }
-                .opcao{
-                    h3{
-                        font-size: 2.5vw;
-                        font-weight: 600;
-                    }  
-                  }
-                }
-                
-        }//choquei fim
-        }//conteudo fim
-        }
-        .butt{
-            padding: 3vw 4vw;
-            font-size: 3vw;
-            border-radius: 40px;
-         }
-         .pagamentos{
-            .porco{
-                gap: 1vw;
-                padding: 3vw;
-                font-size: 3vw;
-                font-weight: 900;
-                border-radius: 30px;
-                border: none;
-    
-                .porcoimg{
-                    width: 5vw;
-                    
-                }
-            }
-            
-            
-        }
- }
-}
-
-
-//celular
-@media (max-width: 468px) {
-    .tudo{
-        .ultimo{
-        
-            width: 95vw;
-            height: 60vw;
-            background-size: 95vw;
-            display: flex;
-
-           .conteudo{
-            .choquei{
-                .inputs{
-                    .quadrado{
-                 .p{
-                    font-size: 3vw;
-                   } 
-                .oioio{
-                        padding: 2.3vw 2vw;
-                        width: 20vw;
+                    button {
+                        border: none;
+                        background-color: #8D60B2;
+                        color: #ffffff;
+                        padding: 1.3vw 5vw;
                         border-radius: 20px;
-                        outline: none;
-                        font-size: 2vw;
-                        height: 2vw;
-                       
-                    }
-                   
-            }
-                }
-
-                .botao{
-                    display: flex;
-                    justify-content: end;
-                    padding-top: 2vw;
-    
-                    button{
-                        padding: 3.3vw 5vw;
-                        font-size: 2.5vw;
+                        font-size: 1vw;
+                        font-weight: 900;
                         margin: 3vw 0;
-                      
+
                     }
 
+                    button:hover {
+
+                        background-color: #240A39;
+                        transform: translateY(-2px);
+                        transition: all 0.3s ease;
+
+
+                    }
                 }
 
-                .final-cartao{
-                    .estimado{
-                        h3{
-                            font-size: 2.5vw;
+                .final-cartao {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .estimado {
+                        display: flex;
+
+                        gap: 1.5vw;
+
+                        h3 {
+                            font-size: 1.5vw;
+                            text-transform: uppercase;
+
                         }
-                        p{
-                            font-size: 3vw;
-  
+
+                        p {
+                            font-size: 1.5vw;
+                            font-weight: 600;
                         }
                     }
-                    .opcao{
-                    h3{
-                        font-size: 3vw;
-                        font-weight: 600;
+
+                    .opcao {
+                        display: flex;
+                        align-items: start;
+                        gap: 1vw;
+                        margin-right: 0.5vw;
+
+                        h3 {
+                            font-size: 1.2vw;
+
+                            margin: 0;
+
+                        }
+
+                        input {
+                            margin-top: 0.5vw;
+                            width: 1vw;
+                            height: 1vw;
+                        }
                     }
-                    
                 }
 
-                }
-                
-                
 
             }
-         }
 
-         .butt{
-            padding: 4vw 4vw;
-            font-size: 2vw;
-         }
-         .pagamentos{
-            .porco{
+        }
+
+        .receita {
+            display: flex;
+            flex-direction: row;
+            background-color: #8D60B2;
+            padding-left: 2vw;
+            border-radius: 30px;
+            width: 60vw;
+            justify-content: center;
+            align-items: center;
+            margin: 2vw;
+            gap: 18vw;
+            border: none;
+            box-shadow: 0.5vw 0.5vw 2px #C7C4C4;
+
+            .separacao1 {
+                display: flex;
+                flex-direction: column;
+                font-size: 1vw;
+                align-items: start;
+                padding: 0;
+                text-align: left;
+
+                h1 {
+                    color: #E5DBEB;
+                    font-weight: 900;
+                }
+
+                p {
+                    color: #E5DBEB;
+                    font-weight: 400;
+                    font-size: 1.5vw;
+                }
+
+                .n {
+                    margin: 0;
+                }
+            }
+
+            .separacao2 {
+                display: flex;
+                flex-direction: column;
+                font-size: 1.5vw;
+                gap: 15vw;
+                padding: 2vw;
+
+
+                img {
+                    width: 6vw;
+                    background-color: #ffffff;
+                    padding: 1vw;
+                    border-radius: 100%;
+                }
+
+                h1 {
+                    color: #E5DBEB;
+                    font-weight: 400;
+                    font-size: 1.5vw;
+                }
+            }
+        }
+
+        .butt {
+            padding: 2vw 2vw;
+            background-color: #8D60B2;
+            border: #8D60B2;
+            color: #E5DBEB;
+            font-weight: 700;
+            font-size: 1.5vw;
+
+            .butt:hover {
+
+                background-color: #dbb1ff;
+                transform: translateY(-2px);
+                transition: all 0.3s ease;
+            }
+        }
+
+        .line {
+            width: 60vw;
+            height: 1vw;
+            border-radius: 5px;
+            background-color: #E5DBEB;
+            margin: 2vw;
+        }
+
+        .pagamentos {
+            .porco {
+                display: flex;
+                align-items: center;
                 gap: 1vw;
-                padding: 2.5vw;
-                font-size: 3vw;
+                padding: 2vw;
+                background-color: #EFCAFE;
+                font-size: 2vw;
                 font-weight: 900;
-                border-radius: 30px;
-    
-                .porcoimg{
-                    width: 4vw;
-                    
+                border-radius: 40px;
+                border: none;
+
+                .porcoimg {
+                    width: 3.5vw;
+
                 }
             }
-            .pix{
-                font-weight: 800;
-                font-size: 2vw;
-                border-radius: 20px;
-    
-            }
-            
-         }
-    
 
+            .porco:hover {
+
+                background-color: #8a4fbe;
+                transform: translateY(-2px);
+                transition: all 0.3s ease;
+                color: #000000;
+                border: 2px solid #dbb1ff;
+            }
+
+            .pix {
+                font-weight: 800;
+                font-size: 1vw;
+                border-radius: 20px;
+
+            }
+
+        }
     }
 
-    
-}
-}
+    @media (max-width: 768px) {
+        .tudo {
+            .ultimo {
+                width: 85vw;
+                height: 60vw;
+                background-size: 85vw;
+                display: flex;
+
+                .conteudo {
+                    .choquei {
+                        .inputs {
+                            .quadrado {
+                                .p {
+                                    font-size: 2.5vw;
+                                }
+
+                                .oioio {
+                                    padding: 2vw 1vw;
+                                    width: 14vw;
+                                    font-size: 2vw;
+                                }
+                            }
+                        }
+
+                        .botao {
+                            display: flex;
+                            justify-content: end;
+                            padding-top: 3vw;
+
+                            button {
+                                padding: 2vw 2vw;
+                                font-size: 1.5vw;
+
+                            }
+
+                        }
+
+                        .final-cartao {
+
+                            .estimado {
+                                gap: 1.5vw;
+                                display: flex;
+                                justify-content: center;
+
+                                h3 {
+                                    margin: 0;
+                                    font-size: 2vw;
+                                }
+
+                                p {
+                                    margin: 0;
+                                    font-size: 2vw;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            .opcao {
+                                display: flex;
+
+                                input {
+                                    margin-top: 0.5vw;
+                                    height: 2vw !important;
+                                    width: 2vw;
+
+                                }
+
+                                h3 {
+                                    font-size: 2vw;
+                                    font-weight: 600;
+                                }
+
+
+                            }
+                        }
+                    }
+
+                    //choquei fim
+                }
+
+                //conteudo fim
+            }
+
+            .butt {
+                padding: 2vw 2vw;
+                font-size: 2vw;
+                border-radius: 40px;
+            }
+
+            .pagamentos {
+                .porco {
+                    gap: 1vw;
+                    padding: 2vw;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    border-radius: 30px;
+                    border: none;
+
+                    .porcoimg {
+                        width: 5vw;
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+    //celular
+    @media (max-width: 468px) {
+        .tudo {
+            .ultimo {
+
+                width: 95vw;
+                height: 60vw;
+                background-size: 95vw;
+                display: flex;
+
+                .conteudo {
+                    .choquei {
+                        .inputs {
+                            .quadrado {
+                                .p {
+                                    font-size: 3vw;
+                                }
+
+                                .oioio {
+                                    padding: 2.3vw 2vw;
+                                    width: 20vw;
+                                    border-radius: 20px;
+                                    outline: none;
+                                    font-size: 2vw;
+                                    height: 2vw;
+
+                                }
+
+                            }
+                        }
+
+                        .botao {
+                            display: flex;
+                            justify-content: end;
+                            padding-top: 2vw;
+
+                            button {
+                                padding: 2.3vw 4vw;
+                                font-size: 2vw;
+                                margin: 3vw 0;
+
+                            }
+
+                        }
+
+                        .final-cartao {
+                            display: flex;
+
+                            .estimado {
+                                h3 {
+                                    font-size: 2vw;
+                                }
+
+                                p {
+                                    font-size: 2vw;
+
+                                }
+                            }
+
+                            .opcao {
+                                display: flex;
+
+                                input {
+                                    margin-top: 0.5vw;
+                                    height: 2vw !important;
+                                    width: 2vw;
+
+                                }
+
+                                h3 {
+                                    font-size: 2vw;
+                                    font-weight: 600;
+                                }
+
+                            }
+
+                        }
+
+
+
+                    }
+                }
+
+                .butt {
+                   
+                    font-size: 1.5vw;
+                }
+
+                .pagamentos {
+                    .porco {
+                        gap: 1vw;
+                        padding: 2.5vw;
+                        font-size: 3vw;
+                        font-weight: 900;
+                        border-radius: 30px;
+
+                        .porcoimg {
+                            width: 4vw;
+
+                        }
+                    }
+
+                    .pix {
+                        font-weight: 800;
+                        font-size: 2vw;
+                        border-radius: 20px;
+
+                    }
+
+                }
+
+
+            }
+
+
+        }
+    }
 }

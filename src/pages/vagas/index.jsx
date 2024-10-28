@@ -47,7 +47,7 @@ export default function Vagas() {
     }
 
     return (
-        <div className='pagina-vagas'>
+        <div className='pagina pagina-vagas'>
          <Cabecalho
              titulo1 = 'Início'
             link1='/'

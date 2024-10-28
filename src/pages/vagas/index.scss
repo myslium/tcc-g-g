@@ -1,8 +1,9 @@
-.pagina-vagas {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ .pagina-vagas {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 
+    
     .topo {
         margin-top: 20px;
     }
