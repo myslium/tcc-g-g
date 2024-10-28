@@ -162,7 +162,6 @@
             .textogislaine{
             font-family: 'Montserrat', sans-serif;    
             font-weight: 400;
-            font-size: 1.7vw;
             padding: 0vw 1.5vw 1.5vw 2.3vw;
             text-align: center;
             text-wrap: wrap;
@@ -226,7 +225,7 @@
             p{
                 text-align: center;
                 width: 50vw;
-                font-size: 4vw;
+                font-size: 4vw!important;
             }
          
         }
@@ -303,14 +302,18 @@
                 padding: 1vw;
                 text-align: center;
 
+
                 
                 .textogislaine{
+                    font-size: 2.4vw !important;
+                                       
                     .titulogis{
-                    font-size: 2.4vw;
+                    font-size: 2.4vw !important;
                     }
-                    .textogislaine{
-                        font-size: 2.4vw;
+                    h2{
+                        font-size: 2vw;
                     }
+                   
                 }    
                 
 

@@ -66,7 +66,7 @@ export default function SobreGeG() {
             <div className="cont">
             <div className="textautonomo">
                 <h1 className='titulogis'>GISLAINE</h1>
-                <h1 className='textogislaine'>Meu nome é <strong>Gislaine</strong>, sou casada e mãe de quatro filhos além de ter uma carreira de <strong>dez anos</strong> na área de recursos humanos.  Atualmente trabalho com vagas administrativa e operacionais, basicamente a área de R&S é a área responsável pela captação, divulgação de vagas, e muitas outras, realizo entrevista por competência, aplico testes e encaminho o candidato para vaga. Não apenas currículos e sim pessoas com vontade e motivação.</h1>
+                <h2 className='textogislaine'>Meu nome é <strong>Gislaine</strong>, sou casada e mãe de quatro filhos além de ter uma carreira de <strong>dez anos</strong> na área de recursos humanos.  Atualmente trabalho com vagas administrativa e operacionais, basicamente a área de R&S é a área responsável pela captação, divulgação de vagas, e muitas outras, realizo entrevista por competência, aplico testes e encaminho o candidato para vaga. Não apenas currículos e sim pessoas com vontade e motivação.</h2>
 
 
             </div>
