@@ -161,7 +161,7 @@ export default function Notificacoes() {
 
                     <div className='titulo-notas'>
 
-                        <h1>Anote aqui...</h1>
+                        <h1 className='anotaaqui'>Anote aqui...</h1>
 
 
                         <button onClick={adicionarnota} >Fixar</button>

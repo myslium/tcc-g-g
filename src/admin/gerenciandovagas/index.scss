@@ -180,6 +180,32 @@
             font-size: 2vw;
            
         }
+
+        .input-container {
+            width: 75%; 
+            align-items: center;
+            margin: 2vw 0vw;
+
+            .oi {
+                left: 1.5vw;
+                top: 50%;
+                font-size: 2vw;
+            }
+
+            .botaobb{
+                width: 100%;
+                padding: 2.5vw 1.5vw 2.5vw 4vw;
+                font-size:2.5vw;
+
+            }
+
+            button {
+                margin-left: 1vw;
+                padding: 2vw 2.5vw; 
+                font-size: 2.5vw; 
+                border-radius: 1vw;
+            }
+        }
     
        }
         
@@ -224,6 +250,58 @@
                 font-size: 2.5vw;
             
             }
+            
+        .input-container {
+            width: 75%; 
+            align-items: center;
+            margin: 2vw 0vw;
+
+            .oi {
+                left: 1.5vw;
+                top: 50%;
+                font-size: 2vw;
+            }
+
+            .botaobb{
+                width: 100%;
+                padding: 2.5vw 1.5vw 2.5vw 4vw;
+                font-size:2.5vw;
+
+            }
+
+            button {
+                margin-left: 1vw;
+                padding: 2vw 2.5vw; 
+                font-size: 2.5vw; 
+                border-radius: 1vw;
+            }
+        }
+        
+        .input-container {
+            width: 80%; 
+            align-items: center;
+            margin: 2.5vw 0vw;
+
+            .oi {
+                left: 2.3vw;
+                top: 50%;
+                font-size: 2.5vw;
+            }
+
+            .botaobb{
+                width: 100%;
+                padding: 2.5vw 1.5vw 2.5vw 5vw;
+                font-size:3vw;
+
+            }
+
+            button {
+                margin-left: 1vw;
+                padding: 2.5vw 3vw; 
+                font-size:3vw; 
+                border-radius: 1vw;
+            }
+        }
     
            }
     }

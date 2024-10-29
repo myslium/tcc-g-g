@@ -48,7 +48,7 @@ padding-bottom: 2vw ;
             align-items: center;
             gap: 2vw;
 
-            h1 {
+            .anotaaqui {
             font-family: 'Ubuntu', sans-serif;
             color: #230733;
             font-weight: 700;
@@ -207,5 +207,269 @@ padding-bottom: 2vw ;
     }
 }
 
+@media(max-width: 768px){
+.cards-interessados{
+    margin-top: 3.5vw;
+    gap: 6vw;
+}
+
+.metas {
+    height: 32vw;
+    margin: 5vw 10vw;
+}
+
+.ultima-parte-notas {
+    margin: 4vw 10vw 0vw 10vw;
+
+    .nova-nota {
+        padding: 3vw 12vw;
+        border-radius: 2vw;
+
+        .titulo-notas {
+            gap: 3vw;
+
+            .anotaaqui {
+            font-size: 3vw;
+   
+            }
+
+            button {
+                border-radius: 0.8vw;
+                padding: 1vw 3vw;
+                font-size: 1.6vw;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #240A39;
+                transform: translateY(-2px);
+            }
+
+        }
+
+        
+        .inputs {
+            gap: 3vw;
+
+            div {
+                gap: 3vw;
+
+                input {
+                    width: 30vw;
+                    height: 4vw;
+                    padding: 1vw 1.5vw;
+                    font-size: 2vw;
+
+                    
+                }
+            }
+
+            textarea {
+                width: 53vw !important;
+                height: 20vw !important;
+                padding: 2.5vw 1.5vw;
+                font-size: 2vw;
+            }
+        }
+    }
+
+    .notas-adicionadas {
+        margin-top: 2vw;
+
+        .card-nota {
+            width: 30vw;
+            height: 25vw;
+            padding: 3vw;
+            .titulo {
+                gap: 1.5vw;
+             
+                img {
+                    width: 2.5vw;
+                    height: 2.5vw;
+                }
     
+                h1 {
+                    width: 60%;
+                    font-size: 1.8vw;
+                }
+    
+                #check {
+                    margin-bottom: 4vw;
+                    width: 1.8vw;
+                }
+            }
+    
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 2vw;
+                margin-left: 1vw;
+                text-align: center;
+            }
+    
+            .icones {
+                display: flex;
+                align-items: center;
+                gap: 0.5vw;
+                justify-content: center;
+
+               button {
+                background-color: #F6E9F9;
+                border: none;
+                width: 1vw;
+      
+
+                #icon {
+                    width: 2vw;
+                    font-size: 2vw;
+                }
+               }
+                h3 {
+                   
+                    font-size: 2vw;
+                    margin: 0;
+                  
+                
+                }
+            }
+    
+        }
+    }
+}
+
+}
+
+
+@media(max-width: 468px){
+    .cards-interessados{
+        margin-top: 3.5vw;
+        gap: 6vw;
+    }
+    
+    .metas {
+        height: 32vw;
+        margin: 5vw 10vw;
+    }
+    
+    .ultima-parte-notas {
+        margin: 4vw 10vw 0vw 10vw;
+    
+        .nova-nota {
+            padding: 4vw 15vw;
+            border-radius: 3vw;
+    
+            .titulo-notas {
+                gap: 3vw;
+    
+                .anotaaqui {
+                font-size: 3vw;
+       
+                }
+    
+                button {
+                    border-radius: 0.8vw;
+                    padding: 1vw 2.5vw;
+                    font-size: 2.5vw;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+                }
+                button:hover {
+                    background-color: #240A39;
+                    transform: translateY(-2px);
+                }
+    
+            }
+    
+            
+            .inputs {
+                gap: 3vw;
+                div {
+                    gap: 3vw;
+    
+                    input {
+                        width: 25vw;
+                        height: 5vw;
+                        padding: 1vw 1vw;
+                        font-size: 2.5vw;
+    
+                        
+                    }
+                }
+    
+                textarea {
+                    width: 53vw !important;
+                    height: 20vw !important;
+                    padding: 2.5vw 1.5vw;
+                    font-size: 2.5vw;
+                }
+            }
+        }
+    
+        .notas-adicionadas {
+            margin-top: 2vw;
+    
+            .card-nota {
+                width: 30vw;
+                height: 25vw;
+                padding: 3vw;
+                .titulo {
+                    gap: 1.5vw;
+                 
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                    }
+        
+                    h1 {
+                        width: 60%;
+                        font-size: 1.5vw;
+                    }
+        
+                    #check {
+                        margin-bottom: 2.5vw;
+                        width: 2vw;
+                    }
+                }
+        
+                p {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 2vw;
+                    margin-left: 1vw;
+                    text-align: center;
+                }
+        
+                .icones {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5vw;
+                    justify-content: center;
+    
+                   button {
+                    background-color: #F6E9F9;
+                    border: none;
+                    width: 2vw;
+          
+    
+                    #icon {
+                        width: 2vw;
+                        font-size: 2vw;
+                    }
+                   }
+                    h3 {
+                       
+                        font-size: 2vw;
+                        margin: 0;
+                      
+                    
+                    }
+                }
+        
+            }
+        }
+    }
+    
+    }
+    
+
+
+
 }
