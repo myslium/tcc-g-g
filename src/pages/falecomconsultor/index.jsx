@@ -44,8 +44,11 @@ export default function Falecomconsultor(){
     }
 
     return (
+  
+        
+       
         <div className='pagina-falecomconsultor'>
-            <Cabecalho
+           <Cabecalho
                 titulo1 = 'Início'
                 link1='/'
                 titulo2 = 'Sobre G&G'
@@ -106,5 +109,7 @@ export default function Falecomconsultor(){
 
             <Footer />
         </div>
+
+
     );
 }

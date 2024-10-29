@@ -4,74 +4,154 @@
 
     .cont-robo{
     align-items: center;
-    margin: 5vw;
-    margin-left: 10vw;
+    margin: 2vw;
+    margin-left: 5vw;
     margin-right: 10vw;
     gap: 1.3vw;
 
         .resposta{
             display: flex;
             flex-direction: row;
-            font-size: 1vw;
-            .respondendo{
-                display: block;
-                p{
-                    padding: 2vw;
-                    font-weight: 500;
-                    font-size: 1vw;
-                    max-width: 20vw;
-                    width: 8vw;
-                }
-
+            .lisaimg{
+                width: 12vw;
             }
-
-            .lala{
+        .resppergunta{
             display: block;
             gap: 1.3vw;
-            .resp{
+            .respbotao{
                 border: 1px solid #E5DBEB;
                 background-color:#E5DBEB ;
-                border-radius: 10px;
-                display: block;
-                margin: 0.3vw;
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                margin: 1vw;
+                .resp{
+                padding: 1vw;
+                font-size: 1.5vw;
+                max-width: 25vw;
+                }
+
+                    }
+            .respondendo{
+                display: flex;
+                flex-direction: row-reverse;
+                width:30vw;
+
                 p{
                     padding: 2vw;
                     font-weight: 500;
-                    font-size: 1vw;
-                    max-width: 15vw;
-                }
-
-            }}
-            .lalis{
-            img{
-                width: 7vw;
-            }}
-        }
-
-
-}
-}
-@media (max-width: 768px) {
-    .cont-robo
-    {
-        align-items: center;
-        justify-content: center;
-        gap: 1vw;
-
-        .resposta{
-            font-size: 1.5vw;
-
-            .respondendo{
-                display: block;
-                p{
-                    padding: 1vw;
-                    font-weight: 500;
                     font-size: 1.5vw;
-                    max-width: 20vw;
-                    width: 8vw;
+                    text-align: center;
                 }
 
             }
+
+       
         }
+            
+        }
+
+
+}
+
+@media (max-width: 768px) {
+    .cont-robo{
+        align-items: center;
+        margin: 2vw;
+        margin-left: 5vw;
+        margin-right: 10vw;
+        gap: 1.3vw;
+    
+            .resposta{
+                display: flex;
+                flex-direction: row;
+                .lisaimg{
+                    width: 12vw;
+                }
+            .resppergunta{
+                display: block;
+                gap: 1.3vw;
+                .respbotao{
+                 
+                    margin: 1vw;
+                    .resp{
+                    padding: 1vw;
+                    font-size: 2.5vw;
+                    max-width: 45vw;
+                    }
+    
+                        }
+                .respondendo{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width:20vw;
+                    margin-left: 40vw;
+    
+                    p{
+                        padding: 2vw;
+                        font-weight: 500;
+                        font-size: 2.5vw;
+                        text-align: center;
+                    }
+    
+                }
+    
+           
+            }
+                
+            }
+    
+    
+    
     }
+
+   
+}
+@media (max-width: 468px) {
+    .cont-robo{
+        margin: 3vw;
+        margin-left: 3vw;
+        margin-right: 10vw;
+        gap: 1.3vw;
+    
+            .resposta{
+                display: flex;
+                flex-direction: row;
+                .lisaimg{
+                    width: 16vw;
+                }
+            .resppergunta{
+                display: block;
+                gap: 1.3vw;
+                .respbotao{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1.5vw;
+                    .resp{
+                    padding: 2vw;
+                    font-size: 2.5vw;
+                    max-width: 55vw;
+                    }
+    
+                        }
+                .respondendo{
+                    
+                    p{
+                      
+                        font-size: 2.5vw;
+                        text-align: center;
+                        max-width: 55vw;
+                    }
+    
+                }
+    
+           
+            }
+                
+            }
+    
+    
+    }
+   
+}
 }

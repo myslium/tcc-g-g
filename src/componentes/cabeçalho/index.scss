@@ -57,7 +57,7 @@
         }
 
         &.active .bar:nth-child(1) {
-            transform: translateY(1.7vw) rotate(45deg);
+            transform: translateY(1.75vw) rotate(45deg);
         }
 
         &.active .bar:nth-child(3) {
@@ -222,8 +222,8 @@
         }
 
         .login {
-            width: 2.8vw;
-            height: 3vw;
+            width: 5vw;
+            height: 5.3vw;
         }
 
         .login:hover {
@@ -233,6 +233,16 @@
         nav.aberto .imh1 {
             margin: 0 auto;
             justify-content: center;
+        }
+
+
+        .robot-link{
+            i{
+                font-size: 2.5vw !important;
+            }
+            span{
+                font-size: 3.5vw !important;
+            }
         }
     }
     
@@ -265,8 +275,8 @@
 
 
         .login {
-            width: 2.8vw;
-            height: 3vw;
+            width: 5vw;
+            height: 5.3vw;
         }
 
         .robot-link {
@@ -278,11 +288,11 @@
             font-family: 'Urbanist', sans-serif;
 
             i {
-                font-size: 1.8vw;
+                font-size: 3vw !important ;
             }
 
             span {
-                font-size: 2vw;
+                font-size: 4vw!important;
                 margin-top: 0.5vw;
                 text-align: center;
             }
