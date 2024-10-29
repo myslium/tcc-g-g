@@ -41,21 +41,24 @@
     @media(max-width:768px){
       
         .botaopergunta{
-           
+            width: 30vw;
+            margin-right: 5vw;
+
            
             .pergunta{
             font-size: 2.5vw;
+
     
             }
         }
         .botaoresposta{
             display: flex;
             flex-direction: row;
+
             .simnao{
             margin: 0.3vw;
             padding: 0.4vw;
             font-size: 2.5vw;
-            width: 20vw;
             height: 6vw;
             
             } 
@@ -70,6 +73,8 @@
         .duvida{
 
             .botaopergunta{
+                margin-right: 5vw;
+
                 .pergunta{
                 font-size: 3vw;
             }}
