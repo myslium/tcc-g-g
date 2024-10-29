@@ -1,4 +1,7 @@
 .pagina-falecomconsultor {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
     .ultimo{
         
@@ -220,7 +223,7 @@
     
     
     @media (max-width: 468px) {
-
+margin: 0%;
     
         
 
@@ -232,7 +235,7 @@
 
             .texto {
 
-                width: 70vw;
+                width: 100%;
 
                 p {
                     font-size: 4vw;
@@ -267,9 +270,10 @@
 
 
 @media (max-width: 468px) {
+    margin: 0;
     .ultimo{
         
-        width: 80vw;
+        width:100%;
         height: 50vw;
         background-size: 80vw;
         margin-left: 10%;
