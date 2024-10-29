@@ -24,6 +24,53 @@ padding-bottom: 2vw ;
 
    height: 28vw;
     margin: 4vw 9vw;
+    .barchart-container {
+        width: 100%;
+        height:  100%; 
+        background-color: #FDF7FE;
+        padding: 20px;
+        border-radius: 10px;
+        overflow: hidden;  
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      
+      
+      .recharts-bar {
+      &:nth-child(1) {
+        fill: #c014c0; 
+      }
+      
+      &:nth-child(2) {
+        fill: #681268; 
+      }
+      }
+      
+      .recharts-legend-item {
+      font-size: 14px;
+      color: #77138b;
+      }
+      
+      .resultado {
+      width: 20vw;
+      height: 25vw;
+      padding: 2vw;
+      border-radius: 2vw;
+      background-color: #E5DBEB;
+      
+      h1 {
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 2vw;
+          color: #4a1569;
+      }
+      
+      p {
+          font-size: 1.35vw;
+          color: #230733;
+          font-weight: 400;
+      }
+      }
+    }
 
   
 
@@ -213,9 +260,34 @@ padding-bottom: 2vw ;
     gap: 6vw;
 }
 
-.metas {
-    height: 32vw;
+    .metas {
     margin: 5vw 10vw;
+    height: 140vw;
+    .barchart-container {
+        display: flex;
+        flex-direction: column;
+       
+    .resultado {
+      width: 50vw;
+      height: 30vw;
+      padding: 2vw;
+      border-radius: 2vw;
+      background-color: #E5DBEB;
+      
+      h1 {
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 2.3vw;
+          color: #4a1569;
+      }
+      
+      p {
+          font-size: 1.8vw;
+          color: #230733;
+          font-weight: 400;
+      }
+      }
+      }
+
 }
 
 .ultima-parte-notas {
@@ -345,17 +417,43 @@ padding-bottom: 2vw ;
         gap: 6vw;
     }
     
-    .metas {
-        height: 32vw;
+        .metas {
         margin: 5vw 10vw;
+        height: 100vw;
+        .barchart-container {
+            display: flex;
+            flex-direction: column;
+
+          
+          .resultado {
+          width: 50vw;
+          height: 30vw;
+          padding: 2vw;
+          border-radius: 2vw;
+          background-color: #E5DBEB;
+          
+          h1 {
+              font-family: 'Ubuntu', sans-serif;
+              font-size: 2.5vw;
+              color: #4a1569;
+          }
+          
+          p {
+              font-size: 2.2vw;
+              color: #230733;
+              font-weight: 400;
+          }
+          }
+          }
+    
     }
     
     .ultima-parte-notas {
         margin: 4vw 10vw 0vw 10vw;
     
         .nova-nota {
-            padding: 4vw 15vw;
-            border-radius: 3vw;
+            padding: 3vw 12vw;
+            border-radius: 2vw;
     
             .titulo-notas {
                 gap: 3vw;
@@ -367,8 +465,8 @@ padding-bottom: 2vw ;
     
                 button {
                     border-radius: 0.8vw;
-                    padding: 1vw 2.5vw;
-                    font-size: 2.5vw;
+                    padding: 1vw 3vw;
+                    font-size: 1.6vw;
                     cursor: pointer;
                     transition: 0.3s ease-in-out;
                 }
@@ -382,14 +480,15 @@ padding-bottom: 2vw ;
             
             .inputs {
                 gap: 3vw;
+    
                 div {
                     gap: 3vw;
     
                     input {
-                        width: 25vw;
-                        height: 5vw;
-                        padding: 1vw 1vw;
-                        font-size: 2.5vw;
+                        width: 30vw;
+                        height: 4vw;
+                        padding: 1vw 1.5vw;
+                        font-size: 2vw;
     
                         
                     }
@@ -399,7 +498,7 @@ padding-bottom: 2vw ;
                     width: 53vw !important;
                     height: 20vw !important;
                     padding: 2.5vw 1.5vw;
-                    font-size: 2.5vw;
+                    font-size: 2vw;
                 }
             }
         }
@@ -415,18 +514,18 @@ padding-bottom: 2vw ;
                     gap: 1.5vw;
                  
                     img {
-                        width: 2vw;
-                        height: 2vw;
+                        width: 2.5vw;
+                        height: 2.5vw;
                     }
         
                     h1 {
                         width: 60%;
-                        font-size: 1.5vw;
+                        font-size: 1.8vw;
                     }
         
                     #check {
-                        margin-bottom: 2.5vw;
-                        width: 2vw;
+                        margin-bottom: 4vw;
+                        width: 1.8vw;
                     }
                 }
         
@@ -446,7 +545,7 @@ padding-bottom: 2vw ;
                    button {
                     background-color: #F6E9F9;
                     border: none;
-                    width: 2vw;
+                    width: 1vw;
           
     
                     #icon {
@@ -466,6 +565,8 @@ padding-bottom: 2vw ;
             }
         }
     }
+    
+  
     
     }
     

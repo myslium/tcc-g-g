@@ -6,10 +6,9 @@
   border-radius: 10px;
   overflow: hidden;  
   display: flex;
-
   align-items: center;
   justify-content: space-evenly;
-}
+
 
 .recharts-bar {
 &:nth-child(1) {
@@ -44,4 +43,59 @@ p {
     color: #230733;
     font-weight: 400;
 }
+}
+
+
+@media(max-width: 768px){
+  .barchart-container {
+    display: flex;
+    flex-direction: column;
+  
+  .resultado {
+  width: 30vw;
+  height: 27vw;
+  padding: 2vw;
+  border-radius: 2vw;
+  background-color: #E5DBEB;
+  
+  h1 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 2.3vw;
+      color: #4a1569;
+  }
+  
+  p {
+      font-size: 1.8vw;
+      color: #230733;
+      font-weight: 400;
+  }
+  }
+  }
+}
+
+
+@media(max-width: 468px){
+  
+  .resultado {
+  width: 35vw;
+  height: 28vw;
+  padding: 2vw;
+  border-radius: 2vw;
+  background-color: #E5DBEB;
+  
+  h1 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 2.3vw;
+      color: #4a1569;
+  }
+  
+  p {
+      font-size: 2vw;
+      color: #230733;
+      font-weight: 400;
+  }
+  }
+
+}
+
 }
