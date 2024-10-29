@@ -17,13 +17,10 @@ export default function Robo(){
   function cadastro(){
     setTimeout(() => {
       let ola = ('Para se cadastrar na vaga desejada basta apenas ir no link do Cabeçalho chamado "VAGAS" ele te direcionará a uma página com as vagas disponiveis em nossa plataforma, ao clicar na desejada tem a opção de se cadastrar e ali você será direcionado para um formulario')
-
       setresposta(ola)
     },
-  1*1000);
-
-  
-  setTimeout(() => {
+    1*1000);
+    setTimeout(() => {
     setrespondendo(
       <Duvida
       sim = {sim}
@@ -33,11 +30,8 @@ export default function Robo(){
 
     
   },
-3*1000);
+  1*1000);
 
-  
-
-   
   }
 
   function disponiveis(){
@@ -91,7 +85,7 @@ export default function Robo(){
 
     
   },
-3*1000);
+1*1000);
 
   }
 
@@ -180,10 +174,7 @@ while (oi === true){
             />
             <TituloMenor titulo = 'Lisa assistente'/>
 
-            <div className="cont-robo">
-
-           
-
+        <div className="cont-robo">
 
         <Intro
         mensagem = 'Ola sou a Lisa assistente do G&G. Estou aqui para esclarecer suas dúvidas.As dúvidas abaixo são as mais frequentes pelo nosso público, caso nenhuma delas seja a sua, tudo certo! Fale conosco através do nosso Email e faremos o possível para esclarecer.'
@@ -193,13 +184,11 @@ while (oi === true){
         cargo = {cargo}
         />
 
-        
-
         <div className='resposta'>
-          <div className="lalis"><img src="/assets/images/consultor/lisinha.png" alt="" />
-          </div>
-          <div className="lala">
-          <button className='resp'><p>{resposta}</p></button>
+          <div><img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" /></div>
+          
+          <div className="resppergunta">
+          <button className='respbotao' ><p className='resp'>{resposta}</p></button>
           <p className='respondendo'> {respondendo}</p>
         </div>
         </div>

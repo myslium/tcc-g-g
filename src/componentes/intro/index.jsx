@@ -9,17 +9,18 @@ export default function Intro (props){
      
       <div className="botons">
 
-         <div className="lisa">
-        <img src="/assets/images/consultor/lisinha.png" alt="" />
+         <div>
+        <img className='lisa' src="/assets/images/consultor/lisinha.png" alt="" />
         ' </div>
 
         <div className="lisamsg">
-    <button className='butao' ><p>{props.mensagem}</p></button>
-    <button  className='butao'><p>Veja se algumas dessas corresponde a sua: </p></button>
-    </div></div>
+      <button className='butao' ><p>{props.mensagem}</p></button>
+      <button  className='butao'><p>Veja se algumas dessas corresponde a sua: </p></button>
+        </div>
+    </div>
     <div className="perguntas">
-      <div className="user">
-      <img src="/assets/images/consultor/usergg.png" alt="" />
+      <div >
+      <img className='user' src="/assets/images/consultor/usergg.png" alt="" />
       </div>
       <div className="botoes">
     <button className='lala' onClick={props.cadastro}><p>Como cadastro minha vaga?</p></button> 

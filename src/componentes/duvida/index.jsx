@@ -5,10 +5,10 @@ export default function Duvida (props){
 
     return(
         <div className="duvida">
-        <button className='botaopergunta'>Mais alguma dúvida?</button>
+        <button className='botaopergunta'><p className='pergunta'>Mais alguma dúvida?</p></button>
         <div className="botaoresposta">
-        <button onClick={props.sim}>Sim</button>
-        <button onClick={props.nao}>Não</button>
+        <button className='simnao' onClick={props.sim}>Sim</button>
+        <button className='simnao' onClick={props.nao}>Não</button>
         </div>
         </div>
 
