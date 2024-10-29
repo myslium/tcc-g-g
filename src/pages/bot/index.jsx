@@ -30,7 +30,7 @@ export default function Robo(){
 
     
   },
-  1*1000);
+  1.5*1000);
 
   }
 
@@ -55,7 +55,7 @@ export default function Robo(){
 
     
   },
-3*1000);
+1.5*1000);
 
   
 
@@ -85,7 +85,7 @@ export default function Robo(){
 
     
   },
-1*1000);
+1.5*1000);
 
   }
 
@@ -95,7 +95,7 @@ export default function Robo(){
       setrespondendo(
 
         <Intro
-        mensagem = 'Aqui estão as perguntas'
+        mensagem = 'Aqui estão as perguntas:'
         cadastro = {cadastro}
         disponiveis = {disponiveis}
         empresa = {empresa}
@@ -105,7 +105,7 @@ export default function Robo(){
       
       
     },
-  1*1000);
+  1.5*1000);
     
 
    
@@ -146,7 +146,7 @@ export default function Robo(){
 
     
   },
-3*1000);
+1.5*1000);
 
   }
 
