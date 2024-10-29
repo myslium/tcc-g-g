@@ -44,8 +44,8 @@ export default function Falecomconsultor(){
     }
 
     return (
-        <div className='pagina-falecomconsultor'>
-            <Cabecalho
+        <>
+         <Cabecalho
                 titulo1 = 'Início'
                 link1='/'
                 titulo2 = 'Sobre G&G'
@@ -59,6 +59,9 @@ export default function Falecomconsultor(){
                 tituloo5= 'AJUDA'
                 aparecer={true}  
             />
+       
+        <div className='pagina-falecomconsultor'>
+           
             <section className='primeira-parte'>
                 <img src="/assets/images/consultor/primeira.png" alt="" />
             </section>
@@ -106,5 +109,7 @@ export default function Falecomconsultor(){
 
             <Footer />
         </div>
+
+        </>
     );
 }
