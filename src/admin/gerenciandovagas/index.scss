@@ -6,6 +6,7 @@
         flex-direction: column;
         align-items: center;
         padding-bottom: 5vw;
+        gap: 3vw;
 
         .input-container {
             position: relative;
@@ -52,7 +53,7 @@
             }
         }
         .vagas {
-            margin: 0vw 9vw 3vw 9vw;
+          
             width: 60vw;
             padding: 3vw;
             background-color: #E5DBEB;
@@ -139,6 +140,94 @@
             }
            
     }
+
+    @media (max-width: 768px) {
+
+       .botooes1 {
+
+        .vagas {
+            width: 70vw;
+            padding: 4vw;
+            gap: 2vw;
+            .titulo {
+               
+                h1 {
+                    font-size: 2.5vw;
+                   
+                }
+        
+            }
+            .curriculos {
+            
+                button {
+                    padding: 1vw 3vw;
+                    font-size: 1.6vw;
+                 
+                }
+              
+            }
+            .tempo {
+            
+                h2 {
+                  
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        button {
+            padding: 1.5vw 7vw;
+            font-size: 2vw;
+           
+        }
+    
+       }
+        
+    }
+
+    @media (max-width: 476px) {
+        
+        .botooes1 {
+
+            .vagas {
+                width: 70vw;
+                padding: 5vw;
+                gap: 2.5vw;
+                .titulo {
+                   
+                    h1 {
+                        font-size: 3vw;
+                       
+                    }
+            
+                }
+                .curriculos {
+                
+                    button {
+                        padding: 1.5vw 3vw;
+                        font-size: 2vw;
+                     
+                    }
+                  
+                }
+                .tempo {
+                
+                    h2 {
+                      
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+            
+            button {
+                padding: 1.5vw 7vw;
+                font-size: 2.5vw;
+            
+            }
+    
+           }
+    }
+
 
    
 }
