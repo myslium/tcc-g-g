@@ -21,9 +21,12 @@ export default function Vagas() {
             const status = dataVencimento < new Date() ? "Fechada" : "Em andamento";
             return { ...vaga, status };
         });
-
-        setVagas(vagasComStatus);
+    
+       
+        const vagasEmAndamento = vagasComStatus.filter(vaga => vaga.status === "Em andamento");
+        setVagas(vagasEmAndamento);
     }
+    
 
     useEffect(() => {
         vagasCandidatos();

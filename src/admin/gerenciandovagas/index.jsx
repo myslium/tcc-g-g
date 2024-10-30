@@ -118,9 +118,10 @@ export default function VagasAdmin() {
                             <div className='curriculos'>
                                 {candidatoVaga.length > 0 ? (
                                     candidatoVaga.map(item2 => (
-                                        <Link to={`/admin/confirmacao/${item2.id}`} key={item2.id}>
-                                            <button>Ver currículo</button>
-                                        </Link>
+                                        <Link to={`/admin/confirmacao/${item2.id}?id_vaga=${item.id}`} key={item2.id}>
+                                        <button>Ver currículo</button>
+                                    </Link>
+                                    
                                     ))
                                 ) : (
                                     <p>Sem currículos disponíveis</p>
