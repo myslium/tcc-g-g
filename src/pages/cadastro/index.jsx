@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Cabecalho from '../../componentes/cabeçalho';
 import TituloMenor from '../../componentes/titulomenor';
 import Footer from '../../componentes/footer';
 import './index.scss';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams,  useNavigate  } from 'react-router-dom';
 
 export default function Cadastro() {
     const [nome, setNome] = useState('');
@@ -12,6 +12,7 @@ export default function Cadastro() {
     const [cpfCandidato, setCpfCandidato] = useState('');
     const [curriculo, setCurriculo] = useState(null);
     const { id } = useParams();
+    const navigate = useNavigate();
 
     function validar() {
         if (!nome || !emailCandidato || !cpfCandidato || !curriculo) {
@@ -45,9 +46,15 @@ export default function Cadastro() {
             setEmailCandidato('');
             setCpfCandidato('');
             setCurriculo(null);
+            navigate('/vagas');
+            
         } catch (error) {
             console.error("Erro ao adicionar candidato:", error);
-            alert('Erro ao confirmar candidato.');
+            if (error.response && error.response.status === 409) {
+                alert('Você já se inscreveu nesta vaga.'); 
+            } else {
+                alert('Erro ao confirmar candidato.');
+            }
         }
     }
 
@@ -62,10 +69,9 @@ export default function Cadastro() {
                 link3='/vagas'
                 titulo4='Fale com consultor'
                 link4='/falecomconsultor'
-                link5='/bot'
-                titulo5='fa-solid fa-robot'
-                tituloo5='AJUDA'
-                aparecer={true}  
+                titulo5 = 'fa-solid fa-robot'
+                tituloo5= 'AJUDA'
+                aparecer={true} 
             />
 
             <TituloMenor titulo='Candidatar-se' />

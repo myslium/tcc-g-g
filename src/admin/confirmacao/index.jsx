@@ -1,9 +1,9 @@
+import React, { useEffect, useState } from 'react';
 import Cabecalho from '../../componentes/cabeçalho';
 import TituloMenor from '../../componentes/titulomenor';
 import './index.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 
 export default function ConfirmarCandidato() {
     const [nome, setNome] = useState('');
@@ -11,7 +11,8 @@ export default function ConfirmarCandidato() {
     const [cpfCandidato, setCpfCandidato] = useState('');
     const [status, setStatus] = useState('');
     const navigate = useNavigate();
-    const { id } = useParams();
+    const { id } = useParams(); 
+    const id_vaga = new URLSearchParams(window.location.search).get('id_vaga'); 
 
     useEffect(() => {
         async function buscar() {
@@ -27,6 +28,7 @@ export default function ConfirmarCandidato() {
         buscar();
     }, [id]); 
 
+
     async function adicionar() {
         const url = `http://localhost:5010/candidato/${id}`;
         try {
@@ -35,13 +37,14 @@ export default function ConfirmarCandidato() {
                 email: emailCandidato,
                 cpf: cpfCandidato,
                 status,
-                id_vaga: id
+                id_vaga 
             };
             await axios.put(url, dados);
             navigate('/admin/gerenciandovagas');
             alert('Candidato Confirmado!');
         } catch (error) {
             console.error("Erro ao adicionar candidato:", error);
+            alert('Erro ao confirmar candidato.'); 
         }
     }
 
@@ -51,16 +54,16 @@ export default function ConfirmarCandidato() {
             const response = await axios.get(url, {
                 responseType: 'blob'
             });
-    
+
             const extensao = response.headers['content-type'] === 'application/pdf' ? 'pdf' :
                              response.headers['content-type'] === 'application/msword' ? 'doc' :
                              response.headers['content-type'] === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ? 'docx' : '';
-    
+
             if (!extensao) {
                 alert("Formato de arquivo não suportado");
                 return;
             }
-    
+
             const urlBlob = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = urlBlob;
@@ -80,18 +83,18 @@ export default function ConfirmarCandidato() {
 
     return (
         <div className='pagina-confirmar'>
-           <Cabecalho
-              titulo01='Sair'
-              onLogout={reset}
-              titulo2='Vagas'
-              link2='/admin/gerenciandovagas'
-              titulo3='Notificações'
-              link3='/admin/notificacoes'
-              titulo4='Gerenciamento Vagas'
-              link4='/admin/gerenciamento'
+            <Cabecalho
+                titulo01='Sair'
+                onLogout={reset}
+                titulo2='Vagas'
+                link2='/admin/gerenciandovagas'
+                titulo3='Notificações'
+                link3='/admin/notificacoes'
+                titulo4='Gerenciamento Vagas'
+                link4='/admin/gerenciamento'
             />
 
-            <TituloMenor titulo='Confirmação de candidato'/>
+            <TituloMenor titulo='Confirmação de candidato' />
 
             <section className='formulario'>
                 <div className='inputs'>
@@ -133,3 +136,4 @@ export default function ConfirmarCandidato() {
         </div>
     );
 }
+
