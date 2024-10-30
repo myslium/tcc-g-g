@@ -1,223 +1,156 @@
-import './index.scss'
-import { useState } from 'react'
-import Intro from '../../componentes/intro'
-import { useNavigate } from 'react-router-dom'
-import Cabecalho from '../../componentes/cabeçalho'
-import Duvida from '../../componentes/duvida'
-import TituloMenor from '../../componentes/titulomenor'
-import axios from 'axios'
+import './index.scss';
+import { useState } from 'react';
+import Intro from '../../componentes/intro';
+import { useNavigate } from 'react-router-dom';
+import Cabecalho from '../../componentes/cabeçalho';
+import Duvida from '../../componentes/duvida';
+import TituloMenor from '../../componentes/titulomenor';
+import axios from 'axios';
 
 export default function Robo() {
-  const [resposta, setresposta] = useState('')
-  const [respondendo, setrespondendo] = useState('')
-
-  const navigate = useNavigate()
-  let oi = true
-
+  const [resposta, setResposta] = useState('');
+  const [respondendo, setRespondendo] = useState('');
+  const [julia, setJulia] = useState([]);
+  const [cpf, setCpf] = useState(''); 
+  const navigate = useNavigate();
+  let oi = true;
 
   function cadastro() {
     setTimeout(() => {
-      let ola = ('Para se cadastrar na vaga desejada basta apenas ir no link do Cabeçalho chamado "VAGAS" ele te direcionará a uma página com as vagas disponiveis em nossa plataforma, ao clicar na desejada tem a opção de se cadastrar e ali você será direcionado para um formulario')
-      setresposta(ola)
-    },
-      1 * 1000);
+      setResposta('Para se cadastrar na vaga desejada basta apenas ir no link do Cabeçalho chamado "VAGAS"...');
+    }, 1000);
     setTimeout(() => {
-      setrespondendo(
-        <Duvida
-          sim={sim}
-          nao={nao}
-        />
-      )
-
-
-    },
-      1.5 * 1000);
-
+      setRespondendo(<Duvida sim={sim} nao={nao} />);
+    }, 1500);
   }
 
   function disponiveis() {
-    setresposta('')
-    setrespondendo('')
-
+    setResposta('');
+    setRespondendo('');
     setTimeout(() => {
-      let ola = (`Em nossa plataforma para ter acesso as vagas disponíveis basta ir no link "VAGAS" e lá estará disponível todas as vagas disponiveis ou terá enderessado o status dela como aberta, fechada, etc.`)
-      setresposta(ola)
-    },
-      1 * 1000);
-
-
+      setResposta('Em nossa plataforma para ter acesso as vagas disponíveis basta ir no link "VAGAS"...');
+    }, 1000);
     setTimeout(() => {
-      setrespondendo(
-        <Duvida
-          sim={sim}
-          nao={nao}
-        />
-      )
-
-
-    },
-      1.5 * 1000);
-
-
-
-
-
-
+      setRespondendo(<Duvida sim={sim} nao={nao} />);
+    }, 1500);
   }
+
   function empresa() {
     setTimeout(() => {
-      let ola = ('Para uma empresa cadastrar uma vaga ou ter interesse em nossos serviços basta ir em "FALE COM O CONSULTOR"  lá você preencherá um formulário para preencher detalhadamente a vaga'
-
-      )
-      setresposta(ola)
-
-
-    },
-      1 * 1000);
-
-
+      setResposta('Para uma empresa cadastrar uma vaga ou ter interesse em nossos serviços basta ir em "FALE COM O CONSULTOR"...');
+    }, 1000);
     setTimeout(() => {
-      setrespondendo(
-        <Duvida
-          sim={sim}
-          nao={nao}
-        />
-      )
-
-
-    },
-      1.5 * 1000);
-
+      setRespondendo(<Duvida sim={sim} nao={nao} />);
+    }, 1500);
   }
 
   function sim() {
-    oi = true
+    oi = true;
     setTimeout(() => {
-      setrespondendo(
-
+      setRespondendo(
         <Intro
-          mensagem='Aqui estão as perguntas:'
+          mensagem="Aqui estão as perguntas:"
           cadastro={cadastro}
           disponiveis={disponiveis}
           empresa={empresa}
           cargo={cargo}
-          cpf={cpf}
-
         />
-      )
-
-
-    },
-      1.5 * 1000);
-
-
-
-
+      );
+    }, 1500);
   }
+
   function nao() {
-
     setTimeout(() => {
-      alert('Em caso de outra dúvida não esclarecida, fale conosco pelo nosso Email, obrigada!!')
-
-    },
-      0.5 * 1000);
-
-    oi = false
-    navigate('/')
-
+      alert('Em caso de outra dúvida não esclarecida, fale conosco pelo nosso Email, obrigada!!');
+    }, 500);
+    oi = false;
+    navigate('/');
   }
 
   function cargo() {
     setTimeout(() => {
-      let ola = ('Em nossa página "VAGAS" lá nós temos vagas com acesso filtrado, ou seja, você pode preencher de acordo com suas preferências e as melhores vagas surgirão para você! '
-
-      )
-      setresposta(ola)
-
-
-    },
-      1 * 1000);
-
-
+      setResposta('Em nossa página "VAGAS" lá nós temos vagas com acesso filtrado...');
+    }, 1000);
     setTimeout(() => {
-      setrespondendo(
-        <Duvida
-          sim={sim}
-          nao={nao}
-        />
-      )
-
-
-    },
-      1.5 * 1000);
-
+      setRespondendo(<Duvida sim={sim} nao={nao} />);
+    }, 1500);
   }
 
+  async function cpfla() {
+    const url = `http://localhost:5010/candidatojoinCPF/${cpf}`;
+    try {
+      const resp = await axios.get(url);
+      setJulia(resp.data);
+    } catch (error) {
+      console.error("Erro ao buscar CPF:", error);
+    }
+  }
 
-
-
-  while (oi === true) {
+  if (oi === true) {
     return (
       <div className="robo-secao">
         <Cabecalho
-          titulo1='Início'
-          link1='/'
-          titulo2='Sobre G&G'
-          link2='/sobre'
-          titulo3='Vagas'
-          link3='/vagas'
-          titulo4='Fale com consultor'
-          link4='/falecomconsultor'
-          link5='/bot'
-          titulo5='fa-solid fa-robot'
-          tituloo5='AJUDA'
+          titulo1="Início"
+          link1="/"
+          titulo2="Sobre G&G"
+          link2="/sobre"
+          titulo3="Vagas"
+          link3="/vagas"
+          titulo4="Fale com consultor"
+          link4="/falecomconsultor"
+          link5="/bot"
+          titulo5="fa-solid fa-robot"
+          tituloo5="AJUDA"
           aparecer={true}
         />
-        <TituloMenor titulo='Lisa assistente' />
+        <TituloMenor titulo="Lisa assistente" />
 
         <div className="cont-robo">
-
           <Intro
-            mensagem='Ola sou a Lisa assistente do G&G. Estou aqui para esclarecer suas dúvidas.As dúvidas abaixo são as mais frequentes pelo nosso público, caso nenhuma delas seja a sua, tudo certo! Fale conosco através do nosso Email e faremos o possível para esclarecer.'
+            mensagem="Olá, sou a Lisa assistente do G&G. Estou aqui para esclarecer suas dúvidas. As dúvidas abaixo são as mais frequentes pelo nosso público, caso nenhuma delas seja a sua, tudo certo! Fale conosco através do nosso Email e faremos o possível para esclarecer."
             cadastro={cadastro}
             disponiveis={disponiveis}
             empresa={empresa}
           />
-      
 
-
-          <div className='resposta'>
+          <div className="resposta">
             <div><img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" /></div>
 
             <div className="resppergunta">
-              <button className='respbotao' ><p className='resp'>{resposta }</p></button>
-              <p className='respondendo'> {respondendo}</p>
-              <div className="tabelacpf">
-              {julia.map((item) => {
-
-              <div key={item.id} className='card'>
-                <h1>{item.nome}</h1>
-                <h2>{item.cpf}</h2>
-                <h3>{item.status}</h3>
+              <button className="respbotao">
+                <p className="resp">{resposta}</p>
+              </button>
+              <p className="respondendo">{respondendo}</p>
+              
+             
+              <div className="cpf-section">
+                <label>Digite seu CPF:</label>
+                <input
+                  type="text"
+                  className="cpfinput"
+                  value={cpf}
+                  onChange={(e) => setCpf(e.target.value)}
+                />
+                <button onClick={cpfla}>Enviar CPF</button>
               </div>
 
-            })}
-      </div>
-
-
+           
+              <div className="tabelacpf">
+                {julia.map((item) => (
+                  <div key={item.id} className="card">
+                    <h1>{item.nome}</h1>
+                    <h2>{item.cargo}</h2>
+                    <h2>{item.cpf}</h2>
+                    <h3>{item.status}</h3>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-
-
         </div>
-
-
-
       </div>
-
-
-    )
-
+    );
   }
 
+  return null;
 }
