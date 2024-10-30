@@ -13,6 +13,7 @@ export default function Robo() {
   const [julia, setJulia] = useState([]);
   const [cpf, setCpf] = useState('');
   const [mostrarTabela, setMostrarTabela] = useState(false);
+  const [mostrarInputCpf, setMostrarInputCpf] = useState(false); 
   const navigate = useNavigate();
   let oi = true;
 
@@ -55,6 +56,7 @@ export default function Robo() {
           disponiveis={disponiveis}
           empresa={empresa}
           cargo={cargo}
+          mostrarCampoCpf={mostrarCampoCpf} 
         />
       );
     }, 1500);
@@ -77,12 +79,16 @@ export default function Robo() {
     }, 1500);
   }
 
+  function mostrarCampoCpf() {
+    setMostrarInputCpf(true); 
+  }
+
   async function cpfla() {
     const url = `http://localhost:5010/candidatojoinCPF/${cpf}`;
     try {
       const resp = await axios.get(url);
       setJulia(resp.data);
-      setMostrarTabela(true); 
+      setMostrarTabela(true);
     } catch (error) {
       console.error("Erro ao buscar CPF:", error);
     }
@@ -113,34 +119,36 @@ export default function Robo() {
             cadastro={cadastro}
             disponiveis={disponiveis}
             empresa={empresa}
+            cargo={cargo}
+            mostrarCampoCpf={mostrarCampoCpf} 
           />
 
           <div className="resposta">
-            
-            <div><img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" />
+            <div>
+              <img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" />
             </div>
-            
 
             <div className="resppergunta">
-            <div className="cpf-section">
-                <label>Digite seu CPF:</label>
-                <input
-                  type="text"
-                  className="cpfinput"
-                  value={cpf}
-                  onChange={(e) => setCpf(e.target.value)}
-                />
-                <button onClick={cpfla}>Enviar CPF</button>
-              </div>
               <button className="respbotao">
                 <p className="resp">{resposta}</p>
               </button>
               <p className="respondendo">{respondendo}</p>
 
+           
+              {mostrarInputCpf && (
+                <div className="cpf-section">
+                  <label>Digite seu CPF:</label>
+                  <input
+                    type="text"
+                    className="cpfinput"
+                    value={cpf}
+                    onChange={(e) => setCpf(e.target.value)}
+                  />
+                  <button onClick={cpfla}>Enviar CPF</button>
+                </div>
+              )}
 
-              
-
-
+             
               {mostrarTabela && (
                 <div className="table-container">
                   <table>
@@ -165,8 +173,6 @@ export default function Robo() {
                   </table>
                 </div>
               )}
-
-
 
             </div>
           </div>
