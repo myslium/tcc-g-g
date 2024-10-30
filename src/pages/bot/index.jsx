@@ -130,8 +130,7 @@ export default function Robo() {
 
             <div className="resppergunta">
               <button className="respbotao">
-                <p className="resp">{resposta ||         
-                
+                <p className="resp">{resposta ||          
                 mostrarInputCpf && (
                 <div className="cpf-section">
                   <label>Digite seu CPF:</label>
