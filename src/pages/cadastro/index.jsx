@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import Cabecalho from '../../componentes/cabeçalho';
 import TituloMenor from '../../componentes/titulomenor';
 import Footer from '../../componentes/footer';
@@ -13,8 +13,18 @@ export default function Cadastro() {
     const [curriculo, setCurriculo] = useState(null);
     const { id } = useParams();
 
-    async function adicionar() {
+    function validar() {
+        if (!nome || !emailCandidato || !cpfCandidato || !curriculo) {
+            alert('Todos os campos são obrigatórios!');
+            return false;
+        }
        
+        return true;
+    }
+
+    async function adicionar() {
+        if (!validar()) return;
+
         const formData = new FormData();
         formData.append('nome', nome);
         formData.append('email', emailCandidato);
@@ -31,10 +41,10 @@ export default function Cadastro() {
                 },
             });
             alert('Candidato Confirmado!');
-            setNome('')
-            setEmailCandidato('')
-            setCpfCandidato('')
-            setCurriculo(null)
+            setNome('');
+            setEmailCandidato('');
+            setCpfCandidato('');
+            setCurriculo(null);
         } catch (error) {
             console.error("Erro ao adicionar candidato:", error);
             alert('Erro ao confirmar candidato.');
@@ -44,17 +54,17 @@ export default function Cadastro() {
     return (
         <div className='pagina-cadastro'>
            <Cabecalho
-                titulo1 = 'Início'
+                titulo1='Início'
                 link1='/'
-                titulo2 = 'Sobre G&G'
-                link2 = '/sobre'
-                titulo3 = 'Vagas'
-                link3 = '/vagas'
-                titulo4 = 'Fale com consultor'
+                titulo2='Sobre G&G'
+                link2='/sobre'
+                titulo3='Vagas'
+                link3='/vagas'
+                titulo4='Fale com consultor'
                 link4='/falecomconsultor'
-                link5 = '/bot'
-                titulo5 = 'fa-solid fa-robot'
-                tituloo5= 'AJUDA'
+                link5='/bot'
+                titulo5='fa-solid fa-robot'
+                tituloo5='AJUDA'
                 aparecer={true}  
             />
 
