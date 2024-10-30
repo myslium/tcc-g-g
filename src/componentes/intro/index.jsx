@@ -1,6 +1,21 @@
 import './index.scss'
+import { useState } from 'react'
 
 export default function Intro (props){
+  
+  const [cpf, setcpf] = useState('')
+  const [julia, setjulia] = useState([])
+
+
+
+  async function cpfla() {
+    const url = `http://localhost:5010/candidatoCPF/${cpf}`
+    let resp = await axios.get(url);
+    setjulia(resp.data)
+
+  }
+
+
 
     
     return(   
@@ -16,6 +31,9 @@ export default function Intro (props){
         <div className="lisamsg">
       <button className='butao' ><p>{props.mensagem}</p></button>
       <button  className='butao'><p>Veja se algumas dessas corresponde a sua: </p></button>
+      <button>Digite seu cpf:</button>
+          <input type="text" className='cpfinput' value={cpf} onChange={e => setcpf(e.target.value)} />
+          <button onClick={cpfla}>enviar cpf</button>
         </div>
     </div>
     <div className="perguntas">
