@@ -11,7 +11,8 @@ export default function Robo() {
   const [resposta, setResposta] = useState('');
   const [respondendo, setRespondendo] = useState('');
   const [julia, setJulia] = useState([]);
-  const [cpf, setCpf] = useState(''); 
+  const [cpf, setCpf] = useState('');
+  const [mostrarTabela, setMostrarTabela] = useState(false);
   const navigate = useNavigate();
   let oi = true;
 
@@ -81,6 +82,7 @@ export default function Robo() {
     try {
       const resp = await axios.get(url);
       setJulia(resp.data);
+      setMostrarTabela(true); 
     } catch (error) {
       console.error("Erro ao buscar CPF:", error);
     }
@@ -114,16 +116,13 @@ export default function Robo() {
           />
 
           <div className="resposta">
-            <div><img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" /></div>
+            
+            <div><img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" />
+            </div>
+            
 
             <div className="resppergunta">
-              <button className="respbotao">
-                <p className="resp">{resposta}</p>
-              </button>
-              <p className="respondendo">{respondendo}</p>
-              
-             
-              <div className="cpf-section">
+            <div className="cpf-section">
                 <label>Digite seu CPF:</label>
                 <input
                   type="text"
@@ -133,18 +132,42 @@ export default function Robo() {
                 />
                 <button onClick={cpfla}>Enviar CPF</button>
               </div>
+              <button className="respbotao">
+                <p className="resp">{resposta}</p>
+              </button>
+              <p className="respondendo">{respondendo}</p>
 
-           
-              <div className="tabelacpf">
-                {julia.map((item) => (
-                  <div key={item.id} className="card">
-                    <h1>{item.nome}</h1>
-                    <h2>{item.cargo}</h2>
-                    <h2>{item.cpf}</h2>
-                    <h3>{item.status}</h3>
-                  </div>
-                ))}
-              </div>
+
+              
+
+
+              {mostrarTabela && (
+                <div className="table-container">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>CPF</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {julia.map((item) => (
+                        <tr key={item.id}>
+                          <td>{item.nome}</td>
+                          <td>{item.cargo}</td>
+                          <td>{item.cpf}</td>
+                          <td>{item.status}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+
+
             </div>
           </div>
         </div>
