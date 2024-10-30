@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import Cabecalho from '../../componentes/cabeçalho'
 import Duvida from '../../componentes/duvida'
 import TituloMenor from '../../componentes/titulomenor'
+import axios from 'axios'
 
 export default function Robo(){
   const [resposta,setresposta] = useState('')
@@ -100,6 +101,8 @@ export default function Robo(){
         disponiveis = {disponiveis}
         empresa = {empresa}
         cargo = {cargo}
+        cpf = {cpf}
+
         />
       )
       
@@ -150,6 +153,33 @@ export default function Robo(){
 
   }
 
+
+ async function cpf(){
+  const url = `http://localhost:5010/candidatoCPF/:cpf`
+    setTimeout(() => {
+      let ola = ''
+      setresposta(ola)
+
+      
+    },
+  1*1000);
+
+
+  setTimeout(() => {
+    setrespondendo(
+      <Duvida
+      sim = {sim}
+      nao = {nao}
+      />
+    )
+
+    
+  },
+1.5*1000);
+
+  
+
+  }
   
 
   

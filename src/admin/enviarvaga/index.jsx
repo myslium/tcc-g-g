@@ -19,8 +19,14 @@ export default function EnviarVaga() {
 
     async function buscarCPF() {
         try {
-            const url = `http://localhost:5010/candidatocurrc/${cpfCandidato}`;
-            const response = await axios.get(url, { responseType: 'blob' });
+            const url = `http://localhost:5010/candidatocurrc`;
+
+            let dado ={
+                'cpf':cpfCandidato,
+                'contato_empresa': emailEmpresa,
+                'cargo': vaga
+            }
+            const response = await axios.post(url, dado, { responseType: 'blob' });
 
             const extensao = response.headers['content-type'] === 'application/pdf' ? 'pdf' :
                 response.headers['content-type'] === 'application/msword' ? 'doc' :

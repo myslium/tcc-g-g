@@ -27,6 +27,8 @@ export default function Intro (props){
     <button className='lala' onClick={props.disponiveis}><p>Como vejo as vagas disponíveis?</p></button>
     <button className='lala' onClick={props.empresa}><p> Oque é necessário fazer para cadastrar vagas da minha empresa para o G&G?</p></button>
     <button className='lala' onClick={props.cargo}><p> Sou especializado em um cargo específico, como acho vagas para este cargo?</p></button>
+    <button className='lala' onClick={props.cpf}><p>Como sei se minha vaga foi aprovada?</p></button>
+
 
     </div>
     </div>   
