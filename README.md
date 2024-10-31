@@ -33,9 +33,9 @@ CREATE TABLE vagas (
 CREATE TABLE formularios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    cpf VARCHAR(11) NOT NULL UNIQUE,
+    cpf VARCHAR(11) NOT NULL ,
     id_vaga INT,
-    email VARCHAR(200) NOT NULL UNIQUE,
+    email VARCHAR(200) NOT NULL ,
     curriculo LONGBLOB NOT NULL,
     data_inscricao DATETIME,
     status VARCHAR(100) NULL,
