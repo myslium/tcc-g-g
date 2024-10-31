@@ -1,5 +1,21 @@
 .robo-secao {
 
+    .respondendo {
+       
+        margin: 0vw 10vw  0vw 5vw;
+
+
+
+        p {
+            padding: 2vw;
+            font-weight: 500;
+            font-size: 1.5vw;
+            text-align: center;
+        }
+
+    }
+    
+
     .cont-robo {
         align-items: center;
         margin: 2vw;
@@ -35,20 +51,7 @@
 
                 }
 
-                .respondendo {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    width: 30vw;
-
-                    p {
-                        padding: 2vw;
-                        font-weight: 500;
-                        font-size: 1.5vw;
-                        text-align: center;
-                    }
-
-                }
-                
+            
                 .table-container {
                     width: 90%;
                     overflow-x: auto;
