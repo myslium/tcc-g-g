@@ -70,15 +70,7 @@
                             font-size: 1.2vw;
                             color: #333;
 
-                            @media (max-width: 768px) {
-                                font-size: 2.5vw;
-                                padding: 8px;
-                            }
-
-                            @media (max-width: 468px) {
-                                font-size: 3.5vw;
-                                padding: 6px;
-                            }
+                          
                         }
 
                         th {
@@ -204,6 +196,69 @@
                         }
 
                     }
+                     
+                .table-container {
+                    width: 90%;
+                    overflow-x: auto;
+                    margin: 2vw;
+                    border-radius: 1vw;
+
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 1vw;
+                        border-radius: 10px;
+                       
+
+
+                        th,
+                        td {
+                            
+                            font-size: 2.5vw;
+                            padding: 8px;
+                        
+                        }
+
+                        th {
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .cpf-section {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1vw;
+              
+                    label {
+                      font-size: 2.5vw;
+                      margin-bottom: 0.5vw;
+
+                    }
+              
+                    .cpfinput {
+                      padding: 1vw 1vw;
+                      font-size: 2.5vw;
+              
+                      &:focus {
+                        border-color: #8b5cb1;
+                        box-shadow: 0 0 5px rgba(139, 92, 177, 0.5);
+                      }
+                    }
+              
+                    button {
+                      margin-top: 1vw;
+                      padding: 1vw 1.5vw;
+                      font-size: 2.5vw;
+                      cursor: pointer;
+                      transition: background-color 0.3s ease;
+              
+                      &:hover {
+                        background-color: #8b5cb1;
+                      }
+                    }
+
+                  }   
+
 
                    
                 }
@@ -259,6 +314,72 @@
                         }
 
                     }
+                    .table-container {
+                        width: 90%;
+                        overflow-x: auto;
+                        margin: 2vw;
+                        border-radius: 1vw;
+    
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-bottom: 1vw;
+                            border-radius: 10px;
+                           
+    
+    
+                            th,
+                            td {
+                                
+                                font-size: 3.5vw;
+                                padding: 6px;
+                    
+                            }
+    
+                            th {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .cpf-section {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 1vw;
+                  
+                        label {
+                          font-size: 3.5vw;
+                          margin-bottom: 0.5vw;
+    
+                        }
+                  
+                        .cpfinput {
+                          padding: 1vw 1vw;
+                          font-size: 3.5vw;
+                  
+                          &:focus {
+                            border-color: #8b5cb1;
+                            box-shadow: 0 0 5px rgba(139, 92, 177, 0.5);
+                          }
+                        }
+                  
+                        button {
+                          margin-top: 1vw;
+                          padding: 2vw 1.5vw;
+                          font-size: 3.5vw;
+                          cursor: pointer;
+                          transition: background-color 0.3s ease;
+                  
+                          &:hover {
+                            background-color: #8b5cb1;
+                          }
+                        }
+    
+                      }   
+    
+    
+                       
+                    
+                       
 
 
                 }
