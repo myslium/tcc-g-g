@@ -18,16 +18,16 @@ export default function Vagas() {
         const vagasComStatus = resp.data.map(vaga => {
             const partesData = vaga.data_vencimento.split('T')[0];
             const dataVencimento = new Date(partesData);
-            const status = dataVencimento < new Date() ? "Fechada" : "Em andamento";
-            return { ...vaga, status };
+            const totalRestantes = vaga.qtd_vagas - vaga.total_aprovados;
+            const status = dataVencimento < new Date() || totalRestantes <= 0 ? "Fechada" : "Em andamento";
+            return { ...vaga, status, totalRestantes };
         });
-    
-       
-        const vagasEmAndamento = vagasComStatus.filter(vaga => vaga.status === "Em andamento");
+
+        // Filtra apenas as vagas em andamento com vagas restantes
+        const vagasEmAndamento = vagasComStatus.filter(vaga => vaga.status === "Em andamento" && vaga.totalRestantes > 0);
         setVagas(vagasEmAndamento);
     }
     
-
     useEffect(() => {
         vagasCandidatos();
     }, []);
@@ -39,7 +39,11 @@ export default function Vagas() {
 
         try {
             const response = await axios.get(`http://localhost:5010/vagas/cargo/${pesquisar}`);
-            setVagas(response.data);
+            const vagasFiltradas = response.data.filter(vaga => {
+                const totalRestantes = vaga.qtd_vagas - vaga.total_aprovados;
+                return totalRestantes > 0; 
+            });
+            setVagas(vagasFiltradas);
         } catch (error) {
             console.error("Erro ao buscar vagas filtradas:", error);
         }
@@ -51,20 +55,19 @@ export default function Vagas() {
 
     return (
         <div className='pagina pagina-vagas'>
-         <Cabecalho
-             titulo1 = 'Início'
-            link1='/'
-            titulo2 = 'Sobre G&G'
-            link2 = '/sobre'
-            titulo3 = 'Vagas'
-            link3 = '/vagas'
-            titulo4 = 'Fale com consultor'
-          link4='/falecomconsultor'
-            link5 = '/bot'
-            titulo5 = 'fa-solid fa-robot'
-            tituloo5= 'AJUDA'
-            aparecer={true}  
-
+            <Cabecalho
+                titulo1='Início'
+                link1='/'
+                titulo2='Sobre G&G'
+                link2='/sobre'
+                titulo3='Vagas'
+                link3='/vagas'
+                titulo4='Fale com consultor'
+                link4='/falecomconsultor'
+                link5='/bot'
+                titulo5='fa-solid fa-robot'
+                tituloo5='AJUDA'
+                aparecer={true}  
             />
 
             <TituloMenor titulo='Vagas' />
@@ -99,15 +102,15 @@ export default function Vagas() {
                                         <p>Sem requisitos especificados</p>
                                     )}
 
-                                    <h4>Beneficios</h4>
-                                        {vaga.beneficios ? (
+                                    <h4>Benefícios</h4>
+                                    {vaga.beneficios ? (
                                         <ul>
                                             {vaga.beneficios.split(',').map((beneficio, index) => (
                                                 <li key={index}>{beneficio.trim()}</li>
                                             ))}
                                         </ul>
                                     ) : (
-                                        <p>Sem beneficios especificados</p>
+                                        <p>Sem benefícios especificados</p>
                                     )}
                                 </div>
 
@@ -135,7 +138,7 @@ export default function Vagas() {
                 </div>
             </div>
 
-            < Footer />
+            <Footer />
         </div>
     );
 }

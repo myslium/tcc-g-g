@@ -48,18 +48,21 @@ export default function VagasAdmin() {
                 const partesData = vaga.data_vencimento.split('T')[0];
                 const dataVencimento = new Date(partesData);
                 const diasRestantes = Math.ceil((dataVencimento - new Date()) / (1000 * 60 * 60 * 24));
-                const status = dataVencimento < new Date() ? "Fechada" : `${diasRestantes} dias restantes`;
-
-                return { ...vaga, status, diasRestantes };
+                const totalRestantes = vaga.qtd_vagas - vaga.total_aprovados;
+                const status = dataVencimento < new Date() ? "Fechada" : totalRestantes > 0 ? `${diasRestantes} dias restantes` : "Fechada";
+                const vagases = `${totalRestantes} vagas restantes`;
+                return { ...vaga, status, diasRestantes, vagases, totalRestantes };
             });
-
-            const vagasAbertas = vagasComStatus.filter(vaga => vaga.status !== "Fechada");
+    
+          
+            const vagasAbertas = vagasComStatus.filter(vaga => vaga.totalRestantes > 0 && vaga.status !== "Fechada");
             setVagas(vagasAbertas);
         } catch (error) {
             console.error("Erro ao buscar vagas e candidatos:", error);
             alert('Erro ao carregar vagas. Por favor, tente novamente mais tarde.');
         }
     }
+    
 
     async function buscarCandidatos() {
         const url = `http://localhost:5010/candidatoNovo`;
@@ -130,6 +133,7 @@ export default function VagasAdmin() {
 
                             <div className='tempo'>
                                 <h2>{item.status}</h2>
+                                <h2>{item.vagases}</h2>
                             </div>
                         </section>
                     );

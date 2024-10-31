@@ -101,12 +101,16 @@
         
             .tempo {
                 display: flex;
-                justify-content: right;
+              align-items: end;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 1vw;
         
                 h2 {
                     color: #2c2c2c;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 600;
+                    margin: 0;
                     font-size: 1.5vw;
                 }
             }
@@ -237,6 +241,7 @@
                   
                 }
                 .tempo {
+                 
                 
                     h2 {
                       
