@@ -98,16 +98,18 @@ export default function Robo() {
     setMostrarInputCpf(true);
     setResposta('');
     setRespondendo('');
-    setMostrarResposta(false); // Reseta a visibilidade
+    setMostrarResposta(true); // Reseta a visibilidade
   }
 
   async function cpfla() {
+
     const url = `http://localhost:5010/candidatojoinCPF/${cpf}`;
     try {
       const resp = await axios.get(url);
       setJulia(resp.data);
       setMostrarTabela(true);
       setMostrarInputCpf(false); 
+ 
       setTimeout(() => {
         setRespondendo(<Duvida sim={sim} nao={nao} />);
       }, 1500);
@@ -147,10 +149,10 @@ export default function Robo() {
           mostrarCampoCpf={mostrarCampoCpf}
           outro={outro}
         />
-        {mostrarResposta && ( // Condicional para mostrar a resposta
+        {mostrarResposta && ( 
           <div className="resposta">
             <div>
-              <img className="lisaimg" src="/assets/images/consultor/lisinha.png" alt="" />
+              <img className="lisaimg" src="/assets/images/consultor/lisinha.jpg" alt="" />
             </div>
             <div className="resppergunta">
               <button className="respbotao">

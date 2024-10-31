@@ -2,7 +2,7 @@
 
     .respondendo {
        
-        margin: 0vw 10vw  0vw 5vw;
+        margin: 0vw 10vw  0vw 7vw;
 
 
 
@@ -28,12 +28,14 @@
             flex-direction: row;
 
             .lisaimg {
-                width: 12vw;
+                width: 6vw;
+                margin-left: 3.5vw;
+
             }
 
             .resppergunta {
                 display: block;
-                gap: 1.3vw;
+                gap: 1.5vw;
 
                 .respbotao {
                     border: 1px solid #E5DBEB;

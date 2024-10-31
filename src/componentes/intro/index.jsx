@@ -5,7 +5,7 @@ export default function Intro(props) {
     <div className="lisa-secao">
       <div className="botons">
         <div>
-          <img className='lisa' src="/assets/images/consultor/lisinha.png" alt="" />
+          <img className='lisa' src="/assets/images/consultor/lisinha.jpg" alt="" />
         </div>
 
         <div className="lisamsg">
