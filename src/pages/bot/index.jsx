@@ -98,7 +98,7 @@ export default function Robo() {
     setMostrarInputCpf(true);
     setResposta('');
     setRespondendo('');
-    setMostrarResposta(true); // Reseta a visibilidade
+    setMostrarResposta(true); 
   }
 
   async function cpfla() {
