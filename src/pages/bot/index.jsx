@@ -65,6 +65,7 @@ export default function Robo() {
           empresa={empresa}
           cargo={cargo}
           mostrarCampoCpf={mostrarCampoCpf}
+          outro = {outro}
         />
       );
     }, 1500);
@@ -106,6 +107,11 @@ export default function Robo() {
     }
   }
 
+  function outro(){
+    alert('Você será encaminhado para o contato do autonomo!')
+
+  }
+
   return (
     <div className="robo-secao">
       <Cabecalho
@@ -131,6 +137,7 @@ export default function Robo() {
           empresa={empresa}
           cargo={cargo}
           mostrarCampoCpf={mostrarCampoCpf}
+          outro = {outro}
         />
         <div className="resposta">
           <div>

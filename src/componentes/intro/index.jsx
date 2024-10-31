@@ -23,6 +23,8 @@ export default function Intro(props) {
           <button className='lala' onClick={props.empresa}><p>O que é necessário fazer para cadastrar vagas da minha empresa para o G&G?</p></button>
           <button className='lala' onClick={props.cargo}><p>Sou especializado em um cargo específico, como acho vagas para este cargo?</p></button>
           <button className='lala' onClick={props.mostrarCampoCpf}><p>Como sei se minha vaga foi aprovada?</p></button> 
+          <a href="https://wa.me/5511986007559"><button className='outro' onClick={props.outro} ><a className='a' href="https://wa.me/5511986007559">Outro</a></button> </a>
+
         </div>
       </div>
     </div>
