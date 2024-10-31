@@ -89,6 +89,8 @@ export default function Robo() {
 
   function mostrarCampoCpf() {
     setMostrarInputCpf(true);
+    setResposta('');
+    setRespondendo('');
   }
 
   async function cpfla() {
