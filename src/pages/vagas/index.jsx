@@ -23,7 +23,6 @@ export default function Vagas() {
             return { ...vaga, status, totalRestantes };
         });
 
-        // Filtra apenas as vagas em andamento com vagas restantes
         const vagasEmAndamento = vagasComStatus.filter(vaga => vaga.status === "Em andamento" && vaga.totalRestantes > 0);
         setVagas(vagasEmAndamento);
     }

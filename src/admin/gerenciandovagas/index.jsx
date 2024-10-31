@@ -109,7 +109,7 @@ export default function VagasAdmin() {
                 </div>
 
                 {vagas.map(item => {
-                    const candidatoVaga = candidatos.filter(c => c.id_vaga === item.id);
+                    const candidatoVaga = candidatos.filter(c => c.id_vaga === item.id && c.status  !== 'Aprovado' && c.status  !== 'Reprovado');
 
                     return (
                         <section className='vagas' key={item.id}>
@@ -119,7 +119,7 @@ export default function VagasAdmin() {
                             </div>
 
                             <div className='curriculos'>
-                                {candidatoVaga.length > 0 ? (
+                                {candidatoVaga.length > 0  ? (
                                     candidatoVaga.map(item2 => (
                                         <Link to={`/admin/confirmacao/${item2.id}?id_vaga=${item.id}`} key={item2.id}>
                                         <button>Ver currículo</button>

@@ -120,7 +120,7 @@ export default function ConfirmarCandidato() {
                     <label>Status:</label>
                     <input 
                         type="text" 
-                        placeholder='Aprovado ou em andamento?' 
+                        placeholder='Aprovado ou Reprovado?' 
                         value={status} 
                         onChange={e => setStatus(e.target.value)} 
                     />
