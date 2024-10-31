@@ -15,10 +15,10 @@
 
         .input-container {
             position: relative;
+            width: 65%; 
             display: flex;
             align-items: center;
-            margin: 2vw 0vw;               
-           
+            margin: 2vw 0vw;
 
             .oi {
                 position: absolute;
@@ -30,8 +30,8 @@
                 pointer-events: none;
             }
 
-            input {
-                width: 48vw;
+            .botaobb{
+                width: 100%;
                 padding: 1vw 1.5vw 1vw 4vw;
                 font-size: 1.3vw;
                 border: none;
@@ -49,8 +49,8 @@
 
             button {
                 margin-left: 1vw;
-                padding: 1.2vw 1.5vw; 
-                font-size: 1vw; 
+                padding: 1vw 1.5vw; 
+                font-size: 1.2vw; 
                 background-color: #b54fcf;
                 color: #fff;
                 border: none;
@@ -166,33 +166,61 @@
                 }
             }
         }
-        @media (max-width: 768px) {
-
+       
+    }
+    @media (max-width: 768px) {
         
-            
+        .botooes1 {
+            .input-container {
+                width: 78%; 
+                align-items: center;
+                margin: 2vw 0vw;
+    
+                .oi {
+                    left: 1.5vw;
+                    top: 50%;
+                    font-size: 2vw;
+                }
+    
+                .botaobb{
+                    width: 100%;
+                    padding: 2.5vw 1.5vw 2.5vw 4.5vw;
+                    font-size:2.5vw;
+    
+                }
+    
+                button {
+                    margin-left: 1vw;
+                    padding: 2vw 2.5vw; 
+                    font-size: 2.5vw; 
+                    border-radius: 1vw;
+                }
+         
+         
+            }
             .cartavaga {
                 width: 130%;
                 height: 35vw;
-
+    
                 ul {
                     li {
                         font-size: 2vw;
                     }
                 }
-
+    
                 .botoazinhos {
                     width: 70vw;
                     font-size: 2vw;
                 }
-
+    
                .textovaga {
-
+    
                     .texy {
                        gap: 1vw;
                         .profissaovaga {
                             font-size: 3vw;
                         }
-
+    
                         h4 {
                             font-size: 2vw;
                         }
@@ -209,8 +237,11 @@
                  }
                }
             }
+            
         }
+       
+    
+        
     }
-
    
 }
