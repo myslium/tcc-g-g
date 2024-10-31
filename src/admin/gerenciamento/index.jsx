@@ -110,11 +110,17 @@ export default function Gerenciamento() {
     }
 
     async function deletarVaga() {
-        const url = `http://localhost:5010/vagas/${vagaId}`;
-        await axios.delete(url);
-        resetarCampos();
-        alert('Vaga deletada com sucesso!');
+        const url = `http://localhost:5010/vagas/del/${vagaId}`;
+        try {
+            await axios.delete(url);
+            resetarCampos();
+            alert('Vaga deletada com sucesso!');
+        } catch (error) {
+            console.error('Erro ao deletar a vaga:', error.response ? error.response.data : error.message);
+            alert('Você não pode deletar vagas que os candidatos se candidataram');
+        }
     }
+    
 
     function resetarCampos() {
         setVagaId('');
