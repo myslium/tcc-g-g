@@ -16,7 +16,7 @@ export default function ConfirmarCandidato() {
 
     useEffect(() => {
         async function buscar() {
-            const url = `http://localhost:5010/candidato/${id}`;
+            const url = `http://4.172.207.208:5017/candidato/${id}`;
             const resp = await axios.get(url);
 
             setNome(resp.data.nome);
@@ -30,7 +30,7 @@ export default function ConfirmarCandidato() {
 
 
     async function adicionar() {
-        const url = `http://localhost:5010/candidato/${id}`;
+        const url = `http://4.172.207.208:5017/candidato/${id}`;
         try {
             let dados = {
                 nome,
@@ -49,7 +49,7 @@ export default function ConfirmarCandidato() {
     }
 
     async function baixarCurriculo() {
-        const url = `http://localhost:5010/candidatocurr/${id}`;
+        const url = `http://4.172.207.208:5017/candidatocurr/${id}`;
         try {
             const response = await axios.get(url, {
                 responseType: 'blob'

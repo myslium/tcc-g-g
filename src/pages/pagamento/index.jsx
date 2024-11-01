@@ -38,7 +38,7 @@ export default function Pagamento() {
             "quantidade": quantidade
         };
     
-        const url = 'http://localhost:5010/vagas';
+        const url = `http://4.172.207.208:5017/vagas`;
     
         try {
             await axios.post(url, paramCorpo);

@@ -12,7 +12,7 @@ export default function Vagas() {
     const [pesquisar, setPesquisar] = useState('');
 
     async function vagasCandidatos() {
-        const url = `http://localhost:5010/vagasa`;
+        const url = `http://4.172.207.208:5017/vagasa`;
         const resp = await axios.get(url);
         
         const vagasComStatus = resp.data.map(vaga => {
@@ -37,7 +37,7 @@ export default function Vagas() {
         }
 
         try {
-            const response = await axios.get(`http://localhost:5010/vagas/cargo/${pesquisar}`);
+            const response = await axios.get(`http://4.172.207.208:5017/vagas/cargo/${pesquisar}`);
             const vagasFiltradas = response.data.filter(vaga => {
                 const totalRestantes = vaga.qtd_vagas - vaga.total_aprovados;
                 return totalRestantes > 0; 

@@ -28,7 +28,7 @@ export default function VagasAdmin() {
         }
 
         try {
-            const response = await axios.get(`http://localhost:5010/vagas/data/${pesquisar}`);
+            const response = await axios.get(`http://4.172.207.208:5017/vagas/data/${pesquisar}`);
             setVagas(response.data);
         } catch (error) {
             console.error("Erro ao buscar vagas filtradas:", error);
@@ -41,7 +41,7 @@ export default function VagasAdmin() {
     }
 
     async function vagasCandidatos() {
-        const url = `http://localhost:5010/vagasa`;
+        const url = `http://4.172.207.208:5017/vagasa`;
         try {
             const resp = await axios.get(url);
             const vagasComStatus = resp.data.map(vaga => {
@@ -65,7 +65,7 @@ export default function VagasAdmin() {
     
 
     async function buscarCandidatos() {
-        const url = `http://localhost:5010/candidatoNovo`;
+        const url = `http://4.172.207.208:5017/candidatoNovo`;
         try {
             const resp = await axios.get(url);
             setCandidatos(resp.data);

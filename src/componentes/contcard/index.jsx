@@ -10,7 +10,7 @@ export default function ContCard() {
 
 
     async function buscarVagas() {
-        const response = await axios.get('http://localhost:5010/vagasd');
+        const response = await axios.get(`http://4.172.207.208:5017/vagasd`);
         setVagas(response.data);
     }
 

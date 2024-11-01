@@ -3,7 +3,6 @@ import Cabecalho from '../../componentes/cabeçalho'
 import TituloMenor from '../../componentes/titulomenor';
 import ContCard from '../../componentes/contcard';
 import CarrosselVagas from '../../componentes/cardvisao';
-import BarChartComponent from '../../componentes/grafico';
 import axios from 'axios'
 import moment from 'moment';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -27,7 +26,7 @@ export default function Notificacoes() {
     async function fetchData() {
       try {
         const cor = ['#c014c0','#681268']
-        const response = await axios.get('http://localhost:5010/formulario/s');
+        const response = await axios.get(`http://4.172.207.208:5017/formulario/s`);
         const dadosTratados = response.data.map((item, pos) => ({
           name: `Mês ${item.mes}`,
           mes: item.quantidade,
@@ -57,7 +56,7 @@ export default function Notificacoes() {
   
 
     async function vernotas() {
-        const url = 'http://localhost:5010/inserirNota';
+        const url = `http://4.172.207.208:5017/inserirNota`;
         let resp = await axios.get(url);
         setcards(resp.data);
        
@@ -86,7 +85,7 @@ export default function Notificacoes() {
 
             if (alterando === -1) {
 
-                const url = 'http://localhost:5010/inserirNota'
+                const url = `http://4.172.207.208:5017/inserirNota`
                 await axios.post(url, obj)
 
                 settitulo('')
@@ -99,7 +98,7 @@ export default function Notificacoes() {
 
             else {
 
-                const url = `http://localhost:5010/inserirNota/${alterando}`
+                const url = `http://4.172.207.208:5017/inserirNota/${alterando}`
                 await axios.put(url, obj)
                 alert('Nota alterada!')
                 settitulo('')
@@ -125,7 +124,7 @@ export default function Notificacoes() {
     }
 
     async function excluir(id) {
-        const url = `http://localhost:5010/inserirNota/${id}`
+        const url = `http://4.172.207.208:5017/inserirNota/${id}`
         await axios.delete(url)
 
         await vernotas()
