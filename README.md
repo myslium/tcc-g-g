@@ -30,7 +30,7 @@ CREATE TABLE vagas (
     qtd_vagas INT
 );
 # Tabela de Formulários
-CREATE TABLE formularios (
+CREATE TABLE formulario (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(11) NOT NULL ,
