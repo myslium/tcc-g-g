@@ -103,7 +103,7 @@ export default function Robo() {
 
   async function cpfla() {
 
-    const url = `http://localhost:5010/candidatojoinCPF/${cpf}`;
+    const url = `http://4.172.207.208:5017/candidatojoinCPF/${cpf}`;
     try {
       const resp = await axios.get(url);
       setJulia(resp.data);

@@ -23,7 +23,7 @@ export default function Falecomconsultor(){
             if ( resp.status === 404) {
                 alert('CNPJ inválido');
             } else {
-                let url = 'http://localhost:5010/interesse';
+                let url = `http://4.172.207.208:5017/interesse`;
                 let empresa = {
                     'empresa': nomeemp,
                     'cnpj': formattedCNPJ

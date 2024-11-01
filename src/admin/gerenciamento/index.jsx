@@ -27,7 +27,7 @@ export default function Gerenciamento() {
 
     const carregarVaga = useCallback(async () => {
         try {
-            const response = await axios.get(`http://localhost:5010/vagas/${vagaId}`);
+            const response = await axios.get(`http://4.172.207.208:5017/vagas/${vagaId}`);
             const vaga = response.data;
 
             setEmpresa(vaga.nome_empresa);
@@ -79,7 +79,7 @@ export default function Gerenciamento() {
             aprovado, 
         };
 
-        const url = 'http://localhost:5010/vagas';
+        const url = `http://4.172.207.208:5017/vagas`;
         alert('Vaga adicionada com sucesso!');
         await axios.post(url, paramCorpo);
         resetarCampos();
@@ -103,14 +103,14 @@ export default function Gerenciamento() {
             aprovado,
         };
 
-        const url = `http://localhost:5010/vagas/${vagaId}`;
+        const url = `http://4.172.207.208:5017/vagas/${vagaId}`;
         await axios.put(url, paramCorpo);
         alert('Vaga editada com sucesso!');
         resetarCampos();
     }
 
     async function deletarVaga() {
-        const url = `http://localhost:5010/vagas/del/${vagaId}`;
+        const url = `http://4.172.207.208:5017/vagas/del/${vagaId}`;
         try {
             await axios.delete(url);
             resetarCampos();

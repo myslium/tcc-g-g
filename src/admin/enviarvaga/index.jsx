@@ -19,7 +19,7 @@ export default function EnviarVaga() {
 
     async function buscarCPF() {
         try {
-            const url = `http://localhost:5010/candidatocurrc`;
+            const url = `http://4.172.207.208:5017/candidatocurrc`;
 
             let dado ={
                 'cpf':cpfCandidato,
@@ -70,7 +70,7 @@ export default function EnviarVaga() {
             curriculo: curriculo 
         };
 
-        const url = `http://localhost:5010/mandaremail`; 
+        const url = `http://4.172.207.208:5017/mandaremail`; 
         try {
             await axios.post(url, corpo);
             alert('E-mail enviado com sucesso!');

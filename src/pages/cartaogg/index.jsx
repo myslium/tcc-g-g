@@ -32,7 +32,7 @@ export default function Cartaogg() {
             setTpp(sa);
 
             if (sa !== "0.00") {
-                const url = `http://localhost:5010/receita`;
+                const url = `http://4.172.207.208:5017/receita`;
                 let dados = {
                     salario: salario,
                     qtd_vagas: qtd_vagas,
@@ -51,7 +51,7 @@ export default function Cartaogg() {
     }, [addVaga]);
 
     async function pagar() {
-        const url = `http://localhost:5010/receita/${id}`;
+        const url = `http://4.172.207.208:5017/receita/${id}`;
         let resposta = await axios.get(url);
         setReceita(agruparReceitas(resposta.data));
     }

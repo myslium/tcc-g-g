@@ -33,7 +33,7 @@ export default function Cadastro() {
         formData.append('curriculo', curriculo);
         formData.append('id_vaga', id); 
 
-        const url = `http://localhost:5010/candidatoNovo`;
+        const url = `http://4.172.207.208:5017/candidatoNovo`;
 
         try {
             await axios.post(url, formData, {

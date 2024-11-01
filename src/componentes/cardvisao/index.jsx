@@ -28,7 +28,7 @@ export default function CarrosselVagas() {
     }
 
     async function buscarVagas() {
-        const response = await axios.get('http://localhost:5010/vagas');
+        const response = await axios.get(`http://4.172.207.208:5017/vagas`);
         setVagas(response.data);
     }
 

@@ -14,7 +14,7 @@ export default function Login() {
         e.preventDefault(); 
         
         try {
-            const url = 'http://localhost:5010/login/adm';
+            const url = `http://4.172.207.208:5017/login/adm`;
             const resp = await axios.post(url, { usuario, senha });
 
             if (resp.data.token) {
