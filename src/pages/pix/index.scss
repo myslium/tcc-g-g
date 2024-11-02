@@ -9,6 +9,7 @@
         margin: 3vw;
         gap: 3vw;
         height: 50vw;
+        margin-top: 30vh;
 
     .tituloo{
         display: flex;
@@ -19,12 +20,12 @@
             font-size: 2.5vw;
             width: 60vw;
             text-align: center;
-            color:#7272ff;
+            color:#323280;
             
         }
         .back{
             img{
-                width: 3vw;
+                width: 4vw;
             }
         }
         
@@ -41,7 +42,7 @@
                 padding: 2vw;
             }
             .qrcode{
-                width: 17vw;
+                width: 20vw;
                 padding: 2vw;
 
             }
@@ -50,6 +51,106 @@
             }
        
         
+    }
+    @media(max-width: 468px){
+        .pixinho{
+            margin: 3vw;
+            margin-top: 30vh;
+            gap: 3vw;
+            height: 50vw;
+    
+        .tituloo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            .titu{
+                font-size: 3.5vw;
+                width: 80vw;
+                text-align: center;
+                color:#323280;
+                
+            }
+            .back{
+                img{
+                    width: 5vw;
+                }
+            }
+            
+    
+        }
+            .imagens{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2vw;
+                padding: 3vw;
+                .paga{
+                    width: 30vw;
+                    padding: 2vw;
+                }
+                .qrcode{
+                    width: 37vw;
+                    padding: 2vw;
+    
+                }
+    
+    
+                }
+           
+            
+        }
+
+    }
+    @media(max-width: 768px){
+        .pixinho{
+            margin: 3vw;
+            margin-top: 30vh;
+            gap: 3vw;
+            height: 50vw;
+    
+        .tituloo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            .titu{
+                font-size: 3.5vw;
+                width: 80vw;
+                text-align: center;
+                color:#323280;
+                
+            }
+            .back{
+                img{
+                    width: 5vw;
+                }
+            }
+            
+    
+        }
+            .imagens{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2vw;
+                padding: 3vw;
+                .paga{
+                    width: 30vw;
+                    padding: 2vw;
+                }
+                .qrcode{
+                    width: 37vw;
+                    padding: 2vw;
+    
+                }
+    
+    
+                }
+           
+            
+        }
+
     }
     
 }

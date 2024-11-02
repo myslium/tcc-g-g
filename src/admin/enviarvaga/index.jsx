@@ -99,6 +99,8 @@ export default function EnviarVaga() {
             />
 
             <TituloMenor titulo='Enviar Vaga' />
+
+            <div className='centro'>
             <div className='formulario'>
                 <div className='inputs'>
                     <label>Vaga:</label>
@@ -120,11 +122,14 @@ export default function EnviarVaga() {
                         <button className='butt on' onClick={baixarCV}>Baixar Currículo</button>
                     </div>
                 </div>
-            </div>
-
-            <div className='botao'>
+                <div className='botao'>
                 <button onClick={adicionarCandidatoFinal}>Confirmar</button>
             </div>
+            </div>
+
+           
+            </div>
+     
         </div>
     );
 }
