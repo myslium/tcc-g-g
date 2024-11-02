@@ -4,6 +4,7 @@ import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
 import './index.scss';
 import { useNavigate, useParams } from 'react-router-dom';
+import TituloMenor from '../../componentes/titulomenor';
 
 export default function Gerenciamento() {
     const navigate = useNavigate();
@@ -157,7 +158,7 @@ export default function Gerenciamento() {
 
     return (
         <div className="pagina-confirmados">
-            <Cabecalho
+            <Cabecalho 
                 titulo01='Sair'
                 onLogout={reset}
                 titulo2='Vagas'
@@ -168,7 +169,7 @@ export default function Gerenciamento() {
                 link4='/admin/gerenciamento'
             />
 
-            <Tituloelogo titulo='Novas vagas' />
+            <TituloMenor  titulo='Novas vagas' />
 
             <section className='terceira-parte'>
                 <h1>Empresa:</h1>

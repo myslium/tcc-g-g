@@ -4,14 +4,12 @@
     justify-content: center;
     align-items: center;
 
-    .tituloelogo {
-        width: 80%;
-        margin: 10vh;
+    .topo {
+        padding: 2vw;
+        div{
+            padding: 0vw 30vw;
+        }
 
-        @media (max-width: 468px) {
-            width: 90%;
-            margin: 4vh;
-            }
     }
 
 

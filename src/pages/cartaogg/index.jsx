@@ -16,9 +16,8 @@ export default function Cartaogg() {
     const [vaga, setVaga] = useState('');
     const [addVaga, setAddVaga] = useState(false);
     const [receita, setReceita] = useState([]);
-    const [pixx, setpixx] = useState('')
-    const navigatee = useNavigate()
-
+    const [pixx, setpixx] = useState('');
+    const navigatee = useNavigate();
 
     async function Tpp() {
         const sal = Number(salario);
@@ -41,7 +40,6 @@ export default function Cartaogg() {
                 };
                 let resp = await axios.post(url, dados);
                 alert(`Valor calculado e adicionado ao seu cartão! ID: ${resp.data.id}`);
-
             }
         }
     }
@@ -53,15 +51,16 @@ export default function Cartaogg() {
     async function pagar() {
         const url = `http://4.172.207.208:5017/receita/${id}`;
         let resposta = await axios.get(url);
+        console.log(resposta.data); // Adicione esta linha para depurar
         setReceita(agruparReceitas(resposta.data));
     }
+
     function agruparReceitas(receitas) {
         const receitasAgrupadas = [];
 
         for (let i = 0; i < receitas.length; i++) {
             const receita = receitas[i];
             let existeIndice = -1;
-
 
             for (let j = 0; j < receitasAgrupadas.length; j++) {
                 if (receitasAgrupadas[j].idInteresse === receita.idInteresse) {
@@ -70,24 +69,20 @@ export default function Cartaogg() {
             }
 
             if (existeIndice !== -1) {
-
                 receitasAgrupadas[existeIndice].salarios.push(receita.salario);
             } else {
-
                 receitasAgrupadas.push({
                     idInteresse: receita.idInteresse,
                     empresa: receita.empresa,
                     vaga: receita.vaga,
-                    salarios: [receita.salario]
+                    salarios: [receita.salario],
+                    qtd_vagas: receita.qtd_vagas 
                 });
             }
         }
 
         return receitasAgrupadas;
     }
-
-
-
 
     function resetar() {
         setSalario(0);
@@ -96,19 +91,28 @@ export default function Cartaogg() {
         setTpp(0);
         setAddVaga(false);
     }
-
-    function total(salarios) {
+    function total(salarios, qtd_vagas) {
+        const qtd = Number(qtd_vagas);
         let soma = 0;
-        for (let i = 0; i < salarios.length; i++) {
-            soma += salarios[i];
+    
+        if (qtd > 0) {
+        
+            for (let i = 0; i < salarios.length; i++) {
+                soma += (salarios[i] * 0.85) * qtd;
+            }
+        } else {
+          
+            for (let i = 0; i < salarios.length; i++) {
+                soma += salarios[i] * 0.85;
+            }
         }
-        return ' R$' + soma.toFixed(2);
+    
+        return 'R$ ' + soma.toFixed(2);
     }
+    
 
-
-
-    const [oiporco, setoiporco] = useState('')
-    const [outroo, setoutroo] = useState('')
+    const [oiporco, setoiporco] = useState('');
+    const [outroo, setoutroo] = useState('');
 
     function porco() {
         let porcooo = <Porco
@@ -116,19 +120,16 @@ export default function Cartaogg() {
             function1={pix}
             p2='Outro'
             function2={outro}
-        />
-        setoiporco(porcooo)
-
-
+        />;
+        setoiporco(porcooo);
     }
+
     function pix() {
-        let oioa = navigatee('/pix')
-        setpixx(oioa)
-
+        navigatee('/pix');
     }
+
     function outro() {
-        let oioi = navigatee('/whats')
-        setoutroo(oioi)
+        navigatee('/whats');
     }
 
     return (
@@ -201,27 +202,29 @@ export default function Cartaogg() {
                 <button className="butt on" onClick={pagar}>Ver Receita</button>
 
                 {receita.map(item => (
-                    <div key={item.id_interesse} className="receita">
-                        <div className="separacao1">
-                            <h1>RECEITA</h1>
-                            <p className='n'>Nome da empresa:</p>
-                            <p>{item.empresa}</p>
+    <div key={item.idInteresse} className="receita">
+        <div className="separacao1">
+            <h1>RECEITA</h1>
+            <p className='n'>Nome da empresa:</p>
+            <p>{item.empresa}</p>
+         
 
-                            <div>
-                                <p>Subtotais:</p>
-                                {item.salarios.map((salario, index) => (
-                                    <p key={index}>R$ {salario}</p>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="separacao2">
-                            <img src="/assets/images/cabecalho/logo.png" alt="" />
-                            <h1>Valor final:
-                                {total(item.salarios)}</h1>
-                        </div>
+            <div>
+                {item.salarios.map((salario, index) => (
+                    <div key={index}>
+                        <p>{item.vaga}</p>
+                        <p>R$ {salario.toFixed(2)}</p>
                     </div>
                 ))}
+            </div>
+        </div>
+
+        <div className="separacao2">
+            <img src="/assets/images/cabecalho/logo.png" alt="" />
+            <h1>Valor final: {total(item.salarios, item.qtd_vagas)}</h1>
+        </div>
+    </div>
+))}
 
                 <div className='line'></div>
 

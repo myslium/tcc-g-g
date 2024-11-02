@@ -2,18 +2,30 @@
     margin: 0;
     display: flex;
     background-color: #BDB1C2; 
-    width: 100%; 
     align-items: center;
     color: #000000;
     justify-content: center;
     padding: 20px 40px;
     z-index: 998; 
     box-sizing: border-box; 
+    padding: 5vw 40vw;
+    width: 100vw;
+    @media(max-width:468px){
+        padding: 10vw 40vw;
 
+
+    }
+    @media(max-width:768px){
+        padding: 8vw 40vw;
+
+
+    }
+    
 .imh1 {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    text-align: center;
+    gap: 10px;
 }
 
 
@@ -24,6 +36,7 @@ h1 {
     font-weight: 400; 
     margin: 0;
     color: #240A39;
+    width: 40vw;
 }
 
 .geg {
