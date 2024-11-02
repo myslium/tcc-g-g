@@ -116,19 +116,17 @@
      }
     
      .card {
-         
          width: 15vw !important;
          height: 13vw !important;
          padding: 2.5vw 2vw 6vw 2vw;
          border-radius: 3vw;
-         margin: 0;
  
          h1 {
-             font-size: 2vw !important;
+             font-size: 2.3vw !important;
          }
  
          h2, h3 {
-             font-size: 1.8vw !important;
+             font-size: 2vw !important;
          }
  
          .link-btn {
@@ -147,27 +145,30 @@
 @media (max-width: 468px) {
     .carrossel {
        gap: 0.3vw !important;
+       height: 50vw;
     }
 
     .cards-container {
   
         gap: 10px !important;
+        margin-top: 10vw;
+
     }
    
     .card {
         
-        width: 15vw !important;
-        height: 13vw !important;
-        padding: 2.5vw 2vw 6vw 2vw;
-        border-radius: 3vw;
+        width: 18vw !important;
+        height: 20vw !important;
+        padding: 1.5vw 1vw 5vw 1vw;
+        border-radius: 30px;
         margin: 0;
 
         h1 {
-            font-size: 2vw !important;
+            font-size: 3vw !important;
         }
 
         h2, h3 {
-            font-size: 1.8vw !important;
+            font-size: 2.5vw !important;
         }
 
         .link-btn {

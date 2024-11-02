@@ -35,6 +35,8 @@ export default function Navegacao() {
                 <Route path='/cartaogg' element={<Cartaogg/>} />
                 <Route path='/cartaogg/:id' element={<Cartaogg/>} />
                 <Route path='/whats' element={<Whats/>} />
+                <Route path='/admin/notificacoes' element={<Notificacoes/>} />
+
 
 
 
@@ -50,15 +52,7 @@ export default function Navegacao() {
                   
                   
                 } />
-                <Route path='/admin/notificacoes' element={
-                      
-                        
-                    <ProtectedRoute>
-                        <Notificacoes />
-                    </ProtectedRoute>         
-                        
-                    
-                } />
+               
                 <Route path='/admin/gerenciamento/:id' element={
                      
                        
