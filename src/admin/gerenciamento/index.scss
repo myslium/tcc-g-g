@@ -9,9 +9,13 @@
         margin: 10vh;
 
         @media (max-width: 468px) {
-            width: 90%;
+            width: 100%;
             margin: 4vh;
             }
+        @media (max-width: 768px) {
+                width: 100%;
+                margin: 4vh;
+        }
     }
 
 
