@@ -9,7 +9,8 @@
     z-index: 998; 
     box-sizing: border-box; 
     padding: 5vw 40vw;
-    width: 100vw;
+    width: 100%;
+
     @media(max-width:468px){
         padding: 10vw 40vw;
 
