@@ -1,8 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cabecalho from '../../componentes/cabeçalho';
 import Tituloelogo from '../../componentes/tituloelogo';
-import TituloMenor from '../../componentes/titulomenor';
 import './index.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 
