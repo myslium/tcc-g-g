@@ -160,7 +160,16 @@
                     transition: all 0.3s ease;
                     border: 5px solid #240A39;
                 }
+
+                @media (max-width: 468px) {
+                    bottom: -1rem !important;
+                  button
+                 {
+                    padding: 0.5vw 1vw !important;
+                 }
+                }
             }
+          
         }
 
       
