@@ -1,9 +1,17 @@
 .pagina-enviarvaga {
+
+    .centro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        padding-bottom: 4vw;
+    }
     .formulario {
-        
-        margin: 3vw 9vw 3vw 9vw;
+        position: relative;
+        margin: 3vw 0vw 3vw 0vw;
         width: 75vw;
-       
+
         border: 0.2vw solid #C7C4C4;
         border-radius: 1vw;
         padding: 3vw;
@@ -44,9 +52,10 @@
                 
             }
 
-            div {
+         
                 
                 button {
+                    position: absolute;
                     padding: 1vw 5vw;
                     background-color: #B54FCF;
                     border-radius: 1.3vw;
@@ -67,7 +76,7 @@
                         border: 5px solid #240A39;
                       
                 }
-            }
+            
            
         }
 
@@ -150,33 +159,201 @@
            
           
         }
+        .botao {
+            position: absolute;
+            right: 6vw;
+            top: 45vw;
+              
+            button {
+                padding: 1vw 5vw;
+                background-color: #B54FCF;
+                border-radius: 1.3vw;
+                border: 5px solid #B54FCF;
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.5vw;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+    
+            button:hover{
+                
+                    background-color: #240A39;
+                    color: white;
+                    transform: translateY(-2px);
+                    transition: all 0.3s ease;
+                    border: 5px solid #240A39;
+                  
+            }
+        }
 
     }
-    .botao {
-        display: flex;
-        justify-content: end;
-        margin-right: 9vw;
-          
-        button {
-            padding: 1vw 5vw;
-            background-color: #B54FCF;
-            border-radius: 1.3vw;
-            border: 5px solid #B54FCF;
-            color: #fff;
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 1.5vw;
-            font-weight: 600;
-            transition: 0.3s ease-in-out;
-        }
+    @media(max-width:768px) {
 
-        button:hover{
+        .formulario {
+            width: 75vw;
+
+            h1 {
+                font-size: 3vw;
+            }
+            .inputs {
+                gap: 2vw;
+                label {
+                    font-size: 3vw;
+                }
+    
+                input {
+                    width: 60vw;
+                    height: 4vw;
+                    padding: 0.8vw 2vw;
+
+                    font-size: 2.5vw;
+                    
+                }
+    
+                
+            }
+            .pesquisar {
+                width: 20vw;
+                height: 6vw;
+                position: relative;
+
+                button {
+                    top: 1.7vw;
+                    left: 0.7vw;
+                    #icon{
+                        font-size: 2vw; 
+                    }
+                }
+               
+
+                #pesquisa-cpf {
+                    width: 20vw;
+                    height: 6vw;
+                    padding: 0vw 5.5vw;
+                    font-size: 2.5vw;
+                    
+                }
+                #pesquisa-cpf::placeholder {
+                    font-size: 2.5vw;
+                
+                }
+            }
+            .selecionados {
+                width: 60vw;
+                margin-bottom: 4vw;
+               
+                .candidatos {
             
-                background-color: #240A39;
-                color: white;
-                transform: translateY(-2px);
-                transition: all 0.3s ease;
-                border: 5px solid #240A39;
+                        .butt {
+    
+                            font-size: 2vw;
+                            width: 20vw;
+        
+                        }
+                    
+    
+    
+                }
+               
               
+            }
+            .botao {
+                top: 70vw;
+    
+                button {
+                    padding: 1.5vw 7vw;
+                    font-size: 2.5vw;
+                 
+                }
+    
+             
+            }
         }
+       
+    }
+    @media(max-width:468px) {
+
+        .formulario {
+            width: 75vw;
+
+            h1 {
+                font-size: 3vw;
+            }
+            .inputs {
+                gap: 2vw;
+                label {
+                    font-size: 3vw;
+                }
+    
+                input {
+                    width: 60vw;
+                    height: 4vw;
+                    padding: 0.8vw 2vw;
+
+                    font-size: 2.5vw;
+                    
+                }
+    
+                
+            }
+            .pesquisar {
+                width: 20vw;
+                height: 6vw;
+                position: relative;
+
+                button {
+                    top: 1vw;
+                    left: 0.7vw;
+                    #icon{
+                        font-size: 2vw; 
+                    }
+                }
+               
+
+                #pesquisa-cpf {
+                    width: 20vw;
+                    height: 6vw;
+                    padding: 0vw 5.5vw;
+                    font-size: 2.5vw;
+                    
+                }
+                #pesquisa-cpf::placeholder {
+                    font-size: 2.5vw;
+                
+                }
+            }
+            .selecionados {
+                width: 60vw;
+                margin-bottom: 4vw;
+               
+                .candidatos {
+            
+                        .butt {
+    
+                            font-size: 2vw;
+                            width: 20vw;
+        
+                        }
+                    
+    
+    
+                }
+               
+              
+            }
+            .botao {
+                top: 70vw;
+    
+                button {
+                    padding: 1.5vw 7vw;
+                    font-size: 2.5vw;
+                 
+                }
+    
+             
+            }
+        }
+       
     }
 }

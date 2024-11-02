@@ -230,37 +230,34 @@ margin: 0%;
         .primeira-div {
 
             display: flex;
-            flex-direction: column-reverse;
-            gap: 0vw;
+            flex-direction: row-reverse;
 
             .texto {
 
-                width: 100%;
+               
 
                 p {
-                    font-size: 4vw;
+                    font-size: 6vw;
                 }
 
                
             }
             .geg-img {
-                width: 90%;
+                width: 100%;
             }
          }
 
          .segunda-div {
-            display: flex;
-            flex-direction: column;
-
+        
             .filhos {
-                width: 70vw;
+                width: 100vw;
 
                 .img-filho {
                     height: 20vw;
                 }
 
                 h3 {
-                    font-size: 4vw;
+                    font-size: 6vw;
                 }
             }
         }
