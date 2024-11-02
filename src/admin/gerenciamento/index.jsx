@@ -25,12 +25,13 @@ export default function Gerenciamento() {
     const [quantidade, setQuantidade] = useState('');
     const [vencimento, setVencimento] = useState('');
     const [aprovado, setAprovado] = useState('não'); 
+   
 
-    const carregarVaga = useCallback(async () => {
+    async function carregarVaga(vagaId) {
         try {
             const response = await axios.get(`http://4.172.207.208:5017/vagas/${vagaId}`);
             const vaga = response.data;
-
+    
             setEmpresa(vaga.nome_empresa);
             setContato(vaga.contato_empresa);
             setCnpj(vaga.cnpj);
@@ -48,14 +49,16 @@ export default function Gerenciamento() {
             setAprovado(vaga.aprovado);
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
+            alert("Falha ao carregar os dados da vaga. Tente novamente.");
         }
-    }, [vagaId]);
-
+    }
+  
     useEffect(() => {
         if (vagaId) {
-            carregarVaga();
+            carregarVaga(vagaId);
         }
-    }, [vagaId, carregarVaga]);
+    }, [vagaId]);
+    
 
     function reset() {
         localStorage.removeItem('token');
@@ -81,9 +84,15 @@ export default function Gerenciamento() {
         };
 
         const url = `http://4.172.207.208:5017/vagas`;
-        alert('Vaga adicionada com sucesso!');
-        await axios.post(url, paramCorpo);
-        resetarCampos();
+        
+        try {
+            await axios.post(url, paramCorpo);
+            alert('Vaga adicionada com sucesso!');
+            resetarCampos();
+        } catch (error) {
+            console.error("Erro ao adicionar vaga:", error);
+            alert("Não foi possível adicionar a vaga. Tente novamente.");
+        }
     }
 
     async function editarVaga() {
@@ -105,23 +114,29 @@ export default function Gerenciamento() {
         };
 
         const url = `http://4.172.207.208:5017/vagas/${vagaId}`;
-        await axios.put(url, paramCorpo);
-        alert('Vaga editada com sucesso!');
-        resetarCampos();
+        
+        try {
+            await axios.put(url, paramCorpo);
+            alert('Vaga editada com sucesso!');
+            resetarCampos();
+        } catch (error) {
+            console.error("Erro ao editar vaga:", error);
+            alert("Não foi possível editar a vaga. Tente novamente.");
+        }
     }
 
     async function deletarVaga() {
         const url = `http://4.172.207.208:5017/vagas/del/${vagaId}`;
+        
         try {
             await axios.delete(url);
             resetarCampos();
             alert('Vaga deletada com sucesso!');
         } catch (error) {
             console.error('Erro ao deletar a vaga:', error.response ? error.response.data : error.message);
-            alert('Você não pode deletar vagas que os candidatos se candidataram');
+            alert("Você não pode deletar vagas que os candidatos se candidataram.");
         }
     }
-    
 
     function resetarCampos() {
         setVagaId('');
