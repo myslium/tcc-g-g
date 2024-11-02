@@ -12,8 +12,8 @@ export default function Inicio() {
             <Cabecalho
                 titulo1 = 'Início'
                 link1='/'
-                titulo2 = 'admin'
-                link2 = '/admin/notificacoes'
+                titulo2 = 'Sobre G&G'
+                link2 = '/sobre'
                 titulo3 = 'Vagas'
                 link3 = '/vagas'
                 titulo4 = 'Fale com consultor'
