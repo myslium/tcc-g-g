@@ -110,11 +110,25 @@ footer {
 
             .text { 
                 text-align: center;
+
+                h3{
+                    font-size: 2.8vw !important;
+                }
+                p{
+                    font-size: 2.5vw !important;
+                }
             }
         }
 
         .logo {
             margin-left:0px !important;
+            img{
+                width: 12vw !important;
+            }
+
+            span{
+                font-size: 2.5vw !important;  
+            }
          }
 
     }
@@ -123,6 +137,9 @@ footer {
 
     .footer-bottom {
         width: 90%;
+        p{
+            font-size: 2vw !important;
+        }
     }
 
 
@@ -143,12 +160,27 @@ footer {
 
             .text { 
                 text-align: center;
+
+                h3{
+                    font-size: 2.5vw !important;
+                }
+                p{
+                    font-size: 2.3vw !important;
+                }
             }
         }
 
         .logo {
             margin-left:0px !important;
             width: 10vw;
+
+            img{
+                width: 10vw !important;
+            }
+
+            span{
+                font-size: 2.3vw !important;  
+            }
          }
 
     }
@@ -157,5 +189,8 @@ footer {
 
     .footer-bottom {
         width: 90%;
+        p{
+            font-size: 2vw !important;
+        }
     }
 }

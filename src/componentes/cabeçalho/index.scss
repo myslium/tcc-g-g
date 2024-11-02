@@ -189,63 +189,57 @@
     .login:hover {
         filter: brightness(0) invert(1);
     }
-
     @media (max-width: 768px) {
         .imh1 {
             .h1 {
-                font-size: 4vw;
+                font-size: 3vw !important;
                 font-family: 'Urbanist', serif;
                 font-weight: 700;
             }
-
+    
             .geg {
                 height: 10vw;
             }
         }
-
+    
         .menu-toggle {
             display: block;
         }
-
+    
         nav {
             display: none;
+            font-size: 1vw;
         }
-
+    
         a {
-            font-size: 2vw;
+            font-size: 1vw;
         }
-
-        li {
-            .oi {
-                font-size: 2.3vw!important;  
-            }  
-        }
-
+    
         .login {
             width: 5vw;
             height: 5.3vw;
         }
-
-        .login:hover {
-            filter: brightness(0) invert(1);
-        }
-
-        nav.aberto .imh1 {
-            margin: 0 auto;
-            justify-content: center;
-        }
-
-
-        .robot-link{
-            i{
-                font-size: 2.5vw !important;
+    
+        .robot-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            font-family: 'Urbanist', sans-serif;
+    
+            i {
+                font-size: 3vw !important;
             }
-            span{
-                font-size: 3.5vw !important;
+    
+            span {
+                font-size: 2.3vw !important;
+                margin-top: 0.5vw;
+                text-align: center;
             }
         }
     }
-    
+
     @media (max-width: 468px) {
         .imh1 {
             .h1 {
