@@ -176,6 +176,8 @@
             .separacao2 {
                 display: flex;
                 flex-direction: column;
+                justify-content: end;
+                align-items: end;
                 font-size: 1.5vw;
                 gap: 15vw;
                 padding: 2vw;
