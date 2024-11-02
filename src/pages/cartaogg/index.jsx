@@ -91,23 +91,25 @@ export default function Cartaogg() {
         setTpp(0);
         setAddVaga(false);
     }
-
     function total(salarios, qtd_vagas) {
         const qtd = Number(qtd_vagas);
         let soma = 0;
-
+    
         if (qtd > 0) {
+        
             for (let i = 0; i < salarios.length; i++) {
-                soma += salarios[i] * qtd;
+                soma += (salarios[i] * 0.85) * qtd;
             }
         } else {
+          
             for (let i = 0; i < salarios.length; i++) {
-                soma += salarios[i];
+                soma += salarios[i] * 0.85;
             }
         }
-
+    
         return 'R$ ' + soma.toFixed(2);
     }
+    
 
     const [oiporco, setoiporco] = useState('');
     const [outroo, setoutroo] = useState('');
