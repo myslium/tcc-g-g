@@ -7,7 +7,13 @@
     .tituloelogo {
         width: 80%;
         margin: 10vh;
+
+        @media (max-width: 468px) {
+            width: 90%;
+            margin: 4vh;
+            }
     }
+
 
     .terceira-parte {
         position: relative; 
@@ -228,7 +234,7 @@
         }
 
         @media (max-width: 468px) {
-            padding: 4vh 15%;
+            padding: 5%;
 
             .vagas {
                 label {
