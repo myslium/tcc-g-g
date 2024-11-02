@@ -143,6 +143,11 @@
 
 /* Responsivo para 468px */
 @media (max-width: 468px) {
+    .visaogeral{
+        width: 70%;
+        margin: 5vw 11vw;
+
+    }
     .carrossel {
        gap: 0.3vw !important;
        height: 50vw;
