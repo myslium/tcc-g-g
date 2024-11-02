@@ -3,7 +3,7 @@ import './index.scss';
 export default function Cards(props) {
     return (
         <div className="cards">
-            <div className="card"> 
+            <div className="card1"> 
                 <img src={props.url} alt="" />
                 <div className='texto'>
                     <h1>{props.titulo}</h1>
