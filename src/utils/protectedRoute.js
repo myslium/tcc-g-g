@@ -1,10 +1,9 @@
 import { Navigate } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode'; // Correção aqui
 
 export default function ProtectedRoute({ children }) {
     const token = localStorage.getItem('token');
 
-   
     console.log('Token:', token);
 
     if (!token || !isTokenValid(token)) {
@@ -16,7 +15,7 @@ export default function ProtectedRoute({ children }) {
 
 function isTokenValid(token) {
     try {
-        const decoded = jwt_decode(token);
+        const decoded = jwtDecode(token);
         const currentTime = Date.now() / 1000;
         return decoded.exp > currentTime;
     } catch (e) {
