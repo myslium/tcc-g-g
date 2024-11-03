@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+import { decode } from "jwt-decode";
 
 export default function ProtectedRoute({ children }) {
     const token = localStorage.getItem('token');
