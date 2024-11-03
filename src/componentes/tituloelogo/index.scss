@@ -5,18 +5,18 @@
     align-items: center;
     color: #000000;
     justify-content: center;
-    padding: 3vw 5px;
+    padding: 1.5vw 5px;
     z-index: 998; 
     box-sizing: border-box; 
     width: 100%;
 
     @media(max-width:468px){
-        padding: 10vw 40vw;
+        padding: 1vw 40vw;
 
 
     }
     @media(max-width:768px){
-        padding: 8vw 40vw;
+        padding: 4vw 40vw;
 
 
     }
@@ -35,7 +35,6 @@ h1 {
     font-weight: 400; 
     margin: 0;
     color: #240A39;
-    width: 40vw;
     text-align: center;
 }
 
@@ -48,11 +47,12 @@ h1 {
 
     h1 {
         font-size: 3.5vw;
+        width: 40vw;
     }
     
     .geg {
-        height: 5vw;
-        width: 7.5vw;
+        height: 7vw;
+        width: 9.5vw;
     }
     .imh1{
         height: 2vw;
@@ -63,11 +63,12 @@ h1 {
 
     h1 {
         font-size: 3vw;
+        width: 35vw;
     }
     
     .geg {
-        height: 7vw;
-        width: 10vw;
+        height: 8vw;
+        width: 11vw;
     }
     .imh1{
         height: 2vw;

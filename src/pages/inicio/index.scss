@@ -268,6 +268,15 @@
         background-size: 90%;
         background-repeat: no-repeat;
 
+        @media (max-width: 468px) {
+            background-size: 90%;
+            background-position: bottom !important;
+       
+           
+      
+           
+        }
+
 
         .consultor {
             width: 45vw;
@@ -317,6 +326,9 @@
             position: absolute;
             right: 5vw;
             bottom: 0;
+
+
+            
         }
 
 

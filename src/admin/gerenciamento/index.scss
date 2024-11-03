@@ -6,10 +6,14 @@
 
     .topo {
         padding: 2vw;
-        div{
-            padding: 0vw 30vw;
-        }
+        width: 78vw;
 
+        @media (max-width: 768px) {
+           width: 90vw;
+            }
+           
+            
+      
     }
 
 
