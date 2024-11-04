@@ -7,36 +7,39 @@ export default function Login() {
     const [usuario, setUsuario] = useState('');
     const [senha, setSenha] = useState('');
     const [loading, setLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
     async function entrar(e) {
         e.preventDefault();
         if (!usuario || !senha) {
-            alert('Por favor, preencha todos os campos.');
+            setErrorMessage('Por favor, preencha todos os campos.');
             return;
         }
 
         setLoading(true);
+        setErrorMessage('');
+
         try {
             const url = `http://4.172.207.208:5017/login/adm`; 
             const resp = await axios.post(url, { usuario, senha });
 
             if (resp.data.token) {
                 localStorage.setItem('token', resp.data.token);
-                setUsuario(''); // Limpa o campo de usuário
-                setSenha('');   // Limpa o campo de senha
-                navigate('/admin/notificacoes'); // Redireciona para a página de notificações
+                setUsuario('');
+                setSenha(''); 
+                navigate('/admin/notificacoes'); 
             } else {
-                alert('Credenciais inválidas');
+                setErrorMessage('Você não tem permissão de acessar essa área.');
             }
         } catch (error) {
             if (error.response && error.response.status === 401) {
-                alert('Credenciais inválidas');
+                setErrorMessage('Você não tem permissão de acessar essa área.');
             } else {
-                alert('Erro ao realizar o login. Tente novamente mais tarde.');
+                setErrorMessage('Erro ao realizar o login. Tente novamente mais tarde.');
             }
         } finally {
-            setLoading(false); // Finaliza o loading
+            setLoading(false);
         }
     }
 
@@ -75,6 +78,11 @@ export default function Login() {
                             {loading ? 'Entrando...' : 'Entrar'}
                         </button>
                     </form>
+                    {errorMessage && (
+                        <div className="error-message">
+                            {errorMessage}
+                        </div>
+                    )}
                 </div>
                 <div className="spacer"></div>
             </div>
