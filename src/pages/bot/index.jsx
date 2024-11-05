@@ -87,7 +87,7 @@ export default function Robo() {
     resetarEstados();
     setTimeout(() => {
       setResposta('Em nossa página "VAGAS" lá nós temos vagas com acesso filtrado...');
-      setMostrarResposta(true); // Mostra a resposta
+      setMostrarResposta(true); 
     }, 1000);
     setTimeout(() => {
       setRespondendo(<Duvida sim={sim} nao={nao} />);
