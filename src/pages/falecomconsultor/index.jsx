@@ -9,39 +9,45 @@ import axios from 'axios';
 export default function Falecomconsultor(){
     const [nomeemp, setnomeemp] = useState('');
     const [cnpj, setcnpj] = useState('');
+    const [verificado, setVerificado] = useState(false);
+    const [loading, setLoading] = useState(false)
     const navigation = useNavigate();
 
     async function verificacao() {
-     
+      
         const formattedCNPJ = cnpj.replace(/[^\d]+/g, '');
-        const url = `https://api.cnpjs.dev/v1/${formattedCNPJ}`;
+        const verificationUrl = `https://api.cnpjs.dev/v1/${formattedCNPJ}`;
 
+        setLoading(true); 
         try {
-            let resp = await axios.get(url);
-    
-          
-            if ( resp.status === 404) {
+            const resp = await axios.get(verificationUrl);
+            if (resp.status === 404) {
                 alert('CNPJ inválido');
             } else {
-                let url = `http://4.172.207.208:5017/interesse`;
-                let empresa = {
+                const postUrl = `http://4.172.207.208:5017/interesse`;
+                const empresa = {
                     'empresa': nomeemp,
                     'cnpj': formattedCNPJ
                 };
-                let postResp = await axios.post(url, empresa);
-                alert('CNPJ válido!');
-                navigation(`/cartaogg/${postResp.data.id}`);
+                const postResp = await axios.post(postUrl, empresa);
+                setVerificado(true);
+                setTimeout(() => {
+                    navigation(`/cartaogg/${postResp.data.id}`)
+                  }, 1500);
+               
             }
         } catch (error) {
-          
-            if (error.response && ( error.response.status === 404)) {
+            if (error.response && error.response.status === 404) {
                 alert('CNPJ inválido');
             } else {
                 console.error('Erro na verificação:', error);
                 alert('Ocorreu um erro ao verificar o CNPJ. Tente novamente mais tarde.');
             }
+        } finally {
+            setLoading(false); 
         }
     }
+
 
     return (
   
@@ -100,9 +106,15 @@ export default function Falecomconsultor(){
                             <p>CNPJ:</p>
                             <input className='oioio' type="text" value={cnpj} onChange={e=> setcnpj(e.target.value)} />
                         </div>
+                       
                         <div className="botao">
-                            <button className='on' onClick={verificacao}>VERIFICAÇÃO</button>
-                        </div>
+                            <button className='on'  onClick={verificacao}   disabled={loading || verificado}>
+                                {loading ? 'Verificando...' : verificado ? `Válido!` : `VERIFICAÇÃO`}
+                            </button>
+                        </div> 
+                       
+                           
+    
                     </div>
                 </div>
             </div>
