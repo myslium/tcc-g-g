@@ -5,24 +5,24 @@ import './index.scss';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast'; 
 
-export default function Falecomconsultor(){
+export default function Falecomconsultor() {
     const [nomeemp, setnomeemp] = useState('');
     const [cnpj, setcnpj] = useState('');
     const [verificado, setVerificado] = useState(false);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
     const navigation = useNavigate();
 
     async function verificacao() {
-      
         const formattedCNPJ = cnpj.replace(/[^\d]+/g, '');
         const verificationUrl = `https://api.cnpjs.dev/v1/${formattedCNPJ}`;
 
-        setLoading(true); 
+        setLoading(true);
         try {
             const resp = await axios.get(verificationUrl);
             if (resp.status === 404) {
-                alert('CNPJ inválido');
+                toast.error('CNPJ inválido'); 
             } else {
                 const postUrl = `http://4.172.207.208:5017/interesse`;
                 const empresa = {
@@ -31,42 +31,38 @@ export default function Falecomconsultor(){
                 };
                 const postResp = await axios.post(postUrl, empresa);
                 setVerificado(true);
+                toast.success('CNPJ válido!'); 
                 setTimeout(() => {
-                    navigation(`/cartaogg/${postResp.data.id}`)
-                  }, 1500);
-               
+                    navigation(`/cartaogg/${postResp.data.id}`);
+                }, 1500);
             }
         } catch (error) {
             if (error.response && error.response.status === 404) {
-                alert('CNPJ inválido');
+                toast.error('CNPJ inválido');
             } else {
                 console.error('Erro na verificação:', error);
-                alert('Ocorreu um erro ao verificar o CNPJ. Tente novamente mais tarde.');
+                toast.error('Ocorreu um erro ao verificar o CNPJ. Tente novamente mais tarde.');
             }
         } finally {
-            setLoading(false); 
+            setLoading(false);
         }
     }
 
-
     return (
-  
-        
-       
         <div className='pagina-falecomconsultor'>
-           <Cabecalho
-                titulo1 = 'Início'
+            <Cabecalho
+                titulo1='Início'
                 link1='/'
-                titulo2 = 'Sobre G&G'
-                link2 = '/sobre'
-                titulo3 = 'Vagas'
-                link3 = '/vagas'
-                titulo4 = 'Fale com consultor'
+                titulo2='Sobre G&G'
+                link2='/sobre'
+                titulo3='Vagas'
+                link3='/vagas'
+                titulo4='Fale com consultor'
                 link4='/falecomconsultor'
-                link5 = '/bot'
-                titulo5 = 'fa-solid fa-robot'
-                tituloo5= 'AJUDA'
-                aparecer={true}  
+                link5='/bot'
+                titulo5='fa-solid fa-robot'
+                tituloo5='AJUDA'
+                aparecer={true}
             />
             <section className='primeira-parte'>
                 <img src="/assets/images/consultor/primeira.png" alt="" />
@@ -102,26 +98,22 @@ export default function Falecomconsultor(){
                     <div className="choquei">
                         <div className='inputs'>
                             <p>NOME DA EMPRESA:</p>
-                            <input className='oioio' type="text" value={nomeemp} onChange={e=> setnomeemp(e.target.value)} />
+                            <input className='oioio' type="text" value={nomeemp} onChange={e => setnomeemp(e.target.value)} />
                             <p>CNPJ:</p>
-                            <input className='oioio' type="text" value={cnpj} onChange={e=> setcnpj(e.target.value)} />
+                            <input className='oioio' type="text" value={cnpj} onChange={e => setcnpj(e.target.value)} />
                         </div>
                        
                         <div className="botao">
-                            <button className='on'  onClick={verificacao}   disabled={loading || verificado}>
+                            <button className='on' onClick={verificacao} disabled={loading || verificado}>
                                 {loading ? 'Verificando...' : verificado ? `Válido!` : `VERIFICAÇÃO`}
                             </button>
-                        </div> 
-                       
-                           
-    
+                        </div>
                     </div>
                 </div>
             </div>
 
             <Footer />
+            <Toaster /> 
         </div>
-
-
     );
 }
