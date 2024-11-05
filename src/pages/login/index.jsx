@@ -7,6 +7,7 @@ export default function Login() {
     const [usuario, setUsuario] = useState('');
     const [senha, setSenha] = useState('');
     const [loading, setLoading] = useState(false);
+    const [ver, setVer] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
@@ -21,14 +22,14 @@ export default function Login() {
         setErrorMessage('');
 
         try {
-            const url = `http://4.172.207.208:5017/login/adm`; 
+            const url = `http://4.172.207.208:5017/login/adm`;
             const resp = await axios.post(url, { usuario, senha });
 
             if (resp.data.token) {
                 localStorage.setItem('token', resp.data.token);
                 setUsuario('');
-                setSenha(''); 
-                navigate('/admin/notificacoes'); 
+                setSenha('');
+                navigate('/admin/notificacoes');
             } else {
                 setErrorMessage('Você não tem permissão de acessar essa área.');
             }
@@ -43,6 +44,12 @@ export default function Login() {
         }
     }
 
+
+    
+
+
+    
+
     return (
         <div className='pagina-login'>
             <div className="login-box1">
@@ -51,27 +58,31 @@ export default function Login() {
                         <img src="/assets/images/cabecalho/logo.png" alt="G&G" />
                         <h2>Login</h2>
                     </div>
-                    <form className="login-form" onSubmit={entrar}> 
+                    <form className="login-form" onSubmit={entrar}>
                         <div className='inputs'>
                             <div className="input-group">
-                                <input 
-                                    type="text" 
-                                    id="username" 
-                                    placeholder="Usuário" 
-                                    value={usuario} 
-                                    onChange={(e) => setUsuario(e.target.value)} 
+                                <input
+                                    type="text"
+                                    id="username"
+                                    placeholder="Usuário"
+                                    value={usuario}
+                                    onChange={(e) => setUsuario(e.target.value)}
                                 />
                                 <i className="fas fa-user icon"></i>
                             </div>
                             <div className="input-group">
-                                <input 
-                                    type="password" 
-                                    id="password" 
-                                    placeholder="Senha" 
-                                    value={senha} 
-                                    onChange={(e) => setSenha(e.target.value)} 
+                                <input
+                                    type={ver ? "text" : "password"}
+                                    id="password"
+                                    placeholder="Senha"
+                                    value={senha}
+                                    onChange={(e) => setSenha(e.target.value)}
                                 />
                                 <i className="fas fa-lock icon"></i>
+
+                                <span onClick={() => setVer(!ver)} className="eye-icon">
+                                <i className="fa fa-eye" aria-hidden="true"></i>
+                                </span>
                             </div>
                         </div>
                         <button type="submit" className="login-btn" disabled={loading}>
