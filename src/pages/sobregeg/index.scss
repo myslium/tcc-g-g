@@ -5,19 +5,22 @@
 
     .faixa {
         width: 100%;
-        height: 40vw;
+        height: 50vw;
         background-color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-
+      
 
         .fundo {
             position: relative;
             width: 60%;
             height: 40vw;
-        }
+        
+       
     }
+   
+}
 
     .cartaotexto {
         padding: 3vw;
@@ -343,7 +346,17 @@
     }
 
     @media (max-width: 468px) {
+            .faixa{
+                width: 100%;
+                height: 70vw;
 
+                .fundo {
+    
+                width: 70%;
+                height: 50vw;
+                      
+                }
+            }
 
         .cartaotexto {
             .cardizinho {

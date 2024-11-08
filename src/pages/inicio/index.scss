@@ -138,8 +138,11 @@
 
     }
     
-    @media(max-width: 468px)
-{
+    @media(max-width: 468px){
+    .faixa{
+        width: 100%;
+        height: 70vw;
+    }
     .recrutando { 
         align-items: center;
         justify-content: center;
