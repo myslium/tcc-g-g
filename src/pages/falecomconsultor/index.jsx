@@ -22,7 +22,14 @@ export default function Falecomconsultor() {
         try {
             const resp = await axios.get(verificationUrl);
             if (resp.status === 404) {
-                toast.error('CNPJ inválido'); 
+                toast.error('CNPJ inválido', {
+                    style: {
+                      borderRadius: '10px',
+                      background: '#333',
+                      color: '#fff',
+                    }
+                  });
+                  
             } else {
                 const postUrl = `http://4.172.207.208:5017/interesse`;
                 const empresa = {
@@ -38,15 +45,23 @@ export default function Falecomconsultor() {
             }
         } catch (error) {
             if (error.response && error.response.status === 404) {
-                toast.error('CNPJ inválido');
+              toast.error('CNPJ inválido');
             } else {
-                console.error('Erro na verificação:', error);
-                toast.error('Ocorreu um erro ao verificar o CNPJ. Tente novamente mais tarde.');
+              toast.error('Ocorreu um erro ao verificar o CNPJ. Tente novamente mais tarde.', {
+                style: {
+                  borderRadius: '10px',
+                  background: 'rgba(255, 0, 0, 0.1)',
+                  color: '#a04dff'
+                }
+              });
             }
-        } finally {
+          } finally {
             setLoading(false);
-        }
+          }
+          
     }
+
+
 
     return (
         <div className='pagina-falecomconsultor'>
