@@ -7,6 +7,9 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import TituloMenor from '../../componentes/titulomenor';
+import toast, { Toaster } from 'react-hot-toast'; 
+
+
 
 export default function Cartaogg() {
     const { id } = useParams();
@@ -24,7 +27,14 @@ export default function Cartaogg() {
         const qtd = Number(qtd_vagas);
 
         if (isNaN(sal) || isNaN(qtd)) {
-            alert("Por favor, insira valores numéricos válidos para salário e quantidade de vagas.");
+            
+            toast.error("Por favor, insira valores numéricos válidos para salário e quantidade de vagas.", {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
             return;
         } else {
             let sa = ((sal * 0.85) * qtd).toFixed(2);
@@ -38,8 +48,9 @@ export default function Cartaogg() {
                     vaga: vaga,
                     id_interesse: id
                 };
-                let resp = await axios.post(url, dados);
-                alert(`Valor calculado e adicionado ao seu cartão! ID: ${resp.data.id}`);
+               await axios.post(url, dados);
+            
+                toast.success(`Valor calculado e adicionado ao seu cartão!`);
             }
         }
     }
@@ -51,7 +62,7 @@ export default function Cartaogg() {
     async function pagar() {
         const url = `http://4.172.207.208:5017/receita/${id}`;
         let resposta = await axios.get(url);
-        console.log(resposta.data); // Adicione esta linha para depurar
+        console.log(resposta.data); 
         setReceita(agruparReceitas(resposta.data));
     }
 
@@ -212,7 +223,6 @@ export default function Cartaogg() {
             <div>
                 {item.salarios.map((salario, index) => (
                     <div key={index}>
-                        <p>{item.vaga}</p>
                         <p>R$ {salario.toFixed(2)}</p>
                     </div>
                 ))}
@@ -240,6 +250,7 @@ export default function Cartaogg() {
             </div>
 
             <Footer />
+            <Toaster /> 
         </div>
 
 

@@ -3,7 +3,10 @@ import Cabecalho from '../../componentes/cabeçalho';
 import TituloMenor from '../../componentes/titulomenor';
 import './index.scss';
 import { useNavigate, useParams } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast'; 
+
 import axios from 'axios';
+
 
 export default function ConfirmarCandidato() {
     const [nome, setNome] = useState('');
@@ -41,10 +44,17 @@ export default function ConfirmarCandidato() {
             };
             await axios.put(url, dados);
             navigate('/admin/gerenciandovagas');
-            alert('Candidato Confirmado!');
+            toast.success('Candidato Confirmado!');
         } catch (error) {
             console.error("Erro ao adicionar candidato:", error);
-            alert('Erro ao confirmar candidato.'); 
+        
+            toast.error('Erro ao confirmar candidato.', {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
         }
     }
 
@@ -133,6 +143,7 @@ export default function ConfirmarCandidato() {
                     <button onClick={adicionar}>Confirmar</button>
                 </div>
             </section>
+            <Toaster/>
         </div>
     );
 }

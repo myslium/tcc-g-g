@@ -5,6 +5,7 @@ import Tituloelogo from '../../componentes/tituloelogo';
 import './index.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 import TituloMenor from '../../componentes/titulomenor';
+import toast, { Toaster } from 'react-hot-toast'; 
 
 export default function Gerenciamento() {
     const navigate = useNavigate();
@@ -49,7 +50,14 @@ export default function Gerenciamento() {
             setAprovado(vaga.aprovado);
         } catch (error) {
             console.error("Erro ao carregar vaga:", error);
-            alert("Falha ao carregar os dados da vaga. Tente novamente.");
+       
+            toast.error("Falha ao carregar os dados da vaga. Tente novamente.", {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
         }
     }
   
@@ -87,11 +95,18 @@ export default function Gerenciamento() {
         
         try {
             await axios.post(url, paramCorpo);
-            alert('Vaga adicionada com sucesso!');
+            toast.success('Vaga adicionada com sucesso!');
             resetarCampos();
         } catch (error) {
             console.error("Erro ao adicionar vaga:", error);
-            alert("Não foi possível adicionar a vaga. Tente novamente.");
+            
+            toast.error("Não foi possível adicionar a vaga. Tente novamente.", {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
         }
     }
 
@@ -117,11 +132,18 @@ export default function Gerenciamento() {
         
         try {
             await axios.put(url, paramCorpo);
-            alert('Vaga editada com sucesso!');
+            toast.success('Vaga editada com sucesso!');
             resetarCampos();
         } catch (error) {
             console.error("Erro ao editar vaga:", error);
-            alert("Não foi possível editar a vaga. Tente novamente.");
+         
+            toast.error("Não foi possível editar a vaga. Tente novamente.", {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
         }
     }
 
@@ -134,7 +156,14 @@ export default function Gerenciamento() {
             alert('Vaga deletada com sucesso!');
         } catch (error) {
             console.error('Erro ao deletar a vaga:', error.response ? error.response.data : error.message);
-            alert("Você não pode deletar vagas que os candidatos se candidataram.");
+    
+            toast.error("Você não pode deletar vagas que os candidatos se candidataram.", {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
         }
     }
 
@@ -276,6 +305,7 @@ export default function Gerenciamento() {
                     </div>
                 </div>
             </section>
+            <Toaster/>
         </div>
     );
 }

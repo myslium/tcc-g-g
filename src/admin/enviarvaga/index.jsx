@@ -64,7 +64,7 @@ export default function EnviarVaga() {
     async function adicionarCandidatoFinal() {
         const corpo = {
             emailEmpresa: emailEmpresa,
-            vaga: vaga,
+            cargo: vaga,
             descricao: descricao,
             cpf: cpfCandidato, 
             curriculo: curriculo 
