@@ -25,8 +25,8 @@ export default function Falecomconsultor() {
                 toast.error('CNPJ inválido', {
                     style: {
                       borderRadius: '10px',
-                      background: '#333',
-                      color: '#fff',
+                     background: 'rgba(255, 0, 0, 0.1)',
+                  color: '#a04dff'
                     }
                   });
                   
