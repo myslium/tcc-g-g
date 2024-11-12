@@ -48,6 +48,7 @@ export default function EnviarVaga() {
             const urlBlob = window.URL.createObjectURL(new Blob([response.data]));
             set_CVUrl(urlBlob);
             set_CVExtensao(extensao);
+            toast.success('Verifique o currículo');
 
         } catch (error) {
             toast.error('Erro ao baixar o currículo:', {
