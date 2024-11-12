@@ -3,6 +3,7 @@ import Cabecalho from '../../componentes/cabeçalho';
 import TituloMenor from '../../componentes/titulomenor';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast'; 
 import axios from 'axios';
 
 export default function EnviarVaga() {
@@ -33,7 +34,14 @@ export default function EnviarVaga() {
                 response.headers['content-type'] === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ? 'docx' : '';
 
             if (!extensao) {
-                alert("Formato de arquivo não suportado");
+               
+                toast.error("Formato de arquivo não suportado", {
+                    style: {
+                      borderRadius: '10px',
+                     background: 'rgba(255, 0, 0, 0.1)',
+                  color: '#a04dff'
+                    }
+                  });
                 return;
             }
 
@@ -42,14 +50,28 @@ export default function EnviarVaga() {
             set_CVExtensao(extensao);
 
         } catch (error) {
-            alert('Erro ao baixar o currículo');
+            toast.error('Erro ao baixar o currículo:', {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
+            
             console.error("Erro ao baixar o currículo:", error);
         }
     }
 
     function baixarCV() {
         if (!cv_Url) {
-            alert('Procure o candidato por CPF antes.');
+           
+            toast.error('Procure o candidato por CPF antes.', {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
             return;
         }
 
@@ -73,9 +95,16 @@ export default function EnviarVaga() {
         const url = `http://4.172.207.208:5017/mandaremail`; 
         try {
             await axios.post(url, corpo);
-            alert('E-mail enviado com sucesso!');
+           toast.success('E-mail enviado com sucesso!');
         } catch (error) {
-            alert('Erro ao enviar o e-mail');
+          
+               toast.error('Erro ao enviar o e-mail', {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
             console.error("Erro ao enviar o e-mail:", error);
         }
     }
@@ -129,6 +158,7 @@ export default function EnviarVaga() {
 
            
             </div>
+            < Toaster />
      
         </div>
     );

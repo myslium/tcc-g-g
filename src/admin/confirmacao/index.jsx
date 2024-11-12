@@ -70,7 +70,14 @@ export default function ConfirmarCandidato() {
                              response.headers['content-type'] === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ? 'docx' : '';
 
             if (!extensao) {
-                alert("Formato de arquivo não suportado");
+            
+                toast.error("Formato de arquivo não suportado", {
+                    style: {
+                      borderRadius: '10px',
+                     background: 'rgba(255, 0, 0, 0.1)',
+                  color: '#a04dff'
+                    }
+                  });
                 return;
             }
 
@@ -82,7 +89,14 @@ export default function ConfirmarCandidato() {
             link.click();
             document.body.removeChild(link);
         } catch (error) {
-            console.error("Erro ao baixar o currículo:", error);
+       
+            toast.error('Erro ao baixar o currículo:', {
+                style: {
+                  borderRadius: '10px',
+                 background: 'rgba(255, 0, 0, 0.1)',
+              color: '#a04dff'
+                }
+              });
         }
     }
     
