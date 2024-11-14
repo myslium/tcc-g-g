@@ -2,14 +2,13 @@ import Cabecalho from '../../componentes/cabeçalho';
 import Footer from '../../componentes/footer';
 import Porco from '../../componentes/porco';
 import './index.scss';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState, useCallback } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import TituloMenor from '../../componentes/titulomenor';
-import toast, { Toaster } from 'react-hot-toast'; 
+import toast, { Toaster } from 'react-hot-toast';
 
-
+const url = 'http://4.172.207.208:5017';
 
 export default function Cartaogg() {
     const { id } = useParams();
@@ -20,79 +19,78 @@ export default function Cartaogg() {
     const [addVaga, setAddVaga] = useState(false);
     const [receita, setReceita] = useState([]);
     const [pixx, setpixx] = useState('');
-    const navigatee = useNavigate();
+    const navigate = useNavigate();
 
-    async function Tpp() {
+
+    const Tpp = useCallback(async () => {
         const sal = Number(salario);
         const qtd = Number(qtd_vagas);
 
         if (isNaN(sal) || isNaN(qtd)) {
-            
             toast.error("Por favor, insira valores numéricos válidos para salário e quantidade de vagas.", {
                 style: {
-                  borderRadius: '10px',
-                 background: 'rgba(255, 0, 0, 0.1)',
-              color: '#a04dff'
+                    borderRadius: '10px',
+                    background: 'rgba(255, 0, 0, 0.1)',
+                    color: '#a04dff'
                 }
-              });
+            });
             return;
-        } else {
-            let sa = ((sal * 0.85) * qtd).toFixed(2);
-            setTpp(sa);
+        }
 
-            if (sa !== "0.00") {
-                const url = `http://4.172.207.208:5017/receita`;
-                let dados = {
-                    salario: salario,
-                    qtd_vagas: qtd_vagas,
-                    vaga: vaga,
-                    id_interesse: id
-                };
-               await axios.post(url, dados);
-            
-                toast.success(`Valor calculado e adicionado ao seu cartão!`);
+        let r = sal * 0.85;
+    
+        let sa = r * qtd;
+        setTpp(sa.toFixed(2));
+
+        if (sa !== "0.00") {
+            try {
+                let dados = { salario: r, qtd_vagas, vaga, id_interesse: id };
+                await axios.post(`${url}/receita`, dados);
+                toast.success("Valor calculado e adicionado ao seu cartão!");
+            } catch (error) {
+                toast.error("Erro ao conectar-se com a API.");
             }
         }
-    }
+    }, [salario, qtd_vagas, vaga, id]);
 
     useEffect(() => {
         if (addVaga) resetar();
     }, [addVaga]);
 
-    async function pagar() {
-        const url = `http://4.172.207.208:5017/receita/${id}`;
-        let resposta = await axios.get(url);
-        console.log(resposta.data); 
-        setReceita(agruparReceitas(resposta.data));
-    }
+    const pagar = useCallback(async () => {
+        try {
+            const resposta = await axios.get(`${url}/receita/${id}`);
+            setReceita(agruparReceitas(resposta.data));
+        } catch (error) {
+            toast.error("Erro ao buscar dados de receita.");
+        }
+    }, [id]);
 
     function agruparReceitas(receitas) {
-        const receitasAgrupadas = [];
+        const grupos = {};
+        const resultado = [];
 
         for (let i = 0; i < receitas.length; i++) {
             const receita = receitas[i];
-            let existeIndice = -1;
+            const { idInteresse, empresa, vaga, salario, qtd_vagas } = receita;
 
-            for (let j = 0; j < receitasAgrupadas.length; j++) {
-                if (receitasAgrupadas[j].idInteresse === receita.idInteresse) {
-                    existeIndice = j;
-                }
-            }
-
-            if (existeIndice !== -1) {
-                receitasAgrupadas[existeIndice].salarios.push(receita.salario);
+            if (!grupos[idInteresse]) {
+                grupos[idInteresse] = {
+                    idInteresse,
+                    empresa,
+                    vaga: [vaga],
+                    salarios: [salario],
+                    qtd_vagas: [qtd_vagas]
+                };
+                resultado.push(grupos[idInteresse]);
             } else {
-                receitasAgrupadas.push({
-                    idInteresse: receita.idInteresse,
-                    empresa: receita.empresa,
-                    vaga: receita.vaga,
-                    salarios: [receita.salario],
-                    qtd_vagas: receita.qtd_vagas 
-                });
+                grupos[idInteresse].vaga.push(vaga);
+                grupos[idInteresse].salarios.push(salario);
+                grupos[idInteresse].qtd_vagas.push(qtd_vagas);
             }
         }
 
-        return receitasAgrupadas;
+        return resultado;
     }
 
     function resetar() {
@@ -102,22 +100,13 @@ export default function Cartaogg() {
         setTpp(0);
         setAddVaga(false);
     }
+
     function total(salarios, qtd_vagas) {
-        const qtd = Number(qtd_vagas);
         let soma = 0;
-    
-        if (qtd > 0) {
-        
-            for (let i = 0; i < salarios.length; i++) {
-                soma += (salarios[i] * 0.85) * qtd;
-            }
-        } else {
-          
-            for (let i = 0; i < salarios.length; i++) {
-                soma += salarios[i] * 0.85;
-            }
+        for(let i = 0;  i < salarios.length; i++) {
+            soma += (salarios[i] * qtd_vagas[i]);
+
         }
-    
         return 'R$ ' + soma.toFixed(2);
     }
     
@@ -125,28 +114,26 @@ export default function Cartaogg() {
     const [oiporco, setoiporco] = useState('');
 
     function porco() {
-        let porcooo = <Porco
-            p1='Pix'
-            function1={pix}
-            p2='Outro'
-            function2={outro}
-        />;
-        setoiporco(porcooo);
+        setoiporco(
+            <Porco
+                p1='Pix'
+                function1={pix}
+                p2='Outro'
+                function2={outro}
+            />
+        );
     }
 
     function pix() {
-        navigatee('/pix');
+        navigate('/pix');
     }
 
     function outro() {
-        navigatee('/whats');
+        navigate('/whats');
     }
 
     return (
-
-
         <div className="pagina cartao-gg">
-
             <Cabecalho
                 titulo1='Início'
                 link1='/'
@@ -160,7 +147,6 @@ export default function Cartaogg() {
                 titulo5='fa-solid fa-robot'
                 tituloo5='AJUDA'
                 aparecer={true}
-
             />
 
             <TituloMenor titulo='Valores' />
@@ -177,12 +163,12 @@ export default function Cartaogg() {
 
                                 <div className="quadrado">
                                     <p className='p'>SALÁRIO:</p>
-                                    <input className='oioio' type="text" value={salario} onChange={e => setSalario(e.target.value)} />
+                                    <input className='oioio' type="number" value={salario} onChange={e => setSalario(e.target.value)} />
                                 </div>
 
                                 <div className="quadrado">
                                     <p className='p'>QTD VAGAS:</p>
-                                    <input className='oioio' type="text" value={qtd_vagas} onChange={e => setQtd_vagas(e.target.value)} />
+                                    <input className='oioio' type="number" value={qtd_vagas} onChange={e => setQtd_vagas(e.target.value)} />
                                 </div>
                             </div>
 
@@ -212,28 +198,29 @@ export default function Cartaogg() {
                 <button className="butt on" onClick={pagar}>Ver Receita</button>
 
                 {receita.map(item => (
-    <div key={item.idInteresse} className="receita">
-        <div className="separacao1">
-            <h1>RECEITA</h1>
-            <p className='n'>Nome da empresa:</p>
-            <p>{item.empresa}</p>
-         
+                    <div key={item.idInteresse} className="receita">
+                        <div className="separacao1">
+                            <h1>RECEITA</h1>
+                            <p className='n'>Nome da empresa:</p>
+                            <p>{item.empresa}</p>
 
-            <div>
-                {item.salarios.map((salario, index) => (
-                    <div key={index}>
-                        <p>R$ {salario.toFixed(2)}</p>
+                            <div>
+                                {item.salarios.map((salario, index) => (
+                                    <div key={index}>
+                                        <p>Vaga: {item.vaga[index]}</p>
+                                        <p>Quantidade de vagas: {item.qtd_vagas[index]}</p>
+                                        <p>Cada vaga R$ {salario.toFixed(2)}</p>
+                                    </div> 
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="separacao2">
+                            <img src="/assets/images/cabecalho/logo.png" alt="Logo" />
+                            <h1>Valor final: {total(item.salarios, item.qtd_vagas)}</h1>
+                        </div>
                     </div>
                 ))}
-            </div>
-        </div>
-
-        <div className="separacao2">
-            <img src="/assets/images/cabecalho/logo.png" alt="" />
-            <h1>Valor final: {total(item.salarios, item.qtd_vagas)}</h1>
-        </div>
-    </div>
-))}
 
                 <div className='line'></div>
 
@@ -244,14 +231,11 @@ export default function Cartaogg() {
                     </button>
                     {oiporco}
                     <h1 className='pix'>{pixx}</h1>
-
                 </div>
             </div>
 
             <Footer />
-            <Toaster /> 
+            <Toaster />
         </div>
-
-
     );
 }
