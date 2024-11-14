@@ -6,6 +6,7 @@ import Cabecalho from '../../componentes/cabeçalho';
 import Duvida from '../../componentes/duvida';
 import TituloMenor from '../../componentes/titulomenor';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast'; 
 
 export default function Robo() {
   const [resposta, setResposta] = useState('');
@@ -78,7 +79,7 @@ export default function Robo() {
 
   function nao() {
     setTimeout(() => {
-      alert('Em caso de outra dúvida não esclarecida, fale conosco pelo nosso Email, obrigada!!');
+      toast.success('Em caso de outra dúvida não esclarecida, fale conosco pelo nosso Email, obrigada!!');
     }, 500);
     navigate('/');
   }
@@ -114,12 +115,12 @@ export default function Robo() {
         setRespondendo(<Duvida sim={sim} nao={nao} />);
       }, 1500);
     } catch (error) {
-      console.error("Erro ao buscar CPF:", error);
+      toast.error("Erro ao buscar CPF:", error);
     }
   }
 
   function outro() {
-    alert('Você será encaminhado para o contato do autonomo!')
+    toast.success('Você será encaminhado para o contato do autonomo!')
   }
 
   return (
@@ -201,6 +202,7 @@ export default function Robo() {
         )}
       </div>
       <p className="respondendo">{respondendo}</p>
+      <Toaster />
     </div>
   );
 }

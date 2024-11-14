@@ -123,7 +123,6 @@ export default function Cartaogg() {
     
 
     const [oiporco, setoiporco] = useState('');
-    const [outroo, setoutroo] = useState('');
 
     function porco() {
         let porcooo = <Porco
