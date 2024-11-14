@@ -38,7 +38,7 @@ export default function Cartaogg() {
         }
 
         let r = sal * 0.85;
-        setSalario(r); // Corrigido para usar setSalario
+    
         let sa = r * qtd;
         setTpp(sa.toFixed(2));
 
