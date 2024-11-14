@@ -206,8 +206,8 @@ export default function Cartaogg() {
                                     <div key={index}>
                                         <p>Vaga: {item.vaga[index]}</p>
                                         <p>Quantidade de vagas: {item.qtd_vagas[index]}</p>
-                                        <p>R$ {salario.toFixed(2)}</p>
-                                    </div>
+                                        <p>Cada vaga R$ {salario.toFixed(2)}</p>
+                                    </div> 
                                 ))}
                             </div>
                         </div>
